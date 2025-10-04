@@ -432,8 +432,12 @@ HTML_TEMPLATE = """
                                 <strong>${clinic.city}, ${clinic.country || 'Turkey'}</strong>
                             </div>
                             <div class="info-row">
-                                <i class="fas fa-dollar-sign text-success"></i>
-                                <span>${clinic.price_range || 'Fiyat bilgisi yok'}</span>
+                                <i class="fas fa-phone text-primary"></i>
+                                <span>${clinic.phone || 'Telefon bilgisi yok'}</span>
+                            </div>
+                            <div class="info-row">
+                                <i class="fas fa-location-dot text-info"></i>
+                                <span>${clinic.address || 'Adres bilgisi yok'}</span>
                             </div>
                             <div class="mt-3">
                                 ${treatments.slice(0, 8).map(t => 
