@@ -1,40 +1,194 @@
-# Python
+# ============================================
+# PYTHON
+# ============================================
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
 *.so
+
+# Distribution / packaging
 .Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
 env/
 venv/
 ENV/
-.venv
+env.bak/
+venv.bak/
+.venv/
 
-# IDEs
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+# PyInstaller
+*.manifest
+*.spec
 
-# Rasa
-rasa_service/models/
-*.tar.gz
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
 
-# Database
+# ============================================
+# RASA
+# ============================================
+# Trained models (large files)
+rasa_service/models/*.tar.gz
+rasa_service/models/*.pkl
+rasa_service/results/
+
+# Keep the models directory structure
+!rasa_service/models/.gitkeep
+
+# ============================================
+# DATABASES
+# ============================================
+# SQLite
 *.db
 *.sqlite
 *.sqlite3
+*.db-journal
 
-# Logs
-*.log
+# PostgreSQL
+*.pgsql
 
-# Docker
-.dockerignore
+# ============================================
+# DATA & STORAGE
+# ============================================
+# Storage klasörü - runtime data
+api_service/storage/chroma_db/
+api_service/storage/sqlite/
+api_service/storage/*.db
 
-# OS
-.DS_Store
-Thumbs.db
+# Processed data - programın ürettiği dosyalar
+api_service/data/processed/
+api_service/data/embeddings/
 
-# Environment
+# Raw data - JSON dosyalarınızı buraya koyun, bunlar GIT'e eklenecek
+# api_service/data/raw/ klasörü IGNORE EDİLMEZ
+
+# ============================================
+# ENVIRONMENT & SECRETS
+# ============================================
 .env
 .env.local
+.env.*.local
+*.env
+.envrc
+
+# Credentials
+credentials.yml
+secrets.yml
+*_credentials.yml
+
+# ============================================
+# LOGS
+# ============================================
+*.log
+logs/
+log/
+*.log.*
+
+# ============================================
+# DOCKER
+# ============================================
+.dockerignore
+docker-compose.override.yml
+docker-compose.local.yml
+
+# ============================================
+# IDE & EDITORS
+# ============================================
+# VSCode
+.vscode/
+.history/
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+
+# Vim
+*.swp
+*.swo
+*~
+*.swn
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb_checkpoints/
+
+# ============================================
+# OPERATING SYSTEM
+# ============================================
+# macOS
+.DS_Store
+.DS_Store?
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================
+# TEMPORARY FILES
+# ============================================
+*.tmp
+*.temp
+*.bak
+*.swp
+*.swo
+.cache/
+
+# ============================================
+# OTHER
+# ============================================
+# Redis
+dump.rdb
+
+# Node modules (if any)
+node_modules/
+
+# Backup files
+*.backup
+*.old
