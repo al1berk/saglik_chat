@@ -1,0 +1,51 @@
+# Tüm servisleri (Rasa, Action Server, FastAPI) başlatmak için Docker Compose
+version: '3.8'
+
+services:
+  # Rasa Chat Servisi
+  rasa:
+    image: rasa/rasa:3.6.0
+    container_name: rasa_service
+    ports:
+      - "5005:5005"
+    volumes:
+      - ./rasa_service:/app
+    command: >
+      run
+      --enable-api
+      --cors "*"
+      --debug
+    networks:
+      - saglik_network
+    depends_on:
+      - action_server
+
+  # Rasa Action Server
+  action_server:
+    image: rasa/rasa-sdk:3.6.0
+    container_name: rasa_action_server
+    ports:
+      - "5055:5055"
+    volumes:
+      - ./rasa_service/actions:/app/actions
+    networks:
+      - saglik_network
+
+  # FastAPI Backend
+  api_service:
+    build:
+      context: ./api_service
+      dockerfile: Dockerfile
+    container_name: api_service
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./api_service:/app
+    environment:
+      - DATABASE_URL=sqlite:///./saglik_chat.db
+    networks:
+      - saglik_network
+
+networks:
+  saglik_network:
+    driver: bridge

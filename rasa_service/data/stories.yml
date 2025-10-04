@@ -1,0 +1,29 @@
+# Konuşma akışları
+version: "3.1"
+
+stories:
+  - story: greeting and clinic search
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: search_clinic
+      - action: action_search_clinics
+      
+  - story: hotel search path
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: search_hotel
+      - action: action_search_hotels
+      
+  - story: treatment inquiry
+    steps:
+      - intent: ask_treatment
+      - action: utter_ask_treatment
+      - intent: search_clinic
+      - action: action_search_clinics
+      
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye

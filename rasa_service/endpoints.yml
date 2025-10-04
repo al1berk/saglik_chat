@@ -1,0 +1,3 @@
+# Action server'ın (actions.py) adresi
+action_endpoint:
+  url: "http://localhost:5055/webhook"

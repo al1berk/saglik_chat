@@ -1,0 +1,50 @@
+# Intent ve Entity tanımlamaları
+# Konuşma akışlarının
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - merhaba
+      - selam
+      - hey
+      - iyi günler
+      - günaydın
+      
+  - intent: goodbye
+    examples: |
+      - hoşça kal
+      - görüşürüz
+      - güle güle
+      - bay bay
+      
+  - intent: search_clinic
+    examples: |
+      - klinik arıyorum
+      - [İstanbul](city)'da klinik bul
+      - [Antalya](city)'da hastane öner
+      - [diş tedavisi](treatment_type) için klinik
+      - [saç ekimi](treatment_type) yapan yer
+      - [göz ameliyatı](treatment_type) için hastane
+      
+  - intent: search_hotel
+    examples: |
+      - otel arıyorum
+      - [İstanbul](city)'da otel bul
+      - kalacak yer öner
+      - yakınlarda otel var mı
+      - [Ankara](city)'da konaklama
+      
+  - intent: ask_treatment
+    examples: |
+      - hangi tedaviler var
+      - ne tür tedaviler yapılıyor
+      - tedavi seçenekleri neler
+      - ameliyat çeşitleri
+      
+  - intent: ask_price
+    examples: |
+      - fiyat ne kadar
+      - ücret bilgisi
+      - maliyet nedir
+      - kaç para tutar

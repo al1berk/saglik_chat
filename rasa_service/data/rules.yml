@@ -1,0 +1,13 @@
+# Kısa ve net kurallar
+version: "3.1"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+      
+  - rule: Say hello anytime the user greets
+    steps:
+      - intent: greet
+      - action: utter_greet
