@@ -25,12 +25,10 @@ brew install ollama
 ollama serve
 
 # 3. Türkçe destekli model indir
-ollama pull llama2
-# veya
-ollama pull mistral
+ollama pull llama3
 
 # 4. Test et
-ollama run llama2 "Merhaba, nasılsın?"
+ollama run llama3 "Merhaba, nasılsın?"
 ```
 
 #### Entegrasyon:
@@ -229,7 +227,7 @@ python -m http.server 8000
 
 **ŞİMDİ YAPILACAK:**
 1. Ollama'yı kur: `brew install ollama`
-2. Modeli indir: `ollama pull llama2`
-3. Test et: `ollama run llama2 "Merhaba"`
+2. Modeli indir: `ollama pull llama3`
+3. Test et: `ollama run llama3 "Merhaba"`
 
 Hazır olunca devam edelim! 🎯
