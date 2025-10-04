@@ -1,0 +1,2185 @@
+{
+  "all_clinics": [
+    {
+      "id": "ant_clinic_001",
+      "name": "Antmodern Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "Fener Mahallesi Bülent Ecevit Blv. No:50 07160 Muratpaşa/Antalya",
+      "phone": "0 242 324 98 98",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_002",
+      "name": "Antalya Bilim University Faculty Of Dentistry Oral & Dental Health Treatment Center",
+      "rating": 4.93,
+      "address": "Tahıl Pazarı Mahallesi Kazım Özalp Cad. Adnan Menderes Bulvarı No:84 Kat:9 Muratpaşa /Antalya",
+      "phone": "0 242 245 00 11",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_003",
+      "name": "Dr. Seda Erdoğan Clinic",
+      "rating": 4.78,
+      "address": "Çağlayan Mahallesi 2047. Sokak No:1 Muratpaşa/ANTALYA",
+      "phone": "0 242 323 78 78",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_004",
+      "name": "Dr. Gökhan Özerdem Clinic",
+      "rating": 4.93,
+      "address": "Yeşilbahçe Mahallesi Metin Kaşapoğlu Cad. Ayhan Kadam İş Merkezi A blok No: 48/11 Muratpaşa /Antalya",
+      "phone": "0 242 322 93 90",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_005",
+      "name": "Dr. Hasan Hüseyin Balıkçı Clinic",
+      "rating": 4.87,
+      "address": "Arapsuyu Mahallesi Atatürk Bulvarı M. Gökay Plaza No:23/41 Konyaaltı/Antalya",
+      "phone": "0 542 471 61 14",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_006",
+      "name": "Dr. Emin Ali Tütüncü Clinic",
+      "rating": 4.78,
+      "address": "Liman Mahallesi 32 Sok. Ofis Peker İş Merkezi No:2/31 Konyaaltı/Antalya",
+      "phone": "0 242 324 81 19",
+      "treatments": [
+        "Hypnotherapy",
+        "Career Coaching",
+        "Child Psychotherapy",
+        "Couples Therapy",
+        "Bereavement Counselling"
+      ]
+    },
+    {
+      "id": "ant_clinic_007",
+      "name": "Dt. Murat Özbıyık Clinic",
+      "rating": 4.98,
+      "address": "Yeşilbahçe Mahallesi Metin Kaşapoğlu Cad. 3/1 Muratpaşa/ Antalya",
+      "phone": "0 242 321 78 78",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_008",
+      "name": "Akdeniz Hospital",
+      "rating": 4.93,
+      "address": "Sorgun Mahallesi 8151 Sk.No:10 Manavgat/Antalya",
+      "phone": "0 242 746 00 13",
+      "treatments": [
+        "Hip Replacement",
+        "Pediatric Orthopedics",
+        "Knee Replacement",
+        "Arthroscopic Operations",
+        "Spinal Surgery"
+      ]
+    },
+    {
+      "id": "ant_clinic_009",
+      "name": "Markasya Oral & Dental Health Clinic",
+      "rating": 4.87,
+      "address": "Toros Mahallesi 805 Sokak Kurgu Plaza No: 14/1 Konyaaltı/Antalya",
+      "phone": "+90 242 241 81 62",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_010",
+      "name": "Medworld Health Phys Therapy & Rehabilitation Center",
+      "rating": 4.65,
+      "address": "Meltem Mahellesi Sabuncu Bulvarı Konyaaltı/Antalya",
+      "phone": "+90 549 800 41 05",
+      "treatments": [
+        "Hypnotherapy",
+        "Career Coaching",
+        "Child Psychotherapy",
+        "Couples Therapy",
+        "Bereavement Counselling"
+      ]
+    },
+    {
+      "id": "ant_clinic_011",
+      "name": "Dr. Namık Yılmaz Clinic",
+      "rating": 4.98,
+      "address": "Kuşkavağı Mahallesi 542.sok No:1 Yakamoz Plaza No:4/kat 2 Konyaaltı/Antalya",
+      "phone": "0 242 344 50 50",
+      "treatments": [
+        "Stomach Stapling Surgery",
+        "Gastric Balloon",
+        "Sleeve Gastrectomy",
+        "Duodenal Switch Surgery",
+        "Gastric Bypass"
+      ]
+    },
+    {
+      "id": "ant_clinic_012",
+      "name": "Akdeniz Şifa Hospital",
+      "rating": 4.93,
+      "address": "Kuzey Yaka Mahallesi Varsak Köprüsü Yeşilırmak Caddesi No:367 07060 Kepez/Antalya",
+      "phone": "444 76 06",
+      "treatments": [
+        "Hip Replacement",
+        "Pediatric Orthopedics",
+        "Knee Replacement",
+        "Arthroscopic Operations",
+        "Spinal Surgery"
+      ]
+    },
+    {
+      "id": "ant_clinic_013",
+      "name": "Akdeniz Şifa Konyaaltı Medical Center",
+      "rating": 4.87,
+      "address": "Kuşkavağı Mahallesi Atatürk Bulvarı No:81 Konyaaltı/Antalya",
+      "phone": "444 76 06",
+      "treatments": [
+        "Hip Replacement",
+        "Pediatric Orthopedics",
+        "Knee Replacement",
+        "Arthroscopic Operations",
+        "Spinal Surgery"
+      ]
+    },
+    {
+      "id": "ant_clinic_014",
+      "name": "Antalya Lara Anadolu Hospital",
+      "rating": 4.65,
+      "address": "Güzeloba Mahallesi Havaalanı Caddesi 07230 Muratpaşa/Antalya",
+      "phone": "0 242 349 40 40",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_015",
+      "name": "Akdeniz Health Vakfı (Asv) Yaşam Hospital",
+      "rating": 4.78,
+      "address": "Merkez Mahallesi Lise Caddesi No:26 Kemer/Antalya",
+      "phone": "0 242 212 0 444",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_016",
+      "name": "Antalya Anadolu Hospital",
+      "rating": 4.65,
+      "address": "Çaybaşı Mahallesi 1352 Sokak No:8 07100 Muratpaşa/Antalya",
+      "phone": "0 242 249 33 00",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_017",
+      "name": "Antera Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Fener Mahallesi Falez Cad. Kemerler Apt. A Blok Kat:1 Daire: 3/4 Muratpaşa/Antalya",
+      "phone": "0 242 332 26 26",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_018",
+      "name": "Antalya Uncalı Meydan Hospital",
+      "rating": 4.93,
+      "address": "Molla Yusuf Mahallesi 1425. Sokak No: 9 07070 Uncalı Konyaaltı /Antalya",
+      "phone": "0 242 226 03 03",
+      "treatments": [
+        "Hip Replacement",
+        "Pediatric Orthopedics",
+        "Knee Replacement",
+        "Arthroscopic Operations",
+        "Spinal Surgery"
+      ]
+    },
+    {
+      "id": "ant_clinic_019",
+      "name": "Alaiye Beyaz Oral & Dental Health Clinic",
+      "rating": 4.87,
+      "address": "Şekerhane Mahallesi Halimağa Caddesi Lale Plaza İş Merkezi Kat 2 No 7 07400 Antalya",
+      "phone": "0 242 511 37 37",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_020",
+      "name": "Dt. Yasemin Dolaşık Clinic",
+      "rating": 4.65,
+      "address": "Meydankavağı Mahallesi Perge Bulvarı Mehmet Atalay Apartmanı A Blok No:26/2 Muratpaşa/Antalya",
+      "phone": "0 551 045 96 73",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_021",
+      "name": "Antalya Opera Yaşam Hospital",
+      "rating": 4.78,
+      "address": "Cumhuriyet Mahallesi No:629 Sokak No:16 07160 Muratpaşa/Antalya",
+      "phone": "0 242 212 06 66",
+      "treatments": [
+        "Hip Replacement",
+        "Pediatric Orthopedics",
+        "Knee Replacement",
+        "Arthroscopic Operations",
+        "Spinal Surgery"
+      ]
+    },
+    {
+      "id": "ant_clinic_022",
+      "name": "Antalya IVF Center",
+      "rating": 4.98,
+      "address": "Kanal Mahallesi Halide Edip Caddesi No:7 07080 Antalya",
+      "phone": "0 242 345 47 00",
+      "treatments": [
+        "IVF"
+      ]
+    },
+    {
+      "id": "ant_clinic_023",
+      "name": "Antlara Oral & Dental Health Clinic",
+      "rating": 4.93,
+      "address": "Fener Mahallesi Tekelioğlu Caddesi, No:51/6 Muratpaşa / Antalya",
+      "phone": "0 242 324 57 79",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_024",
+      "name": "Dr. Azem Çobaner Clinic",
+      "rating": 4.87,
+      "address": "Varlık Mah. 192 Sk. Başaran 1 Apartmanı No: 5/5 Muratpaşa/Antalya",
+      "phone": "0 242 237 64 46",
+      "treatments": []
+    },
+    {
+      "id": "ant_clinic_025",
+      "name": "Ballıpınar Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Çağlayan Mahallesi Barınaklar Bulvarı No:78/A Muratpaşa/Antalya",
+      "phone": "0 242 323 26 07",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_026",
+      "name": "Dt. Niyazi Selim Selçuk Clinic",
+      "rating": 4.98,
+      "address": "Şirinyalı Mahallesi İsmet Gökşen Caddesi No:98/102 Muratpaşa/Antalya",
+      "phone": "0 242 244 22 11",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_027",
+      "name": "Atalya Oral & Dental Health Clinic",
+      "rating": 4.93,
+      "address": "Ulus Mahallesi Mehmet Akif Caddesi No: 50/A Kepez / ANTALYA",
+      "phone": "0 242 334 0107",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_028",
+      "name": "Antalya Yaşam Hospital",
+      "rating": 4.87,
+      "address": "Şirinyalı Mahallesi 1487 Sokak No:4 07160 Muratpaşa/Antalya",
+      "phone": "0 242 310 80 80",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_029",
+      "name": "Beyaz Ada Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "Fener Mahallesi Tekelioğlu Cad. Astur Ceylan Sitesi C Blok No:80/1 D:1 Muratpaşa/Antalya",
+      "phone": "0 242 324 94 95",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_030",
+      "name": "ASKlinik Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Meydankavağı Mahallesi İsmail Cem Cad. C Blok No:10 Muratpaşa/Antalya",
+      "phone": "0 242 322 08 80",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_031",
+      "name": "Aspendos Anadolu Hospital",
+      "rating": 4.98,
+      "address": "Yeni Mahalle Atatürk Bulvarı 07980 Kemer/Antalya",
+      "phone": "0 242 722 53 53",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_032",
+      "name": "Baron Oral & Dental Health Clinic",
+      "rating": 4.93,
+      "address": "Side Mahallesi İnönü(Yalı) Bulvarı M.Erkek Apt. No:2-6/Z23 Manavgat / Antalya",
+      "phone": "0 242 746 23 63",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_033",
+      "name": "Op. Dr. Mehmet Ali Korkmaz Clinic",
+      "rating": 4.87,
+      "address": "Fener Mahallesi 1968 Sokak Özdemir Apartmanı No:11 İç Kapı No:4 Muratpaşa/Antalya",
+      "phone": "0 506 799 62 15",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_034",
+      "name": "Op. Dr. Atilla Fesli Clinic",
+      "rating": 4.65,
+      "address": "Yeşilbahçe Mahallesi Portakal Çiçeği Caddesi 1460 Sokak Turunç Plaza İş Merkezi No:6/303 Muratpaşa/Antalya",
+      "phone": "0 242 312 66 09",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_035",
+      "name": "Op. Dr. Yılmaz Geyik Clinic",
+      "rating": 4.78,
+      "address": "Fener Mahallesi Fener Caddesi Beyaz Dünya İş Merkezi No:15 Kat:2 No:35-36 Muratpaşa/Antalya",
+      "phone": "0 242 323 24 23",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_036",
+      "name": "De Clinic Oral & Dental Health Clinic",
+      "rating": 4.98,
+      "address": "Çağlayan Mahallesi Barınaklar Bulvarı No:66/A Muratpaşa /Antalya",
+      "phone": "0 242 255 55 18",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_037",
+      "name": "Attelia Oral & Dental Health Center",
+      "rating": 4.93,
+      "address": "Kızıltoprak Mahallesi Aspendos Bulvarı Çam Plaza No:19/B Muratpaşa/Antalya",
+      "phone": "0 242 312 50 24",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_038",
+      "name": "Op. Dr. Mehmet Arif Karagöz Clinic",
+      "rating": 4.87,
+      "address": "Yeşilbahçe Mah.Semt Tevfik Işık Cad. No: 14A//4 Muratpaşa /Antalya",
+      "phone": "0 534 234 44 44",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_039",
+      "name": "Op. Dr. Bahadır Çelik Clinic",
+      "rating": 4.65,
+      "address": "Fener Mah. Tekelioğlu Cad. No:9 Şenol Çimen Apt. Daire: 6 Muratpaşa /Antalya",
+      "phone": "0 530 185 83 10",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_040",
+      "name": "Dct Klinik Oral & Dental Health Center",
+      "rating": 4.78,
+      "address": "Güzeloba Mahallesi Rauf Denktaş Caddesi Ozan Apt.A Blok No:12/A Muratpaşa/Antalya",
+      "phone": "0 242 349 11 01",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_041",
+      "name": "A-dent Oral & Dental Health Clinic",
+      "rating": 4.98,
+      "address": "Gebizli Mah. Termessos Bulv. No:545F A1-A2 Blok Muratpaşa/Antalya",
+      "phone": "0 552 504 71 15",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_042",
+      "name": "Dentgroup Oral & Dental Health Clinic",
+      "rating": 4.93,
+      "address": "Güzeloba Mahallesi, B, Barınaklar Blv. No:130, 07230 Muratpaşa/Antalya",
+      "phone": "0 242 349 49 22",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_043",
+      "name": "Denart Oral & Dental Health Clinic",
+      "rating": 4.87,
+      "address": "Bahçelievler Mahallesi Sorkun Bulvarı Pk:07600 07660 Manavgat/Antalya",
+      "phone": "0 242 746 49 00",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_044",
+      "name": "Dentares Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "Şirinyalı Mahallesi İsmet Gökşen Caddesi Güzel Apartmanı No:18/A Muratpaşa/Antalya",
+      "phone": "0 242 316 30 00",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_045",
+      "name": "Dr. Figen Sayın Yıldıran Clinic",
+      "rating": 4.78,
+      "address": "Fener Mahallesi 1950.Sok. Working Plaza NO:2/Z02 Daire.6 Muratpaşa/Antalya",
+      "phone": "0 242 316 21 41",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_046",
+      "name": "Dizayn Oral & Dental Health Clinic",
+      "rating": 4.98,
+      "address": "Yeşilbahçe Mahallesi Metin Kaşapoğlu Cad. Gökhan İş Merkezi A Blok No:19 D:4 Muratpaşa /Antalya",
+      "phone": "0 242 312 44 59",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_047",
+      "name": "Demet Oral & Dental Health Clinic",
+      "rating": 4.93,
+      "address": "Altınkum Mahallesi Anadolu Cad. Kıvılcım Apt. No:43/A Konyaaltı/Antalya",
+      "phone": "0 242 229 02 01",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_048",
+      "name": "DK Clinic",
+      "rating": 4.87,
+      "address": "Şirinyalı Mahallesi İsmet Gökşen Cad. No:14 Muratpaşa/Antalya",
+      "phone": "0 242 317 10 00",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_049",
+      "name": "Büyükgebiz Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "Yenigün Mahallesi Mevlana Cad. Özpınarlar Midtown Plaza No:54 Muratpaşa /Antalya",
+      "phone": "0 242 502 50 50",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_050",
+      "name": "Dişpark Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Bahçeli Evler Mahallesi Çetin Emeç Caddesi No.50 Manavgat / Antalya",
+      "phone": "0 242 746 40 01",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_051",
+      "name": "Dr. Ömer Özkan Clinic",
+      "rating": 4.98,
+      "address": "Yeşilbahçe Mahallesi 1470 Sok. No:12 Muratpaşa /Antalya",
+      "phone": "0 242 228 28 28",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_052",
+      "name": "Dr. Sibel Atalay Clinic",
+      "rating": 4.93,
+      "address": "Fener Mahallesi Falez Cad. No:1/8 Muratpaşa/Antalya",
+      "phone": "0 242 338 08 48",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_053",
+      "name": "Dr. Mahmut Ulvi Kayalı Clinic",
+      "rating": 4.87,
+      "address": "Fener Mahallesi 1971 Sok. D Blok No:36D İç Kapı No: 5-6 Muratpaşa / Antalya",
+      "phone": "0 242 322 02 12",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_054",
+      "name": "Almina Clinic",
+      "rating": 4.65,
+      "address": "Yeşilbahçe Mah. Çınarlı Cad. 3. Erivan Apt. No:1/5-6 Muratpaşa/Antalya",
+      "phone": "0 242 311 05 81",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_055",
+      "name": "Flora Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Arapsuyu Mahallesi Atatürk Bulvarı No:47/21 Konyaaltı/Antalya",
+      "phone": "0 242 222 02 04",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_056",
+      "name": "Dr. Harun Şimşek Clinic",
+      "rating": 4.93,
+      "address": "Fener Mahallesi Fener Cad. Fener İş Merkezi A Blok No:9 Büro:7(103) Muratpaşa /Antalya",
+      "phone": "0 242 323 23 63",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_057",
+      "name": "Ezgi Şenyurt Dt. Clinic",
+      "rating": 4.87,
+      "address": "Arapsuyu Mahallesi Atatürk Bulvarı No:25/13 Konyaaltı /Antalya",
+      "phone": "0 242 248 48 35",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_058",
+      "name": "Dünyagöz Hospital",
+      "rating": 4.78,
+      "address": "Zafer Mahallesi Yıldırım Beyazıt Caddesi No:93 07020 Kepez/Antalya",
+      "phone": "444 44 69",
+      "treatments": [
+        "Keratoplasty",
+        "Cataract",
+        "Oculoplastic Surgery",
+        "Epi-LASIK Eye Surgery",
+        "Extracapsullar Cataract Extraction"
+      ]
+    },
+    {
+      "id": "ant_clinic_059",
+      "name": "IDH Süleyman Mert Oral & Dental Health Center",
+      "rating": 4.98,
+      "address": "Kültür Mahallesi 3822 Sok. No:6 Kepez/Antalya",
+      "phone": "0 242 243 38 47",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_060",
+      "name": "Klinik 7 Oral & Dental Health Clinic",
+      "rating": 4.93,
+      "address": "Güzeloba Mahallesi Çağlayangil Cad.No:7/A Muratpaşa/Antalya",
+      "phone": "0 242 243 41 18",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_061",
+      "name": "Hurma Oral & Dental Health Clinic",
+      "rating": 4.87,
+      "address": "Liman Mahallesi 16. Sokak Demir Apt. No: 4/1-2 Konyaaltı / ANTALYA",
+      "phone": "0 242 259 58 53",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_062",
+      "name": "Kemer Yaşam Hospital",
+      "rating": 4.65,
+      "address": "Merkez Mahallesi Lise Caddesi No:26 Kemer/Antalya",
+      "phone": "0 242 814 60 70",
+      "treatments": [
+        "Hip Replacement",
+        "Pediatric Orthopedics",
+        "Knee Replacement",
+        "Arthroscopic Operations",
+        "Spinal Surgery"
+      ]
+    },
+    {
+      "id": "ant_clinic_063",
+      "name": "Medicalpark Antalya Hospital Complex",
+      "rating": 4.78,
+      "address": "Fener Mahallesi Tekelioğlu Caddesi No:7 07160 Muratpaşa/Antalya",
+      "phone": "0 242 314 34 34",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_064",
+      "name": "Korkut Gürsoy Dt. Clinic",
+      "rating": 4.98,
+      "address": "Kazım Karabekir Cad. No:32 Kat:1 Side/Antalya",
+      "phone": "0 242 753 69 61",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_065",
+      "name": "Falez Oral & Dental Health Clinic",
+      "rating": 4.93,
+      "address": "Şirinyalı Mahallesi Özgürlük Bulvarı Özgür Apt. No:31/4-5 Muratpaşa / Antalya",
+      "phone": "0 242 316 16 62",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_066",
+      "name": "Kubilay Yücel Clinic",
+      "rating": 4.87,
+      "address": "Fener Mahallesi 1971. sok. No:36 D Blok 1-2-3 Muratpaşa /ANTALYA",
+      "phone": "444 30 75",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_067",
+      "name": "Klinik Myra Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "Şirinyalı Mahallesi İsmet Gökşen Cad. Osman Eceoğlu Sitesi B Blok No:114/A Muratpaşa/ANTALYA",
+      "phone": "0 242 247 49 54",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_068",
+      "name": "Konyaaltı Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Liman Mahallesi32.Sk.No:8 Daire:2 Konyaaltı/Antalya",
+      "phone": "0 242 229 52 02",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_069",
+      "name": "Medstar Topçular Hospital",
+      "rating": 4.98,
+      "address": "Tarım Mahallesi Perge Bulvarı No:19 07200 Muratpaşa/Antalya",
+      "phone": "0 242 310 32 32",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_070",
+      "name": "Mediface Medical Center",
+      "rating": 4.93,
+      "address": "Çağlayan Mahallesi Bülent ECEVİT Blv. 2044. Sok. No:171 Muratpaşa /Antalya",
+      "phone": "+44 20 3290 0594",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_071",
+      "name": "Medicus Clinic",
+      "rating": 4.87,
+      "address": "Side Mahallesi Kazım Karabekir Cad. No: 50 Manavgat/Antalya",
+      "phone": "0 242 753 11 11",
+      "treatments": [
+        "Hypnotherapy",
+        "Career Coaching",
+        "Child Psychotherapy",
+        "Couples Therapy",
+        "Bereavement Counselling"
+      ]
+    },
+    {
+      "id": "ant_clinic_072",
+      "name": "Medstar Antalya Hospital",
+      "rating": 4.65,
+      "address": "Yıldız Mahallesi Yıldız Caddesi 220 Sokak No:19 Merkez/Antalya",
+      "phone": "0 242 310 92 92",
+      "treatments": [
+        "Hip Replacement",
+        "Pediatric Orthopedics",
+        "Knee Replacement",
+        "Arthroscopic Operations",
+        "Spinal Surgery"
+      ]
+    },
+    {
+      "id": "ant_clinic_073",
+      "name": "Olimpos Hospital",
+      "rating": 4.78,
+      "address": "Öğretmenevleri Mahallesi Çamlık Caddesi 460 Sk. No : 48 Konyaaltı /Antalya",
+      "phone": "0 242 228 09 09",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_074",
+      "name": "Motto Oral & Dental Health Clinic",
+      "rating": 4.98,
+      "address": "Bahçelievler Mahallesi Konyaaltı Cad No:72/1 Muratpaşa /ANTALYA",
+      "phone": "+90 (242) 244 42 22",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_075",
+      "name": "Manavgat Yaşam Hospital",
+      "rating": 4.93,
+      "address": "Kavaklı Mahallesi Hasan Fehmi Boztepe Caddesi No:176 07600 Manavgat/Antalya",
+      "phone": "0 242 212 08 88",
+      "treatments": [
+        "Hip Replacement",
+        "Pediatric Orthopedics",
+        "Knee Replacement",
+        "Arthroscopic Operations",
+        "Spinal Surgery"
+      ]
+    },
+    {
+      "id": "ant_clinic_076",
+      "name": "Msc Oral & Dental Health Clinic",
+      "rating": 4.87,
+      "address": "Güzeloba Mahallesi Barınaklar Bulvarı No:1 07230 Muratpaşa/Antalya",
+      "phone": "0 242 349 75 23",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_077",
+      "name": "Memorial Antalya Hospital",
+      "rating": 4.65,
+      "address": "Zafer Mahallesi Yıldırım Beyazıt Caddesi No:91 07020 Kepez/Antalya",
+      "phone": "0 242 314 66 66",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_078",
+      "name": "Modern Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Bahçelievler Mahallesi Antalya Caddesi No:43/3-4 Manavgat/Antalya",
+      "phone": "0 242 746 05 05",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_079",
+      "name": "Panoramik Oral & Dental Health Clinic",
+      "rating": 4.98,
+      "address": "Çağlayan Mahallesi Bülent Ecevit Blv. Park Residance Evleri A Blok No:112/B Muratpaşa/ANTALYA",
+      "phone": "0 242 243 04 42",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_080",
+      "name": "Orion Oral & Dental Health Clinic",
+      "rating": 4.93,
+      "address": "Fener Mahallesi Bülent ECEVİT Blv. No:72 Muratpaşa /Antalya",
+      "phone": "444 2 676",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_081",
+      "name": "Panoramik Oral & Dental Health Clinic",
+      "rating": 4.87,
+      "address": "Liman Mahallesi Boğaçayı Caddesi Tuğba Apartmanı 71/B Antalya",
+      "phone": "0 242 348 00 30",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_082",
+      "name": "Ortoperio Antalya Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "Çağlayan Mahallesi Barınaklar Bulvarı No:60/A Muratpaşa/Antalya",
+      "phone": "0 242 329 44 44",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_083",
+      "name": "Şirinyalı Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Şirinyalı Mahallesi İsmet Gökşen Cad. Kurt Apt. No:63/7 Muratpaşa / Antalya",
+      "phone": "0 242 316 13 31",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_084",
+      "name": "Rengarenk Oral & Dental Health Clinic-Uncalı Branch",
+      "rating": 4.98,
+      "address": "Uluç Mahallesi Gazi Mustafa Kemal Bulvarı İş Merkezi Apt. No:93/A Konyaaltı/Antalya",
+      "phone": "0 242 230 36 36",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_085",
+      "name": "TALYA BİLİŞİM",
+      "rating": 4.93,
+      "address": "Akdeniz Üniversitesi",
+      "phone": null,
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_086",
+      "name": "Sayın Ortodonti Oral & Dental Health Clinic",
+      "rating": 4.87,
+      "address": "Fener Mahallesi 1968 Sokak Sayın Plaza D:27 07160 Muratpaşa/Antalya",
+      "phone": "0 242 316 96 26",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_087",
+      "name": "Perla Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "Fener Mahallesi Lara Caddesi 1964 sokak no:7 Antalya",
+      "phone": "0 242 323 22 88",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_088",
+      "name": "Umut Antalya Oral & Dental Health Clinic",
+      "rating": 4.98,
+      "address": "Kanal Mahallesi Antalya Bulvarı No:110 Kepez / Antalya",
+      "phone": "0 242 332 51 55",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_089",
+      "name": "Talya Medical Center",
+      "rating": 4.93,
+      "address": "Ögretmenevleri Mah, Atatürk Blv. No:74/A 07070 Konyaaltı/Antalya",
+      "phone": "0 242 228 78 78",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_090",
+      "name": "Papatya Oral & Dental Health Clinic",
+      "rating": 4.87,
+      "address": "Kuşkavağı Mahallesi Atatürk Bulvarı Cad. No:77/1 Konyaaltı /Antalya",
+      "phone": "0 242 230 07 07",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_091",
+      "name": "JST Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "Tarım Mahallesi Perge Bulvarı C Blok No:13/D Muratpaşa/Antalya",
+      "phone": "+90 532 364 8910",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_092",
+      "name": "Yalın Oral & Dental Health Clinic",
+      "rating": 4.98,
+      "address": "Öğretmenevleri Mahallesi Çamlık Cad. Çamlık Apt. No:40/A Konyaaltı/Antalya",
+      "phone": "0 242 229 89 99",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_093",
+      "name": "Sevil Smile Studio Oral & Dental Health Clinic - Antalya",
+      "rating": 4.93,
+      "address": "Fener Mahallesi Lara Cad. C Blok No:239/C Muratpaşa /Antalya",
+      "phone": "0 242 324 18 88",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_094",
+      "name": "Konyaaltı Dentgroup Oral & Dental Health Clinic",
+      "rating": 4.87,
+      "address": "Kuşkavağı Mahallesi 563 Sokak No:2/A Konyaaltı/Antalya",
+      "phone": "0 242 255 07 42",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_095",
+      "name": "Veske Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "A. Hisar Mahallesi 4604 Sokak No:18/1 Manavgat/Antalya",
+      "phone": "0 242 777 06 66",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_096",
+      "name": "Vitale Gynecology and Obstetrics Hospital",
+      "rating": 4.78,
+      "address": "Kanal Mahallesi Halide Edip Cad. No:5 Kepez/Antalya",
+      "phone": "0 242 345 28 28",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_097",
+      "name": "Turuncu Oral & Dental Health Clinic",
+      "rating": 4.98,
+      "address": "Fabrikalar Mahallesi 3002. Sk No:34/1 Kepez /Antalya",
+      "phone": "0 242 344 01 00",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_098",
+      "name": "LD Klinik Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Gazi Mahallesi Yeşilırmak Caddesi 1-A Blok No:172 D Kepez/Antalya",
+      "phone": "0 242 504 66 22",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_099",
+      "name": "Medikum Hospital",
+      "rating": 4.87,
+      "address": "Hacıevler Mah. Merkez Sok. No:2 Kumluca/Antalya",
+      "phone": "0 242 887 22 10",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_100",
+      "name": "Uzm. Dr. Berat Çiğdem Clinic",
+      "rating": 4.65,
+      "address": "Çağlayan Mahallesi Fener Cad Irmak Apt. No:51/7 Muratpaşa /ANTALYA",
+      "phone": "0 531 241 20 81",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_101",
+      "name": "Zorlu Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Altındağ Mahallesi Güllük Caddesi Birol Apt. No:95/C Muratpaşa/Antalya",
+      "phone": "0 242 248 36 46",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_102",
+      "name": "Mavi Yeşil Oral & Dental Health Clinic",
+      "rating": 4.98,
+      "address": "Uncalı Mah. Toroslar Cad. Ramazan Karabulut Sit. No:82BB Konyaaltı/Antalya",
+      "phone": "0 242 228 22 22",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+    {
+      "id": "ant_clinic_103",
+      "name": "Uz. Dr. Ali Bacanlı Skin & Venereal Diseases Clinic",
+      "rating": 4.87,
+      "address": "Zerdalilik Mahallesi Burhanettin Onat Cad. No:96/A Muratpaşa/Antalya",
+      "phone": "0 242 321 19 82",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_104",
+      "name": "Uzm. Dr. Engin Erkal Clinic",
+      "rating": 4.65,
+      "address": "Yeşilbahçe Mahallesi Metin Kaşapoğlu Cad. No:19/A D:13 Muratpaşa /Antalya",
+      "phone": "0 242 313 07 70",
+      "treatments": [
+        "Facial Surgery",
+        "Seconder Rhinoplasty",
+        "Open Rhinoplasty",
+        "Septum Deviation",
+        "Septoplasty"
+      ]
+    },
+    {
+      "id": "ant_clinic_105",
+      "name": "Pekel Oral & Dental Health Clinic",
+      "rating": 4.98,
+      "address": "Kızılsaray Mahallesi Yener Ulusoy Bulvarı Talay Apt.No.17/A Muratpaşa/Antalya",
+      "phone": "0 242 247 38 58",
+      "treatments": [
+        "Composite Bonding",
+        "Zirconium Crowns",
+        "Porcelain Veneers",
+        "Cosmetic Dentistry",
+        "Teeth Whitening"
+      ]
+    },
+  {
+    "id": "ist_clinic_001",
+    "name": "Doç. Dr. Ahu Birol Kocaalp Clinic",
+    "rating": 4.98,
+    "address": "Caddebostan Mahallesi Kavaklı Sok. Aliye Hanım Ap. No:2 Kat:2 Daire:3 Kadıköy /İstanbul",
+    "phone": "0 216 350 13 33",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_002",
+    "name": "Acıbadem University Acıbadem Atakent Hospital",
+    "rating": 4.93,
+    "address": "Halkalı Merkez Mahallesi Turgut Özal Bulvarı No:16 Küçükçekmece/İSTANBUL",
+    "phone": "0 212 404 44 44",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_003",
+    "name": "Biruni University Health Eğitimi Research & Application Center",
+    "rating": 4.98,
+    "address": "Beşyol Mahallesi Eski Londra Asfaltı No:10 Küçükçekmece/İstanbul",
+    "phone": "444 8 276",
+    "city": "İstanbul",
+    "treatments": [
+      "Keratoplasty",
+      "Cataract",
+      "Oculoplastic Surgery",
+      "Epi-LASIK Eye Surgery",
+      "Extracapsullar Cataract Extraction"
+    ]
+  },
+  {
+    "id": "ist_clinic_004",
+    "name": "Doç. Dr. Dağhan Işık Clinic",
+    "rating": 4.87,
+    "address": "Teşvikiye Mahallesi Hakkı Yeten Caddesi Vital Fulya Plaza No:23 K:2 D:6 Oda No:2 Şişli/İstanbul",
+    "phone": "0 533 225 36 96",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_005",
+    "name": "Doç. Dr. Aydın ARSLAN Clinic",
+    "rating": 4.65,
+    "address": "Ataköy 7-8-9-10. Kısım Mahallesi Çobançeşme E5 Yanyol Cad. Ataköy Towers A Blok No.20/1 D:108 K:6 Bakırköy/İstanbul",
+    "phone": "0 506 777 44 44",
+    "city": "İstanbul",
+    "treatments": [
+      "Hip Replacement",
+      "Pediatric Orthopedics",
+      "Knee Replacement",
+      "Arthroscopic Operations",
+      "Spinal Surgery"
+    ]
+  },
+  {
+    "id": "ist_clinic_006",
+    "name": "Dentopol Oral & Dental Health Clinic",
+    "rating": 4.78,
+    "address": "Altayçeşme Mahallesi Bağdat Caddesi No:317/1 Maltepe/İstanbul",
+    "phone": "444 97 37",
+    "city": "İstanbul",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "ist_clinic_007",
+    "name": "Dr. Hakan Öçsel Clinic",
+    "rating": 4.98,
+    "address": "Dr. Faruk Ayanoğlu Cad.Dirim Apt.No:22/5 Kadıköy /İstanbul",
+    "phone": "0 532 387 30 50",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_008",
+    "name": "Doç. Dr. Burak Ersoy Clinic",
+    "rating": 4.93,
+    "address": "Halaskargazi Mahallesi Valikonağı Cad. No:91-93 D:5 Oda:3 K:5 Şişli/İstanbul",
+    "phone": "0 212 291 66 79",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_009",
+    "name": "Avrasya Hospital",
+    "rating": 4.87,
+    "address": "Beştelsiz Mahallesi 101 Sokak No:107 Zeytinburnu/İstanbul",
+    "phone": "0 212 665 50 50",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_010",
+    "name": "Derindere Hospital",
+    "rating": 4.65,
+    "address": "Merkez Mahallesi Çobançeşme Caddesi Burcu Sokak No:9 Kâğıthane/İstanbul",
+    "phone": "0 212 888 38 88",
+    "city": "İstanbul",
+    "treatments": [
+      "Hip Replacement",
+      "Pediatric Orthopedics",
+      "Knee Replacement",
+      "Arthroscopic Operations",
+      "Spinal Surgery"
+    ]
+  },
+  {
+    "id": "ist_clinic_011",
+    "name": "Dr. Berat Bora Ok Clinic",
+    "rating": 4.98,
+    "address": "Fenerbahçe Mahallesi Cemil Topuzlu Caddesi Lalezar Sokak No:7 K:3 D:9 Kadıköy/İstanbul",
+    "phone": "0 216 358 21 22",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_012",
+    "name": "Başkent University İstanbul Health Research & Application Center",
+    "rating": 4.93,
+    "address": "Altunizade Mahallesi Kısıklı Caddesi Oymacı Sokak No:7 Üsküdar/İstanbul",
+    "phone": "0 216 554 15 00",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_013",
+    "name": "Dt. Ahmet Sinan Cem ÇEPELOĞLU Clinic",
+    "rating": 4.87,
+    "address": "Merkez Mahallesi Halaskargazi Cad. Mürüvvet Apt. No:165/3 K:3 Şişli/İstanbul",
+    "phone": "0 541 688 48 98",
+    "city": "İstanbul",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "ist_clinic_014",
+    "name": "Dr. İsmail Metin Hoşer Clinic",
+    "rating": 4.65,
+    "address": "Acıbadem Mahallesi Şeyh Galip sokak No:2/1 Elysium Elit Sitesi B Blok D:29 Kadıköy/İstanbul",
+    "phone": "0 534 478 88 71",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_015",
+    "name": "Dr. Fatma Gökçe HASPOLAT Clinic",
+    "rating": 4.78,
+    "address": "Harbiye Mahallesi Abdi İpekçi Caddesi Deniz Apartmanı No:20 D:6 K:1 Şişli/İstanbul",
+    "phone": "0 533 277 52 72",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_016",
+    "name": "İstanbul Aydın University Health Research & Application Center",
+    "rating": 4.98,
+    "address": "Beşyol Mahallesi Fabrikalar Caddesi No:3 Küçükçekmece/İstanbul",
+    "phone": "444 1 428",
+    "city": "İstanbul",
+    "treatments": []
+  },
+  {
+    "id": "ist_clinic_017",
+    "name": "Doç. Dr. İsmail Küçüker Clinic",
+    "rating": 4.93,
+    "address": "Suadiye Mahallesi Bağdat Caddesi No:461 İç Kapı No:3 Kadıköy/İstanbul",
+    "phone": "0 505 251 38 03",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_018",
+    "name": "Dr. Ziya YAVUZ Clinic",
+    "rating": 4.87,
+    "address": "Teşvikiye Mahallesi Hakkı Yeten Caddesi No.15 D.10 Oda No: 1 Şişli/İstanbul",
+    "phone": "0 544 788 43 88",
+    "city": "İstanbul",
+    "treatments": [
+      "Eyebrow Transplant",
+      "FUT - Follicular Unit Transplant",
+      "FUE - Follicular Unit Extraction",
+      "DHI - Direct Hair Implantation",
+      "Facial Hair Transplant"
+    ]
+  },
+  {
+    "id": "ist_clinic_019",
+    "name": "Dr. Özge Ergün Clinic",
+    "rating": 4.78,
+    "address": "Teşvikiye Mahallesi Hakkı Yeten Cad. Fulya Terrace No:11/67 Şişli/İstanbul",
+    "phone": "0 212 215 55 43",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_020",
+    "name": "Dr. Aslı Berker Clinic",
+    "rating": 4.98,
+    "address": "Meşrutiyet Mahallesi Valikonağı Cd. Kodaman Sok. No:1 Keçeci Apt. K:2 D:2 Oda No:203 Şişli/İstanbul",
+    "phone": "0 212 296 18 08",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_021",
+    "name": "Dünyagöz Etiler Hospital",
+    "rating": 4.93,
+    "address": "Etiler Nispetiye Caddesi Yanarsu Sokak No:1/3 Beşiktaş/İstanbul",
+    "phone": "444 44 69",
+    "city": "İstanbul",
+    "treatments": [
+      "Keratoplasty",
+      "Cataract",
+      "Oculoplastic Surgery",
+      "Epi-LASIK Eye Surgery",
+      "Extracapsullar Cataract Extraction"
+    ]
+  },
+  {
+    "id": "ist_clinic_022",
+    "name": "İstinye University Health Research & Application Center",
+    "rating": 4.87,
+    "address": "Aşık Veysel Mahallesi Süleyman Demirel Caddesi No:1 34517 Esenyurt /İstanbul",
+    "phone": "444 66 23",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ist_clinic_023",
+    "name": "İstanbul Bezmialem Vakıf University Health Research & Application Center",
+    "rating": 4.65,
+    "address": "İskenderpaşa Mahallesi Adnan Menderes Bulvarı (Vatan Cad.) 34093 Fatih / İstanbul",
+    "phone": "0 212 453 18 69",
+    "city": "İstanbul",
+    "treatments": [
+      "Hip Replacement",
+      "Pediatric Orthopedics",
+      "Knee Replacement",
+      "Arthroscopic Operations",
+      "Spinal Surgery"
+    ]
+  },
+  {
+    "id": "ist_clinic_024",
+    "name": "İstanbul Altınbaş University Oral & Dental Health Research & Application Center",
+    "rating": 4.78,
+    "address": "Zuhuratbaba Mahallesi İncirli Cad. No:11 Bakırköy/İstanbul",
+    "phone": "0 212 709 45 30",
+    "city": "İstanbul",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "ist_clinic_025",
+    "name": "Op. Dr. Arzu Türkseven Topaçoğlu Clinic",
+    "rating": 4.98,
+    "address": "Suadiye Mahallesi Bağdat Cd. Noter Sk. No:41/D:1 Kadıköy/İstanbul",
+    "phone": "0 212 368 68 00",
+    "city": "İstanbul",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ank_clinic_001",
+    "name": "Ayaş Prestige Termal Hotel Konaklamalı Phys Therapy & Rehabilitation Center",
+    "rating": 4.93,
+    "address": "Hacıveli Mahallesi Ankara Cad. No:1 Ayaş/Ankara",
+    "phone": "444 89 78",
+    "city": "Ankara",
+    "treatments": [
+      "Hypnotherapy",
+      "Career Coaching",
+      "Child Psychotherapy",
+      "Couples Therapy",
+      "Bereavement Counselling"
+    ]
+  },
+  {
+    "id": "ank_clinic_002",
+    "name": "Başkent University Ankara Hospital",
+    "rating": 4.87,
+    "address": "Yukarı Bahçelievler Mahallesi Mareşal Fevzi Çakmak Caddesi No:45 06490 Çankaya/Ankara",
+    "phone": "+90 312 203 68 68",
+    "city": "Ankara",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ank_clinic_003",
+    "name": "Doç. Dr. Esin Yalçınkaya Clinic",
+    "rating": 4.65,
+    "address": "Mustafa Kemal Mah. Via Green Plaza 2079. Sok. No: 2B/20 Çankaya / Ankara",
+    "phone": "0 530 244 71 84",
+    "city": "Ankara",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ank_clinic_004",
+    "name": "Bilge Hayatlar Huzurevi ve Yaşlı Bakım Center Konaklamalı Phys Therapy & Rehabilitation Center",
+    "rating": 4.78,
+    "address": "Yaşamkent Mahallesi 3166. Sok. No: 14 Çankaya/Ankara",
+    "phone": "0 505 421 07 97",
+    "city": "Ankara",
+    "treatments": [
+      "Hypnotherapy",
+      "Career Coaching",
+      "Child Psychotherapy",
+      "Couples Therapy",
+      "Bereavement Counselling"
+    ]
+  },
+  {
+    "id": "ank_clinic_005",
+    "name": "Doç. Dr. Ozan Bitik Clinic",
+    "rating": 4.98,
+    "address": "Kızılırmak Mahallesi Dumlupınar Bulvarı No:3A/52 Çankaya - Ankara",
+    "phone": "0 531 305 39 37",
+    "city": "Ankara",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ank_clinic_006",
+    "name": "Dünyagöz Ankara Hospital",
+    "rating": 4.93,
+    "address": "Tunus Caddesi No:28 Kavaklıdere Çankaya/Ankara",
+    "phone": "444 44 69",
+    "city": "Ankara",
+    "treatments": [
+      "Keratoplasty",
+      "Cataract",
+      "Oculoplastic Surgery",
+      "Epi-LASIK Eye Surgery",
+      "Extracapsullar Cataract Extraction"
+    ]
+  },
+  {
+    "id": "ank_clinic_007",
+    "name": "Dr. Dt. Yasemin Özyürek Türkdönmez Clinic",
+    "rating": 4.87,
+    "address": "Kızılırmak Mah. 1443. Cad. No: 25/B/174 Çankaya/Ankara",
+    "phone": "0 312 979 88 58",
+    "city": "Ankara",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "ank_clinic_008",
+    "name": "Doktorun Oteli Konaklamalı Phys Therapy & Rehabilitation Center",
+    "rating": 4.65,
+    "address": "Çaldağ Mahallesi Gedik Yolu Cad. No:32 Haymana/Ankara",
+    "phone": "0 542 658 00 10",
+    "city": "Ankara",
+    "treatments": [
+      "Hypnotherapy",
+      "Career Coaching",
+      "Child Psychotherapy",
+      "Couples Therapy",
+      "Bereavement Counselling"
+    ]
+  },
+  {
+    "id": "ank_clinic_009",
+    "name": "Eliz Thermal Hotel Convention Spa Wellness Konaklamalı Phys Therapy & Rehabilitation Center",
+    "rating": 4.98,
+    "address": "İsmetpaşa Mahallesi Gülşenler Cad. No: 7/1 Kızılcahamam/Ankara",
+    "phone": "+90 3128104444",
+    "city": "Ankara",
+    "treatments": [
+      "Hypnotherapy",
+      "Career Coaching",
+      "Child Psychotherapy",
+      "Couples Therapy",
+      "Bereavement Counselling"
+    ]
+  },
+  {
+    "id": "ank_clinic_010",
+    "name": "Fizyocare Phys Therapy & Rehabilitation Center",
+    "rating": 4.65,
+    "address": "Alacaatlı Caddesi 2857 Sokak No:7 Çayyolu Çankaya/Ankara",
+    "phone": "0 312 240 05 40",
+    "city": "Ankara",
+    "treatments": [
+      "Hypnotherapy",
+      "Career Coaching",
+      "Child Psychotherapy",
+      "Couples Therapy",
+      "Bereavement Counselling"
+    ]
+  },
+  {
+    "id": "ank_clinic_011",
+    "name": "MİA Huzurevi Ve Yaşlı Bakım Konaklamalı Phys Therapy & Rehabilitation Center",
+    "rating": 4.78,
+    "address": "Kızılcaşar Mahallesi Koza Sok. No: 411 İncek-Gölbaşı - Ankara",
+    "phone": "0 312 557 23 00",
+    "city": "Ankara",
+    "treatments": [
+      "Hypnotherapy",
+      "Career Coaching",
+      "Child Psychotherapy",
+      "Couples Therapy",
+      "Bereavement Counselling"
+    ]
+  },
+  {
+    "id": "ank_clinic_012",
+    "name": "A Life Park Hospital Ankara Hospital",
+    "rating": 4.98,
+    "address": "Elvan Mahallesi 1935. Sokak No:5 Etimesgut/Ankara",
+    "phone": "08508885433",
+    "city": "Ankara",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ank_clinic_013",
+    "name": "Acıbadem Ankara Hospital",
+    "rating": 4.93,
+    "address": "Yukarı Dikmen Mahallesi 630. Sokak No:6 Çankaya/Ankara",
+    "phone": "444 55 44",
+    "city": "Ankara",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ank_clinic_014",
+    "name": "Op. Dr. İbrahim Sakçak Clinic",
+    "rating": 4.87,
+    "address": "Çukurambar Mah. Muhsin Yazıcıoğlu Cad. Sarıkonak Apt. No: 8/11 Çankaya/Ankara",
+    "phone": "0 532 050 32 23",
+    "city": "Ankara",
+    "treatments": [
+      "Stomach Stapling Surgery",
+      "Gastric Balloon",
+      "Sleeve Gastrectomy",
+      "Duodenal Switch Surgery",
+      "Gastric Bypass"
+    ]
+  },
+  {
+    "id": "ank_clinic_015",
+    "name": "Op. Dr. Aşkın Evren Güler Clinic",
+    "rating": 4.65,
+    "address": "İşçi Blokları Mah. Mevlana Bulvarı No: 182/26-27 Çankaya/Ankara",
+    "phone": "0 312 990 09 90",
+    "city": "Ankara",
+    "treatments": [
+      "IVF"
+    ]
+  },
+  {
+    "id": "ank_clinic_016",
+    "name": "Ada Dent Oral & Dental Health Clinic",
+    "rating": 4.78,
+    "address": "Kızılırmak Mahallesi 1445. Sok. The Paragon İş Merkezi No:2-B/78 Çukurambar-Çankaya/Ankara",
+    "phone": "0 312 432 24 44",
+    "city": "Ankara",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "ank_clinic_017",
+    "name": "Op. Dr. İrem Özyüncü Clinic",
+    "rating": 4.98,
+    "address": "Çukurambar Mah. Muhsin Yazıcıoğlu Cad. Sarıkonak Apt. No:8/15 Çankaya - Ankara",
+    "phone": "0 312 286 86 88",
+    "city": "Ankara",
+    "treatments": [
+      "IVF"
+    ]
+  },
+  {
+    "id": "ank_clinic_018",
+    "name": "Akropol Hospital",
+    "rating": 4.93,
+    "address": "Ahiler Mahallesi Uzayan Sok. No:99 Aydınlıkevler Altındağ / Ankara",
+    "phone": "0 312 207 90 00",
+    "city": "Ankara",
+    "treatments": [
+      "Hip Replacement",
+      "Pediatric Orthopedics",
+      "Knee Replacement",
+      "Arthroscopic Operations",
+      "Spinal Surgery"
+    ]
+  },
+  {
+    "id": "ank_clinic_019",
+    "name": "Op. Dr. Onurkan İdacı Clinic",
+    "rating": 4.87,
+    "address": "Kızılırmak Mah. 1443. Cad. Dumlupınar Bulvarı YDA Center Sok. No:9/796 Çankaya/Ankara",
+    "phone": "0 312 544 44 45",
+    "city": "Ankara",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ank_clinic_020",
+    "name": "Op. Dr. Orhan Aydın Clinic",
+    "rating": 4.65,
+    "address": "Mustafa Kemal Mah. Dumlupınar Bulvarı Mahall Ankara C2 Blok No:274/2/151/Ankara",
+    "phone": "0 533 947 63 89",
+    "city": "Ankara",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ank_clinic_021",
+    "name": "Ankara Cerrahi Medical Center",
+    "rating": 4.78,
+    "address": "Aşağı Öveçler Mahallesi 1332. Cadde No:15 Çankaya/Ankara",
+    "phone": "0 312 473 88 55",
+    "city": "Ankara",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ank_clinic_022",
+    "name": "Op. Dr. Talip Talha Tanyeli Clinic",
+    "rating": 4.98,
+    "address": "Mustafa Kemal Mah. 2118 Cad. A Blok No:4/44 Çankaya/ Ankara",
+    "phone": "0 312 623 33 00",
+    "city": "Ankara",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "ank_clinic_023",
+    "name": "Ankara Güven Hospital",
+    "rating": 4.93,
+    "address": "Kavaklıdere Mahallesi Şimşek Sokak No:29 06540 Çankaya/Ankara",
+    "phone": "444 94 94",
+    "city": "Ankara",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "ank_clinic_024",
+    "name": "Ankara Estetik & Ortodonti Oral & Dental Health Clinic",
+    "rating": 4.87,
+    "address": "Kentkoop Mahallesi Batıkent Bulvarı No:255/41 Yenimahalle/Ankara",
+    "phone": "0 312 496 14 96",
+    "city": "Ankara",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  }
+  ]
+}
