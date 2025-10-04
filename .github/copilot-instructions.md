@@ -1,22 +1,23 @@
 # GitHub Copilot Instructions - Sağlık Chat Projesi
 
 ## Proje Hakkında
-Bu proje, medikal turizm için akıllı klinik ve otel öneri sistemidir. 
-- Klinik verileri
-- Otel verileri
+Bu proje, **çok dilli medikal turizm** için akıllı klinik ve otel öneri sistemidir. 
+- **6 Dil Desteği**: 🇹🇷 Turkish, 🇬🇧 English, 🇩🇪 German, 🇸🇦 Arabic, 🇷🇺 Russian, 🇳🇱 Dutch
+- Klinik verileri (154 klinik)
+- Otel verileri (5 otel)
 - ChromaDB ile vektör arama
-- Rasa ile NLU/Intent/NER
-- Ollama ile yerel LLM
+- Rasa ile NLU/Intent/NER (çok dilli)
+- Ollama ile yerel LLM (çok dilli yanıtlar)
 
 ## Mimari
 ```
-Kullanıcı → Frontend (HTML/JS) 
+Kullanıcı (6 dilde) → Frontend (HTML/JS) 
          ↓
     API Service (FastAPI)
          ↓
-    ├── Rasa Service (NLU/Intent/NER)
+    ├── Rasa Service (NLU/Intent/NER) - Dil algılama
     ├── ChromaDB (Vector Search)
-    └── Ollama (LLM - Açıklama/Öneri)
+    └── Ollama (LLM - Çok dilli açıklama/öneri)
 ```
 
 ## Veri Modeli
@@ -56,6 +57,7 @@ Kullanıcı → Frontend (HTML/JS)
 3. **ask_recommendation** - Öneri isteme
 4. **ask_info** - Bilgi sorma
 5. **greet** / **goodbye** - Selamlama
+6. **detect_language** - Dil algılama (6 dil)
 
 ## Kod Kuralları
 
@@ -65,13 +67,15 @@ Kullanıcı → Frontend (HTML/JS)
 - Docstring'ler ekle
 - Error handling yap
 - Logging kullan
+- **Çok dilli destek** için response'ları kullanıcı diline göre formatla
 
 ### API Endpoints
 ```python
-POST /api/chat
+POST /api/chat  # language parameter ekle
 POST /api/search/clinics
 POST /api/search/hotels
 GET /api/clinics/{id}
+GET /api/languages  # Desteklenen diller
 GET /api/hotels/{id}
 ```
 
@@ -86,10 +90,11 @@ GET /api/hotels/{id}
 - Fallback action'ları tanımla
 
 ### Ollama Kullanımı
-- Model: "llama2" veya "mistral"
+- Model: "llama3"
 - Temperature: 0.7
-- Context window: 2048 tokens
-- System prompt ile Türkçe cevap ver
+- Context window: 8192 tokens
+- System prompt ile **çok dilli** cevap ver (6 dil desteği)
+- Kullanıcı dilini algıla ve aynı dilde yanıt ver
 
 ## Dosya Yapısı
 ```

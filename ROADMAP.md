@@ -1,5 +1,18 @@
 # 🏥 Sağlık Chat Projesi - Yol Haritası
 
+## 🌍 Çok Dilli Destek
+**6 Dil Desteği:**
+- 🇹🇷 Turkish (Türkçe)
+- 🇬🇧 English (İngilizce)
+- 🇩🇪 German (Almanca)
+- 🇸🇦 Arabic (Arapça)
+- 🇷🇺 Russian (Rusça)
+- 🇳🇱 Dutch (Hollandaca)
+
+**Hedef:** Türkiye'ye en çok sağlık turisti gönderen ülkelerin dillerinde hizmet vermek.
+
+---
+
 ## ✅ Tamamlanan Adımlar
 - [x] ChromaDB kurulumu
 - [x] 154 klinik verisi eklendi
@@ -7,13 +20,14 @@
 - [x] Veritabanı hazırlandı (prepare_data.py)
 - [x] Web viewer oluşturuldu
 - [x] City, phone, address bilgileri eklendi
+- [x] Çok dilli system prompt hazırlandı (6 dil)
 
 ---
 
 ## 🎯 Yapılacaklar Listesi
 
 ### 1. OLLAMA KURULUMU (30 dk)
-**Amaç:** Yerel LLM kullanarak Türkçe cevaplar üretmek
+**Amaç:** Yerel LLM kullanarak **çok dilli** cevaplar üretmek (6 dil desteği)
 
 #### Adımlar:
 ```bash
@@ -24,22 +38,26 @@ brew install ollama
 # 2. Ollama'yı başlat
 ollama serve
 
-# 3. Türkçe destekli model indir
+# 3. Çok dilli model indir (Llama 3 - 6 dil desteği)
 ollama pull llama3
 
-# 4. Test et
+# 4. Test et (Türkçe)
 ollama run llama3 "Merhaba, nasılsın?"
+
+# 5. Test et (İngilizce)
+ollama run llama3 "Hello, how are you?"
 ```
 
 #### Entegrasyon:
 - `api_service/app/core/ollama.py` dosyası oluştur
 - Ollama client wrapper yaz
-- System prompt ekle (Türkçe, tıbbi turizm uzmanı)
+- System prompt ekle (6 dil, tıbbi turizm uzmanı)
+- Dil algılama mekanizması ekle
 
 ---
 
 ### 2. RASA KURULUMU VE EĞİTİM (1-2 saat)
-**Amaç:** Kullanıcı girdilerinden intent ve entity çıkarmak
+**Amaç:** Kullanıcı girdilerinden intent ve entity çıkarmak (**6 dilde**)
 
 #### Adımlar:
 ```bash
@@ -47,7 +65,7 @@ ollama run llama3 "Merhaba, nasılsın?"
 cd rasa_service
 pip install rasa
 
-# 2. Training data hazırla (nlu.yml)
+# 2. Training data hazırla (nlu.yml) - 6 dilde
 # - search_clinic intenti için 20+ örnek
 # - search_hotel intenti için 20+ örnek
 # - Entity'ler: city, treatment, price_range
