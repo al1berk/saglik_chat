@@ -1,0 +1,176 @@
+[
+  {
+    "id": "hotel_001",
+    "name": "İstanbul Medikal Otel & Spa",
+    "city": "İstanbul",
+    "country": "Turkey",
+    "type": "Medical Hotel",
+    "rating": 4.7,
+    "price_per_night": 120,
+    "description": "Medikal turizm hastalarına özel hizmet veren, hastanelere yakın konumda lüks otel. Post-operatif bakım desteği.",
+    "features": [
+      "Hastaneye 5 dk mesafe",
+      "Hemşire desteği",
+      "Özel diyet menü",
+      "Spa & Wellness",
+      "Havalimanı transferi"
+    ],
+    "amenities": [
+      "24/7 Resepsiyon",
+      "Ücretsiz WiFi",
+      "Kahvaltı Dahil",
+      "Otopark",
+      "Fitness Center",
+      "Yüzme Havuzu"
+    ],
+    "contact": {
+      "phone": "+90 212 XXX XX XX",
+      "email": "info@medikalotel.com",
+      "website": "www.medikalotel.com.tr"
+    },
+    "nearby_hospitals": [
+      "İstanbul Medikal Park Hastanesi",
+      "Acıbadem Maslak",
+      "Memorial Şişli"
+    ]
+  },
+  {
+    "id": "hotel_002",
+    "name": "Antalya Recovery Residence",
+    "city": "Antalya",
+    "country": "Turkey",
+    "type": "Recovery Hotel",
+    "rating": 4.8,
+    "price_per_night": 95,
+    "description": "Antalya'da deniz manzaralı, saç ekimi ve estetik ameliyat sonrası dinlenme için ideal otel.",
+    "features": [
+      "Deniz manzarası",
+      "Post-op bakım odası",
+      "Özel hemşire",
+      "Sessiz ortam",
+      "Spa hizmetleri"
+    ],
+    "amenities": [
+      "Kahvaltı & Akşam Yemeği",
+      "Ücretsiz WiFi",
+      "Klima",
+      "Minibar",
+      "Balkon",
+      "Masaj Salonu"
+    ],
+    "contact": {
+      "phone": "+90 242 XXX XX XX",
+      "email": "info@recoveryresidence.com",
+      "website": "www.antalyarecovery.com.tr"
+    },
+    "nearby_hospitals": [
+      "Antalya Saç Ekimi Merkezi",
+      "Medstar Hospital",
+      "Lara Estetik Merkezi"
+    ]
+  },
+  {
+    "id": "hotel_003",
+    "name": "Ankara Medical Suites",
+    "city": "Ankara",
+    "country": "Turkey",
+    "type": "Apart Hotel",
+    "rating": 4.5,
+    "price_per_night": 80,
+    "description": "Ankara'da apart otel konseptinde, uzun süreli konaklama için uygun, hastane yakını konaklama.",
+    "features": [
+      "Mutfaklı odalar",
+      "Çamaşırhane",
+      "Tercüman hizmeti",
+      "Alışveriş desteği",
+      "Ulaşım kolaylığı"
+    ],
+    "amenities": [
+      "Tam donanımlı mutfak",
+      "Ücretsiz WiFi",
+      "Uydu TV",
+      "Çalışma masası",
+      "Otopark"
+    ],
+    "contact": {
+      "phone": "+90 312 XXX XX XX",
+      "email": "info@medicalsuites.com",
+      "website": "www.ankaramedicalsuites.com.tr"
+    },
+    "nearby_hospitals": [
+      "Ankara Çankaya Estetik Merkezi",
+      "Bayındır Hastanesi",
+      "Private Koru Hospital"
+    ]
+  },
+  {
+    "id": "hotel_004",
+    "name": "İzmir Wellness Hotel",
+    "city": "İzmir",
+    "country": "Turkey",
+    "type": "Wellness Hotel",
+    "rating": 4.6,
+    "price_per_night": 110,
+    "description": "İzmir'de denize sıfır, diş tedavisi ve hafif ameliyatlar sonrası konaklamaya uygun wellness otel.",
+    "features": [
+      "Deniz kenarı",
+      "Spa merkezi",
+      "Sağlıklı beslenme",
+      "Yoga & Meditasyon",
+      "Özel hemşire hizmeti"
+    ],
+    "amenities": [
+      "3 Öğün Yemek",
+      "Ücretsiz WiFi",
+      "Spa & Sauna",
+      "Fitness",
+      "Açık Havuz",
+      "Beach Access"
+    ],
+    "contact": {
+      "phone": "+90 232 XXX XX XX",
+      "email": "info@izmirwellness.com",
+      "website": "www.izmirwellness.com.tr"
+    },
+    "nearby_hospitals": [
+      "İzmir Özel Ege Diş Kliniği",
+      "Ege Üniversitesi Hastanesi",
+      "Kent Hospital"
+    ]
+  },
+  {
+    "id": "hotel_005",
+    "name": "Bursa Termal Recovery Center",
+    "city": "Bursa",
+    "country": "Turkey",
+    "type": "Thermal Hotel",
+    "rating": 4.9,
+    "price_per_night": 150,
+    "description": "Bursa'da termal suları ile ünlü, kalp ameliyatı sonrası rehabilitasyona uygun lüks otel.",
+    "features": [
+      "Termal havuzlar",
+      "Kardiyoloji hemşiresi",
+      "Fizyoterapi merkezi",
+      "Özel diyet mutfağı",
+      "24/7 medikal destek"
+    ],
+    "amenities": [
+      "Termal Spa",
+      "Ücretsiz WiFi",
+      "Restaurant",
+      "Fitness & Pool",
+      "Masaj",
+      "VIP Transfer"
+    ],
+    "contact": {
+      "phone": "+90 224 XXX XX XX",
+      "email": "info@bursatermal.com",
+      "website": "www.bursatermalrecovery.com.tr"
+    },
+    "nearby_hospitals": [
+      "Bursa Kardiyoloji Hastanesi",
+      "Uludağ Üniversitesi Hastanesi",
+      "Özel Bursa Hastanesi"
+    ]
+  }
+]

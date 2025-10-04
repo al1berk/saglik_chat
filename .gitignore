@@ -33,6 +33,7 @@ ENV/
 env.bak/
 venv.bak/
 .venv/
+.virtualenv/
 
 # PyInstaller
 *.manifest
@@ -188,6 +189,10 @@ dump.rdb
 
 # Node modules (if any)
 node_modules/
+
+# Frontend build artifacts
+frontend/dist/
+frontend/build/
 
 # Backup files
 *.backup

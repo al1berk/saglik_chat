@@ -6,6 +6,7 @@
       "rating": 4.65,
       "address": "Fener Mahallesi Bülent Ecevit Blv. No:50 07160 Muratpaşa/Antalya",
       "phone": "0 242 324 98 98",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -20,6 +21,7 @@
       "rating": 4.93,
       "address": "Tahıl Pazarı Mahallesi Kazım Özalp Cad. Adnan Menderes Bulvarı No:84 Kat:9 Muratpaşa /Antalya",
       "phone": "0 242 245 00 11",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -34,6 +36,7 @@
       "rating": 4.78,
       "address": "Çağlayan Mahallesi 2047. Sokak No:1 Muratpaşa/ANTALYA",
       "phone": "0 242 323 78 78",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -48,6 +51,7 @@
       "rating": 4.93,
       "address": "Yeşilbahçe Mahallesi Metin Kaşapoğlu Cad. Ayhan Kadam İş Merkezi A blok No: 48/11 Muratpaşa /Antalya",
       "phone": "0 242 322 93 90",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -62,6 +66,7 @@
       "rating": 4.87,
       "address": "Arapsuyu Mahallesi Atatürk Bulvarı M. Gökay Plaza No:23/41 Konyaaltı/Antalya",
       "phone": "0 542 471 61 14",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -76,6 +81,7 @@
       "rating": 4.78,
       "address": "Liman Mahallesi 32 Sok. Ofis Peker İş Merkezi No:2/31 Konyaaltı/Antalya",
       "phone": "0 242 324 81 19",
+      "city": "Antalya",
       "treatments": [
         "Hypnotherapy",
         "Career Coaching",
@@ -90,6 +96,7 @@
       "rating": 4.98,
       "address": "Yeşilbahçe Mahallesi Metin Kaşapoğlu Cad. 3/1 Muratpaşa/ Antalya",
       "phone": "0 242 321 78 78",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -104,6 +111,7 @@
       "rating": 4.93,
       "address": "Sorgun Mahallesi 8151 Sk.No:10 Manavgat/Antalya",
       "phone": "0 242 746 00 13",
+      "city": "Antalya",
       "treatments": [
         "Hip Replacement",
         "Pediatric Orthopedics",
@@ -118,6 +126,7 @@
       "rating": 4.87,
       "address": "Toros Mahallesi 805 Sokak Kurgu Plaza No: 14/1 Konyaaltı/Antalya",
       "phone": "+90 242 241 81 62",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -132,6 +141,7 @@
       "rating": 4.65,
       "address": "Meltem Mahellesi Sabuncu Bulvarı Konyaaltı/Antalya",
       "phone": "+90 549 800 41 05",
+      "city": "Antalya",
       "treatments": [
         "Hypnotherapy",
         "Career Coaching",
@@ -146,6 +156,7 @@
       "rating": 4.98,
       "address": "Kuşkavağı Mahallesi 542.sok No:1 Yakamoz Plaza No:4/kat 2 Konyaaltı/Antalya",
       "phone": "0 242 344 50 50",
+      "city": "Antalya",
       "treatments": [
         "Stomach Stapling Surgery",
         "Gastric Balloon",
@@ -160,6 +171,7 @@
       "rating": 4.93,
       "address": "Kuzey Yaka Mahallesi Varsak Köprüsü Yeşilırmak Caddesi No:367 07060 Kepez/Antalya",
       "phone": "444 76 06",
+      "city": "Antalya",
       "treatments": [
         "Hip Replacement",
         "Pediatric Orthopedics",
@@ -174,6 +186,7 @@
       "rating": 4.87,
       "address": "Kuşkavağı Mahallesi Atatürk Bulvarı No:81 Konyaaltı/Antalya",
       "phone": "444 76 06",
+      "city": "Antalya",
       "treatments": [
         "Hip Replacement",
         "Pediatric Orthopedics",
@@ -188,6 +201,7 @@
       "rating": 4.65,
       "address": "Güzeloba Mahallesi Havaalanı Caddesi 07230 Muratpaşa/Antalya",
       "phone": "0 242 349 40 40",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -202,6 +216,7 @@
       "rating": 4.78,
       "address": "Merkez Mahallesi Lise Caddesi No:26 Kemer/Antalya",
       "phone": "0 242 212 0 444",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -216,6 +231,7 @@
       "rating": 4.65,
       "address": "Çaybaşı Mahallesi 1352 Sokak No:8 07100 Muratpaşa/Antalya",
       "phone": "0 242 249 33 00",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -230,6 +246,7 @@
       "rating": 4.78,
       "address": "Fener Mahallesi Falez Cad. Kemerler Apt. A Blok Kat:1 Daire: 3/4 Muratpaşa/Antalya",
       "phone": "0 242 332 26 26",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -244,6 +261,7 @@
       "rating": 4.93,
       "address": "Molla Yusuf Mahallesi 1425. Sokak No: 9 07070 Uncalı Konyaaltı /Antalya",
       "phone": "0 242 226 03 03",
+      "city": "Antalya",
       "treatments": [
         "Hip Replacement",
         "Pediatric Orthopedics",
@@ -258,6 +276,7 @@
       "rating": 4.87,
       "address": "Şekerhane Mahallesi Halimağa Caddesi Lale Plaza İş Merkezi Kat 2 No 7 07400 Antalya",
       "phone": "0 242 511 37 37",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -272,6 +291,7 @@
       "rating": 4.65,
       "address": "Meydankavağı Mahallesi Perge Bulvarı Mehmet Atalay Apartmanı A Blok No:26/2 Muratpaşa/Antalya",
       "phone": "0 551 045 96 73",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -286,6 +306,7 @@
       "rating": 4.78,
       "address": "Cumhuriyet Mahallesi No:629 Sokak No:16 07160 Muratpaşa/Antalya",
       "phone": "0 242 212 06 66",
+      "city": "Antalya",
       "treatments": [
         "Hip Replacement",
         "Pediatric Orthopedics",
@@ -300,6 +321,7 @@
       "rating": 4.98,
       "address": "Kanal Mahallesi Halide Edip Caddesi No:7 07080 Antalya",
       "phone": "0 242 345 47 00",
+      "city": "Antalya",
       "treatments": [
         "IVF"
       ]
@@ -310,6 +332,7 @@
       "rating": 4.93,
       "address": "Fener Mahallesi Tekelioğlu Caddesi, No:51/6 Muratpaşa / Antalya",
       "phone": "0 242 324 57 79",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -324,6 +347,7 @@
       "rating": 4.87,
       "address": "Varlık Mah. 192 Sk. Başaran 1 Apartmanı No: 5/5 Muratpaşa/Antalya",
       "phone": "0 242 237 64 46",
+      "city": "Antalya",
       "treatments": []
     },
     {
@@ -332,6 +356,7 @@
       "rating": 4.78,
       "address": "Çağlayan Mahallesi Barınaklar Bulvarı No:78/A Muratpaşa/Antalya",
       "phone": "0 242 323 26 07",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -346,6 +371,7 @@
       "rating": 4.98,
       "address": "Şirinyalı Mahallesi İsmet Gökşen Caddesi No:98/102 Muratpaşa/Antalya",
       "phone": "0 242 244 22 11",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -360,6 +386,7 @@
       "rating": 4.93,
       "address": "Ulus Mahallesi Mehmet Akif Caddesi No: 50/A Kepez / ANTALYA",
       "phone": "0 242 334 0107",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -374,6 +401,7 @@
       "rating": 4.87,
       "address": "Şirinyalı Mahallesi 1487 Sokak No:4 07160 Muratpaşa/Antalya",
       "phone": "0 242 310 80 80",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -388,6 +416,7 @@
       "rating": 4.65,
       "address": "Fener Mahallesi Tekelioğlu Cad. Astur Ceylan Sitesi C Blok No:80/1 D:1 Muratpaşa/Antalya",
       "phone": "0 242 324 94 95",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -402,6 +431,7 @@
       "rating": 4.78,
       "address": "Meydankavağı Mahallesi İsmail Cem Cad. C Blok No:10 Muratpaşa/Antalya",
       "phone": "0 242 322 08 80",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -416,6 +446,7 @@
       "rating": 4.98,
       "address": "Yeni Mahalle Atatürk Bulvarı 07980 Kemer/Antalya",
       "phone": "0 242 722 53 53",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -430,6 +461,7 @@
       "rating": 4.93,
       "address": "Side Mahallesi İnönü(Yalı) Bulvarı M.Erkek Apt. No:2-6/Z23 Manavgat / Antalya",
       "phone": "0 242 746 23 63",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -444,6 +476,7 @@
       "rating": 4.87,
       "address": "Fener Mahallesi 1968 Sokak Özdemir Apartmanı No:11 İç Kapı No:4 Muratpaşa/Antalya",
       "phone": "0 506 799 62 15",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -458,6 +491,7 @@
       "rating": 4.65,
       "address": "Yeşilbahçe Mahallesi Portakal Çiçeği Caddesi 1460 Sokak Turunç Plaza İş Merkezi No:6/303 Muratpaşa/Antalya",
       "phone": "0 242 312 66 09",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -472,6 +506,7 @@
       "rating": 4.78,
       "address": "Fener Mahallesi Fener Caddesi Beyaz Dünya İş Merkezi No:15 Kat:2 No:35-36 Muratpaşa/Antalya",
       "phone": "0 242 323 24 23",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -486,6 +521,7 @@
       "rating": 4.98,
       "address": "Çağlayan Mahallesi Barınaklar Bulvarı No:66/A Muratpaşa /Antalya",
       "phone": "0 242 255 55 18",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -500,6 +536,7 @@
       "rating": 4.93,
       "address": "Kızıltoprak Mahallesi Aspendos Bulvarı Çam Plaza No:19/B Muratpaşa/Antalya",
       "phone": "0 242 312 50 24",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -514,6 +551,7 @@
       "rating": 4.87,
       "address": "Yeşilbahçe Mah.Semt Tevfik Işık Cad. No: 14A//4 Muratpaşa /Antalya",
       "phone": "0 534 234 44 44",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -528,6 +566,7 @@
       "rating": 4.65,
       "address": "Fener Mah. Tekelioğlu Cad. No:9 Şenol Çimen Apt. Daire: 6 Muratpaşa /Antalya",
       "phone": "0 530 185 83 10",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -542,6 +581,7 @@
       "rating": 4.78,
       "address": "Güzeloba Mahallesi Rauf Denktaş Caddesi Ozan Apt.A Blok No:12/A Muratpaşa/Antalya",
       "phone": "0 242 349 11 01",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -556,6 +596,7 @@
       "rating": 4.98,
       "address": "Gebizli Mah. Termessos Bulv. No:545F A1-A2 Blok Muratpaşa/Antalya",
       "phone": "0 552 504 71 15",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -570,6 +611,7 @@
       "rating": 4.93,
       "address": "Güzeloba Mahallesi, B, Barınaklar Blv. No:130, 07230 Muratpaşa/Antalya",
       "phone": "0 242 349 49 22",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -584,6 +626,7 @@
       "rating": 4.87,
       "address": "Bahçelievler Mahallesi Sorkun Bulvarı Pk:07600 07660 Manavgat/Antalya",
       "phone": "0 242 746 49 00",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -598,6 +641,7 @@
       "rating": 4.65,
       "address": "Şirinyalı Mahallesi İsmet Gökşen Caddesi Güzel Apartmanı No:18/A Muratpaşa/Antalya",
       "phone": "0 242 316 30 00",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -612,6 +656,7 @@
       "rating": 4.78,
       "address": "Fener Mahallesi 1950.Sok. Working Plaza NO:2/Z02 Daire.6 Muratpaşa/Antalya",
       "phone": "0 242 316 21 41",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -626,6 +671,7 @@
       "rating": 4.98,
       "address": "Yeşilbahçe Mahallesi Metin Kaşapoğlu Cad. Gökhan İş Merkezi A Blok No:19 D:4 Muratpaşa /Antalya",
       "phone": "0 242 312 44 59",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -640,6 +686,7 @@
       "rating": 4.93,
       "address": "Altınkum Mahallesi Anadolu Cad. Kıvılcım Apt. No:43/A Konyaaltı/Antalya",
       "phone": "0 242 229 02 01",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -654,6 +701,7 @@
       "rating": 4.87,
       "address": "Şirinyalı Mahallesi İsmet Gökşen Cad. No:14 Muratpaşa/Antalya",
       "phone": "0 242 317 10 00",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -668,6 +716,7 @@
       "rating": 4.65,
       "address": "Yenigün Mahallesi Mevlana Cad. Özpınarlar Midtown Plaza No:54 Muratpaşa /Antalya",
       "phone": "0 242 502 50 50",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -682,6 +731,7 @@
       "rating": 4.78,
       "address": "Bahçeli Evler Mahallesi Çetin Emeç Caddesi No.50 Manavgat / Antalya",
       "phone": "0 242 746 40 01",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -696,6 +746,7 @@
       "rating": 4.98,
       "address": "Yeşilbahçe Mahallesi 1470 Sok. No:12 Muratpaşa /Antalya",
       "phone": "0 242 228 28 28",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -710,6 +761,7 @@
       "rating": 4.93,
       "address": "Fener Mahallesi Falez Cad. No:1/8 Muratpaşa/Antalya",
       "phone": "0 242 338 08 48",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -724,6 +776,7 @@
       "rating": 4.87,
       "address": "Fener Mahallesi 1971 Sok. D Blok No:36D İç Kapı No: 5-6 Muratpaşa / Antalya",
       "phone": "0 242 322 02 12",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -738,6 +791,7 @@
       "rating": 4.65,
       "address": "Yeşilbahçe Mah. Çınarlı Cad. 3. Erivan Apt. No:1/5-6 Muratpaşa/Antalya",
       "phone": "0 242 311 05 81",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -752,6 +806,7 @@
       "rating": 4.78,
       "address": "Arapsuyu Mahallesi Atatürk Bulvarı No:47/21 Konyaaltı/Antalya",
       "phone": "0 242 222 02 04",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -766,6 +821,7 @@
       "rating": 4.93,
       "address": "Fener Mahallesi Fener Cad. Fener İş Merkezi A Blok No:9 Büro:7(103) Muratpaşa /Antalya",
       "phone": "0 242 323 23 63",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -780,6 +836,7 @@
       "rating": 4.87,
       "address": "Arapsuyu Mahallesi Atatürk Bulvarı No:25/13 Konyaaltı /Antalya",
       "phone": "0 242 248 48 35",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -794,6 +851,7 @@
       "rating": 4.78,
       "address": "Zafer Mahallesi Yıldırım Beyazıt Caddesi No:93 07020 Kepez/Antalya",
       "phone": "444 44 69",
+      "city": "Antalya",
       "treatments": [
         "Keratoplasty",
         "Cataract",
@@ -808,6 +866,7 @@
       "rating": 4.98,
       "address": "Kültür Mahallesi 3822 Sok. No:6 Kepez/Antalya",
       "phone": "0 242 243 38 47",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -822,6 +881,7 @@
       "rating": 4.93,
       "address": "Güzeloba Mahallesi Çağlayangil Cad.No:7/A Muratpaşa/Antalya",
       "phone": "0 242 243 41 18",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -836,6 +896,7 @@
       "rating": 4.87,
       "address": "Liman Mahallesi 16. Sokak Demir Apt. No: 4/1-2 Konyaaltı / ANTALYA",
       "phone": "0 242 259 58 53",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -850,6 +911,7 @@
       "rating": 4.65,
       "address": "Merkez Mahallesi Lise Caddesi No:26 Kemer/Antalya",
       "phone": "0 242 814 60 70",
+      "city": "Antalya",
       "treatments": [
         "Hip Replacement",
         "Pediatric Orthopedics",
@@ -864,6 +926,7 @@
       "rating": 4.78,
       "address": "Fener Mahallesi Tekelioğlu Caddesi No:7 07160 Muratpaşa/Antalya",
       "phone": "0 242 314 34 34",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -878,6 +941,7 @@
       "rating": 4.98,
       "address": "Kazım Karabekir Cad. No:32 Kat:1 Side/Antalya",
       "phone": "0 242 753 69 61",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -892,6 +956,7 @@
       "rating": 4.93,
       "address": "Şirinyalı Mahallesi Özgürlük Bulvarı Özgür Apt. No:31/4-5 Muratpaşa / Antalya",
       "phone": "0 242 316 16 62",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -906,6 +971,7 @@
       "rating": 4.87,
       "address": "Fener Mahallesi 1971. sok. No:36 D Blok 1-2-3 Muratpaşa /ANTALYA",
       "phone": "444 30 75",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -920,6 +986,7 @@
       "rating": 4.65,
       "address": "Şirinyalı Mahallesi İsmet Gökşen Cad. Osman Eceoğlu Sitesi B Blok No:114/A Muratpaşa/ANTALYA",
       "phone": "0 242 247 49 54",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -934,6 +1001,7 @@
       "rating": 4.78,
       "address": "Liman Mahallesi32.Sk.No:8 Daire:2 Konyaaltı/Antalya",
       "phone": "0 242 229 52 02",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -948,6 +1016,7 @@
       "rating": 4.98,
       "address": "Tarım Mahallesi Perge Bulvarı No:19 07200 Muratpaşa/Antalya",
       "phone": "0 242 310 32 32",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -962,6 +1031,7 @@
       "rating": 4.93,
       "address": "Çağlayan Mahallesi Bülent ECEVİT Blv. 2044. Sok. No:171 Muratpaşa /Antalya",
       "phone": "+44 20 3290 0594",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -976,6 +1046,7 @@
       "rating": 4.87,
       "address": "Side Mahallesi Kazım Karabekir Cad. No: 50 Manavgat/Antalya",
       "phone": "0 242 753 11 11",
+      "city": "Antalya",
       "treatments": [
         "Hypnotherapy",
         "Career Coaching",
@@ -990,6 +1061,7 @@
       "rating": 4.65,
       "address": "Yıldız Mahallesi Yıldız Caddesi 220 Sokak No:19 Merkez/Antalya",
       "phone": "0 242 310 92 92",
+      "city": "Antalya",
       "treatments": [
         "Hip Replacement",
         "Pediatric Orthopedics",
@@ -1004,6 +1076,7 @@
       "rating": 4.78,
       "address": "Öğretmenevleri Mahallesi Çamlık Caddesi 460 Sk. No : 48 Konyaaltı /Antalya",
       "phone": "0 242 228 09 09",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -1018,6 +1091,7 @@
       "rating": 4.98,
       "address": "Bahçelievler Mahallesi Konyaaltı Cad No:72/1 Muratpaşa /ANTALYA",
       "phone": "+90 (242) 244 42 22",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -1032,6 +1106,7 @@
       "rating": 4.93,
       "address": "Kavaklı Mahallesi Hasan Fehmi Boztepe Caddesi No:176 07600 Manavgat/Antalya",
       "phone": "0 242 212 08 88",
+      "city": "Antalya",
       "treatments": [
         "Hip Replacement",
         "Pediatric Orthopedics",
@@ -1046,6 +1121,7 @@
       "rating": 4.87,
       "address": "Güzeloba Mahallesi Barınaklar Bulvarı No:1 07230 Muratpaşa/Antalya",
       "phone": "0 242 349 75 23",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1060,6 +1136,7 @@
       "rating": 4.65,
       "address": "Zafer Mahallesi Yıldırım Beyazıt Caddesi No:91 07020 Kepez/Antalya",
       "phone": "0 242 314 66 66",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -1074,6 +1151,7 @@
       "rating": 4.78,
       "address": "Bahçelievler Mahallesi Antalya Caddesi No:43/3-4 Manavgat/Antalya",
       "phone": "0 242 746 05 05",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1088,6 +1166,7 @@
       "rating": 4.98,
       "address": "Çağlayan Mahallesi Bülent Ecevit Blv. Park Residance Evleri A Blok No:112/B Muratpaşa/ANTALYA",
       "phone": "0 242 243 04 42",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -1102,6 +1181,7 @@
       "rating": 4.93,
       "address": "Fener Mahallesi Bülent ECEVİT Blv. No:72 Muratpaşa /Antalya",
       "phone": "444 2 676",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1116,6 +1196,7 @@
       "rating": 4.87,
       "address": "Liman Mahallesi Boğaçayı Caddesi Tuğba Apartmanı 71/B Antalya",
       "phone": "0 242 348 00 30",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1130,6 +1211,7 @@
       "rating": 4.65,
       "address": "Çağlayan Mahallesi Barınaklar Bulvarı No:60/A Muratpaşa/Antalya",
       "phone": "0 242 329 44 44",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1144,6 +1226,7 @@
       "rating": 4.78,
       "address": "Şirinyalı Mahallesi İsmet Gökşen Cad. Kurt Apt. No:63/7 Muratpaşa / Antalya",
       "phone": "0 242 316 13 31",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1158,6 +1241,7 @@
       "rating": 4.98,
       "address": "Uluç Mahallesi Gazi Mustafa Kemal Bulvarı İş Merkezi Apt. No:93/A Konyaaltı/Antalya",
       "phone": "0 242 230 36 36",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1172,6 +1256,7 @@
       "rating": 4.93,
       "address": "Akdeniz Üniversitesi",
       "phone": null,
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -1186,6 +1271,7 @@
       "rating": 4.87,
       "address": "Fener Mahallesi 1968 Sokak Sayın Plaza D:27 07160 Muratpaşa/Antalya",
       "phone": "0 242 316 96 26",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1200,6 +1286,7 @@
       "rating": 4.65,
       "address": "Fener Mahallesi Lara Caddesi 1964 sokak no:7 Antalya",
       "phone": "0 242 323 22 88",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1214,6 +1301,7 @@
       "rating": 4.98,
       "address": "Kanal Mahallesi Antalya Bulvarı No:110 Kepez / Antalya",
       "phone": "0 242 332 51 55",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1228,6 +1316,7 @@
       "rating": 4.93,
       "address": "Ögretmenevleri Mah, Atatürk Blv. No:74/A 07070 Konyaaltı/Antalya",
       "phone": "0 242 228 78 78",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -1242,6 +1331,7 @@
       "rating": 4.87,
       "address": "Kuşkavağı Mahallesi Atatürk Bulvarı Cad. No:77/1 Konyaaltı /Antalya",
       "phone": "0 242 230 07 07",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1256,6 +1346,7 @@
       "rating": 4.65,
       "address": "Tarım Mahallesi Perge Bulvarı C Blok No:13/D Muratpaşa/Antalya",
       "phone": "+90 532 364 8910",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1270,6 +1361,7 @@
       "rating": 4.98,
       "address": "Öğretmenevleri Mahallesi Çamlık Cad. Çamlık Apt. No:40/A Konyaaltı/Antalya",
       "phone": "0 242 229 89 99",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1284,6 +1376,7 @@
       "rating": 4.93,
       "address": "Fener Mahallesi Lara Cad. C Blok No:239/C Muratpaşa /Antalya",
       "phone": "0 242 324 18 88",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1298,6 +1391,7 @@
       "rating": 4.87,
       "address": "Kuşkavağı Mahallesi 563 Sokak No:2/A Konyaaltı/Antalya",
       "phone": "0 242 255 07 42",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1312,6 +1406,7 @@
       "rating": 4.65,
       "address": "A. Hisar Mahallesi 4604 Sokak No:18/1 Manavgat/Antalya",
       "phone": "0 242 777 06 66",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -1326,6 +1421,7 @@
       "rating": 4.78,
       "address": "Kanal Mahallesi Halide Edip Cad. No:5 Kepez/Antalya",
       "phone": "0 242 345 28 28",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1340,6 +1436,7 @@
       "rating": 4.98,
       "address": "Fabrikalar Mahallesi 3002. Sk No:34/1 Kepez /Antalya",
       "phone": "0 242 344 01 00",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1354,6 +1451,7 @@
       "rating": 4.78,
       "address": "Gazi Mahallesi Yeşilırmak Caddesi 1-A Blok No:172 D Kepez/Antalya",
       "phone": "0 242 504 66 22",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1368,6 +1466,7 @@
       "rating": 4.87,
       "address": "Hacıevler Mah. Merkez Sok. No:2 Kumluca/Antalya",
       "phone": "0 242 887 22 10",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1382,6 +1481,7 @@
       "rating": 4.65,
       "address": "Çağlayan Mahallesi Fener Cad Irmak Apt. No:51/7 Muratpaşa /ANTALYA",
       "phone": "0 531 241 20 81",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -1396,6 +1496,7 @@
       "rating": 4.78,
       "address": "Altındağ Mahallesi Güllük Caddesi Birol Apt. No:95/C Muratpaşa/Antalya",
       "phone": "0 242 248 36 46",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1410,6 +1511,7 @@
       "rating": 4.98,
       "address": "Uncalı Mah. Toroslar Cad. Ramazan Karabulut Sit. No:82BB Konyaaltı/Antalya",
       "phone": "0 242 228 22 22",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
@@ -1424,6 +1526,7 @@
       "rating": 4.87,
       "address": "Zerdalilik Mahallesi Burhanettin Onat Cad. No:96/A Muratpaşa/Antalya",
       "phone": "0 242 321 19 82",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -1438,6 +1541,7 @@
       "rating": 4.65,
       "address": "Yeşilbahçe Mahallesi Metin Kaşapoğlu Cad. No:19/A D:13 Muratpaşa /Antalya",
       "phone": "0 242 313 07 70",
+      "city": "Antalya",
       "treatments": [
         "Facial Surgery",
         "Seconder Rhinoplasty",
@@ -1452,6 +1556,7 @@
       "rating": 4.98,
       "address": "Kızılsaray Mahallesi Yener Ulusoy Bulvarı Talay Apt.No.17/A Muratpaşa/Antalya",
       "phone": "0 242 247 38 58",
+      "city": "Antalya",
       "treatments": [
         "Composite Bonding",
         "Zirconium Crowns",
