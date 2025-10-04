@@ -109,10 +109,10 @@ def prepare_clinic_data(clinics):
             "city": city,
             "country": "Turkey",
             "rating": float(clinic.get("rating", 0)),
-            "price_range": clinic.get("price_range", "$$-$$$"),
-            "treatments": treatments,
-            "address": address,
-            "phone": clinic.get("phone", ""),
+            "price_range": clinic.get("price_range", "") or "$$-$$$",
+            "treatments": treatments or "",
+            "address": address or "",
+            "phone": clinic.get("phone", "") or "",
             "type": "clinic"
         })
         
@@ -167,27 +167,24 @@ def add_to_collection(collection, documents, metadatas, ids, name):
         print(f"⚠️  {name} için eklenecek veri yok")
         return
     
-    # Mevcut ID'leri kontrol et
+    # Koleksiyonu tamamen temizle ve yeniden ekle
     try:
-        existing = collection.get(ids=ids)
-        existing_ids = set(existing['ids'])
-    except:
-        existing_ids = set()
+        # Mevcut tüm kayıtları sil
+        existing = collection.get()
+        if existing and existing.get('ids'):
+            print(f"🗑️  {name}: Mevcut {len(existing['ids'])} kayıt siliniyor...")
+            collection.delete(ids=existing['ids'])
+    except Exception as e:
+        print(f"⚠️  Temizleme hatası (normal olabilir): {e}")
     
-    # Yeni kayıtları filtrele
-    new_indices = [i for i, doc_id in enumerate(ids) if doc_id not in existing_ids]
-    
-    if new_indices:
-        print(f"📥 {name}: {len(new_indices)} yeni kayıt ekleniyor...")
-        collection.add(
-            documents=[documents[i] for i in new_indices],
-            metadatas=[metadatas[i] for i in new_indices],
-            ids=[ids[i] for i in new_indices]
-        )
-        print(f"✅ {name}: Ekleme tamamlandı!")
-    else:
-        print(f"ℹ️  {name}: Tüm kayıtlar zaten mevcut")
-    
+    # Tüm verileri ekle
+    print(f"📥 {name}: {len(documents)} kayıt ekleniyor...")
+    collection.add(
+        documents=documents,
+        metadatas=metadatas,
+        ids=ids
+    )
+    print(f"✅ {name}: Ekleme tamamlandı!")
     print(f"📊 {name} toplam kayıt sayısı: {collection.count()}")
 
 def main():
