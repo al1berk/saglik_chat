@@ -1,5 +1,5 @@
-# Intent ve Entity tanımlamaları
-# Konuşma akışlarının
+# Intent ve Entity tanımlamaları - 6 Dilli Destek
+# 🇹🇷 Turkish, 🇬🇧 English, 🇩🇪 German, 🇸🇦 Arabic, 🇷🇺 Russian, 🇳🇱 Dutch
 version: "3.1"
 
 nlu:
@@ -10,6 +10,21 @@ nlu:
       - hey
       - iyi günler
       - günaydın
+      - hello
+      - hi
+      - good morning
+      - good day
+      - hallo
+      - guten tag
+      - guten morgen
+      - مرحبا
+      - صباح الخير
+      - привет
+      - добрый день
+      - доброе утро
+      - hoi
+      - goedemorgen
+      - goedendag
       
   - intent: goodbye
     examples: |
@@ -17,6 +32,20 @@ nlu:
       - görüşürüz
       - güle güle
       - bay bay
+      - goodbye
+      - bye
+      - see you
+      - auf wiedersehen
+      - tschüss
+      - bis bald
+      - مع السلامة
+      - إلى اللقاء
+      - пока
+      - до свидания
+      - до встречи
+      - dag
+      - tot ziens
+      - doei
       
   - intent: search_clinic
     examples: |
@@ -26,6 +55,36 @@ nlu:
       - [diş tedavisi](treatment_type) için klinik
       - [saç ekimi](treatment_type) yapan yer
       - [göz ameliyatı](treatment_type) için hastane
+      - I'm looking for a clinic
+      - find clinic in [Istanbul](city)
+      - recommend hospital in [Antalya](city)
+      - clinic for [dental treatment](treatment_type)
+      - place for [hair transplant](treatment_type)
+      - hospital for [eye surgery](treatment_type)
+      - ich suche eine klinik
+      - klinik in [Istanbul](city) finden
+      - krankenhaus in [Antalya](city) empfehlen
+      - klinik für [zahnbehandlung](treatment_type)
+      - ort für [haartransplantation](treatment_type)
+      - krankenhaus für [augenoperation](treatment_type)
+      - أبحث عن عيادة
+      - ابحث عن عيادة في [إسطنبول](city)
+      - أوصي بمستشفى في [أنطاليا](city)
+      - عيادة [لعلاج الأسنان](treatment_type)
+      - مكان [لزراعة الشعر](treatment_type)
+      - مستشفى [لجراحة العيون](treatment_type)
+      - я ищу клинику
+      - найти клинику в [Стамбуле](city)
+      - рекомендовать больницу в [Анталии](city)
+      - клиника для [стоматологического лечения](treatment_type)
+      - место для [пересадки волос](treatment_type)
+      - больница для [операции на глазах](treatment_type)
+      - ik zoek een kliniek
+      - kliniek in [Istanbul](city) vinden
+      - ziekenhuis in [Antalya](city) aanbevelen
+      - kliniek voor [tandheelkundige behandeling](treatment_type)
+      - plek voor [haartransplantatie](treatment_type)
+      - ziekenhuis voor [oogoperatie](treatment_type)
       
   - intent: search_hotel
     examples: |
@@ -34,6 +93,31 @@ nlu:
       - kalacak yer öner
       - yakınlarda otel var mı
       - [Ankara](city)'da konaklama
+      - I'm looking for a hotel
+      - find hotel in [Istanbul](city)
+      - recommend accommodation
+      - is there a hotel nearby
+      - accommodation in [Ankara](city)
+      - ich suche ein hotel
+      - hotel in [Istanbul](city) finden
+      - unterkunft empfehlen
+      - gibt es ein hotel in der nähe
+      - unterkunft in [Ankara](city)
+      - أبحث عن فندق
+      - ابحث عن فندق في [إسطنبول](city)
+      - أوصي بإقامة
+      - هل يوجد فندق قريب
+      - إقامة في [أنقرة](city)
+      - я ищу отель
+      - найти отель в [Стамбуле](city)
+      - рекомендовать проживание
+      - есть ли отель поблизости
+      - проживание в [Анкаре](city)
+      - ik zoek een hotel
+      - hotel in [Istanbul](city) vinden
+      - accommodatie aanbevelen
+      - is er een hotel in de buurt
+      - accommodatie in [Ankara](city)
       
   - intent: ask_treatment
     examples: |
@@ -41,6 +125,26 @@ nlu:
       - ne tür tedaviler yapılıyor
       - tedavi seçenekleri neler
       - ameliyat çeşitleri
+      - what treatments are available
+      - what types of treatments are done
+      - what are the treatment options
+      - types of surgeries
+      - welche behandlungen gibt es
+      - welche arten von behandlungen werden durchgeführt
+      - was sind die behandlungsoptionen
+      - arten von operationen
+      - ما هي العلاجات المتاحة
+      - ما هي أنواع العلاجات التي يتم إجراؤها
+      - ما هي خيارات العلاج
+      - أنواع العمليات الجراحية
+      - какие методы лечения доступны
+      - какие виды лечения проводятся
+      - каковы варианты лечения
+      - виды операций
+      - welke behandelingen zijn er beschikbaar
+      - welke soorten behandelingen worden gedaan
+      - wat zijn de behandelingsopties
+      - soorten operaties
       
   - intent: ask_price
     examples: |
@@ -48,3 +152,23 @@ nlu:
       - ücret bilgisi
       - maliyet nedir
       - kaç para tutar
+      - how much is the price
+      - cost information
+      - what is the cost
+      - how much does it cost
+      - wie hoch ist der preis
+      - kosteninformation
+      - was sind die kosten
+      - wie viel kostet es
+      - كم السعر
+      - معلومات التكلفة
+      - ما هي التكلفة
+      - كم تكلفته
+      - сколько стоит
+      - информация о стоимости
+      - какова стоимость
+      - сколько это стоит
+      - hoeveel kost het
+      - kosteninformatie
+      - wat zijn de kosten
+      - hoeveel kost het

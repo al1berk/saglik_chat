@@ -58,6 +58,30 @@ rasa_service/models/*.tar.gz
 rasa_service/models/*.pkl
 rasa_service/results/
 
+# Rasa training artifacts (auto-generated during training)
+**/ted_policy.tf_model.data-*
+**/ted_policy.tf_model.index
+**/checkpoint
+**/unexpected_intent_policy.data-*
+**/unexpected_intent_policy.index
+**/unexpected_intent_policy.entities_to_idx.json
+**/unexpected_intent_policy.fake_features.pkl
+**/unexpected_intent_policy.label_intent_to_idx.json
+**/unexpected_intent_policy.metadata.json
+**/unexpected_intent_policy.priority.pkl
+**/unexpected_intent_policy.tf_model.data-*
+**/unexpected_intent_policy.tf_model.index
+**/feature_to_idx_dict.json
+**/oov_words.json
+**/vocabularies.json
+**/patterns.json
+**/featurizer.json
+
+# Rasa cache and runtime files
+.rasa/
+rasa_service/.rasa/
+rasa_service/graphs/
+
 # Keep the models directory structure
 !rasa_service/models/.gitkeep
 
