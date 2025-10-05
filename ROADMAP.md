@@ -1,12 +1,86 @@
 # 🏥 Sağlık Chat Projesi - Yol Haritası
 
-## ✅ Tamamlanan Adımlar
-- [x] ChromaDB kurulumu
-- [x] 154 klinik verisi eklendi
-- [x] 5 otel verisi eklendi
-- [x] Veritabanı hazırlandı (prepare_data.py)
-- [x] Web viewer oluşturuldu
-- [x] City, phone, address bilgileri eklendi
+**Son Güncelleme:** 5 Ekim 2025  
+**Durum:** Database Hazırlığı Tamamlandı ✅  
+**Sıradaki Adım:** RAG Service + Chat API Geliştirme
+
+---
+
+## 📊 Proje Genel Bakış
+
+### Mimari
+```
+Kullanıcı → Frontend (HTML/JS) 
+         ↓
+    API Service (FastAPI)
+         ↓
+    ├── Rasa Service (NLU/Intent/NER)
+    ├── ChromaDB (Vector Search)
+    ├── RAG Service (Veri Hazırlama)
+    └── Ollama (LLM - Cevap Üretme)
+```
+
+### Teknoloji Stack
+- **Backend:** FastAPI, SQLAlchemy, SQLite
+- **Vector DB:** ChromaDB
+- **LLM:** Ollama (Llama3)
+- **NLU:** Rasa
+- **Frontend:** HTML/CSS/JS (Vanilla)
+
+---
+
+## ✅ TAMAMLANAN ADIMLAR (Phase 1: Database)
+
+### 1. Database Altyapısı ✅
+- [x] SQLite veritabanı kurulumu
+- [x] 4 tablo oluşturuldu:
+  - `clinics` (189 kayıt)
+  - `hotels` (60 kayıt)
+  - `appointments` (randevu sistemi)
+  - `chat_history` (sohbet geçmişi)
+
+### 2. Klinik Verisi ✅
+- [x] 189 klinik eklendi
+- [x] 41 farklı tedavi tipi
+- [x] Her tedaviye fiyat eklendi (price + currency)
+- [x] Rating, adres, telefon bilgileri
+- [x] 4 şehir: Antalya, İstanbul, Ankara, İzmir
+
+### 3. Otel Verisi ✅
+- [x] 60 otel eklendi
+- [x] Fiyat, özellikler, konum bilgileri
+- [x] API endpoints hazır
+
+### 4. Çok Dilli Veri Hazırlığı ✅
+- [x] `treatment_details.json` oluşturuldu
+  - 41 tedavi için detaylı bilgi
+  - Fiyat aralıkları (min-max)
+  - Süre bilgisi (duration_days)
+  - Kategori (Dental, Hair Transplant, etc.)
+  - **6 dilde açıklama** (tr, en, de, ar, ru, nl)
+  
+- [x] `translations.json` oluşturuldu
+  - 41 tedavi çevirisi (6 dil)
+  - 9 UI element çevirisi
+  - Tam çok dilli destek
+
+### 5. Randevu Sistemi ✅
+- [x] Appointment model ve schema
+- [x] CRUD işlemleri
+- [x] API endpoints (8 endpoint)
+- [x] Durum takibi (pending, confirmed, completed, cancelled)
+- [x] Email/SMS tracking
+- [x] Migration script
+
+### 6. ChromaDB Kurulumu ✅
+- [x] ChromaDB yüklendi
+- [x] Vector collections oluşturuldu
+- [x] Similarity search hazır
+
+### 7. Ollama Kurulumu ✅
+- [x] Ollama yüklendi
+- [x] Llama3 modeli indirildi
+- [x] Test edildi (Türkçe desteği OK)
 
 ---
 
