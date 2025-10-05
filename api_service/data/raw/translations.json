@@ -1,0 +1,406 @@
+{
+  "treatments": {
+    "Composite Bonding": {
+      "tr": "Kompozit Bonding",
+      "en": "Composite Bonding",
+      "de": "Komposit Bonding",
+      "ar": "ترابط المركب",
+      "ru": "Композитный бондинг",
+      "nl": "Composiet Bonding"
+    },
+    "Zirconium Crowns": {
+      "tr": "Zirkonyum Kaplama",
+      "en": "Zirconium Crowns",
+      "de": "Zirkoniumkronen",
+      "ar": "تيجان الزركونيوم",
+      "ru": "Циркониевые коронки",
+      "nl": "Zirkonium Kronen"
+    },
+    "Porcelain Veneers": {
+      "tr": "Porselen Lamineler",
+      "en": "Porcelain Veneers",
+      "de": "Porzellan-Veneers",
+      "ar": "قشور البورسلين",
+      "ru": "Фарфоровые виниры",
+      "nl": "Porseleinen Veneers"
+    },
+    "Teeth Whitening": {
+      "tr": "Diş Beyazlatma",
+      "en": "Teeth Whitening",
+      "de": "Zahnaufhellung",
+      "ar": "تبييض الأسنان",
+      "ru": "Отбеливание зубов",
+      "nl": "Tanden Bleken"
+    },
+    "Cosmetic Dentistry": {
+      "tr": "Estetik Diş Hekimliği",
+      "en": "Cosmetic Dentistry",
+      "de": "Kosmetische Zahnheilkunde",
+      "ar": "طب الأسنان التجميلي",
+      "ru": "Косметическая стоматология",
+      "nl": "Cosmetische Tandheelkunde"
+    },
+    "FUE - Follicular Unit Extraction": {
+      "tr": "FUE Saç Ekimi",
+      "en": "FUE - Follicular Unit Extraction",
+      "de": "FUE - Follikuläre Extraktion",
+      "ar": "FUE - استخراج الوحدة الجريبية",
+      "ru": "FUE - Экстракция фолликулярных единиц",
+      "nl": "FUE - Folliculaire Unit Extractie"
+    },
+    "DHI - Direct Hair Implantation": {
+      "tr": "DHI Direkt Saç Ekimi",
+      "en": "DHI - Direct Hair Implantation",
+      "de": "DHI - Direkte Haarimplantation",
+      "ar": "DHI - زراعة الشعر المباشرة",
+      "ru": "DHI - Прямая имплантация волос",
+      "nl": "DHI - Directe Haarimplantatie"
+    },
+    "FUT - Follicular Unit Transplant": {
+      "tr": "FUT Saç Ekimi",
+      "en": "FUT - Follicular Unit Transplant",
+      "de": "FUT - Follikuläre Transplantation",
+      "ar": "FUT - زراعة الوحدة الجريبية",
+      "ru": "FUT - Трансплантация фолликулярных единиц",
+      "nl": "FUT - Folliculaire Unit Transplantatie"
+    },
+    "Eyebrow Transplant": {
+      "tr": "Kaş Ekimi",
+      "en": "Eyebrow Transplant",
+      "de": "Augenbrauentransplantation",
+      "ar": "زراعة الحواجب",
+      "ru": "Пересадка бровей",
+      "nl": "Wenkbrauw Transplantatie"
+    },
+    "Facial Hair Transplant": {
+      "tr": "Sakal-Bıyık Ekimi",
+      "en": "Facial Hair Transplant",
+      "de": "Gesichtshaar-Transplantation",
+      "ar": "زراعة شعر الوجه",
+      "ru": "Пересадка волос на лице",
+      "nl": "Gezichtshaar Transplantatie"
+    },
+    "Open Rhinoplasty": {
+      "tr": "Açık Burun Estetiği",
+      "en": "Open Rhinoplasty",
+      "de": "Offene Nasenkorrektur",
+      "ar": "تجميل الأنف المفتوح",
+      "ru": "Открытая ринопластика",
+      "nl": "Open Neuscorrectie"
+    },
+    "Seconder Rhinoplasty": {
+      "tr": "Revizyon Burun Estetiği",
+      "en": "Revision Rhinoplasty",
+      "de": "Revisions-Rhinoplastik",
+      "ar": "تجميل الأنف التصحيحي",
+      "ru": "Ревизионная ринопластика",
+      "nl": "Revisie Neuscorrectie"
+    },
+    "Septoplasty": {
+      "tr": "Septoplasti",
+      "en": "Septoplasty",
+      "de": "Septoplastik",
+      "ar": "رأب الحاجز الأنفي",
+      "ru": "Септопластика",
+      "nl": "Septoplastiek"
+    },
+    "Septum Deviation": {
+      "tr": "Septum Deviasyonu",
+      "en": "Septum Deviation",
+      "de": "Septumdeviation",
+      "ar": "انحراف الحاجز الأنفي",
+      "ru": "Искривление перегородки",
+      "nl": "Septum Deviatie"
+    },
+    "Facial Surgery": {
+      "tr": "Yüz Estetiği",
+      "en": "Facial Surgery",
+      "de": "Gesichtschirurgie",
+      "ar": "جراحة الوجه",
+      "ru": "Хирургия лица",
+      "nl": "Gezichtschirurgie"
+    },
+    "Gastric Bypass": {
+      "tr": "Gastrik Bypass",
+      "en": "Gastric Bypass",
+      "de": "Magenbypass",
+      "ar": "المجازة المعدية",
+      "ru": "Желудочное шунтирование",
+      "nl": "Maagbypass"
+    },
+    "Gastric Balloon": {
+      "tr": "Mide Balonu",
+      "en": "Gastric Balloon",
+      "de": "Magenballon",
+      "ar": "بالون المعدة",
+      "ru": "Желудочный баллон",
+      "nl": "Maagballon"
+    },
+    "Sleeve Gastrectomy": {
+      "tr": "Tüp Mide",
+      "en": "Sleeve Gastrectomy",
+      "de": "Schlauchmagen",
+      "ar": "تكميم المعدة",
+      "ru": "Рукавная гастрэктомия",
+      "nl": "Sleeve Gastrectomie"
+    },
+    "Duodenal Switch Surgery": {
+      "tr": "Duodenal Switch Ameliyatı",
+      "en": "Duodenal Switch Surgery",
+      "de": "Duodenalswitch-Operation",
+      "ar": "جراحة التحويل الاثني عشري",
+      "ru": "Операция дуоденального переключения",
+      "nl": "Duodenale Switch Chirurgie"
+    },
+    "Stomach Stapling Surgery": {
+      "tr": "Mide Zımbalama",
+      "en": "Stomach Stapling Surgery",
+      "de": "Magenheftung",
+      "ar": "تدبيس المعدة",
+      "ru": "Сшивание желудка",
+      "nl": "Maagnieten"
+    },
+    "Hip Replacement": {
+      "tr": "Kalça Protezi",
+      "en": "Hip Replacement",
+      "de": "Hüftgelenkersatz",
+      "ar": "استبدال مفصل الورك",
+      "ru": "Замена тазобедренного сустава",
+      "nl": "Heupvervanging"
+    },
+    "Knee Replacement": {
+      "tr": "Diz Protezi",
+      "en": "Knee Replacement",
+      "de": "Kniegelenkersatz",
+      "ar": "استبدال مفصل الركبة",
+      "ru": "Замена коленного сустава",
+      "nl": "Knievervanging"
+    },
+    "Arthroscopic Operations": {
+      "tr": "Artroskopik Ameliyatlar",
+      "en": "Arthroscopic Operations",
+      "de": "Arthroskopische Operationen",
+      "ar": "عمليات التنظير المفصلي",
+      "ru": "Артроскопические операции",
+      "nl": "Arthroscopische Operaties"
+    },
+    "Spinal Surgery": {
+      "tr": "Omurga Cerrahisi",
+      "en": "Spinal Surgery",
+      "de": "Wirbelsäulenchirurgie",
+      "ar": "جراحة العمود الفقري",
+      "ru": "Хирургия позвоночника",
+      "nl": "Spinale Chirurgie"
+    },
+    "Pediatric Orthopedics": {
+      "tr": "Çocuk Ortopedisi",
+      "en": "Pediatric Orthopedics",
+      "de": "Kinderorthopädie",
+      "ar": "جراحة العظام للأطفال",
+      "ru": "Детская ортопедия",
+      "nl": "Kinderorthopedie"
+    },
+    "Cataract": {
+      "tr": "Katarakt Ameliyatı",
+      "en": "Cataract Surgery",
+      "de": "Katarakt-Operation",
+      "ar": "جراحة الساد",
+      "ru": "Операция катаракты",
+      "nl": "Cataract Chirurgie"
+    },
+    "Extracapsullar Cataract Extraction": {
+      "tr": "Ekstrakapsuler Katarakt",
+      "en": "Extracapsular Cataract Extraction",
+      "de": "Extrakapsuläre Kataraktextraktion",
+      "ar": "استخراج الساد خارج المحفظة",
+      "ru": "Экстракапсулярная экстракция",
+      "nl": "Extracapsulaire Cataract Extractie"
+    },
+    "Epi-LASIK Eye Surgery": {
+      "tr": "Epi-LASIK Göz Ameliyatı",
+      "en": "Epi-LASIK Eye Surgery",
+      "de": "Epi-LASIK Augenoperation",
+      "ar": "جراحة العين Epi-LASIK",
+      "ru": "Операция Epi-LASIK",
+      "nl": "Epi-LASIK Oogchirurgie"
+    },
+    "Keratoplasty": {
+      "tr": "Kornea Nakli",
+      "en": "Corneal Transplant",
+      "de": "Hornhauttransplantation",
+      "ar": "زرع القرنية",
+      "ru": "Трансплантация роговицы",
+      "nl": "Hoornvliestransplantatie"
+    },
+    "Oculoplastic Surgery": {
+      "tr": "Göz Kapağı Estetiği",
+      "en": "Oculoplastic Surgery",
+      "de": "Lidästhetik",
+      "ar": "جراحة العين التجميلية",
+      "ru": "Окулопластическая хирургия",
+      "nl": "Oculoplastische Chirurgie"
+    },
+    "Laser Varicose Vein Treatment": {
+      "tr": "Lazer Varis Tedavisi",
+      "en": "Laser Varicose Vein Treatment",
+      "de": "Laser-Krampfaderbehandlung",
+      "ar": "علاج الدوالي بالليزر",
+      "ru": "Лазерное лечение варикоза",
+      "nl": "Laser Spataderen Behandeling"
+    },
+    "IVF": {
+      "tr": "Tüp Bebek",
+      "en": "IVF Treatment",
+      "de": "IVF-Behandlung",
+      "ar": "علاج أطفال الأنابيب",
+      "ru": "Лечение ЭКО",
+      "nl": "IVF-behandeling"
+    },
+    "Cardiac stress test": {
+      "tr": "Kardiyak Stres Testi",
+      "en": "Cardiac Stress Test",
+      "de": "Herzbelastungstest",
+      "ar": "اختبار الإجهاد القلبي",
+      "ru": "Кардиологический стресс-тест",
+      "nl": "Cardiale Stresstest"
+    },
+    "ECG (Electrocardiogram)": {
+      "tr": "EKG",
+      "en": "ECG",
+      "de": "EKG",
+      "ar": "تخطيط كهربية القلب",
+      "ru": "ЭКГ",
+      "nl": "ECG"
+    },
+    "Invasive Procedures": {
+      "tr": "İnvaziv Prosedürler",
+      "en": "Invasive Procedures",
+      "de": "Invasive Verfahren",
+      "ar": "الإجراءات الغازية",
+      "ru": "Инвазивные процедуры",
+      "nl": "Invasieve Procedures"
+    },
+    "Non-invasive Procedures": {
+      "tr": "Non-invaziv Prosedürler",
+      "en": "Non-invasive Procedures",
+      "de": "Nicht-invasive Verfahren",
+      "ar": "الإجراءات غير الغازية",
+      "ru": "Неинвазивные процедуры",
+      "nl": "Niet-invasieve Procedures"
+    },
+    "Child Psychotherapy": {
+      "tr": "Çocuk Psikoterapisi",
+      "en": "Child Psychotherapy",
+      "de": "Kinderpsychotherapie",
+      "ar": "العلاج النفسي للأطفال",
+      "ru": "Детская психотерапия",
+      "nl": "Kinderpsychotherapie"
+    },
+    "Couples Therapy": {
+      "tr": "Çift Terapisi",
+      "en": "Couples Therapy",
+      "de": "Paartherapie",
+      "ar": "العلاج الزوجي",
+      "ru": "Парная терапия",
+      "nl": "Relatietherapie"
+    },
+    "Bereavement Counselling": {
+      "tr": "Yas Danışmanlığı",
+      "en": "Bereavement Counselling",
+      "de": "Trauerberatung",
+      "ar": "الاستشارة في حالات الفقد",
+      "ru": "Консультирование по утрате",
+      "nl": "Rouwbegeleiding"
+    },
+    "Hypnotherapy": {
+      "tr": "Hipnoterapi",
+      "en": "Hypnotherapy",
+      "de": "Hypnotherapie",
+      "ar": "العلاج بالتنويم المغناطيسي",
+      "ru": "Гипнотерапия",
+      "nl": "Hypnotherapie"
+    },
+    "Career Coaching": {
+      "tr": "Kariyer Koçluğu",
+      "en": "Career Coaching",
+      "de": "Karriere-Coaching",
+      "ar": "التدريب المهني",
+      "ru": "Карьерный коучинг",
+      "nl": "Carrièrecoaching"
+    }
+  },
+  "ui_elements": {
+    "search_placeholder": {
+      "tr": "Tedavi veya klinik ara...",
+      "en": "Search treatment or clinic...",
+      "de": "Behandlung oder Klinik suchen...",
+      "ar": "ابحث عن العلاج أو العيادة...",
+      "ru": "Поиск лечения или клиники...",
+      "nl": "Zoek behandeling of kliniek..."
+    },
+    "price": {
+      "tr": "Fiyat",
+      "en": "Price",
+      "de": "Preis",
+      "ar": "السعر",
+      "ru": "Цена",
+      "nl": "Prijs"
+    },
+    "rating": {
+      "tr": "Puan",
+      "en": "Rating",
+      "de": "Bewertung",
+      "ar": "التقييم",
+      "ru": "Рейтинг",
+      "nl": "Beoordeling"
+    },
+    "treatments": {
+      "tr": "Tedaviler",
+      "en": "Treatments",
+      "de": "Behandlungen",
+      "ar": "العلاجات",
+      "ru": "Процедуры",
+      "nl": "Behandelingen"
+    },
+    "duration": {
+      "tr": "Süre",
+      "en": "Duration",
+      "de": "Dauer",
+      "ar": "المدة",
+      "ru": "Длительность",
+      "nl": "Duur"
+    },
+    "book_appointment": {
+      "tr": "Randevu Al",
+      "en": "Book Appointment",
+      "de": "Termin buchen",
+      "ar": "احجز موعد",
+      "ru": "Записаться",
+      "nl": "Afspraak Maken"
+    },
+    "get_quote": {
+      "tr": "Fiyat Teklifi Al",
+      "en": "Get Quote",
+      "de": "Angebot erhalten",
+      "ar": "احصل على عرض سعر",
+      "ru": "Получить предложение",
+      "nl": "Offerte Aanvragen"
+    },
+    "view_details": {
+      "tr": "Detayları Gör",
+      "en": "View Details",
+      "de": "Details ansehen",
+      "ar": "عرض التفاصيل",
+      "ru": "Подробнее",
+      "nl": "Details Bekijken"
+    },
+    "days": {
+      "tr": "gün",
+      "en": "days",
+      "de": "Tage",
+      "ar": "أيام",
+      "ru": "дней",
+      "nl": "dagen"
+    }
+  }
+}

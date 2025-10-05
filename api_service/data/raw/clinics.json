@@ -8,11 +8,31 @@
       "phone": "0 242 324 98 98",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -23,11 +43,31 @@
       "phone": "0 242 245 00 11",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -38,11 +78,31 @@
       "phone": "0 242 323 78 78",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -53,11 +113,31 @@
       "phone": "0 242 322 93 90",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -68,11 +148,31 @@
       "phone": "0 542 471 61 14",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -83,11 +183,31 @@
       "phone": "0 242 324 81 19",
       "city": "Antalya",
       "treatments": [
-        "Hypnotherapy",
-        "Career Coaching",
-        "Child Psychotherapy",
-        "Couples Therapy",
-        "Bereavement Counselling"
+        {
+          "name": "Hypnotherapy",
+          "price": 135,
+          "currency": "EUR"
+        },
+        {
+          "name": "Career Coaching",
+          "price": 120,
+          "currency": "EUR"
+        },
+        {
+          "name": "Child Psychotherapy",
+          "price": 115,
+          "currency": "EUR"
+        },
+        {
+          "name": "Couples Therapy",
+          "price": 150,
+          "currency": "EUR"
+        },
+        {
+          "name": "Bereavement Counselling",
+          "price": 100,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -98,11 +218,31 @@
       "phone": "0 242 321 78 78",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -113,11 +253,31 @@
       "phone": "0 242 746 00 13",
       "city": "Antalya",
       "treatments": [
-        "Hip Replacement",
-        "Pediatric Orthopedics",
-        "Knee Replacement",
-        "Arthroscopic Operations",
-        "Spinal Surgery"
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -128,11 +288,31 @@
       "phone": "+90 242 241 81 62",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -143,11 +323,31 @@
       "phone": "+90 549 800 41 05",
       "city": "Antalya",
       "treatments": [
-        "Hypnotherapy",
-        "Career Coaching",
-        "Child Psychotherapy",
-        "Couples Therapy",
-        "Bereavement Counselling"
+        {
+          "name": "Hypnotherapy",
+          "price": 135,
+          "currency": "EUR"
+        },
+        {
+          "name": "Career Coaching",
+          "price": 120,
+          "currency": "EUR"
+        },
+        {
+          "name": "Child Psychotherapy",
+          "price": 115,
+          "currency": "EUR"
+        },
+        {
+          "name": "Couples Therapy",
+          "price": 150,
+          "currency": "EUR"
+        },
+        {
+          "name": "Bereavement Counselling",
+          "price": 100,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -158,11 +358,31 @@
       "phone": "0 242 344 50 50",
       "city": "Antalya",
       "treatments": [
-        "Stomach Stapling Surgery",
-        "Gastric Balloon",
-        "Sleeve Gastrectomy",
-        "Duodenal Switch Surgery",
-        "Gastric Bypass"
+        {
+          "name": "Stomach Stapling Surgery",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Gastric Balloon",
+          "price": 2750,
+          "currency": "EUR"
+        },
+        {
+          "name": "Sleeve Gastrectomy",
+          "price": 4750,
+          "currency": "EUR"
+        },
+        {
+          "name": "Duodenal Switch Surgery",
+          "price": 7000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Gastric Bypass",
+          "price": 5500,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -173,11 +393,31 @@
       "phone": "444 76 06",
       "city": "Antalya",
       "treatments": [
-        "Hip Replacement",
-        "Pediatric Orthopedics",
-        "Knee Replacement",
-        "Arthroscopic Operations",
-        "Spinal Surgery"
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -188,11 +428,31 @@
       "phone": "444 76 06",
       "city": "Antalya",
       "treatments": [
-        "Hip Replacement",
-        "Pediatric Orthopedics",
-        "Knee Replacement",
-        "Arthroscopic Operations",
-        "Spinal Surgery"
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -203,11 +463,31 @@
       "phone": "0 242 349 40 40",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -218,11 +498,31 @@
       "phone": "0 242 212 0 444",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -233,11 +533,31 @@
       "phone": "0 242 249 33 00",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -248,11 +568,31 @@
       "phone": "0 242 332 26 26",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -263,11 +603,31 @@
       "phone": "0 242 226 03 03",
       "city": "Antalya",
       "treatments": [
-        "Hip Replacement",
-        "Pediatric Orthopedics",
-        "Knee Replacement",
-        "Arthroscopic Operations",
-        "Spinal Surgery"
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -278,11 +638,31 @@
       "phone": "0 242 511 37 37",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -293,11 +673,31 @@
       "phone": "0 551 045 96 73",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -308,11 +708,31 @@
       "phone": "0 242 212 06 66",
       "city": "Antalya",
       "treatments": [
-        "Hip Replacement",
-        "Pediatric Orthopedics",
-        "Knee Replacement",
-        "Arthroscopic Operations",
-        "Spinal Surgery"
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -323,7 +743,11 @@
       "phone": "0 242 345 47 00",
       "city": "Antalya",
       "treatments": [
-        "IVF"
+        {
+          "name": "IVF",
+          "price": 3750,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -334,11 +758,31 @@
       "phone": "0 242 324 57 79",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -358,11 +802,31 @@
       "phone": "0 242 323 26 07",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -373,11 +837,31 @@
       "phone": "0 242 244 22 11",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -388,11 +872,31 @@
       "phone": "0 242 334 0107",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -403,11 +907,31 @@
       "phone": "0 242 310 80 80",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -418,11 +942,31 @@
       "phone": "0 242 324 94 95",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -433,11 +977,31 @@
       "phone": "0 242 322 08 80",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -448,11 +1012,31 @@
       "phone": "0 242 722 53 53",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -463,11 +1047,31 @@
       "phone": "0 242 746 23 63",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -478,11 +1082,31 @@
       "phone": "0 506 799 62 15",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -493,11 +1117,31 @@
       "phone": "0 242 312 66 09",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -508,11 +1152,31 @@
       "phone": "0 242 323 24 23",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -523,11 +1187,31 @@
       "phone": "0 242 255 55 18",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -538,11 +1222,31 @@
       "phone": "0 242 312 50 24",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -553,11 +1257,31 @@
       "phone": "0 534 234 44 44",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -568,11 +1292,31 @@
       "phone": "0 530 185 83 10",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -583,11 +1327,31 @@
       "phone": "0 242 349 11 01",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -598,11 +1362,31 @@
       "phone": "0 552 504 71 15",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -613,11 +1397,31 @@
       "phone": "0 242 349 49 22",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -628,11 +1432,31 @@
       "phone": "0 242 746 49 00",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -643,11 +1467,31 @@
       "phone": "0 242 316 30 00",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -658,11 +1502,31 @@
       "phone": "0 242 316 21 41",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -673,11 +1537,31 @@
       "phone": "0 242 312 44 59",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -688,11 +1572,31 @@
       "phone": "0 242 229 02 01",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -703,11 +1607,31 @@
       "phone": "0 242 317 10 00",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -718,11 +1642,31 @@
       "phone": "0 242 502 50 50",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -733,11 +1677,31 @@
       "phone": "0 242 746 40 01",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -748,11 +1712,31 @@
       "phone": "0 242 228 28 28",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -763,11 +1747,31 @@
       "phone": "0 242 338 08 48",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -778,11 +1782,31 @@
       "phone": "0 242 322 02 12",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -793,11 +1817,31 @@
       "phone": "0 242 311 05 81",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -808,11 +1852,31 @@
       "phone": "0 242 222 02 04",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -823,11 +1887,31 @@
       "phone": "0 242 323 23 63",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -838,11 +1922,31 @@
       "phone": "0 242 248 48 35",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -853,11 +1957,31 @@
       "phone": "444 44 69",
       "city": "Antalya",
       "treatments": [
-        "Keratoplasty",
-        "Cataract",
-        "Oculoplastic Surgery",
-        "Epi-LASIK Eye Surgery",
-        "Extracapsullar Cataract Extraction"
+        {
+          "name": "Keratoplasty",
+          "price": 4500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cataract",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Oculoplastic Surgery",
+          "price": 3000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Epi-LASIK Eye Surgery",
+          "price": 1850,
+          "currency": "EUR"
+        },
+        {
+          "name": "Extracapsullar Cataract Extraction",
+          "price": 2650,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -868,11 +1992,31 @@
       "phone": "0 242 243 38 47",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -883,11 +2027,31 @@
       "phone": "0 242 243 41 18",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -898,11 +2062,31 @@
       "phone": "0 242 259 58 53",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -913,11 +2097,31 @@
       "phone": "0 242 814 60 70",
       "city": "Antalya",
       "treatments": [
-        "Hip Replacement",
-        "Pediatric Orthopedics",
-        "Knee Replacement",
-        "Arthroscopic Operations",
-        "Spinal Surgery"
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -928,11 +2132,31 @@
       "phone": "0 242 314 34 34",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -943,11 +2167,31 @@
       "phone": "0 242 753 69 61",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -958,11 +2202,31 @@
       "phone": "0 242 316 16 62",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -973,11 +2237,31 @@
       "phone": "444 30 75",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -988,11 +2272,31 @@
       "phone": "0 242 247 49 54",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1003,11 +2307,31 @@
       "phone": "0 242 229 52 02",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1018,11 +2342,31 @@
       "phone": "0 242 310 32 32",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1033,11 +2377,31 @@
       "phone": "+44 20 3290 0594",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1048,11 +2412,31 @@
       "phone": "0 242 753 11 11",
       "city": "Antalya",
       "treatments": [
-        "Hypnotherapy",
-        "Career Coaching",
-        "Child Psychotherapy",
-        "Couples Therapy",
-        "Bereavement Counselling"
+        {
+          "name": "Hypnotherapy",
+          "price": 135,
+          "currency": "EUR"
+        },
+        {
+          "name": "Career Coaching",
+          "price": 120,
+          "currency": "EUR"
+        },
+        {
+          "name": "Child Psychotherapy",
+          "price": 115,
+          "currency": "EUR"
+        },
+        {
+          "name": "Couples Therapy",
+          "price": 150,
+          "currency": "EUR"
+        },
+        {
+          "name": "Bereavement Counselling",
+          "price": 100,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1063,11 +2447,31 @@
       "phone": "0 242 310 92 92",
       "city": "Antalya",
       "treatments": [
-        "Hip Replacement",
-        "Pediatric Orthopedics",
-        "Knee Replacement",
-        "Arthroscopic Operations",
-        "Spinal Surgery"
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1078,11 +2482,31 @@
       "phone": "0 242 228 09 09",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1093,11 +2517,31 @@
       "phone": "+90 (242) 244 42 22",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1108,11 +2552,31 @@
       "phone": "0 242 212 08 88",
       "city": "Antalya",
       "treatments": [
-        "Hip Replacement",
-        "Pediatric Orthopedics",
-        "Knee Replacement",
-        "Arthroscopic Operations",
-        "Spinal Surgery"
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1123,11 +2587,31 @@
       "phone": "0 242 349 75 23",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1138,11 +2622,31 @@
       "phone": "0 242 314 66 66",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1153,11 +2657,31 @@
       "phone": "0 242 746 05 05",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1168,11 +2692,31 @@
       "phone": "0 242 243 04 42",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1183,11 +2727,31 @@
       "phone": "444 2 676",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1198,11 +2762,31 @@
       "phone": "0 242 348 00 30",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1213,11 +2797,31 @@
       "phone": "0 242 329 44 44",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1228,11 +2832,31 @@
       "phone": "0 242 316 13 31",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1243,11 +2867,31 @@
       "phone": "0 242 230 36 36",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1258,11 +2902,31 @@
       "phone": null,
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1273,11 +2937,31 @@
       "phone": "0 242 316 96 26",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1288,11 +2972,31 @@
       "phone": "0 242 323 22 88",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1303,11 +3007,31 @@
       "phone": "0 242 332 51 55",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1318,11 +3042,31 @@
       "phone": "0 242 228 78 78",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1333,11 +3077,31 @@
       "phone": "0 242 230 07 07",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1348,11 +3112,31 @@
       "phone": "+90 532 364 8910",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1363,11 +3147,31 @@
       "phone": "0 242 229 89 99",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1378,11 +3182,31 @@
       "phone": "0 242 324 18 88",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1393,11 +3217,31 @@
       "phone": "0 242 255 07 42",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1408,11 +3252,31 @@
       "phone": "0 242 777 06 66",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1423,11 +3287,31 @@
       "phone": "0 242 345 28 28",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1438,11 +3322,31 @@
       "phone": "0 242 344 01 00",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1453,11 +3357,31 @@
       "phone": "0 242 504 66 22",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1468,11 +3392,31 @@
       "phone": "0 242 887 22 10",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1483,11 +3427,31 @@
       "phone": "0 531 241 20 81",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1498,11 +3462,31 @@
       "phone": "0 242 248 36 46",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1513,11 +3497,31 @@
       "phone": "0 242 228 22 22",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1528,11 +3532,31 @@
       "phone": "0 242 321 19 82",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1543,11 +3567,31 @@
       "phone": "0 242 313 07 70",
       "city": "Antalya",
       "treatments": [
-        "Facial Surgery",
-        "Seconder Rhinoplasty",
-        "Open Rhinoplasty",
-        "Septum Deviation",
-        "Septoplasty"
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
       ]
     },
     {
@@ -1558,1255 +3602,2886 @@
       "phone": "0 242 247 38 58",
       "city": "Antalya",
       "treatments": [
-        "Composite Bonding",
-        "Zirconium Crowns",
-        "Porcelain Veneers",
-        "Cosmetic Dentistry",
-        "Teeth Whitening"
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
       ]
     },
-  {
-    "id": "ist_clinic_001",
-    "name": "Doç. Dr. Ahu Birol Kocaalp Clinic",
-    "rating": 4.98,
-    "address": "Caddebostan Mahallesi Kavaklı Sok. Aliye Hanım Ap. No:2 Kat:2 Daire:3 Kadıköy /İstanbul",
-    "phone": "0 216 350 13 33",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_002",
-    "name": "Acıbadem University Acıbadem Atakent Hospital",
-    "rating": 4.93,
-    "address": "Halkalı Merkez Mahallesi Turgut Özal Bulvarı No:16 Küçükçekmece/İSTANBUL",
-    "phone": "0 212 404 44 44",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_003",
-    "name": "Biruni University Health Eğitimi Research & Application Center",
-    "rating": 4.98,
-    "address": "Beşyol Mahallesi Eski Londra Asfaltı No:10 Küçükçekmece/İstanbul",
-    "phone": "444 8 276",
-    "city": "İstanbul",
-    "treatments": [
-      "Keratoplasty",
-      "Cataract",
-      "Oculoplastic Surgery",
-      "Epi-LASIK Eye Surgery",
-      "Extracapsullar Cataract Extraction"
-    ]
-  },
-  {
-    "id": "ist_clinic_004",
-    "name": "Doç. Dr. Dağhan Işık Clinic",
-    "rating": 4.87,
-    "address": "Teşvikiye Mahallesi Hakkı Yeten Caddesi Vital Fulya Plaza No:23 K:2 D:6 Oda No:2 Şişli/İstanbul",
-    "phone": "0 533 225 36 96",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_005",
-    "name": "Doç. Dr. Aydın ARSLAN Clinic",
-    "rating": 4.65,
-    "address": "Ataköy 7-8-9-10. Kısım Mahallesi Çobançeşme E5 Yanyol Cad. Ataköy Towers A Blok No.20/1 D:108 K:6 Bakırköy/İstanbul",
-    "phone": "0 506 777 44 44",
-    "city": "İstanbul",
-    "treatments": [
-      "Hip Replacement",
-      "Pediatric Orthopedics",
-      "Knee Replacement",
-      "Arthroscopic Operations",
-      "Spinal Surgery"
-    ]
-  },
-  {
-    "id": "ist_clinic_006",
-    "name": "Dentopol Oral & Dental Health Clinic",
-    "rating": 4.78,
-    "address": "Altayçeşme Mahallesi Bağdat Caddesi No:317/1 Maltepe/İstanbul",
-    "phone": "444 97 37",
-    "city": "İstanbul",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "ist_clinic_007",
-    "name": "Dr. Hakan Öçsel Clinic",
-    "rating": 4.98,
-    "address": "Dr. Faruk Ayanoğlu Cad.Dirim Apt.No:22/5 Kadıköy /İstanbul",
-    "phone": "0 532 387 30 50",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_008",
-    "name": "Doç. Dr. Burak Ersoy Clinic",
-    "rating": 4.93,
-    "address": "Halaskargazi Mahallesi Valikonağı Cad. No:91-93 D:5 Oda:3 K:5 Şişli/İstanbul",
-    "phone": "0 212 291 66 79",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_009",
-    "name": "Avrasya Hospital",
-    "rating": 4.87,
-    "address": "Beştelsiz Mahallesi 101 Sokak No:107 Zeytinburnu/İstanbul",
-    "phone": "0 212 665 50 50",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_010",
-    "name": "Derindere Hospital",
-    "rating": 4.65,
-    "address": "Merkez Mahallesi Çobançeşme Caddesi Burcu Sokak No:9 Kâğıthane/İstanbul",
-    "phone": "0 212 888 38 88",
-    "city": "İstanbul",
-    "treatments": [
-      "Hip Replacement",
-      "Pediatric Orthopedics",
-      "Knee Replacement",
-      "Arthroscopic Operations",
-      "Spinal Surgery"
-    ]
-  },
-  {
-    "id": "ist_clinic_011",
-    "name": "Dr. Berat Bora Ok Clinic",
-    "rating": 4.98,
-    "address": "Fenerbahçe Mahallesi Cemil Topuzlu Caddesi Lalezar Sokak No:7 K:3 D:9 Kadıköy/İstanbul",
-    "phone": "0 216 358 21 22",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_012",
-    "name": "Başkent University İstanbul Health Research & Application Center",
-    "rating": 4.93,
-    "address": "Altunizade Mahallesi Kısıklı Caddesi Oymacı Sokak No:7 Üsküdar/İstanbul",
-    "phone": "0 216 554 15 00",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_013",
-    "name": "Dt. Ahmet Sinan Cem ÇEPELOĞLU Clinic",
-    "rating": 4.87,
-    "address": "Merkez Mahallesi Halaskargazi Cad. Mürüvvet Apt. No:165/3 K:3 Şişli/İstanbul",
-    "phone": "0 541 688 48 98",
-    "city": "İstanbul",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "ist_clinic_014",
-    "name": "Dr. İsmail Metin Hoşer Clinic",
-    "rating": 4.65,
-    "address": "Acıbadem Mahallesi Şeyh Galip sokak No:2/1 Elysium Elit Sitesi B Blok D:29 Kadıköy/İstanbul",
-    "phone": "0 534 478 88 71",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_015",
-    "name": "Dr. Fatma Gökçe HASPOLAT Clinic",
-    "rating": 4.78,
-    "address": "Harbiye Mahallesi Abdi İpekçi Caddesi Deniz Apartmanı No:20 D:6 K:1 Şişli/İstanbul",
-    "phone": "0 533 277 52 72",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_016",
-    "name": "İstanbul Aydın University Health Research & Application Center",
-    "rating": 4.98,
-    "address": "Beşyol Mahallesi Fabrikalar Caddesi No:3 Küçükçekmece/İstanbul",
-    "phone": "444 1 428",
-    "city": "İstanbul",
-    "treatments": []
-  },
-  {
-    "id": "ist_clinic_017",
-    "name": "Doç. Dr. İsmail Küçüker Clinic",
-    "rating": 4.93,
-    "address": "Suadiye Mahallesi Bağdat Caddesi No:461 İç Kapı No:3 Kadıköy/İstanbul",
-    "phone": "0 505 251 38 03",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_018",
-    "name": "Dr. Ziya YAVUZ Clinic",
-    "rating": 4.87,
-    "address": "Teşvikiye Mahallesi Hakkı Yeten Caddesi No.15 D.10 Oda No: 1 Şişli/İstanbul",
-    "phone": "0 544 788 43 88",
-    "city": "İstanbul",
-    "treatments": [
-      "Eyebrow Transplant",
-      "FUT - Follicular Unit Transplant",
-      "FUE - Follicular Unit Extraction",
-      "DHI - Direct Hair Implantation",
-      "Facial Hair Transplant"
-    ]
-  },
-  {
-    "id": "ist_clinic_019",
-    "name": "Dr. Özge Ergün Clinic",
-    "rating": 4.78,
-    "address": "Teşvikiye Mahallesi Hakkı Yeten Cad. Fulya Terrace No:11/67 Şişli/İstanbul",
-    "phone": "0 212 215 55 43",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_020",
-    "name": "Dr. Aslı Berker Clinic",
-    "rating": 4.98,
-    "address": "Meşrutiyet Mahallesi Valikonağı Cd. Kodaman Sok. No:1 Keçeci Apt. K:2 D:2 Oda No:203 Şişli/İstanbul",
-    "phone": "0 212 296 18 08",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_021",
-    "name": "Dünyagöz Etiler Hospital",
-    "rating": 4.93,
-    "address": "Etiler Nispetiye Caddesi Yanarsu Sokak No:1/3 Beşiktaş/İstanbul",
-    "phone": "444 44 69",
-    "city": "İstanbul",
-    "treatments": [
-      "Keratoplasty",
-      "Cataract",
-      "Oculoplastic Surgery",
-      "Epi-LASIK Eye Surgery",
-      "Extracapsullar Cataract Extraction"
-    ]
-  },
-  {
-    "id": "ist_clinic_022",
-    "name": "İstinye University Health Research & Application Center",
-    "rating": 4.87,
-    "address": "Aşık Veysel Mahallesi Süleyman Demirel Caddesi No:1 34517 Esenyurt /İstanbul",
-    "phone": "444 66 23",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ist_clinic_023",
-    "name": "İstanbul Bezmialem Vakıf University Health Research & Application Center",
-    "rating": 4.65,
-    "address": "İskenderpaşa Mahallesi Adnan Menderes Bulvarı (Vatan Cad.) 34093 Fatih / İstanbul",
-    "phone": "0 212 453 18 69",
-    "city": "İstanbul",
-    "treatments": [
-      "Hip Replacement",
-      "Pediatric Orthopedics",
-      "Knee Replacement",
-      "Arthroscopic Operations",
-      "Spinal Surgery"
-    ]
-  },
-  {
-    "id": "ist_clinic_024",
-    "name": "İstanbul Altınbaş University Oral & Dental Health Research & Application Center",
-    "rating": 4.78,
-    "address": "Zuhuratbaba Mahallesi İncirli Cad. No:11 Bakırköy/İstanbul",
-    "phone": "0 212 709 45 30",
-    "city": "İstanbul",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "ist_clinic_025",
-    "name": "Op. Dr. Arzu Türkseven Topaçoğlu Clinic",
-    "rating": 4.98,
-    "address": "Suadiye Mahallesi Bağdat Cd. Noter Sk. No:41/D:1 Kadıköy/İstanbul",
-    "phone": "0 212 368 68 00",
-    "city": "İstanbul",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ank_clinic_001",
-    "name": "Ayaş Prestige Termal Hotel Konaklamalı Phys Therapy & Rehabilitation Center",
-    "rating": 4.93,
-    "address": "Hacıveli Mahallesi Ankara Cad. No:1 Ayaş/Ankara",
-    "phone": "444 89 78",
-    "city": "Ankara",
-    "treatments": [
-      "Hypnotherapy",
-      "Career Coaching",
-      "Child Psychotherapy",
-      "Couples Therapy",
-      "Bereavement Counselling"
-    ]
-  },
-  {
-    "id": "ank_clinic_002",
-    "name": "Başkent University Ankara Hospital",
-    "rating": 4.87,
-    "address": "Yukarı Bahçelievler Mahallesi Mareşal Fevzi Çakmak Caddesi No:45 06490 Çankaya/Ankara",
-    "phone": "+90 312 203 68 68",
-    "city": "Ankara",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ank_clinic_003",
-    "name": "Doç. Dr. Esin Yalçınkaya Clinic",
-    "rating": 4.65,
-    "address": "Mustafa Kemal Mah. Via Green Plaza 2079. Sok. No: 2B/20 Çankaya / Ankara",
-    "phone": "0 530 244 71 84",
-    "city": "Ankara",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ank_clinic_004",
-    "name": "Bilge Hayatlar Huzurevi ve Yaşlı Bakım Center Konaklamalı Phys Therapy & Rehabilitation Center",
-    "rating": 4.78,
-    "address": "Yaşamkent Mahallesi 3166. Sok. No: 14 Çankaya/Ankara",
-    "phone": "0 505 421 07 97",
-    "city": "Ankara",
-    "treatments": [
-      "Hypnotherapy",
-      "Career Coaching",
-      "Child Psychotherapy",
-      "Couples Therapy",
-      "Bereavement Counselling"
-    ]
-  },
-  {
-    "id": "ank_clinic_005",
-    "name": "Doç. Dr. Ozan Bitik Clinic",
-    "rating": 4.98,
-    "address": "Kızılırmak Mahallesi Dumlupınar Bulvarı No:3A/52 Çankaya - Ankara",
-    "phone": "0 531 305 39 37",
-    "city": "Ankara",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ank_clinic_006",
-    "name": "Dünyagöz Ankara Hospital",
-    "rating": 4.93,
-    "address": "Tunus Caddesi No:28 Kavaklıdere Çankaya/Ankara",
-    "phone": "444 44 69",
-    "city": "Ankara",
-    "treatments": [
-      "Keratoplasty",
-      "Cataract",
-      "Oculoplastic Surgery",
-      "Epi-LASIK Eye Surgery",
-      "Extracapsullar Cataract Extraction"
-    ]
-  },
-  {
-    "id": "ank_clinic_007",
-    "name": "Dr. Dt. Yasemin Özyürek Türkdönmez Clinic",
-    "rating": 4.87,
-    "address": "Kızılırmak Mah. 1443. Cad. No: 25/B/174 Çankaya/Ankara",
-    "phone": "0 312 979 88 58",
-    "city": "Ankara",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "ank_clinic_008",
-    "name": "Doktorun Oteli Konaklamalı Phys Therapy & Rehabilitation Center",
-    "rating": 4.65,
-    "address": "Çaldağ Mahallesi Gedik Yolu Cad. No:32 Haymana/Ankara",
-    "phone": "0 542 658 00 10",
-    "city": "Ankara",
-    "treatments": [
-      "Hypnotherapy",
-      "Career Coaching",
-      "Child Psychotherapy",
-      "Couples Therapy",
-      "Bereavement Counselling"
-    ]
-  },
-  {
-    "id": "ank_clinic_009",
-    "name": "Eliz Thermal Hotel Convention Spa Wellness Konaklamalı Phys Therapy & Rehabilitation Center",
-    "rating": 4.98,
-    "address": "İsmetpaşa Mahallesi Gülşenler Cad. No: 7/1 Kızılcahamam/Ankara",
-    "phone": "+90 3128104444",
-    "city": "Ankara",
-    "treatments": [
-      "Hypnotherapy",
-      "Career Coaching",
-      "Child Psychotherapy",
-      "Couples Therapy",
-      "Bereavement Counselling"
-    ]
-  },
-  {
-    "id": "ank_clinic_010",
-    "name": "Fizyocare Phys Therapy & Rehabilitation Center",
-    "rating": 4.65,
-    "address": "Alacaatlı Caddesi 2857 Sokak No:7 Çayyolu Çankaya/Ankara",
-    "phone": "0 312 240 05 40",
-    "city": "Ankara",
-    "treatments": [
-      "Hypnotherapy",
-      "Career Coaching",
-      "Child Psychotherapy",
-      "Couples Therapy",
-      "Bereavement Counselling"
-    ]
-  },
-  {
-    "id": "ank_clinic_011",
-    "name": "MİA Huzurevi Ve Yaşlı Bakım Konaklamalı Phys Therapy & Rehabilitation Center",
-    "rating": 4.78,
-    "address": "Kızılcaşar Mahallesi Koza Sok. No: 411 İncek-Gölbaşı - Ankara",
-    "phone": "0 312 557 23 00",
-    "city": "Ankara",
-    "treatments": [
-      "Hypnotherapy",
-      "Career Coaching",
-      "Child Psychotherapy",
-      "Couples Therapy",
-      "Bereavement Counselling"
-    ]
-  },
-  {
-    "id": "ank_clinic_012",
-    "name": "A Life Park Hospital Ankara Hospital",
-    "rating": 4.98,
-    "address": "Elvan Mahallesi 1935. Sokak No:5 Etimesgut/Ankara",
-    "phone": "08508885433",
-    "city": "Ankara",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ank_clinic_013",
-    "name": "Acıbadem Ankara Hospital",
-    "rating": 4.93,
-    "address": "Yukarı Dikmen Mahallesi 630. Sokak No:6 Çankaya/Ankara",
-    "phone": "444 55 44",
-    "city": "Ankara",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ank_clinic_014",
-    "name": "Op. Dr. İbrahim Sakçak Clinic",
-    "rating": 4.87,
-    "address": "Çukurambar Mah. Muhsin Yazıcıoğlu Cad. Sarıkonak Apt. No: 8/11 Çankaya/Ankara",
-    "phone": "0 532 050 32 23",
-    "city": "Ankara",
-    "treatments": [
-      "Stomach Stapling Surgery",
-      "Gastric Balloon",
-      "Sleeve Gastrectomy",
-      "Duodenal Switch Surgery",
-      "Gastric Bypass"
-    ]
-  },
-  {
-    "id": "ank_clinic_015",
-    "name": "Op. Dr. Aşkın Evren Güler Clinic",
-    "rating": 4.65,
-    "address": "İşçi Blokları Mah. Mevlana Bulvarı No: 182/26-27 Çankaya/Ankara",
-    "phone": "0 312 990 09 90",
-    "city": "Ankara",
-    "treatments": [
-      "IVF"
-    ]
-  },
-  {
-    "id": "ank_clinic_016",
-    "name": "Ada Dent Oral & Dental Health Clinic",
-    "rating": 4.78,
-    "address": "Kızılırmak Mahallesi 1445. Sok. The Paragon İş Merkezi No:2-B/78 Çukurambar-Çankaya/Ankara",
-    "phone": "0 312 432 24 44",
-    "city": "Ankara",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "ank_clinic_017",
-    "name": "Op. Dr. İrem Özyüncü Clinic",
-    "rating": 4.98,
-    "address": "Çukurambar Mah. Muhsin Yazıcıoğlu Cad. Sarıkonak Apt. No:8/15 Çankaya - Ankara",
-    "phone": "0 312 286 86 88",
-    "city": "Ankara",
-    "treatments": [
-      "IVF"
-    ]
-  },
-  {
-    "id": "ank_clinic_018",
-    "name": "Akropol Hospital",
-    "rating": 4.93,
-    "address": "Ahiler Mahallesi Uzayan Sok. No:99 Aydınlıkevler Altındağ / Ankara",
-    "phone": "0 312 207 90 00",
-    "city": "Ankara",
-    "treatments": [
-      "Hip Replacement",
-      "Pediatric Orthopedics",
-      "Knee Replacement",
-      "Arthroscopic Operations",
-      "Spinal Surgery"
-    ]
-  },
-  {
-    "id": "ank_clinic_019",
-    "name": "Op. Dr. Onurkan İdacı Clinic",
-    "rating": 4.87,
-    "address": "Kızılırmak Mah. 1443. Cad. Dumlupınar Bulvarı YDA Center Sok. No:9/796 Çankaya/Ankara",
-    "phone": "0 312 544 44 45",
-    "city": "Ankara",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ank_clinic_020",
-    "name": "Op. Dr. Orhan Aydın Clinic",
-    "rating": 4.65,
-    "address": "Mustafa Kemal Mah. Dumlupınar Bulvarı Mahall Ankara C2 Blok No:274/2/151/Ankara",
-    "phone": "0 533 947 63 89",
-    "city": "Ankara",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ank_clinic_021",
-    "name": "Ankara Cerrahi Medical Center",
-    "rating": 4.78,
-    "address": "Aşağı Öveçler Mahallesi 1332. Cadde No:15 Çankaya/Ankara",
-    "phone": "0 312 473 88 55",
-    "city": "Ankara",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ank_clinic_022",
-    "name": "Op. Dr. Talip Talha Tanyeli Clinic",
-    "rating": 4.98,
-    "address": "Mustafa Kemal Mah. 2118 Cad. A Blok No:4/44 Çankaya/ Ankara",
-    "phone": "0 312 623 33 00",
-    "city": "Ankara",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "ank_clinic_023",
-    "name": "Ankara Güven Hospital",
-    "rating": 4.93,
-    "address": "Kavaklıdere Mahallesi Şimşek Sokak No:29 06540 Çankaya/Ankara",
-    "phone": "444 94 94",
-    "city": "Ankara",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "ank_clinic_024",
-    "name": "Ankara Estetik & Ortodonti Oral & Dental Health Clinic",
-    "rating": 4.87,
-    "address": "Kentkoop Mahallesi Batıkent Bulvarı No:255/41 Yenimahalle/Ankara",
-    "phone": "0 312 496 14 96",
-    "city": "Ankara",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_001",
-    "name": "İzmir Can Hospital",
-    "rating": 4.98,
-    "address": "Ataşehir Mahallesi 8019/16. Sokak No:18 35630 Çiğli/İzmir",
-    "phone": "0 232 715 40 00",
-    "city": "İzmir",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "izm_clinic_002",
-    "name": "Op. Dr. Hakan Aydoğan Clinic",
-    "rating": 4.98,
-    "address": "Mansuroğlu Mahallesiİslam Kerimov Cad.No:4/A Bayraklı/İzmir",
-    "phone": "0 532 486 28 98",
-    "city": "İzmir",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "izm_clinic_003",
-    "name": "Başkent University İzmir Zübeyde Hanım Research & Application Center",
-    "rating": 4.78,
-    "address": "Caher Dudayev Bulvarı no: 175 Bostanlı Karşıyaka / İZMİR",
-    "phone": "0 232 241 10 00",
-    "city": "İzmir",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "izm_clinic_004",
-    "name": "Akut Kalp Damar Hospital",
-    "rating": 4.98,
-    "address": "Dokuz Eylül Mahallesi 343/1 Sokak No:6 Gaziemir / İzmir",
-    "phone": "+90 232 220 3900",
-    "city": "İzmir",
-    "treatments": [
-      "Cardiac stress test",
-      "Non-invasive Procedures",
-      "Invasive Procedures",
-      "ECG (Electrocardiogram)",
-      "Laser Varicose Vein Treatment"
-    ]
-  },
-  {
-    "id": "izm_clinic_005",
-    "name": "Balçova Termal Otel",
-    "rating": 4.93,
-    "address": "Vali Hüseyin Öğütcen Cd. No:2 35330, Balçova - İZMİR",
-    "phone": "+90 232 259 01 02",
-    "city": "İzmir",
-    "treatments": [
-      "Hypnotherapy",
-      "Career Coaching",
-      "Child Psychotherapy",
-      "Couples Therapy",
-      "Bereavement Counselling"
-    ]
-  },
-  {
-    "id": "izm_clinic_006",
-    "name": "Cadde Dental Oral & Dental Health Clinic",
-    "rating": 4.65,
-    "address": "Mavişehir Mahallesi Cafer Dudayev Bulvarı Mavibahçe Avm no:40/B /İzmir",
-    "phone": "0 232 336 70 79",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_007",
-    "name": "Doç. Dr. Fatih UYGUR Clinic",
-    "rating": 4.78,
-    "address": "Kültür Mahallesi Cumhuriyet Bulvarı No:193 No:3 Konak/İzmir",
-    "phone": "0 555 015 39 53",
-    "city": "İzmir",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "izm_clinic_008",
-    "name": "Dr. Ali ÜÇKAN Clinic",
-    "rating": 4.87,
-    "address": "Mansuroğlu Mh: 1593/1 Sokak:16/7 Lider Centrio İş Merkezi K:2 d: 7 Bayraklı/İzmir",
-    "phone": "0 232 422 02 26",
-    "city": "İzmir",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "izm_clinic_009",
-    "name": "Op. Dr. Özgün Akgül Clinic",
-    "rating": 4.65,
-    "address": "Adalet Mahallesi Manos Bulvarı No:39/3 kapı no:3806 Bayraklı/İzmir",
-    "phone": "0 555 259 94 25",
-    "city": "İzmir",
-    "treatments": [
-      "Stomach Stapling Surgery",
-      "Gastric Balloon",
-      "Sleeve Gastrectomy",
-      "Duodenal Switch Surgery",
-      "Gastric Bypass"
-    ]
-  },
-  {
-    "id": "izm_clinic_010",
-    "name": "Batı Anadolu Central Hospital",
-    "rating": 4.98,
-    "address": "Fuat Edip Baksi Mahallesi Zeki Yavaş Sokak No: 2/2, 35540 Bayraklı/İzmir",
-    "phone": "(0232) 341 67 67",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_011",
-    "name": "Ata Oral & Dental Health Clinic",
-    "rating": 4.65,
-    "address": "1377 Sokak Mutlu Apartmanı No: 2/1-2 Alsancak/İzmir",
-    "phone": "+90 232 464 86 26",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_012",
-    "name": "Op. Dr. Çağhan Baytekin Clinic",
-    "rating": 4.78,
-    "address": "Alsancak Atatürk Cad.Mert Plaza No:376 Kat:4 Konak/İzmir",
-    "phone": "0 232 463 35 44",
-    "city": "İzmir",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "izm_clinic_013",
-    "name": "Çınarlı Hospital",
-    "rating": 4.93,
-    "address": "Çınarlı Mahallesi Anadolu Caddesi No:14 35110 Konak/İzmir",
-    "phone": "0 232 462 27 27",
-    "city": "İzmir",
-    "treatments": [
-      "IVF"
-    ]
-  },
-  {
-    "id": "izm_clinic_014",
-    "name": "Op. Dr. Nazmi YOĞURTÇU Clinic",
-    "rating": 4.87,
-    "address": "İslam Kerimov Cad. No:4/A Bayraklı/İzmir",
-    "phone": "0 232 440 90 90",
-    "city": "İzmir",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "izm_clinic_015",
-    "name": "Atagöz Eye Diseases Center",
-    "rating": 4.65,
-    "address": "Manas Bulvarı 1586/7 Sokak No:2/A Blok Bayraklı/İZMİR",
-    "phone": "0(232) 446 15 16",
-    "city": "İzmir",
-    "treatments": [
-      "Keratoplasty",
-      "Cataract",
-      "Oculoplastic Surgery",
-      "Epi-LASIK Eye Surgery",
-      "Extracapsullar Cataract Extraction"
-    ]
-  },
-  {
-    "id": "izm_clinic_016",
-    "name": "Dent Forum Oral & Dental Health Clinic",
-    "rating": 4.93,
-    "address": "Mithatpaşa Cad. No:262/1B Ünlü Apartmanı Narlıdere/İzmir",
-    "phone": "0 232 250 30 50",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_017",
-    "name": "Alfa Medical Center",
-    "rating": 4.87,
-    "address": "6244 Sokak No:1/B Bornova, İzmir",
-    "phone": "+90 232 262 28 28",
-    "city": "İzmir",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "izm_clinic_018",
-    "name": "Diş Hekimi Çiğdem İdiz Clinic",
-    "rating": 4.98,
-    "address": "Adalet Mahallesi Manas Bulvarı Folkart Towers B Blok No:39 K: 32 D: 3203 Bayraklı/İzmir",
-    "phone": "0 232 502 11 10",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_019",
-    "name": "Ata Health Hospital",
-    "rating": 4.87,
-    "address": "Kazım Dirik Mah. 297 Sokak No:1 (Metro Stadyum Durağı) Bornova / İzmir / Türkiye",
-    "phone": "+90(232) 459 59 59",
-    "city": "İzmir",
-    "treatments": [
-      "Hip Replacement",
-      "Pediatric Orthopedics",
-      "Knee Replacement",
-      "Arthroscopic Operations",
-      "Spinal Surgery"
-    ]
-  },
-  {
-    "id": "izm_clinic_020",
-    "name": "Dent Ekol Oral & Dental Health Center",
-    "rating": 4.65,
-    "address": "8019/13 Sokak No:211 A-B Çiğli/İzmir",
-    "phone": "0 232 386 43 46",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_021",
-    "name": "Op. Dr. Ali Saraç Clinic",
-    "rating": 4.65,
-    "address": "İslam Kerimov Cad. No:4/A Bayraklı/İzmir",
-    "phone": "0 232 440 90 90",
-    "city": "İzmir",
-    "treatments": [
-      "Keratoplasty",
-      "Cataract",
-      "Oculoplastic Surgery",
-      "Epi-LASIK Eye Surgery",
-      "Extracapsullar Cataract Extraction"
-    ]
-  },
-  {
-    "id": "izm_clinic_022",
-    "name": "Dentapoint Oral & Dental Health Clinic",
-    "rating": 4.78,
-    "address": "Bahriye Üçok Mahallesi Girne Bulvarı No: 154/A Karşıyaka/İzmir",
-    "phone": "0 232 999 76 70",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_023",
-    "name": "Çankaya Medical Center",
-    "rating": 4.98,
-    "address": "Gazi Blv. No: 56-58 Çankaya / İZMİR",
-    "phone": "0232 425 31 32",
-    "city": "İzmir",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "izm_clinic_024",
-    "name": "Ekol Göz Medical Center",
-    "rating": 4.93,
-    "address": "8019/ 13 Sokak No: 2 Çiğli/İzmir",
-    "phone": "0 232 386 69 69",
-    "city": "İzmir",
-    "treatments": [
-      "Keratoplasty",
-      "Cataract",
-      "Oculoplastic Surgery",
-      "Epi-LASIK Eye Surgery",
-      "Extracapsullar Cataract Extraction"
-    ]
-  },
-  {
-    "id": "izm_clinic_025",
-    "name": "Dent 35 Oral & Dental Health Clinic",
-    "rating": 4.87,
-    "address": "Kazım Dirik Mahallesi Mustafa Kemal Cad. No:119/C Bornova/İzmir",
-    "phone": "0 232 404 84 84",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_026",
-    "name": "Denta Klinik Oral & Dental Health Clinic",
-    "rating": 4.65,
-    "address": "Laleli MahallesiMenderes Cad.No:354-A Buca/İzmir",
-    "phone": "0 232 438 05 10",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_027",
-    "name": "Dentroyal Oral & Dental Health Clinic",
-    "rating": 4.78,
-    "address": "Mavişehir Mahallesi 2040 Sokak No:33 B/0 Karşıyaka /İzmir",
-    "phone": "0 232 366 33 30",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_028",
-    "name": "Ekol Kulak Burun Boğaz Hospital",
-    "rating": 4.98,
-    "address": "Ataşehir Mahallesi 8019/16 Sokak No:4 35630 Çiğli/ İzmir",
-    "phone": "0 232 386 55 05",
-    "city": "İzmir",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "izm_clinic_029",
-    "name": "Dent KM Ağız ve Diş Clinic",
-    "rating": 4.93,
-    "address": "Menderes Mahallesi Seyfi Demirsoy Caddesi No:13/B Buca/İzmir",
-    "phone": "0 232 452 54 51",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_030",
-    "name": "Art Oral & Dental Health Clinic",
-    "rating": 4.65,
-    "address": "Mertoğlu İş Merkezi 1717 Sokak Kat:3 No: 128/301-302 Karşıyaka/İzmir",
-    "phone": "+90 232 381 10 74",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_031",
-    "name": "Egesante Medical Center",
-    "rating": 4.98,
-    "address": "Bahçelerarası Mahallesi Mithat Paşa Caddesi 24/A, 35330 Balçova/İzmir",
-    "phone": "0 232 259 14 44",
-    "city": "İzmir",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  },
-  {
-    "id": "izm_clinic_032",
-    "name": "Estetik4 Oral & Dental Health Clinic",
-    "rating": 4.93,
-    "address": "Bahriye Üçok Mahallesi Atatürk Blv. No:45/D Karşıyaka /İzmir",
-    "phone": "0 232 462 60 70",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_033",
-    "name": "Dentomega Oral & Dental Health Clinic",
-    "rating": 4.87,
-    "address": "Adalet Mahallesi Manas Bulvarı No:72/A Bayraklı /İzmir",
-    "phone": "0 232 338 77 59",
-    "city": "İzmir",
-    "treatments": [
-      "Composite Bonding",
-      "Zirconium Crowns",
-      "Porcelain Veneers",
-      "Cosmetic Dentistry",
-      "Teeth Whitening"
-    ]
-  },
-  {
-    "id": "izm_clinic_034",
-    "name": "Karşıyaka Göz Hospital",
-    "rating": 4.65,
-    "address": "Yalı Mahallesi Caher Dudayev Bulvarı No:71 35550 Karşıyaka/İzmir",
-    "phone": "0 232 362 54 54",
-    "city": "İzmir",
-    "treatments": [
-      "Keratoplasty",
-      "Cataract",
-      "Oculoplastic Surgery",
-      "Epi-LASIK Eye Surgery",
-      "Extracapsullar Cataract Extraction"
-    ]
-  },
-  {
-    "id": "izm_clinic_035",
-    "name": "Medifema Hospital",
-    "rating": 4.78,
-    "address": "Mustafa Kemal Paşa Mahallesi Kocatepe Caddesi No:1 35860 Torbalı/İzmir",
-    "phone": "0 232 854 18 54",
-    "city": "İzmir",
-    "treatments": [
-      "Facial Surgery",
-      "Seconder Rhinoplasty",
-      "Open Rhinoplasty",
-      "Septum Deviation",
-      "Septoplasty"
-    ]
-  }
-
+    {
+      "id": "ist_clinic_001",
+      "name": "Doç. Dr. Ahu Birol Kocaalp Clinic",
+      "rating": 4.98,
+      "address": "Caddebostan Mahallesi Kavaklı Sok. Aliye Hanım Ap. No:2 Kat:2 Daire:3 Kadıköy /İstanbul",
+      "phone": "0 216 350 13 33",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_002",
+      "name": "Acıbadem University Acıbadem Atakent Hospital",
+      "rating": 4.93,
+      "address": "Halkalı Merkez Mahallesi Turgut Özal Bulvarı No:16 Küçükçekmece/İSTANBUL",
+      "phone": "0 212 404 44 44",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_003",
+      "name": "Biruni University Health Eğitimi Research & Application Center",
+      "rating": 4.98,
+      "address": "Beşyol Mahallesi Eski Londra Asfaltı No:10 Küçükçekmece/İstanbul",
+      "phone": "444 8 276",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Keratoplasty",
+          "price": 4500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cataract",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Oculoplastic Surgery",
+          "price": 3000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Epi-LASIK Eye Surgery",
+          "price": 1850,
+          "currency": "EUR"
+        },
+        {
+          "name": "Extracapsullar Cataract Extraction",
+          "price": 2650,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_004",
+      "name": "Doç. Dr. Dağhan Işık Clinic",
+      "rating": 4.87,
+      "address": "Teşvikiye Mahallesi Hakkı Yeten Caddesi Vital Fulya Plaza No:23 K:2 D:6 Oda No:2 Şişli/İstanbul",
+      "phone": "0 533 225 36 96",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_005",
+      "name": "Doç. Dr. Aydın ARSLAN Clinic",
+      "rating": 4.65,
+      "address": "Ataköy 7-8-9-10. Kısım Mahallesi Çobançeşme E5 Yanyol Cad. Ataköy Towers A Blok No.20/1 D:108 K:6 Bakırköy/İstanbul",
+      "phone": "0 506 777 44 44",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_006",
+      "name": "Dentopol Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Altayçeşme Mahallesi Bağdat Caddesi No:317/1 Maltepe/İstanbul",
+      "phone": "444 97 37",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_007",
+      "name": "Dr. Hakan Öçsel Clinic",
+      "rating": 4.98,
+      "address": "Dr. Faruk Ayanoğlu Cad.Dirim Apt.No:22/5 Kadıköy /İstanbul",
+      "phone": "0 532 387 30 50",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_008",
+      "name": "Doç. Dr. Burak Ersoy Clinic",
+      "rating": 4.93,
+      "address": "Halaskargazi Mahallesi Valikonağı Cad. No:91-93 D:5 Oda:3 K:5 Şişli/İstanbul",
+      "phone": "0 212 291 66 79",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_009",
+      "name": "Avrasya Hospital",
+      "rating": 4.87,
+      "address": "Beştelsiz Mahallesi 101 Sokak No:107 Zeytinburnu/İstanbul",
+      "phone": "0 212 665 50 50",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_010",
+      "name": "Derindere Hospital",
+      "rating": 4.65,
+      "address": "Merkez Mahallesi Çobançeşme Caddesi Burcu Sokak No:9 Kâğıthane/İstanbul",
+      "phone": "0 212 888 38 88",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_011",
+      "name": "Dr. Berat Bora Ok Clinic",
+      "rating": 4.98,
+      "address": "Fenerbahçe Mahallesi Cemil Topuzlu Caddesi Lalezar Sokak No:7 K:3 D:9 Kadıköy/İstanbul",
+      "phone": "0 216 358 21 22",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_012",
+      "name": "Başkent University İstanbul Health Research & Application Center",
+      "rating": 4.93,
+      "address": "Altunizade Mahallesi Kısıklı Caddesi Oymacı Sokak No:7 Üsküdar/İstanbul",
+      "phone": "0 216 554 15 00",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_013",
+      "name": "Dt. Ahmet Sinan Cem ÇEPELOĞLU Clinic",
+      "rating": 4.87,
+      "address": "Merkez Mahallesi Halaskargazi Cad. Mürüvvet Apt. No:165/3 K:3 Şişli/İstanbul",
+      "phone": "0 541 688 48 98",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_014",
+      "name": "Dr. İsmail Metin Hoşer Clinic",
+      "rating": 4.65,
+      "address": "Acıbadem Mahallesi Şeyh Galip sokak No:2/1 Elysium Elit Sitesi B Blok D:29 Kadıköy/İstanbul",
+      "phone": "0 534 478 88 71",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_015",
+      "name": "Dr. Fatma Gökçe HASPOLAT Clinic",
+      "rating": 4.78,
+      "address": "Harbiye Mahallesi Abdi İpekçi Caddesi Deniz Apartmanı No:20 D:6 K:1 Şişli/İstanbul",
+      "phone": "0 533 277 52 72",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_016",
+      "name": "İstanbul Aydın University Health Research & Application Center",
+      "rating": 4.98,
+      "address": "Beşyol Mahallesi Fabrikalar Caddesi No:3 Küçükçekmece/İstanbul",
+      "phone": "444 1 428",
+      "city": "İstanbul",
+      "treatments": []
+    },
+    {
+      "id": "ist_clinic_017",
+      "name": "Doç. Dr. İsmail Küçüker Clinic",
+      "rating": 4.93,
+      "address": "Suadiye Mahallesi Bağdat Caddesi No:461 İç Kapı No:3 Kadıköy/İstanbul",
+      "phone": "0 505 251 38 03",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_018",
+      "name": "Dr. Ziya YAVUZ Clinic",
+      "rating": 4.87,
+      "address": "Teşvikiye Mahallesi Hakkı Yeten Caddesi No.15 D.10 Oda No: 1 Şişli/İstanbul",
+      "phone": "0 544 788 43 88",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Eyebrow Transplant",
+          "price": 1150,
+          "currency": "EUR"
+        },
+        {
+          "name": "FUT - Follicular Unit Transplant",
+          "price": 1850,
+          "currency": "EUR"
+        },
+        {
+          "name": "FUE - Follicular Unit Extraction",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "DHI - Direct Hair Implantation",
+          "price": 3000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Facial Hair Transplant",
+          "price": 1500,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_019",
+      "name": "Dr. Özge Ergün Clinic",
+      "rating": 4.78,
+      "address": "Teşvikiye Mahallesi Hakkı Yeten Cad. Fulya Terrace No:11/67 Şişli/İstanbul",
+      "phone": "0 212 215 55 43",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_020",
+      "name": "Dr. Aslı Berker Clinic",
+      "rating": 4.98,
+      "address": "Meşrutiyet Mahallesi Valikonağı Cd. Kodaman Sok. No:1 Keçeci Apt. K:2 D:2 Oda No:203 Şişli/İstanbul",
+      "phone": "0 212 296 18 08",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_021",
+      "name": "Dünyagöz Etiler Hospital",
+      "rating": 4.93,
+      "address": "Etiler Nispetiye Caddesi Yanarsu Sokak No:1/3 Beşiktaş/İstanbul",
+      "phone": "444 44 69",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Keratoplasty",
+          "price": 4500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cataract",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Oculoplastic Surgery",
+          "price": 3000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Epi-LASIK Eye Surgery",
+          "price": 1850,
+          "currency": "EUR"
+        },
+        {
+          "name": "Extracapsullar Cataract Extraction",
+          "price": 2650,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_022",
+      "name": "İstinye University Health Research & Application Center",
+      "rating": 4.87,
+      "address": "Aşık Veysel Mahallesi Süleyman Demirel Caddesi No:1 34517 Esenyurt /İstanbul",
+      "phone": "444 66 23",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_023",
+      "name": "İstanbul Bezmialem Vakıf University Health Research & Application Center",
+      "rating": 4.65,
+      "address": "İskenderpaşa Mahallesi Adnan Menderes Bulvarı (Vatan Cad.) 34093 Fatih / İstanbul",
+      "phone": "0 212 453 18 69",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_024",
+      "name": "İstanbul Altınbaş University Oral & Dental Health Research & Application Center",
+      "rating": 4.78,
+      "address": "Zuhuratbaba Mahallesi İncirli Cad. No:11 Bakırköy/İstanbul",
+      "phone": "0 212 709 45 30",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ist_clinic_025",
+      "name": "Op. Dr. Arzu Türkseven Topaçoğlu Clinic",
+      "rating": 4.98,
+      "address": "Suadiye Mahallesi Bağdat Cd. Noter Sk. No:41/D:1 Kadıköy/İstanbul",
+      "phone": "0 212 368 68 00",
+      "city": "İstanbul",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_001",
+      "name": "Ayaş Prestige Termal Hotel Konaklamalı Phys Therapy & Rehabilitation Center",
+      "rating": 4.93,
+      "address": "Hacıveli Mahallesi Ankara Cad. No:1 Ayaş/Ankara",
+      "phone": "444 89 78",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Hypnotherapy",
+          "price": 135,
+          "currency": "EUR"
+        },
+        {
+          "name": "Career Coaching",
+          "price": 120,
+          "currency": "EUR"
+        },
+        {
+          "name": "Child Psychotherapy",
+          "price": 115,
+          "currency": "EUR"
+        },
+        {
+          "name": "Couples Therapy",
+          "price": 150,
+          "currency": "EUR"
+        },
+        {
+          "name": "Bereavement Counselling",
+          "price": 100,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_002",
+      "name": "Başkent University Ankara Hospital",
+      "rating": 4.87,
+      "address": "Yukarı Bahçelievler Mahallesi Mareşal Fevzi Çakmak Caddesi No:45 06490 Çankaya/Ankara",
+      "phone": "+90 312 203 68 68",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_003",
+      "name": "Doç. Dr. Esin Yalçınkaya Clinic",
+      "rating": 4.65,
+      "address": "Mustafa Kemal Mah. Via Green Plaza 2079. Sok. No: 2B/20 Çankaya / Ankara",
+      "phone": "0 530 244 71 84",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_004",
+      "name": "Bilge Hayatlar Huzurevi ve Yaşlı Bakım Center Konaklamalı Phys Therapy & Rehabilitation Center",
+      "rating": 4.78,
+      "address": "Yaşamkent Mahallesi 3166. Sok. No: 14 Çankaya/Ankara",
+      "phone": "0 505 421 07 97",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Hypnotherapy",
+          "price": 135,
+          "currency": "EUR"
+        },
+        {
+          "name": "Career Coaching",
+          "price": 120,
+          "currency": "EUR"
+        },
+        {
+          "name": "Child Psychotherapy",
+          "price": 115,
+          "currency": "EUR"
+        },
+        {
+          "name": "Couples Therapy",
+          "price": 150,
+          "currency": "EUR"
+        },
+        {
+          "name": "Bereavement Counselling",
+          "price": 100,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_005",
+      "name": "Doç. Dr. Ozan Bitik Clinic",
+      "rating": 4.98,
+      "address": "Kızılırmak Mahallesi Dumlupınar Bulvarı No:3A/52 Çankaya - Ankara",
+      "phone": "0 531 305 39 37",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_006",
+      "name": "Dünyagöz Ankara Hospital",
+      "rating": 4.93,
+      "address": "Tunus Caddesi No:28 Kavaklıdere Çankaya/Ankara",
+      "phone": "444 44 69",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Keratoplasty",
+          "price": 4500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cataract",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Oculoplastic Surgery",
+          "price": 3000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Epi-LASIK Eye Surgery",
+          "price": 1850,
+          "currency": "EUR"
+        },
+        {
+          "name": "Extracapsullar Cataract Extraction",
+          "price": 2650,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_007",
+      "name": "Dr. Dt. Yasemin Özyürek Türkdönmez Clinic",
+      "rating": 4.87,
+      "address": "Kızılırmak Mah. 1443. Cad. No: 25/B/174 Çankaya/Ankara",
+      "phone": "0 312 979 88 58",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_008",
+      "name": "Doktorun Oteli Konaklamalı Phys Therapy & Rehabilitation Center",
+      "rating": 4.65,
+      "address": "Çaldağ Mahallesi Gedik Yolu Cad. No:32 Haymana/Ankara",
+      "phone": "0 542 658 00 10",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Hypnotherapy",
+          "price": 135,
+          "currency": "EUR"
+        },
+        {
+          "name": "Career Coaching",
+          "price": 120,
+          "currency": "EUR"
+        },
+        {
+          "name": "Child Psychotherapy",
+          "price": 115,
+          "currency": "EUR"
+        },
+        {
+          "name": "Couples Therapy",
+          "price": 150,
+          "currency": "EUR"
+        },
+        {
+          "name": "Bereavement Counselling",
+          "price": 100,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_009",
+      "name": "Eliz Thermal Hotel Convention Spa Wellness Konaklamalı Phys Therapy & Rehabilitation Center",
+      "rating": 4.98,
+      "address": "İsmetpaşa Mahallesi Gülşenler Cad. No: 7/1 Kızılcahamam/Ankara",
+      "phone": "+90 3128104444",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Hypnotherapy",
+          "price": 135,
+          "currency": "EUR"
+        },
+        {
+          "name": "Career Coaching",
+          "price": 120,
+          "currency": "EUR"
+        },
+        {
+          "name": "Child Psychotherapy",
+          "price": 115,
+          "currency": "EUR"
+        },
+        {
+          "name": "Couples Therapy",
+          "price": 150,
+          "currency": "EUR"
+        },
+        {
+          "name": "Bereavement Counselling",
+          "price": 100,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_010",
+      "name": "Fizyocare Phys Therapy & Rehabilitation Center",
+      "rating": 4.65,
+      "address": "Alacaatlı Caddesi 2857 Sokak No:7 Çayyolu Çankaya/Ankara",
+      "phone": "0 312 240 05 40",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Hypnotherapy",
+          "price": 135,
+          "currency": "EUR"
+        },
+        {
+          "name": "Career Coaching",
+          "price": 120,
+          "currency": "EUR"
+        },
+        {
+          "name": "Child Psychotherapy",
+          "price": 115,
+          "currency": "EUR"
+        },
+        {
+          "name": "Couples Therapy",
+          "price": 150,
+          "currency": "EUR"
+        },
+        {
+          "name": "Bereavement Counselling",
+          "price": 100,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_011",
+      "name": "MİA Huzurevi Ve Yaşlı Bakım Konaklamalı Phys Therapy & Rehabilitation Center",
+      "rating": 4.78,
+      "address": "Kızılcaşar Mahallesi Koza Sok. No: 411 İncek-Gölbaşı - Ankara",
+      "phone": "0 312 557 23 00",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Hypnotherapy",
+          "price": 135,
+          "currency": "EUR"
+        },
+        {
+          "name": "Career Coaching",
+          "price": 120,
+          "currency": "EUR"
+        },
+        {
+          "name": "Child Psychotherapy",
+          "price": 115,
+          "currency": "EUR"
+        },
+        {
+          "name": "Couples Therapy",
+          "price": 150,
+          "currency": "EUR"
+        },
+        {
+          "name": "Bereavement Counselling",
+          "price": 100,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_012",
+      "name": "A Life Park Hospital Ankara Hospital",
+      "rating": 4.98,
+      "address": "Elvan Mahallesi 1935. Sokak No:5 Etimesgut/Ankara",
+      "phone": "08508885433",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_013",
+      "name": "Acıbadem Ankara Hospital",
+      "rating": 4.93,
+      "address": "Yukarı Dikmen Mahallesi 630. Sokak No:6 Çankaya/Ankara",
+      "phone": "444 55 44",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_014",
+      "name": "Op. Dr. İbrahim Sakçak Clinic",
+      "rating": 4.87,
+      "address": "Çukurambar Mah. Muhsin Yazıcıoğlu Cad. Sarıkonak Apt. No: 8/11 Çankaya/Ankara",
+      "phone": "0 532 050 32 23",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Stomach Stapling Surgery",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Gastric Balloon",
+          "price": 2750,
+          "currency": "EUR"
+        },
+        {
+          "name": "Sleeve Gastrectomy",
+          "price": 4750,
+          "currency": "EUR"
+        },
+        {
+          "name": "Duodenal Switch Surgery",
+          "price": 7000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Gastric Bypass",
+          "price": 5500,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_015",
+      "name": "Op. Dr. Aşkın Evren Güler Clinic",
+      "rating": 4.65,
+      "address": "İşçi Blokları Mah. Mevlana Bulvarı No: 182/26-27 Çankaya/Ankara",
+      "phone": "0 312 990 09 90",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "IVF",
+          "price": 3750,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_016",
+      "name": "Ada Dent Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Kızılırmak Mahallesi 1445. Sok. The Paragon İş Merkezi No:2-B/78 Çukurambar-Çankaya/Ankara",
+      "phone": "0 312 432 24 44",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_017",
+      "name": "Op. Dr. İrem Özyüncü Clinic",
+      "rating": 4.98,
+      "address": "Çukurambar Mah. Muhsin Yazıcıoğlu Cad. Sarıkonak Apt. No:8/15 Çankaya - Ankara",
+      "phone": "0 312 286 86 88",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "IVF",
+          "price": 3750,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_018",
+      "name": "Akropol Hospital",
+      "rating": 4.93,
+      "address": "Ahiler Mahallesi Uzayan Sok. No:99 Aydınlıkevler Altındağ / Ankara",
+      "phone": "0 312 207 90 00",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_019",
+      "name": "Op. Dr. Onurkan İdacı Clinic",
+      "rating": 4.87,
+      "address": "Kızılırmak Mah. 1443. Cad. Dumlupınar Bulvarı YDA Center Sok. No:9/796 Çankaya/Ankara",
+      "phone": "0 312 544 44 45",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_020",
+      "name": "Op. Dr. Orhan Aydın Clinic",
+      "rating": 4.65,
+      "address": "Mustafa Kemal Mah. Dumlupınar Bulvarı Mahall Ankara C2 Blok No:274/2/151/Ankara",
+      "phone": "0 533 947 63 89",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_021",
+      "name": "Ankara Cerrahi Medical Center",
+      "rating": 4.78,
+      "address": "Aşağı Öveçler Mahallesi 1332. Cadde No:15 Çankaya/Ankara",
+      "phone": "0 312 473 88 55",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_022",
+      "name": "Op. Dr. Talip Talha Tanyeli Clinic",
+      "rating": 4.98,
+      "address": "Mustafa Kemal Mah. 2118 Cad. A Blok No:4/44 Çankaya/ Ankara",
+      "phone": "0 312 623 33 00",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_023",
+      "name": "Ankara Güven Hospital",
+      "rating": 4.93,
+      "address": "Kavaklıdere Mahallesi Şimşek Sokak No:29 06540 Çankaya/Ankara",
+      "phone": "444 94 94",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "ank_clinic_024",
+      "name": "Ankara Estetik & Ortodonti Oral & Dental Health Clinic",
+      "rating": 4.87,
+      "address": "Kentkoop Mahallesi Batıkent Bulvarı No:255/41 Yenimahalle/Ankara",
+      "phone": "0 312 496 14 96",
+      "city": "Ankara",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_001",
+      "name": "İzmir Can Hospital",
+      "rating": 4.98,
+      "address": "Ataşehir Mahallesi 8019/16. Sokak No:18 35630 Çiğli/İzmir",
+      "phone": "0 232 715 40 00",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_002",
+      "name": "Op. Dr. Hakan Aydoğan Clinic",
+      "rating": 4.98,
+      "address": "Mansuroğlu Mahallesiİslam Kerimov Cad.No:4/A Bayraklı/İzmir",
+      "phone": "0 532 486 28 98",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_003",
+      "name": "Başkent University İzmir Zübeyde Hanım Research & Application Center",
+      "rating": 4.78,
+      "address": "Caher Dudayev Bulvarı no: 175 Bostanlı Karşıyaka / İZMİR",
+      "phone": "0 232 241 10 00",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_004",
+      "name": "Akut Kalp Damar Hospital",
+      "rating": 4.98,
+      "address": "Dokuz Eylül Mahallesi 343/1 Sokak No:6 Gaziemir / İzmir",
+      "phone": "+90 232 220 3900",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Cardiac stress test",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Non-invasive Procedures",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Invasive Procedures",
+          "price": 6500,
+          "currency": "EUR"
+        },
+        {
+          "name": "ECG (Electrocardiogram)",
+          "price": 100,
+          "currency": "EUR"
+        },
+        {
+          "name": "Laser Varicose Vein Treatment",
+          "price": 2500,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_005",
+      "name": "Balçova Termal Otel",
+      "rating": 4.93,
+      "address": "Vali Hüseyin Öğütcen Cd. No:2 35330, Balçova - İZMİR",
+      "phone": "+90 232 259 01 02",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Hypnotherapy",
+          "price": 135,
+          "currency": "EUR"
+        },
+        {
+          "name": "Career Coaching",
+          "price": 120,
+          "currency": "EUR"
+        },
+        {
+          "name": "Child Psychotherapy",
+          "price": 115,
+          "currency": "EUR"
+        },
+        {
+          "name": "Couples Therapy",
+          "price": 150,
+          "currency": "EUR"
+        },
+        {
+          "name": "Bereavement Counselling",
+          "price": 100,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_006",
+      "name": "Cadde Dental Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "Mavişehir Mahallesi Cafer Dudayev Bulvarı Mavibahçe Avm no:40/B /İzmir",
+      "phone": "0 232 336 70 79",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_007",
+      "name": "Doç. Dr. Fatih UYGUR Clinic",
+      "rating": 4.78,
+      "address": "Kültür Mahallesi Cumhuriyet Bulvarı No:193 No:3 Konak/İzmir",
+      "phone": "0 555 015 39 53",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_008",
+      "name": "Dr. Ali ÜÇKAN Clinic",
+      "rating": 4.87,
+      "address": "Mansuroğlu Mh: 1593/1 Sokak:16/7 Lider Centrio İş Merkezi K:2 d: 7 Bayraklı/İzmir",
+      "phone": "0 232 422 02 26",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_009",
+      "name": "Op. Dr. Özgün Akgül Clinic",
+      "rating": 4.65,
+      "address": "Adalet Mahallesi Manos Bulvarı No:39/3 kapı no:3806 Bayraklı/İzmir",
+      "phone": "0 555 259 94 25",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Stomach Stapling Surgery",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Gastric Balloon",
+          "price": 2750,
+          "currency": "EUR"
+        },
+        {
+          "name": "Sleeve Gastrectomy",
+          "price": 4750,
+          "currency": "EUR"
+        },
+        {
+          "name": "Duodenal Switch Surgery",
+          "price": 7000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Gastric Bypass",
+          "price": 5500,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_010",
+      "name": "Batı Anadolu Central Hospital",
+      "rating": 4.98,
+      "address": "Fuat Edip Baksi Mahallesi Zeki Yavaş Sokak No: 2/2, 35540 Bayraklı/İzmir",
+      "phone": "(0232) 341 67 67",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_011",
+      "name": "Ata Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "1377 Sokak Mutlu Apartmanı No: 2/1-2 Alsancak/İzmir",
+      "phone": "+90 232 464 86 26",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_012",
+      "name": "Op. Dr. Çağhan Baytekin Clinic",
+      "rating": 4.78,
+      "address": "Alsancak Atatürk Cad.Mert Plaza No:376 Kat:4 Konak/İzmir",
+      "phone": "0 232 463 35 44",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_013",
+      "name": "Çınarlı Hospital",
+      "rating": 4.93,
+      "address": "Çınarlı Mahallesi Anadolu Caddesi No:14 35110 Konak/İzmir",
+      "phone": "0 232 462 27 27",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "IVF",
+          "price": 3750,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_014",
+      "name": "Op. Dr. Nazmi YOĞURTÇU Clinic",
+      "rating": 4.87,
+      "address": "İslam Kerimov Cad. No:4/A Bayraklı/İzmir",
+      "phone": "0 232 440 90 90",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_015",
+      "name": "Atagöz Eye Diseases Center",
+      "rating": 4.65,
+      "address": "Manas Bulvarı 1586/7 Sokak No:2/A Blok Bayraklı/İZMİR",
+      "phone": "0(232) 446 15 16",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Keratoplasty",
+          "price": 4500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cataract",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Oculoplastic Surgery",
+          "price": 3000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Epi-LASIK Eye Surgery",
+          "price": 1850,
+          "currency": "EUR"
+        },
+        {
+          "name": "Extracapsullar Cataract Extraction",
+          "price": 2650,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_016",
+      "name": "Dent Forum Oral & Dental Health Clinic",
+      "rating": 4.93,
+      "address": "Mithatpaşa Cad. No:262/1B Ünlü Apartmanı Narlıdere/İzmir",
+      "phone": "0 232 250 30 50",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_017",
+      "name": "Alfa Medical Center",
+      "rating": 4.87,
+      "address": "6244 Sokak No:1/B Bornova, İzmir",
+      "phone": "+90 232 262 28 28",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_018",
+      "name": "Diş Hekimi Çiğdem İdiz Clinic",
+      "rating": 4.98,
+      "address": "Adalet Mahallesi Manas Bulvarı Folkart Towers B Blok No:39 K: 32 D: 3203 Bayraklı/İzmir",
+      "phone": "0 232 502 11 10",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_019",
+      "name": "Ata Health Hospital",
+      "rating": 4.87,
+      "address": "Kazım Dirik Mah. 297 Sokak No:1 (Metro Stadyum Durağı) Bornova / İzmir / Türkiye",
+      "phone": "+90(232) 459 59 59",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Hip Replacement",
+          "price": 9000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Pediatric Orthopedics",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Knee Replacement",
+          "price": 8250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Arthroscopic Operations",
+          "price": 3250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Spinal Surgery",
+          "price": 11000,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_020",
+      "name": "Dent Ekol Oral & Dental Health Center",
+      "rating": 4.65,
+      "address": "8019/13 Sokak No:211 A-B Çiğli/İzmir",
+      "phone": "0 232 386 43 46",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_021",
+      "name": "Op. Dr. Ali Saraç Clinic",
+      "rating": 4.65,
+      "address": "İslam Kerimov Cad. No:4/A Bayraklı/İzmir",
+      "phone": "0 232 440 90 90",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Keratoplasty",
+          "price": 4500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cataract",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Oculoplastic Surgery",
+          "price": 3000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Epi-LASIK Eye Surgery",
+          "price": 1850,
+          "currency": "EUR"
+        },
+        {
+          "name": "Extracapsullar Cataract Extraction",
+          "price": 2650,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_022",
+      "name": "Dentapoint Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Bahriye Üçok Mahallesi Girne Bulvarı No: 154/A Karşıyaka/İzmir",
+      "phone": "0 232 999 76 70",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_023",
+      "name": "Çankaya Medical Center",
+      "rating": 4.98,
+      "address": "Gazi Blv. No: 56-58 Çankaya / İZMİR",
+      "phone": "0232 425 31 32",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_024",
+      "name": "Ekol Göz Medical Center",
+      "rating": 4.93,
+      "address": "8019/ 13 Sokak No: 2 Çiğli/İzmir",
+      "phone": "0 232 386 69 69",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Keratoplasty",
+          "price": 4500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cataract",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Oculoplastic Surgery",
+          "price": 3000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Epi-LASIK Eye Surgery",
+          "price": 1850,
+          "currency": "EUR"
+        },
+        {
+          "name": "Extracapsullar Cataract Extraction",
+          "price": 2650,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_025",
+      "name": "Dent 35 Oral & Dental Health Clinic",
+      "rating": 4.87,
+      "address": "Kazım Dirik Mahallesi Mustafa Kemal Cad. No:119/C Bornova/İzmir",
+      "phone": "0 232 404 84 84",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_026",
+      "name": "Denta Klinik Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "Laleli MahallesiMenderes Cad.No:354-A Buca/İzmir",
+      "phone": "0 232 438 05 10",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_027",
+      "name": "Dentroyal Oral & Dental Health Clinic",
+      "rating": 4.78,
+      "address": "Mavişehir Mahallesi 2040 Sokak No:33 B/0 Karşıyaka /İzmir",
+      "phone": "0 232 366 33 30",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_028",
+      "name": "Ekol Kulak Burun Boğaz Hospital",
+      "rating": 4.98,
+      "address": "Ataşehir Mahallesi 8019/16 Sokak No:4 35630 Çiğli/ İzmir",
+      "phone": "0 232 386 55 05",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_029",
+      "name": "Dent KM Ağız ve Diş Clinic",
+      "rating": 4.93,
+      "address": "Menderes Mahallesi Seyfi Demirsoy Caddesi No:13/B Buca/İzmir",
+      "phone": "0 232 452 54 51",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_030",
+      "name": "Art Oral & Dental Health Clinic",
+      "rating": 4.65,
+      "address": "Mertoğlu İş Merkezi 1717 Sokak Kat:3 No: 128/301-302 Karşıyaka/İzmir",
+      "phone": "+90 232 381 10 74",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_031",
+      "name": "Egesante Medical Center",
+      "rating": 4.98,
+      "address": "Bahçelerarası Mahallesi Mithat Paşa Caddesi 24/A, 35330 Balçova/İzmir",
+      "phone": "0 232 259 14 44",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_032",
+      "name": "Estetik4 Oral & Dental Health Clinic",
+      "rating": 4.93,
+      "address": "Bahriye Üçok Mahallesi Atatürk Blv. No:45/D Karşıyaka /İzmir",
+      "phone": "0 232 462 60 70",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_033",
+      "name": "Dentomega Oral & Dental Health Clinic",
+      "rating": 4.87,
+      "address": "Adalet Mahallesi Manas Bulvarı No:72/A Bayraklı /İzmir",
+      "phone": "0 232 338 77 59",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Composite Bonding",
+          "price": 250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Zirconium Crowns",
+          "price": 450,
+          "currency": "EUR"
+        },
+        {
+          "name": "Porcelain Veneers",
+          "price": 375,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cosmetic Dentistry",
+          "price": 1250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Teeth Whitening",
+          "price": 300,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_034",
+      "name": "Karşıyaka Göz Hospital",
+      "rating": 4.65,
+      "address": "Yalı Mahallesi Caher Dudayev Bulvarı No:71 35550 Karşıyaka/İzmir",
+      "phone": "0 232 362 54 54",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Keratoplasty",
+          "price": 4500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Cataract",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Oculoplastic Surgery",
+          "price": 3000,
+          "currency": "EUR"
+        },
+        {
+          "name": "Epi-LASIK Eye Surgery",
+          "price": 1850,
+          "currency": "EUR"
+        },
+        {
+          "name": "Extracapsullar Cataract Extraction",
+          "price": 2650,
+          "currency": "EUR"
+        }
+      ]
+    },
+    {
+      "id": "izm_clinic_035",
+      "name": "Medifema Hospital",
+      "rating": 4.78,
+      "address": "Mustafa Kemal Paşa Mahallesi Kocatepe Caddesi No:1 35860 Torbalı/İzmir",
+      "phone": "0 232 854 18 54",
+      "city": "İzmir",
+      "treatments": [
+        {
+          "name": "Facial Surgery",
+          "price": 5500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Seconder Rhinoplasty",
+          "price": 4250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Open Rhinoplasty",
+          "price": 3500,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septum Deviation",
+          "price": 2250,
+          "currency": "EUR"
+        },
+        {
+          "name": "Septoplasty",
+          "price": 2250,
+          "currency": "EUR"
+        }
+      ]
+    }
   ]
 }
