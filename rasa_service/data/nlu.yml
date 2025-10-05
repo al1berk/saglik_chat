@@ -23,8 +23,9 @@ nlu:
     - hoşça kal
     - güle güle
     - bay bay
-    - kendine iyi bak
+    - iyi günler
     - görüşmek üzere
+    - kendine iyi bak
 
 - intent: affirm
   examples: |
@@ -75,17 +76,29 @@ nlu:
   examples: |
     - bir klinik arıyorum
     - klinik bul
+    - klinik ara
+    - klinik öner
+    - hangi kliniklere gidebilirim
+    - hangi klinikten randevu alabilirim
+    - klinik listesi
+    - tedavi olabileceğim yer
     - [Antalya](sehir) da klinik var mı
+    - [Antalyada](sehir) klinik
+    - [Antalya](sehir) klinik bul
     - [diş tedavisi](tedavi) için klinik
     - [saç ekimi](tedavi) kliniği lazım
+    - [saç ekimi](tedavi) için klinik bul
     - [İstanbul](sehir) da [göz ameliyatı](tedavi) yapan klinik
+    - [İstanbulda](sehir) [estetik](tedavi) kliniği
     - [diş](tedavi) kliniği öner
     - iyi bir [estetik](tedavi) kliniği
     - [rinoplasti](tedavi) için doktor
-    - [Antalya](sehir) da [diş](tedavi) kliniği
-    - [implant](tedavi) yaptıran klinik
-    - [beyazlatma](tedavi) yapan yer
-    - [kanal tedavisi](tedavi) için klinik öner
+    - [Bursa](sehir) da klinik
+    - [İzmir](sehir) de [diş](tedavi) kliniği
+    - burada klinik var mı
+    - yakında klinik
+    - [Ankara](sehir) klinik
+    - [Antalyada](sehir) hangi klinikler var
 
 - intent: otel_ara
   examples: |
@@ -97,8 +110,6 @@ nlu:
     - [İstanbul](sehir) da [lüks](otel_tipi) otel
     - konaklama yeri lazım
     - nerede kalabilirim
-    - [Antalya](sehir) da konaklama
-    - tedavi için otel öner
 
 - intent: sac_ekimi_bilgisi
   examples: |
@@ -117,13 +128,3 @@ nlu:
     - fue saç ekimi
     - dhi saç ekimi
     - saç ekimi ameliyatı
-    - saç ekimi bilgisi
-    - saç ekimi bilgi
-    - saç ekimi ile ilgili bilgi
-    - saç ekimi için bilgi ver
-    - saç ekimi operasyonu
-    - saç ekimi tedavisi
-    - saç ekiminde hangi yöntemler var
-    - saç ekimi nasıl olur
-    - saç ekimi fiyat
-    - saç ekimi paket

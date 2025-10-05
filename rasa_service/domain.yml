@@ -18,6 +18,28 @@ entities:
   - konum_ozelligi
   - sehir
 
+slots:
+  sehir:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: sehir
+  
+  tedavi:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: tedavi
+  
+  otel_tipi:
+    type: text
+    influence_conversation: true
+    mappings:
+      - type: from_entity
+        entity: otel_tipi
+
 responses:
   utter_greet:
   - text: "Merhaba! Size nasıl yardımcı olabilirim?"

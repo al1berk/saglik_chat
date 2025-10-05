@@ -43,3 +43,44 @@ stories:
   steps:
   - intent: otel_ara
   - action: action_otel_ara
+
+# YENİ: Context-aware hikayeler (slot kullanımı)
+- story: otel sonra klinik arama - şehir hatırlama
+  steps:
+  - intent: otel_ara
+    entities:
+    - sehir: "Antalya"
+  - action: action_otel_ara
+  - slot_was_set:
+    - sehir: "Antalya"
+  - intent: klinik_ara
+  - action: action_klinik_ara
+
+- story: şehir belirtip klinik arama
+  steps:
+  - intent: klinik_ara
+    entities:
+    - sehir: "Antalya"
+  - action: action_klinik_ara
+  - slot_was_set:
+    - sehir: "Antalya"
+
+- story: tedavi belirtip sonra klinik arama
+  steps:
+  - intent: sac_ekimi_bilgisi
+  - action: action_sac_ekimi_detaylari
+  - slot_was_set:
+    - tedavi: "saç ekimi"
+  - intent: klinik_ara
+  - action: action_klinik_ara
+
+- story: şehir ve tedavi ile klinik arama
+  steps:
+  - intent: klinik_ara
+    entities:
+    - sehir: "Antalya"
+    - tedavi: "saç ekimi"
+  - action: action_klinik_ara
+  - slot_was_set:
+    - sehir: "Antalya"
+    - tedavi: "saç ekimi"

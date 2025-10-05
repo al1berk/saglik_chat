@@ -46,14 +46,21 @@ class ActionKlinikAra(Action):
         return "action_klinik_ara"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # Önce entity'leri kontrol et
         tedavi = next(tracker.get_latest_entity_values("tedavi"), None)
         sehir = next(tracker.get_latest_entity_values("sehir"), None)
+        
+        # Entity yoksa slot'tan al (sohbet geçmişinden)
+        if not tedavi:
+            tedavi = tracker.get_slot("tedavi")
+        if not sehir:
+            sehir = tracker.get_slot("sehir")
         
         # Şehir normalizasyonu
         if sehir:
             sehir = normalize_city(sehir)
         
-        logger.info(f"🔍 Klinik arama: tedavi={tedavi}, sehir={sehir}")
+        logger.info(f"🔍 Klinik arama: tedavi={tedavi}, sehir={sehir} (slot'tan: {tracker.get_slot('sehir')})")
         
         try:
             # Doğru endpoint: /api/clinics/search
@@ -149,11 +156,17 @@ class ActionOtelAra(Action):
         sehir = next(tracker.get_latest_entity_values("sehir"), None)
         otel_tipi = next(tracker.get_latest_entity_values("otel_tipi"), None)
         
+        # Entity yoksa slot'tan al (sohbet geçmişinden)
+        if not sehir:
+            sehir = tracker.get_slot("sehir")
+        if not otel_tipi:
+            otel_tipi = tracker.get_slot("otel_tipi")
+        
         # Şehir normalizasyonu
         if sehir:
             sehir = normalize_city(sehir)
         
-        logger.info(f"🔍 Otel arama: sehir={sehir}, tip={otel_tipi}")
+        logger.info(f"🔍 Otel arama: sehir={sehir}, tip={otel_tipi} (slot'tan: {tracker.get_slot('sehir')})")
         
         try:
             # Doğru endpoint: /api/hotels/search
