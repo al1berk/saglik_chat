@@ -1,5 +1,6 @@
 # Klinik veritabanı modeli
 from sqlalchemy import Column, Integer, String, Float, Text, JSON
+from sqlalchemy.orm import relationship
 from app.db.session import Base
 
 class Clinic(Base):
@@ -17,4 +18,7 @@ class Clinic(Base):
     # Metadata
     created_at = Column(String)  # ISO format date
     updated_at = Column(String)  # ISO format date
+    
+    # Relationships
+    appointments = relationship("Appointment", back_populates="clinic", cascade="all, delete-orphan")
 
