@@ -23,9 +23,8 @@ nlu:
     - hoşça kal
     - güle güle
     - bay bay
-    - iyi günler
-    - görüşmek üzere
     - kendine iyi bak
+    - görüşmek üzere
 
 - intent: affirm
   examples: |
@@ -83,6 +82,10 @@ nlu:
     - [diş](tedavi) kliniği öner
     - iyi bir [estetik](tedavi) kliniği
     - [rinoplasti](tedavi) için doktor
+    - [Antalya](sehir) da [diş](tedavi) kliniği
+    - [implant](tedavi) yaptıran klinik
+    - [beyazlatma](tedavi) yapan yer
+    - [kanal tedavisi](tedavi) için klinik öner
 
 - intent: otel_ara
   examples: |
@@ -94,6 +97,8 @@ nlu:
     - [İstanbul](sehir) da [lüks](otel_tipi) otel
     - konaklama yeri lazım
     - nerede kalabilirim
+    - [Antalya](sehir) da konaklama
+    - tedavi için otel öner
 
 - intent: sac_ekimi_bilgisi
   examples: |
@@ -112,3 +117,13 @@ nlu:
     - fue saç ekimi
     - dhi saç ekimi
     - saç ekimi ameliyatı
+    - saç ekimi bilgisi
+    - saç ekimi bilgi
+    - saç ekimi ile ilgili bilgi
+    - saç ekimi için bilgi ver
+    - saç ekimi operasyonu
+    - saç ekimi tedavisi
+    - saç ekiminde hangi yöntemler var
+    - saç ekimi nasıl olur
+    - saç ekimi fiyat
+    - saç ekimi paket

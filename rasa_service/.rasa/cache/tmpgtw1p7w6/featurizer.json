@@ -1,0 +1,62 @@
+{
+  "type": "IntentMaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "affirm": 0,
+        "back": 1,
+        "bot_challenge": 2,
+        "deny": 3,
+        "goodbye": 4,
+        "greet": 5,
+        "klinik_ara": 6,
+        "mood_great": 7,
+        "mood_unhappy": 8,
+        "nlu_fallback": 9,
+        "otel_ara": 10,
+        "out_of_scope": 11,
+        "restart": 12,
+        "sac_ekimi_bilgisi": 13,
+        "session_start": 14
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "utter_greet": 13,
+        "utter_cheer_up": 14,
+        "utter_did_that_help": 15,
+        "utter_happy": 16,
+        "utter_goodbye": 17,
+        "utter_iamabot": 18,
+        "utter_default": 19,
+        "action_klinik_ara": 20,
+        "action_otel_ara": 21,
+        "action_sac_ekimi_detaylari": 22,
+        "action_ask_ollama": 23
+      },
+      "entities": {
+        "konum_ozelligi": 0,
+        "otel_tipi": 1,
+        "sehir": 2,
+        "tedavi": 3
+      },
+      "slots": {},
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

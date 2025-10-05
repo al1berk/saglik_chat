@@ -4,6 +4,11 @@ from app.api.endpoints import clinics, hotels, chat
 
 api_router = APIRouter()
 
+# /api/clinics ve /api/clinics/search
 api_router.include_router(clinics.router, prefix="/clinics", tags=["clinics"])
+
+# /api/hotels ve /api/hotels/search
 api_router.include_router(hotels.router, prefix="/hotels", tags=["hotels"])
+
+# /api/chat
 api_router.include_router(chat.router, prefix="/chat", tags=["chat"])

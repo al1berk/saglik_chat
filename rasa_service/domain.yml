@@ -22,40 +22,47 @@ responses:
   utter_greet:
   - text: "Merhaba! Size nasıl yardımcı olabilirim?"
   - text: "Selam! Bugün size nasıl yardımcı olabilirim?"
+  - text: "İyi günler! Ne aramıştınız?"
   
   utter_cheer_up:
   - text: "Üzülmeyin, size yardımcı olmak için buradayım!"
+  - text: "Merak etmeyin, en iyi çözümü bulacağız!"
   
   utter_did_that_help:
   - text: "Bu yardımcı oldu mu?"
   - text: "Size yardımcı olabildim mi?"
+  - text: "Başka bir şey sormak ister misiniz?"
   
   utter_happy:
   - text: "Harika! Size yardımcı olabildiğime sevindim."
-  - text: "Süper! Devam edelim."
+  - text: "Süper! Başka bir konuda yardımcı olabilir miyim?"
   
   utter_goodbye:
   - text: "Görüşmek üzere! İyi günler!"
   - text: "Hoşça kalın! Tekrar görüşmek üzere."
+  - text: "İyi günler! Sağlıklı günler dilerim!"
   
   utter_iamabot:
-  - text: "Ben Rasa destekli bir sağlık asistanıyım. Size klinik ve otel önerileri sunabilirim."
+  - text: "Ben Rasa destekli bir sağlık turizmi asistanıyım. Size klinik ve otel önerileri sunabilirim."
+  - text: "Ben yapay zeka destekli bir sağlık asistanıyım. Tedavi ve konaklama konusunda yardımcı olabilirim."
+
+  utter_default:
+  - text: "Üzgünüm, tam olarak anlayamadım. Daha açık sorabilir misiniz?"
+  - text: "Kusura bakmayın, bunu anlayamadım. Başka türlü sorabilir misiniz?"
 
 actions:
-  # Basit metin cevapları (utterances)
   - utter_greet
   - utter_cheer_up
   - utter_did_that_help
   - utter_happy
   - utter_goodbye
   - utter_iamabot
-  
-  # actions.py dosyasında tanımlayacağımız özel eylemler (Custom Actions)
+  - utter_default
   - action_klinik_ara
   - action_otel_ara
   - action_sac_ekimi_detaylari
   - action_ask_ollama
-
+  - action_default_fallback
 
 session_config:
   session_expiration_time: 60

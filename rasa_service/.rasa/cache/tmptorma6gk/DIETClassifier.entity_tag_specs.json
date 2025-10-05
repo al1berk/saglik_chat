@@ -1,0 +1,44 @@
+[
+  {
+    "tag_name": "entity",
+    "ids_to_tags": {
+      "1": "B-konum_ozelligi",
+      "2": "I-konum_ozelligi",
+      "3": "L-konum_ozelligi",
+      "4": "U-konum_ozelligi",
+      "5": "B-otel_tipi",
+      "6": "I-otel_tipi",
+      "7": "L-otel_tipi",
+      "8": "U-otel_tipi",
+      "9": "B-sehir",
+      "10": "I-sehir",
+      "11": "L-sehir",
+      "12": "U-sehir",
+      "13": "B-tedavi",
+      "14": "I-tedavi",
+      "15": "L-tedavi",
+      "16": "U-tedavi",
+      "0": "O"
+    },
+    "tags_to_ids": {
+      "B-konum_ozelligi": 1,
+      "I-konum_ozelligi": 2,
+      "L-konum_ozelligi": 3,
+      "U-konum_ozelligi": 4,
+      "B-otel_tipi": 5,
+      "I-otel_tipi": 6,
+      "L-otel_tipi": 7,
+      "U-otel_tipi": 8,
+      "B-sehir": 9,
+      "I-sehir": 10,
+      "L-sehir": 11,
+      "U-sehir": 12,
+      "B-tedavi": 13,
+      "I-tedavi": 14,
+      "L-tedavi": 15,
+      "U-tedavi": 16,
+      "O": 0
+    },
+    "num_tags": 17
+  }
+]

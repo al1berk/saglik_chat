@@ -3,10 +3,10 @@ class ChatManager {
     constructor() {
         this.messagesContainer = document.getElementById('chatMessages');
         this.userInput = document.getElementById('userInput');
-        this.useRealAPI = true; // true = Rasa kullan, false = mock data
+        this.useRasa = true; // RASA ÖNCELİKLİ - Ollama'ya sadece Rasa actions üzerinden bağlanır
     }
 
-    // Mesaj gönder (ana fonksiyon - index.html'deki sendMessage'ı override eder)
+    // Mesaj gönder (ana fonksiyon)
     async sendMessage() {
         const message = this.userInput.value.trim();
         
@@ -17,28 +17,21 @@ class ChatManager {
         this.showTyping();
 
         try {
-            if (this.useRealAPI) {
-                // Gerçek Rasa API kullan
-                const responses = await window.apiService.sendMessage(message);
-                this.hideTyping();
-                
-                if (responses && responses.length > 0) {
-                    for (const response of responses) {
-                        this.addBotMessage({ text: response.response });
-                        await this.delay(500); // Mesajlar arası kısa gecikme
-                    }
-                } else {
-                    // Rasa yanıt vermediyse fallback
-                    this.addBotMessage({ 
-                        text: 'Üzgünüm, şu anda size yardımcı olamıyorum. Lütfen tekrar deneyin.' 
-                    });
+            // ÖNCELİKLE RASA KULLAN
+            // Akış: Frontend → Rasa (NLU) → Rasa Actions (ChromaDB + Ollama) → Yanıt
+            const responses = await window.apiService.sendMessage(message);
+            this.hideTyping();
+            
+            if (responses && responses.length > 0) {
+                for (const response of responses) {
+                    this.addBotMessage({ text: response.response });
+                    await this.delay(500);
                 }
             } else {
-                // Mock data kullan (test için)
-                await this.delay(1500);
-                this.hideTyping();
-                const response = this.getMockResponse(message);
-                this.addBotMessage(response);
+                // Rasa yanıt vermediyse
+                this.addBotMessage({ 
+                    text: 'Üzgünüm, şu anda size yardımcı olamıyorum. Lütfen tekrar deneyin.' 
+                });
             }
         } catch (error) {
             console.error('Chat error:', error);
@@ -47,13 +40,112 @@ class ChatManager {
             // Hata mesajı göster
             this.addBotMessage({
                 text: `❌ <strong>Bağlantı Hatası</strong><br><br>
-                Backend servisi çalışmıyor olabilir. Lütfen şunları kontrol edin:<br><br>
-                1. API servisi çalışıyor mu? <code>cd api_service && python main.py</code><br>
-                2. Rasa servisi çalışıyor mu? <code>rasa run</code><br>
-                3. Rasa actions çalışıyor mu? <code>rasa run actions</code><br><br>
-                Teknik detay: ${error.message}`
+                Backend servisleri çalışmıyor olabilir. Lütfen şunları kontrol edin:<br><br>
+                <strong>1. API Servisi:</strong><br>
+                <code>cd api_service && source ../venv/bin/activate && python main.py</code><br><br>
+                <strong>2. Rasa Servisi:</strong><br>
+                <code>cd rasa_service && source ../venv/bin/activate && rasa run --enable-api</code><br><br>
+                <strong>3. Rasa Actions:</strong><br>
+                <code>cd rasa_service && source ../venv/bin/activate && rasa run actions</code><br><br>
+                <strong>4. Ollama:</strong><br>
+                <code>ollama serve</code><br><br>
+                <small>Teknik detay: ${error.message}</small>`,
+                quickReplies: ['Yardım', 'Test Et']
             });
         }
+    }
+
+    // İlgili sonuçları göster (klinik/otel) - Smart Chat için
+    async showRelatedResults(message) {
+        const msg = message.toLowerCase();
+        
+        try {
+            // Klinik araması
+            if (msg.includes('klinik') || msg.includes('hastane') || msg.includes('doktor') || 
+                msg.includes('diş') || msg.includes('saç') || msg.includes('estetik')) {
+                
+                const clinics = await window.apiService.searchClinics({ 
+                    q: message, 
+                    limit: 3 
+                });
+                
+                if (clinics && clinics.length > 0) {
+                    await this.delay(500);
+                    this.addClinicResults(clinics);
+                }
+            }
+            
+            // Otel araması
+            if (msg.includes('otel') || msg.includes('konaklama') || msg.includes('kalacak')) {
+                const hotels = await window.apiService.searchHotels({ 
+                    q: message, 
+                    limit: 3 
+                });
+                
+                if (hotels && hotels.length > 0) {
+                    await this.delay(500);
+                    this.addHotelResults(hotels);
+                }
+            }
+        } catch (error) {
+            console.error('Related results error:', error);
+        }
+    }
+
+    // Klinik sonuçlarını göster
+    addClinicResults(clinics) {
+        let html = '<div class="treatment-card"><h3>🏥 Bulunan Klinikler</h3>';
+        
+        clinics.forEach((clinic, index) => {
+            html += `
+                <div class="info-box">
+                    <strong>${index + 1}. ${clinic.name}</strong><br>
+                    📍 ${clinic.city}<br>
+                    ⭐ Puan: ${clinic.rating}/5<br>
+                    📞 ${clinic.phone || 'Belirtilmemiş'}<br>
+            `;
+            
+            if (clinic.treatments && clinic.treatments.length > 0) {
+                html += `<br><span class="badge badge-primary">${clinic.treatments.slice(0, 3).join('</span> <span class="badge badge-primary">')}</span>`;
+            }
+            
+            html += '</div>';
+        });
+        
+        html += '</div>';
+        
+        this.addBotMessage({ 
+            text: html,
+            quickReplies: ['Daha Fazla Klinik', 'Randevu Al', 'Fiyat Bilgisi']
+        });
+    }
+
+    // Otel sonuçlarını göster
+    addHotelResults(hotels) {
+        let html = '<div class="treatment-card"><h3>🏨 Bulunan Oteller</h3>';
+        
+        hotels.forEach((hotel, index) => {
+            html += `
+                <div class="info-box">
+                    <strong>${index + 1}. ${hotel.name}</strong><br>
+                    📍 ${hotel.city}<br>
+                    ⭐ Puan: ${hotel.rating}/5<br>
+                    💰 Gecelik: $${hotel.price_per_night}<br>
+            `;
+            
+            if (hotel.features && hotel.features.length > 0) {
+                html += `<br><span class="badge badge-success">${hotel.features.slice(0, 3).join('</span> <span class="badge badge-success">')}</span>`;
+            }
+            
+            html += '</div>';
+        });
+        
+        html += '</div>';
+        
+        this.addBotMessage({ 
+            text: html,
+            quickReplies: ['Daha Fazla Otel', 'Rezervasyon Yap', 'Yakındaki Klinikler']
+        });
     }
 
     // Kullanıcı mesajı ekle
@@ -149,36 +241,6 @@ class ChatManager {
         return div.innerHTML;
     }
 
-    // Mock response (test için)
-    getMockResponse(message) {
-        const msg = message.toLowerCase();
-        
-        if (msg.includes('saç ekimi') || msg.includes('saç')) {
-            return {
-                text: `💇‍♂️ <strong>SAÇ EKİMİ BİLGİSİ</strong><br><br>
-                Saç ekimi, saç köklerinin sağlıklı bölgelerden alınıp dökülme olan bölgelere nakledilmesi işlemidir.<br><br>
-                <strong>Yöntemler:</strong><br>
-                • FUE: 1.800€ - 2.500€<br>
-                • DHI: 2.200€ - 3.000€<br><br>
-                <strong>Süre:</strong> 6-8 saat işlem, 2-3 gün konaklama<br><br>
-                📞 Randevu için bizimle iletişime geçin!`,
-                quickReplies: ['Randevu Al', 'Fiyat Detayları', 'Klinikler']
-            };
-        }
-        
-        if (msg.includes('merhaba') || msg.includes('selam')) {
-            return {
-                text: 'Merhaba! 👋 Size nasıl yardımcı olabilirim?',
-                quickReplies: ['Saç Ekimi', 'Diş Tedavisi', 'Estetik', 'Otel']
-            };
-        }
-        
-        return {
-            text: 'Size nasıl yardımcı olabilirim? Saç ekimi, diş tedavisi, estetik operasyonlar ve konaklama hakkında bilgi verebilirim.',
-            quickReplies: ['Tedaviler', 'Fiyatlar', 'Randevu Al']
-        };
-    }
-
     // Enter tuşu kontrolü
     handleKeyPress(event) {
         if (event.key === 'Enter') {
@@ -190,11 +252,16 @@ class ChatManager {
     async checkHealth() {
         try {
             const health = await window.apiService.healthCheck();
-            console.log('Backend health:', health);
-            return health.status === 'healthy';
+            console.log('✅ Backend health:', health);
+            
+            if (health.status === 'healthy') {
+                console.log('🤖 Rasa modu aktif');
+                console.log('📊 Akış: Kullanıcı → Rasa (NLU/Intent/NER) → Actions (ChromaDB + Ollama) → Yanıt');
+                return true;
+            }
+            return false;
         } catch (error) {
-            console.warn('Backend offline, fallback to mock mode');
-            this.useRealAPI = false;
+            console.error('❌ Backend offline:', error.message);
             return false;
         }
     }
@@ -206,14 +273,37 @@ const chatManager = new ChatManager();
 // DOM yüklendiğinde
 document.addEventListener('DOMContentLoaded', async function() {
     console.log('🏥 Sağlık Chat başlatılıyor...');
+    console.log('🤖 MOD: Rasa + ChromaDB + Ollama (Tam Entegrasyon)');
     
     // Sağlık kontrolü yap
     const isHealthy = await chatManager.checkHealth();
     
     if (!isHealthy) {
-        console.warn('⚠️ Backend çalışmıyor, mock mode aktif');
+        console.warn('⚠️ Backend çalışmıyor. Lütfen servisleri başlatın.');
+        
+        // Kullanıcıya bilgi ver
+        chatManager.addBotMessage({
+            text: `⚠️ <strong>Backend Bağlantısı Yok</strong><br><br>
+            Lütfen aşağıdaki servisleri sırayla başlatın:<br><br>
+            <strong>Terminal 1 - API:</strong><br>
+            <code>cd api_service && source ../venv/bin/activate && python main.py</code><br><br>
+            <strong>Terminal 2 - Rasa:</strong><br>
+            <code>cd rasa_service && source ../venv/bin/activate && rasa run --enable-api</code><br><br>
+            <strong>Terminal 3 - Rasa Actions:</strong><br>
+            <code>cd rasa_service && source ../venv/bin/activate && rasa run actions</code><br><br>
+            <strong>Terminal 4 - Ollama:</strong><br>
+            <code>ollama serve</code><br><br>
+            Ardından sayfayı yenileyin (F5).`,
+            quickReplies: ['Yardım', 'Dokümantasyon']
+        });
     } else {
-        console.log('✅ Backend bağlantısı başarılı');
+        console.log('✅ Backend bağlantısı başarılı!');
+        console.log('🎯 AKIŞ:');
+        console.log('   1. Kullanıcı mesajı → Rasa (NLU)');
+        console.log('   2. Rasa → Intent + Entities');
+        console.log('   3. Rasa Actions → ChromaDB arama');
+        console.log('   4. Rasa Actions → Ollama öneri');
+        console.log('   5. Yanıt → Kullanıcı');
     }
     
     // Input'a focus

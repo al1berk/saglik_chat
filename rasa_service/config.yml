@@ -3,12 +3,10 @@
 recipe: default.v1
 assistant_id: saglik_asistani
 
-# Dil anahtarını, hata vermemesi için tek ve varsayılan bir dile ayarlıyoruz.
 language: tr
 
-# NLU Pipeline: Gelen mesajları işleme hattı
+# NLU Pipeline - TÜRKÇE İÇİN OPTİMİZE EDİLDİ
 pipeline:
-  # Bu pipeline, nlu.yml dosyasında lang: etiketiyle bulduğu TÜM diller için çalışacaktır.
   - name: WhitespaceTokenizer
   - name: RegexFeaturizer
   - name: LexicalSyntacticFeaturizer
@@ -17,27 +15,30 @@ pipeline:
     analyzer: char_wb
     min_ngram: 1
     max_ngram: 4
+  # DIETClassifier - Ana intent ve entity sınıflandırıcı
   - name: DIETClassifier
-    epochs: 100
-    # DIETClassifier, dil bilgisini bir "entity" olarak yakalayabilir.
-    # Bu, LanguageDetector'a olan ihtiyacı ortadan kaldırır.
+    epochs: 200  # Artırıldı (100 → 200)
     entity_recognition: True
-    # Bu özellik, modelin hangi dilde konuştuğunu bir entity olarak yakalamasını sağlar.
-    use_masked_language_model: True
+    use_masked_language_model: False  # Türkçe için False daha iyi
+    constrain_similarities: True
+    model_confidence: softmax  # linear_norm → softmax (Rasa 3.6.21 uyumlu)
   - name: EntitySynonymMapper
   - name: ResponseSelector
     epochs: 100
+  # FallbackClassifier - Düşük güven durumunda
   - name: FallbackClassifier
-    threshold: 0.3
+    threshold: 0.7  # Artırıldı (0.3 → 0.7)
     ambiguity_threshold: 0.1
 
-# Policies bölümü aynı kalabilir.
 policies:
   - name: MemoizationPolicy
   - name: RulePolicy
+    core_fallback_threshold: 0.3
+    core_fallback_action_name: "action_default_fallback"
   - name: UnexpecTEDIntentPolicy
     max_history: 5
     epochs: 100
   - name: TEDPolicy
     max_history: 5
     epochs: 100
+    constrain_similarities: True
