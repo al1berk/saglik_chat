@@ -11,6 +11,13 @@ intents:
   - klinik_ara
   - otel_ara
   - sac_ekimi_bilgisi
+  - dis_implant_bilgisi
+  - rinoplasti_bilgisi
+  - mide_kucultme_bilgisi
+  - lasik_bilgisi
+  - fiyat_sor
+  - sigorta_sor
+  - randevu_sor
 
 entities:
   - tedavi
@@ -83,6 +90,13 @@ actions:
   - action_klinik_ara
   - action_otel_ara
   - action_sac_ekimi_detaylari
+  - action_dis_implant_detaylari
+  - action_rinoplasti_detaylari
+  - action_mide_kucultme_detaylari
+  - action_lasik_detaylari
+  - action_fiyat_bilgisi
+  - action_sigorta_bilgisi
+  - action_randevu_bilgisi
   - action_ask_ollama
   - action_default_fallback
 

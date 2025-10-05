@@ -1,0 +1,19 @@
+{
+  "0": "affirm",
+  "1": "bot_challenge",
+  "2": "deny",
+  "3": "dis_implant_bilgisi",
+  "4": "fiyat_sor",
+  "5": "goodbye",
+  "6": "greet",
+  "7": "klinik_ara",
+  "8": "lasik_bilgisi",
+  "9": "mide_kucultme_bilgisi",
+  "10": "mood_great",
+  "11": "mood_unhappy",
+  "12": "otel_ara",
+  "13": "randevu_sor",
+  "14": "rinoplasti_bilgisi",
+  "15": "sac_ekimi_bilgisi",
+  "16": "sigorta_sor"
+}

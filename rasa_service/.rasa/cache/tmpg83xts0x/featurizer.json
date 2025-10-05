@@ -1,0 +1,80 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "affirm": 0,
+        "back": 1,
+        "bot_challenge": 2,
+        "deny": 3,
+        "dis_implant_bilgisi": 4,
+        "fiyat_sor": 5,
+        "goodbye": 6,
+        "greet": 7,
+        "klinik_ara": 8,
+        "lasik_bilgisi": 9,
+        "mide_kucultme_bilgisi": 10,
+        "mood_great": 11,
+        "mood_unhappy": 12,
+        "nlu_fallback": 13,
+        "otel_ara": 14,
+        "out_of_scope": 15,
+        "randevu_sor": 16,
+        "restart": 17,
+        "rinoplasti_bilgisi": 18,
+        "sac_ekimi_bilgisi": 19,
+        "session_start": 20,
+        "sigorta_sor": 21
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "utter_greet": 13,
+        "utter_cheer_up": 14,
+        "utter_did_that_help": 15,
+        "utter_happy": 16,
+        "utter_goodbye": 17,
+        "utter_iamabot": 18,
+        "utter_default": 19,
+        "action_klinik_ara": 20,
+        "action_otel_ara": 21,
+        "action_sac_ekimi_detaylari": 22,
+        "action_dis_implant_detaylari": 23,
+        "action_rinoplasti_detaylari": 24,
+        "action_mide_kucultme_detaylari": 25,
+        "action_lasik_detaylari": 26,
+        "action_fiyat_bilgisi": 27,
+        "action_sigorta_bilgisi": 28,
+        "action_randevu_bilgisi": 29,
+        "action_ask_ollama": 30
+      },
+      "entities": {
+        "konum_ozelligi": 0,
+        "otel_tipi": 1,
+        "sehir": 2,
+        "tedavi": 3
+      },
+      "slots": {
+        "sehir_0": 0,
+        "tedavi_0": 1,
+        "otel_tipi_0": 2
+      },
+      "active_loop": {}
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

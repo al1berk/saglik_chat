@@ -84,3 +84,69 @@ stories:
   - slot_was_set:
     - sehir: "Antalya"
     - tedavi: "saç ekimi"
+
+# YENİ STORY'LER
+- story: diş implant bilgisi isteme
+  steps:
+  - intent: dis_implant_bilgisi
+  - action: action_dis_implant_detaylari
+
+- story: rinoplasti bilgisi isteme
+  steps:
+  - intent: rinoplasti_bilgisi
+  - action: action_rinoplasti_detaylari
+
+- story: mide küçültme bilgisi isteme
+  steps:
+  - intent: mide_kucultme_bilgisi
+  - action: action_mide_kucultme_detaylari
+
+- story: lasik bilgisi isteme
+  steps:
+  - intent: lasik_bilgisi
+  - action: action_lasik_detaylari
+
+- story: fiyat sorusu
+  steps:
+  - intent: fiyat_sor
+  - action: action_fiyat_bilgisi
+
+- story: sigorta sorusu
+  steps:
+  - intent: sigorta_sor
+  - action: action_sigorta_bilgisi
+
+- story: randevu sorusu
+  steps:
+  - intent: randevu_sor
+  - action: action_randevu_bilgisi
+
+# Context-aware hikayeler
+- story: tedavi bilgisi sonra fiyat sorma
+  steps:
+  - intent: dis_implant_bilgisi
+  - action: action_dis_implant_detaylari
+  - slot_was_set:
+    - tedavi: "diş implantı"
+  - intent: fiyat_sor
+  - action: action_fiyat_bilgisi
+
+- story: tedavi bilgisi sonra klinik arama
+  steps:
+  - intent: rinoplasti_bilgisi
+  - action: action_rinoplasti_detaylari
+  - slot_was_set:
+    - tedavi: "rinoplasti"
+  - intent: klinik_ara
+  - action: action_klinik_ara
+
+- story: klinik arama sonra randevu sorusu
+  steps:
+  - intent: klinik_ara
+    entities:
+    - sehir: "Antalya"
+  - action: action_klinik_ara
+  - slot_was_set:
+    - sehir: "Antalya"
+  - intent: randevu_sor
+  - action: action_randevu_bilgisi

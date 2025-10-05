@@ -357,3 +357,402 @@ Yanıtın maksimum 3-4 cümle olsun."""
             dispatcher.utter_message(text="Üzgünüm, şu anda size yardımcı olamıyorum.")
 
         return []
+
+class ActionDisImplantDetaylari(Action):
+    """Diş implantı bilgisi için Ollama'dan detaylı açıklama al"""
+    
+    def name(self) -> Text:
+        return "action_dis_implant_detaylari"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        logger.info("🦷 Diş implantı bilgisi için Ollama'ya sorgu gönderiliyor...")
+
+        prompt = """Sen profesyonel bir Türk sağlık turizmi danışmanısın. 
+
+ÖNEMLİ: SADECE VE SADECE TÜRKÇE CEVAP VER!
+
+Diş implantı tedavisi hakkında şu bilgileri kısa ve net şekilde açıkla:
+
+1. Diş implantı nedir ve nasıl yapılır?
+2. All-on-4 ve All-on-6 teknikleri nedir?
+3. Tek diş vs çoklu diş implantı farkları
+4. Ortalama tedavi ücreti: 400-800 Euro (tek diş), 3.500-6.000 Euro (All-on-4/6)
+5. İşlem süresi: Tek diş 30-60 dakika, tam ağız 2-3 saat
+6. İyileşme süresi: 3-6 ay (kemik entegrasyonu)
+7. Paket içeriği: Panoramik röntgen, 3D tomografi, geçici protez, otel konaklaması dahil
+
+Her maddeyi 2-3 cümle ile açıkla. Net, anlaşılır ve profesyonel bir dil kullan.
+Toplam maksimum 10 cümle yaz."""
+        
+        data = {
+            "model": "llama3",
+            "prompt": prompt,
+            "stream": False,
+            "options": {
+                "temperature": 0.4,
+                "num_predict": 500,
+                "top_p": 0.9,
+                "repeat_penalty": 1.2,
+                "stop": ["English:", "In English:", "Translation:"]
+            }
+        }
+
+        dispatcher.utter_message(text="🦷 Diş implantı hakkında detaylı bilgi hazırlıyorum...")
+
+        try:
+            response = requests.post(OLLAMA_API_URL, json=data, timeout=OLLAMA_TIMEOUT, proxies=PROXIES)
+            response.raise_for_status()
+            
+            generated_text = response.json().get('response', '').strip()
+
+            if generated_text:
+                dispatcher.utter_message(text=f"🦷 **DİŞ IMPLANTI BİLGİLERİ:**\n\n{generated_text}")
+                logger.info(f"✅ Ollama cevabı başarıyla alındı ({len(generated_text)} karakter)")
+            else:
+                dispatcher.utter_message(text="🦷 Üzgünüm, diş implantı bilgisi şu anda hazırlanamadı. Lütfen tekrar deneyin.")
+                logger.warning("⚠️ Ollama boş cevap döndürdü")
+
+        except requests.exceptions.ConnectionError:
+            logger.error("❌ Ollama servisine bağlanılamadı")
+            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın.")
+        except requests.exceptions.Timeout:
+            logger.error(f"⏱️ Ollama API zaman aşımı ({OLLAMA_TIMEOUT}s)")
+            dispatcher.utter_message(text=f"⏱️ Yapay zeka servisi yanıt vermekte gecikiyor. Lütfen biraz bekleyip tekrar deneyin.")
+        except Exception as e:
+            logger.error(f"❌ Ollama hatası: {e}")
+            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
+
+        return [{"event": "slot", "name": "tedavi", "value": "diş implantı"}]
+
+class ActionRinoplastiDetaylari(Action):
+    """Rinoplasti (burun estetiği) bilgisi için Ollama'dan detaylı açıklama al"""
+    
+    def name(self) -> Text:
+        return "action_rinoplasti_detaylari"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        logger.info("👃 Rinoplasti bilgisi için Ollama'ya sorgu gönderiliyor...")
+
+        prompt = """Sen profesyonel bir Türk sağlık turizmi danışmanısın. 
+
+ÖNEMLİ: SADECE VE SADECE TÜRKÇE CEVAP VER!
+
+Rinoplasti (burun estetiği) tedavisi hakkında şu bilgileri kısa ve net şekilde açıkla:
+
+1. Rinoplasti nedir ve nasıl yapılır?
+2. Açık rinoplasti vs Kapalı rinoplasti farkları
+3. Piezo tekniği nedir?
+4. Ortalama tedavi ücreti: 2.500-4.500 Euro
+5. İşlem süresi: 2-4 saat
+6. İyileşme süresi: 7-10 gün (splint çıkarma), 6-12 ay (tam iyileşme)
+7. Paket içeriği: Tüm testler, 5 yıldız otel, VIP transfer, kontroller dahil
+
+Her maddeyi 2-3 cümle ile açıkla. Net, anlaşılır ve profesyonel bir dil kullan.
+Toplam maksimum 10 cümle yaz."""
+        
+        data = {
+            "model": "llama3",
+            "prompt": prompt,
+            "stream": False,
+            "options": {
+                "temperature": 0.4,
+                "num_predict": 500,
+                "top_p": 0.9,
+                "repeat_penalty": 1.2,
+                "stop": ["English:", "In English:", "Translation:"]
+            }
+        }
+
+        dispatcher.utter_message(text="👃 Rinoplasti hakkında detaylı bilgi hazırlıyorum...")
+
+        try:
+            response = requests.post(OLLAMA_API_URL, json=data, timeout=OLLAMA_TIMEOUT, proxies=PROXIES)
+            response.raise_for_status()
+            
+            generated_text = response.json().get('response', '').strip()
+
+            if generated_text:
+                dispatcher.utter_message(text=f"👃 **RİNOPLASTİ BİLGİLERİ:**\n\n{generated_text}")
+                logger.info(f"✅ Ollama cevabı başarıyla alındı ({len(generated_text)} karakter)")
+            else:
+                dispatcher.utter_message(text="👃 Üzgünüm, rinoplasti bilgisi şu anda hazırlanamadı. Lütfen tekrar deneyin.")
+                logger.warning("⚠️ Ollama boş cevap döndürdü")
+
+        except requests.exceptions.ConnectionError:
+            logger.error("❌ Ollama servisine bağlanılamadı")
+            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın.")
+        except requests.exceptions.Timeout:
+            logger.error(f"⏱️ Ollama API zaman aşımı ({OLLAMA_TIMEOUT}s)")
+            dispatcher.utter_message(text=f"⏱️ Yapay zeka servisi yanıt vermekte gecikiyor. Lütfen biraz bekleyip tekrar deneyin.")
+        except Exception as e:
+            logger.error(f"❌ Ollama hatası: {e}")
+            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
+
+        return [{"event": "slot", "name": "tedavi", "value": "rinoplasti"}]
+
+class ActionMideKucultmeDetaylari(Action):
+    """Mide küçültme ameliyatı bilgisi için Ollama'dan detaylı açıklama al"""
+    
+    def name(self) -> Text:
+        return "action_mide_kucultme_detaylari"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        logger.info("🏥 Mide küçültme bilgisi için Ollama'ya sorgu gönderiliyor...")
+
+        prompt = """Sen profesyonel bir Türk sağlık turizmi danışmanısın. 
+
+ÖNEMLİ: SADECE VE SADECE TÜRKÇE CEVAP VER!
+
+Mide küçültme (bariatrik cerrahi) ameliyatı hakkında şu bilgileri kısa ve net şekilde açıkla:
+
+1. Mide küçültme ameliyatı nedir?
+2. Sleeve gastrektomi (tüp mide) vs Gastrik bypass farkları
+3. Kimler için uygundur? (BMI > 35)
+4. Ortalama tedavi ücreti: 3.500-5.500 Euro
+5. İşlem süresi: 1-2 saat (laparoskopik)
+6. Hastanede kalış: 3-4 gün, iyileşme: 2-3 hafta
+7. Beklenen kilo kaybı: 1 yılda %60-70 fazla kilo
+8. Paket içeriği: Tüm testler, diyet programı, otel, transfer dahil
+
+Her maddeyi 2-3 cümle ile açıkla. Net, anlaşılır ve profesyonel bir dil kullan.
+Toplam maksimum 12 cümle yaz."""
+        
+        data = {
+            "model": "llama3",
+            "prompt": prompt,
+            "stream": False,
+            "options": {
+                "temperature": 0.4,
+                "num_predict": 600,
+                "top_p": 0.9,
+                "repeat_penalty": 1.2,
+                "stop": ["English:", "In English:", "Translation:"]
+            }
+        }
+
+        dispatcher.utter_message(text="🏥 Mide küçültme ameliyatı hakkında detaylı bilgi hazırlıyorum...")
+
+        try:
+            response = requests.post(OLLAMA_API_URL, json=data, timeout=OLLAMA_TIMEOUT, proxies=PROXIES)
+            response.raise_for_status()
+            
+            generated_text = response.json().get('response', '').strip()
+
+            if generated_text:
+                dispatcher.utter_message(text=f"🏥 **MİDE KÜÇÜLTME BİLGİLERİ:**\n\n{generated_text}")
+                logger.info(f"✅ Ollama cevabı başarıyla alındı ({len(generated_text)} karakter)")
+            else:
+                dispatcher.utter_message(text="🏥 Üzgünüm, mide küçültme bilgisi şu anda hazırlanamadı. Lütfen tekrar deneyin.")
+                logger.warning("⚠️ Ollama boş cevap döndürdü")
+
+        except requests.exceptions.ConnectionError:
+            logger.error("❌ Ollama servisine bağlanılamadı")
+            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın.")
+        except requests.exceptions.Timeout:
+            logger.error(f"⏱️ Ollama API zaman aşımı ({OLLAMA_TIMEOUT}s)")
+            dispatcher.utter_message(text=f"⏱️ Yapay zeka servisi yanıt vermekte gecikiyor. Lütfen biraz bekleyip tekrar deneyin.")
+        except Exception as e:
+            logger.error(f"❌ Ollama hatası: {e}")
+            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
+
+        return [{"event": "slot", "name": "tedavi", "value": "mide küçültme"}]
+
+class ActionLasikDetaylari(Action):
+    """Lasik (göz lazer) ameliyatı bilgisi için Ollama'dan detaylı açıklama al"""
+    
+    def name(self) -> Text:
+        return "action_lasik_detaylari"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        logger.info("👁️ Lasik bilgisi için Ollama'ya sorgu gönderiliyor...")
+
+        prompt = """Sen profesyonel bir Türk sağlık turizmi danışmanısın. 
+
+ÖNEMLİ: SADECE VE SADECE TÜRKÇE CEVAP VER!
+
+Lasik (göz lazer) ameliyatı hakkında şu bilgileri kısa ve net şekilde açıkla:
+
+1. Lasik ameliyatı nedir ve nasıl yapılır?
+2. Lasik, PRK ve Femtolasik farkları
+3. Kimler için uygundur? (miyopi, hipermetropi, astigmat)
+4. Ortalama tedavi ücreti: 1.500-2.500 Euro (her iki göz)
+5. İşlem süresi: 15-20 dakika (her iki göz)
+6. İyileşme süresi: 1-2 gün (görmede düzelme), 1 hafta (tam iyileşme)
+7. Başarı oranı: %95+ hastada gözlüksüz yaşam
+8. Paket içeriği: Tüm testler, kontroller, otel, transfer dahil
+
+Her maddeyi 2-3 cümle ile açıkla. Net, anlaşılır ve profesyonel bir dil kullan.
+Toplam maksimum 12 cümle yaz."""
+        
+        data = {
+            "model": "llama3",
+            "prompt": prompt,
+            "stream": False,
+            "options": {
+                "temperature": 0.4,
+                "num_predict": 600,
+                "top_p": 0.9,
+                "repeat_penalty": 1.2,
+                "stop": ["English:", "In English:", "Translation:"]
+            }
+        }
+
+        dispatcher.utter_message(text="👁️ Lasik ameliyatı hakkında detaylı bilgi hazırlıyorum...")
+
+        try:
+            response = requests.post(OLLAMA_API_URL, json=data, timeout=OLLAMA_TIMEOUT, proxies=PROXIES)
+            response.raise_for_status()
+            
+            generated_text = response.json().get('response', '').strip()
+
+            if generated_text:
+                dispatcher.utter_message(text=f"👁️ **LASİK AMELİYATI BİLGİLERİ:**\n\n{generated_text}")
+                logger.info(f"✅ Ollama cevabı başarıyla alındı ({len(generated_text)} karakter)")
+            else:
+                dispatcher.utter_message(text="👁️ Üzgünüm, lasik bilgisi şu anda hazırlanamadı. Lütfen tekrar deneyin.")
+                logger.warning("⚠️ Ollama boş cevap döndürdü")
+
+        except requests.exceptions.ConnectionError:
+            logger.error("❌ Ollama servisine bağlanılamadı")
+            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın.")
+        except requests.exceptions.Timeout:
+            logger.error(f"⏱️ Ollama API zaman aşımı ({OLLAMA_TIMEOUT}s)")
+            dispatcher.utter_message(text=f"⏱️ Yapay zeka servisi yanıt vermekte gecikiyor. Lütfen biraz bekleyip tekrar deneyin.")
+        except Exception as e:
+            logger.error(f"❌ Ollama hatası: {e}")
+            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
+
+        return [{"event": "slot", "name": "tedavi", "value": "lasik"}]
+
+class ActionFiyatBilgisi(Action):
+    """Fiyat bilgisi için context-aware cevap ver"""
+    
+    def name(self) -> Text:
+        return "action_fiyat_bilgisi"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        # Slot'tan tedavi bilgisini al
+        tedavi = tracker.get_slot("tedavi")
+        tedavi_entity = next(tracker.get_latest_entity_values("tedavi"), None)
+        
+        if tedavi_entity:
+            tedavi = tedavi_entity
+        
+        logger.info(f"💰 Fiyat bilgisi soruluyor - tedavi: {tedavi}")
+
+        # Tedavi bazlı fiyat bilgileri
+        fiyat_bilgileri = {
+            "saç ekimi": "💇 **SAÇ EKİMİ FİYATLARI:**\n- FUE Tekniği: 2.500-3.500 Euro\n- DHI Tekniği: 3.000-4.000 Euro\n- Paket: 5 yıldız otel, VIP transfer, tüm kontroller dahil",
+            "diş implantı": "🦷 **DİŞ IMPLANTI FİYATLARI:**\n- Tek Diş: 400-800 Euro\n- All-on-4: 3.500-5.000 Euro\n- All-on-6: 4.500-6.000 Euro\n- Paket: Otel konaklaması, testler dahil",
+            "rinoplasti": "👃 **RİNOPLASTİ FİYATLARI:**\n- Açık/Kapalı Rinoplasti: 2.500-4.500 Euro\n- Piezo Tekniği: 3.500-5.000 Euro\n- Paket: 5 yıldız otel, VIP transfer, kontroller dahil",
+            "mide küçültme": "🏥 **MİDE KÜÇÜLTME FİYATLARI:**\n- Sleeve Gastrektomi: 3.500-4.500 Euro\n- Gastrik Bypass: 4.000-5.500 Euro\n- Paket: 3-4 gün hastane, otel, diyet programı dahil",
+            "lasik": "👁️ **LASİK AMELİYATI FİYATLARI:**\n- Klasik Lasik: 1.500-2.000 Euro\n- Femtolasik: 2.000-2.500 Euro (her iki göz)\n- Paket: Tüm testler, kontroller dahil"
+        }
+
+        if tedavi and any(key in tedavi.lower() for key in fiyat_bilgileri.keys()):
+            for key, value in fiyat_bilgileri.items():
+                if key in tedavi.lower():
+                    dispatcher.utter_message(text=value)
+                    return []
+        
+        # Genel fiyat bilgisi
+        message = """💰 **GENEL FİYAT BİLGİLERİ:**
+
+Türkiye'deki medikal turizm fiyatları, Avrupa ve ABD'ye göre %50-70 daha ekonomiktir.
+
+**Popüler Tedaviler:**
+🦷 Diş İmplantı: 400-800 Euro (tek)
+💇 Saç Ekimi: 2.500-4.000 Euro
+👃 Rinoplasti: 2.500-4.500 Euro
+🏥 Mide Küçültme: 3.500-5.500 Euro
+👁️ Lasik: 1.500-2.500 Euro
+
+**Paket İçeriği:**
+✅ Tüm ameliyat masrafları
+✅ Otel konaklaması
+✅ VIP havalimanı transferi
+✅ Ameliyat öncesi/sonrası kontroller
+✅ Tercümanlık hizmeti
+
+Hangi tedavi için detaylı fiyat bilgisi almak istersiniz?"""
+        
+        dispatcher.utter_message(text=message)
+        return []
+
+class ActionSigortaBilgisi(Action):
+    """Sigorta bilgisi ver"""
+    
+    def name(self) -> Text:
+        return "action_sigorta_bilgisi"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        logger.info("🏥 Sigorta bilgisi soruluyor...")
+
+        message = """🏥 **SİGORTA BİLGİLERİ:**
+
+**Türkiye'deki Medikal Turizm ve Sigorta:**
+
+❌ **SGK (Sosyal Güvenlik Kurumu):**
+Yurt dışından gelen hastalar için SGK kapsamı yoktur. Ancak Türk vatandaşları belirli koşullarda SGK ile tedavi olabilir.
+
+✅ **Özel Sigorta:**
+- Bazı uluslararası özel sağlık sigortaları Türkiye'deki tedavileri karşılayabilir
+- Anlaşmalı kliniklerimiz: Allianz, Axa, Cigna
+- Tedavi öncesi sigorta şirketinizle mutlaka iletişime geçin
+
+💳 **Ödeme Seçenekleri:**
+- Nakit (Euro, Dolar, TL)
+- Kredi kartı (taksit imkanı)
+- Banka havalesi
+
+📋 **Fatura ve Raporlama:**
+- Tüm tedaviler için detaylı fatura verilir
+- Sigorta şirketinize sunabileceğiniz medikal raporlar hazırlanır
+- Geri ödeme için gerekli evraklar sağlanır
+
+Özel sigorta durumunuz için kliniklerimizle direkt iletişime geçmenizi öneririz."""
+        
+        dispatcher.utter_message(text=message)
+        return []
+
+class ActionRandevuBilgisi(Action):
+    """Randevu alma bilgisi ver"""
+    
+    def name(self) -> Text:
+        return "action_randevu_bilgisi"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        logger.info("📅 Randevu bilgisi soruluyor...")
+
+        message = """📅 **RANDEVU ALMA SÜRECİ:**
+
+**Adım 1: İletişim**
+📞 Klinikle direkt iletişime geçin
+📧 E-posta ile başvuru yapın
+💬 WhatsApp hattından yazın
+
+**Adım 2: Ön Değerlendirme**
+📸 Fotoğraf veya röntgen gönderin
+📋 Medikal geçmişinizi paylaşın
+🩺 Online konsültasyon alın (ücretsiz)
+
+**Adım 3: Randevu Tarihi**
+📅 Uygun tarih belirleyin
+✈️ Uçak bileti alın
+🏨 Otel rezervasyonu yapılır
+
+**Adım 4: Türkiye'ye Geliş**
+🚐 VIP havalimanı karşılama
+🏥 Kliniğe transfer
+👨‍⚕️ Doktor görüşmesi ve son kontroller
+
+**Randevu Süresi:**
+- Acil durumlar: 2-3 gün içinde
+- Normal randevu: 1-2 hafta
+- Yoğun dönemler: 3-4 hafta
+
+**İletişim:**
+Öncelikle hangi tedavi için randevu almak istediğinizi belirtin. Size en uygun kliniği önerebilirim!"""
+        
+        dispatcher.utter_message(text=message)
+        return []

@@ -128,3 +128,128 @@ nlu:
     - fue saç ekimi
     - dhi saç ekimi
     - saç ekimi ameliyatı
+
+- intent: dis_implant_bilgisi
+  examples: |
+    - diş implantı hakkında bilgi
+    - diş implantı nedir
+    - diş implantı nasıl yapılır
+    - implant diş tedavisi
+    - diş implantı fiyatları
+    - diş implantı ne kadar
+    - diş eksikliği tedavisi
+    - implant diş
+    - dental implant
+    - tek diş implantı
+    - çoklu diş implantı
+    - all on four nedir
+    - all on six diş implantı
+    - diş protezi mi implant mı
+    - implant diş süreci
+
+- intent: rinoplasti_bilgisi
+  examples: |
+    - rinoplasti nedir
+    - burun estetiği hakkında bilgi
+    - burun ameliyatı
+    - rinoplasti fiyatları
+    - burun estetiği ne kadar
+    - burun şekillendirme
+    - burun küçültme ameliyatı
+    - eğri burun düzeltme
+    - rinoplasti süreci
+    - burun ameliyatı nasıl olur
+    - burun estetiği sonrası
+    - rinoplasti iyileşme
+    - açık rinoplasti
+    - kapalı rinoplasti
+    - revizyon rinoplasti
+
+- intent: mide_kucultme_bilgisi
+  examples: |
+    - mide küçültme ameliyatı
+    - mide küçültme nedir
+    - bariatrik cerrahi
+    - sleeve gastrektomi
+    - tüp mide ameliyatı
+    - gastrik bypass
+    - obezite cerrahisi
+    - mide küçültme fiyatları
+    - mide küçültme ne kadar
+    - kilo verme ameliyatı
+    - mide balonu
+    - mide küçültme süreci
+    - ameliyat sonrası kilo kaybı
+    - mide küçültme riskleri
+    - tüp mide hakkında bilgi
+
+- intent: lasik_bilgisi
+  examples: |
+    - lasik ameliyatı nedir
+    - göz lazer ameliyatı
+    - lasik göz ameliyatı
+    - gözlük bırakma ameliyatı
+    - miyop lazer tedavisi
+    - lasik fiyatları
+    - göz ameliyatı ne kadar
+    - lasik süreci
+    - lazer göz ameliyatı sonrası
+    - prk ameliyatı
+    - femtolasik nedir
+    - göz lazer tedavisi
+    - gözlüksüz yaşam
+    - lasik riskleri
+    - göz ameliyatı hakkında
+
+- intent: fiyat_sor
+  examples: |
+    - fiyatlar ne kadar
+    - [saç ekimi](tedavi) fiyatı
+    - [diş implantı](tedavi) ücreti
+    - [rinoplasti](tedavi) kaç para
+    - ne kadar ödemem gerekir
+    - fiyat bilgisi
+    - ücret ne kadar
+    - paket fiyatı
+    - toplam maliyet
+    - [burun estetiği](tedavi) fiyatı
+    - [mide küçültme](tedavi) ücreti ne kadar
+    - [lasik](tedavi) için ne kadar para
+    - fiyat listesi
+    - ödeme bilgisi
+    - kaç lira
+    - kaç euro
+
+- intent: sigorta_sor
+  examples: |
+    - sigorta kabul ediliyor mu
+    - özel sigortam geçerli mi
+    - sigorta ile ödeme
+    - sağlık sigortası
+    - sigorta kapsamı
+    - sigortam var kullanabilir miyim
+    - sigorta anlaşmalı mı
+    - sgk geçerli mi
+    - devlet hastanesi mi
+    - özel sigorta
+    - sigorta anlaşması
+    - hangi sigortalar geçerli
+    - sigorta ile tedavi
+
+- intent: randevu_sor
+  examples: |
+    - randevu almak istiyorum
+    - nasıl randevu alabilirim
+    - randevu için ne yapmalıyım
+    - randevu oluştur
+    - randevu tarihi
+    - ne zaman müsaitsiniz
+    - hangi günler boş
+    - randevu sistemini nasıl kullanırım
+    - online randevu
+    - telefon ile randevu
+    - acil randevu
+    - yarın randevu var mı
+    - bu hafta müsait misiniz
+    - randevu iptal
+    - randevu değiştirme
