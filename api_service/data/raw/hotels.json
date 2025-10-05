@@ -4,6 +4,7 @@
     "name": "İstanbul Medikal Otel & Spa",
     "city": "İstanbul",
     "country": "Turkey",
+    "address": "Maslak Mahallesi Büyükdere Caddesi No:255 Sarıyer/İstanbul",
     "type": "Medical Hotel",
     "rating": 4.7,
     "price_per_night": 120,
@@ -24,7 +25,7 @@
       "Yüzme Havuzu"
     ],
     "contact": {
-      "phone": "+90 212 XXX XX XX",
+      "phone": "+90 212 234 56 78",
       "email": "info@medikalotel.com",
       "website": "www.medikalotel.com.tr"
     },
@@ -39,6 +40,7 @@
     "name": "Antalya Recovery Residence",
     "city": "Antalya",
     "country": "Turkey",
+    "address": "Fener Mahallesi Bülent Ecevit Bulvarı No:48 Muratpaşa/Antalya",
     "type": "Recovery Hotel",
     "rating": 4.8,
     "price_per_night": 95,
@@ -59,7 +61,7 @@
       "Masaj Salonu"
     ],
     "contact": {
-      "phone": "+90 242 XXX XX XX",
+      "phone": "+90 242 123 45 67",
       "email": "info@recoveryresidence.com",
       "website": "www.antalyarecovery.com.tr"
     },
@@ -74,6 +76,7 @@
     "name": "Ankara Medical Suites",
     "city": "Ankara",
     "country": "Turkey",
+    "address": "Çankaya Mahallesi Atatürk Bulvarı No:125 Çankaya/Ankara",
     "type": "Apart Hotel",
     "rating": 4.5,
     "price_per_night": 80,
@@ -93,7 +96,7 @@
       "Otopark"
     ],
     "contact": {
-      "phone": "+90 312 XXX XX XX",
+      "phone": "+90 312 345 67 89",
       "email": "info@medicalsuites.com",
       "website": "www.ankaramedicalsuites.com.tr"
     },
@@ -108,6 +111,7 @@
     "name": "İzmir Wellness Hotel",
     "city": "İzmir",
     "country": "Turkey",
+    "address": "Alsancak Mahallesi Kıbrıs Şehitleri Caddesi No:140 Konak/İzmir",
     "type": "Wellness Hotel",
     "rating": 4.6,
     "price_per_night": 110,
@@ -128,7 +132,7 @@
       "Beach Access"
     ],
     "contact": {
-      "phone": "+90 232 XXX XX XX",
+      "phone": "+90 232 456 78 90",
       "email": "info@izmirwellness.com",
       "website": "www.izmirwellness.com.tr"
     },
@@ -143,6 +147,7 @@
     "name": "Bursa Termal Recovery Center",
     "city": "Bursa",
     "country": "Turkey",
+    "address": "Çekirge Mahallesi 1. Murat Caddesi No:20 Osmangazi/Bursa",
     "type": "Thermal Hotel",
     "rating": 4.9,
     "price_per_night": 150,
@@ -163,7 +168,7 @@
       "VIP Transfer"
     ],
     "contact": {
-      "phone": "+90 224 XXX XX XX",
+      "phone": "+90 224 567 89 01",
       "email": "info@bursatermal.com",
       "website": "www.bursatermalrecovery.com.tr"
     },
@@ -172,5 +177,1710 @@
       "Uludağ Üniversitesi Hastanesi",
       "Özel Bursa Hastanesi"
     ]
+  },
+  {
+    "id": "hotel_006",
+    "name": "Antalya Lara Beach Medical Resort",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Lara Mahallesi Atatürk Caddesi No:201 Muratpaşa/Antalya",
+    "type": "Beach Resort",
+    "rating": 4.9,
+    "price_per_night": 140,
+    "description": "Lara Plajı'nda 5 yıldızlı medikal resort. Diş tedavisi ve estetik ameliyat sonrası lüks konaklama.",
+    "features": [
+      "Private beach",
+      "Medikal konsiyerj",
+      "VIP araç transferi",
+      "Spa & Terapi",
+      "Gourmet mutfak"
+    ],
+    "amenities": [
+      "All Inclusive",
+      "Özel Plaj",
+      "Infinity Pool",
+      "Fine Dining",
+      "Gym & Yoga",
+      "Kids Club"
+    ],
+    "contact": {
+      "phone": "+90 242 324 11 22",
+      "email": "info@laramedical.com",
+      "website": "www.laramedicalresort.com"
+    }
+  },
+  {
+    "id": "hotel_007",
+    "name": "İstanbul Taksim Health Hotel",
+    "city": "İstanbul",
+    "country": "Turkey",
+    "address": "Gümüşsuyu Mahallesi İnönü Caddesi No:8 Beyoğlu/İstanbul",
+    "type": "City Hotel",
+    "rating": 4.6,
+    "price_per_night": 100,
+    "description": "Taksim meydanına 2 dk mesafede, şehir merkezinde medikal konaklama.",
+    "features": [
+      "Merkezi konum",
+      "Metro bağlantısı",
+      "Çok dilli personel",
+      "Havalimanı shuttle",
+      "24/7 destek"
+    ],
+    "amenities": [
+      "Kahvaltı Buffet",
+      "Free WiFi",
+      "Concierge",
+      "Business Center",
+      "Rooftop Terrace"
+    ],
+    "contact": {
+      "phone": "+90 212 456 33 44",
+      "email": "info@taksimhealth.com",
+      "website": "www.taksimhealthhotel.com"
+    }
+  },
+  {
+    "id": "hotel_008",
+    "name": "Antalya Konyaaltı Clinic Apartments",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Arapsuyu Mahallesi Atatürk Bulvarı No:25 Konyaaltı/Antalya",
+    "type": "Serviced Apartments",
+    "rating": 4.7,
+    "price_per_night": 85,
+    "description": "Konyaaltı sahilinde günlük kiralık daireler, aile konaklaması için ideal.",
+    "features": [
+      "Deniz manzarası",
+      "Mutfaklı stüdyo",
+      "Haftalık temizlik",
+      "Eczane yakınında",
+      "Market erişimi"
+    ],
+    "amenities": [
+      "Full Kitchen",
+      "Washing Machine",
+      "WiFi",
+      "Balcony",
+      "Parking",
+      "Air Conditioning"
+    ],
+    "contact": {
+      "phone": "+90 242 345 22 33",
+      "email": "info@konyaalticlinics.com",
+      "website": "www.konyaaltimedical.com"
+    }
+  },
+  {
+    "id": "hotel_009",
+    "name": "İzmir Alsancak Marina Hotel",
+    "city": "İzmir",
+    "country": "Turkey",
+    "address": "Alsancak Mahallesi Atatürk Caddesi No:188 Konak/İzmir",
+    "type": "Boutique Hotel",
+    "rating": 4.8,
+    "price_per_night": 115,
+    "description": "Alsancak marinada butik otel, diş klinikleri yürüme mesafesinde.",
+    "features": [
+      "Marina view",
+      "Walking distance",
+      "Roof restaurant",
+      "Concierge service",
+      "City tours"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Bar",
+      "Terrace",
+      "Room Service",
+      "Minibar"
+    ],
+    "contact": {
+      "phone": "+90 232 421 55 66",
+      "email": "info@alsancakmarina.com",
+      "website": "www.alsan cakmarinahotel.com"
+    }
+  },
+  {
+    "id": "hotel_010",
+    "name": "Ankara Çankaya Residence",
+    "city": "Ankara",
+    "country": "Turkey",
+    "address": "Kavaklıdere Mahallesi Tunalı Hilmi Caddesi No:98 Çankaya/Ankara",
+    "type": "Residence",
+    "rating": 4.4,
+    "price_per_night": 75,
+    "description": "Çankaya'da rezidans tipi konaklama, hastane transferi dahil.",
+    "features": [
+      "Rezidans konfor",
+      "Güvenlik 24/7",
+      "Otopark",
+      "Market",
+      "Sessiz çevre"
+    ],
+    "amenities": [
+      "Kitchen",
+      "Laundry",
+      "WiFi",
+      "TV",
+      "Heating",
+      "Balcony"
+    ],
+    "contact": {
+      "phone": "+90 312 440 77 88",
+      "email": "info@cankayaresidence.com",
+      "website": "www.cankayamedicalresidence.com"
+    }
+  },
+  {
+    "id": "hotel_011",
+    "name": "Antalya Belek Golf & Spa Resort",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Belek Mahallesi Atatürk Bulvarı No:15 Serik/Antalya",
+    "type": "Golf Resort",
+    "rating": 4.9,
+    "price_per_night": 180,
+    "description": "Belek'te golf sahası olan lüks resort, ameliyat sonrası rehabilitasyon programları.",
+    "features": [
+      "18-hole golf",
+      "Medical spa",
+      "Physiotherapy",
+      "Personal trainer",
+      "Nutritionist"
+    ],
+    "amenities": [
+      "All Inclusive",
+      "Golf Course",
+      "Multiple Pools",
+      "Spa Center",
+      "Fine Dining",
+      "Tennis Courts"
+    ],
+    "contact": {
+      "phone": "+90 242 715 88 99",
+      "email": "info@belekgolfmedical.com",
+      "website": "www.belekmedicalresort.com"
+    }
+  },
+  {
+    "id": "hotel_012",
+    "name": "İstanbul Kadıköy Dental Suites",
+    "city": "İstanbul",
+    "country": "Turkey",
+    "address": "Caferağa Mahallesi Moda Caddesi No:76 Kadıköy/İstanbul",
+    "type": "Dental Hotel",
+    "rating": 4.7,
+    "price_per_night": 90,
+    "description": "Kadıköy'de diş klinikleriyle entegre otel, post-dental care uzmanı.",
+    "features": [
+      "Dental clinics nearby",
+      "Soft food menu",
+      "Ice packs available",
+      "Pharmacist on call",
+      "Ferry access"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Room Service",
+      "Minibar",
+      "Safe Box",
+      "Hair Dryer"
+    ],
+    "contact": {
+      "phone": "+90 216 330 11 22",
+      "email": "info@kadikoydentalsuites.com",
+      "website": "www.kadikoydentalsuites.com"
+    }
+  },
+  {
+    "id": "hotel_013",
+    "name": "Antalya Kepez Medical Lodge",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Kepez Mahallesi Dokuma Caddesi No:111 Kepez/Antalya",
+    "type": "Medical Lodge",
+    "rating": 4.5,
+    "price_per_night": 70,
+    "description": "Kepez bölgesinde ekonomik medikal konaklama, aile odaları mevcut.",
+    "features": [
+      "Budget friendly",
+      "Family rooms",
+      "Kitchen access",
+      "Laundry service",
+      "Clinic shuttle"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Kitchen",
+      "Parking",
+      "TV",
+      "Air Con"
+    ],
+    "contact": {
+      "phone": "+90 242 334 22 33",
+      "email": "info@kepezmedical.com",
+      "website": "www.kepezlodge.com"
+    }
+  },
+  {
+    "id": "hotel_014",
+    "name": "İzmir Bornova Health Residence",
+    "city": "İzmir",
+    "country": "Turkey",
+    "address": "Erzene Mahallesi İzmir Caddesi No:333 Bornova/İzmir",
+    "type": "Health Residence",
+    "rating": 4.6,
+    "price_per_night": 95,
+    "description": "Bornova'da üniversite hastanesi yakını sağlık rezidansı.",
+    "features": [
+      "University hospital nearby",
+      "Student discounts",
+      "Study rooms",
+      "Garden",
+      "Quiet zone"
+    ],
+    "amenities": [
+      "Kitchen",
+      "WiFi",
+      "Study Room",
+      "Garden",
+      "Parking",
+      "Laundry"
+    ],
+    "contact": {
+      "phone": "+90 232 388 44 55",
+      "email": "info@bornovahealth.com",
+      "website": "www.bornovahealthresidence.com"
+    }
+  },
+  {
+    "id": "hotel_015",
+    "name": "Antalya Manavgat Wellness Center",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Side Mahallesi Liman Caddesi No:45 Manavgat/Antalya",
+    "type": "Wellness Center",
+    "rating": 4.8,
+    "price_per_night": 125,
+    "description": "Manavgat'ta nehir kenarında wellness merkezi, detox programları.",
+    "features": [
+      "River view",
+      "Detox programs",
+      "Yoga classes",
+      "Massage therapy",
+      "Organic food"
+    ],
+    "amenities": [
+      "Healthy Meals",
+      "Yoga Studio",
+      "Spa",
+      "Pool",
+      "Garden",
+      "WiFi"
+    ],
+    "contact": {
+      "phone": "+90 242 746 33 44",
+      "email": "info@manavgatwellness.com",
+      "website": "www.manavgatwellness.com"
+    }
+  },
+  {
+    "id": "hotel_016",
+    "name": "İstanbul Şişli Medical Plaza Hotel",
+    "city": "İstanbul",
+    "country": "Turkey",
+    "address": "Mecidiyeköy Mahallesi Büyükdere Caddesi No:171 Şişli/İstanbul",
+    "type": "Plaza Hotel",
+    "rating": 4.8,
+    "price_per_night": 130,
+    "description": "Şişli'de hastane kompleksi içinde, doğrudan hastaneye bağlantılı.",
+    "features": [
+      "Hospital connected",
+      "Elevator access",
+      "Medical staff on-site",
+      "Pharmacy in building",
+      "Lab services"
+    ],
+    "amenities": [
+      "Restaurant",
+      "WiFi",
+      "Business Center",
+      "Meeting Rooms",
+      "Cafe",
+      "Parking"
+    ],
+    "contact": {
+      "phone": "+90 212 373 55 66",
+      "email": "info@sisliplaza.com",
+      "website": "www.sislimedicaplaza.com"
+    }
+  },
+  {
+    "id": "hotel_017",
+    "name": "Ankara Kızılay Comfort Inn",
+    "city": "Ankara",
+    "country": "Turkey",
+    "address": "Kızılay Mahallesi Atatürk Bulvarı No:89 Çankaya/Ankara",
+    "type": "Inn",
+    "rating": 4.3,
+    "price_per_night": 65,
+    "description": "Kızılay'da merkezi konum, ekonomik ve konforlu konaklama.",
+    "features": [
+      "City center",
+      "Metro access",
+      "Budget friendly",
+      "Clean rooms",
+      "Helpful staff"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "TV",
+      "Heating",
+      "Desk",
+      "Shower"
+    ],
+    "contact": {
+      "phone": "+90 312 418 99 00",
+      "email": "info@kizilayinn.com",
+      "website": "www.kizilaycomfort.com"
+    }
+  },
+  {
+    "id": "hotel_018",
+    "name": "Antalya Side Antique Resort",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Side Mahallesi Liman Caddesi No:67 Manavgat/Antalya",
+    "type": "Historic Resort",
+    "rating": 4.7,
+    "price_per_night": 105,
+    "description": "Side antik kentinde tarihi dokusunu koruyan butik resort.",
+    "features": [
+      "Historic location",
+      "Beach access",
+      "Cultural tours",
+      "Spa services",
+      "Authentic cuisine"
+    ],
+    "amenities": [
+      "Restaurant",
+      "Beach",
+      "Pool",
+      "WiFi",
+      "Bar",
+      "Terrace"
+    ],
+    "contact": {
+      "phone": "+90 242 753 66 77",
+      "email": "info@sideantique.com",
+      "website": "www.sideantiqueresort.com"
+    }
+  },
+  {
+    "id": "hotel_019",
+    "name": "İzmir Karşıyaka Seaside Hotel",
+    "city": "İzmir",
+    "country": "Turkey",
+    "address": "Cumhuriyet Mahallesi Sahilşehitler Caddesi No:78 Karşıyaka/İzmir",
+    "type": "Seaside Hotel",
+    "rating": 4.6,
+    "price_per_night": 100,
+    "description": "Karşıyaka sahilinde deniz manzaralı otel, feribot ile kolay ulaşım.",
+    "features": [
+      "Sea view",
+      "Ferry nearby",
+      "Promenade access",
+      "Bike rental",
+      "Local markets"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Balcony",
+      "Sea View",
+      "Restaurant",
+      "Bar"
+    ],
+    "contact": {
+      "phone": "+90 232 369 77 88",
+      "email": "info@karsiyakaseaside.com",
+      "website": "www.karsiyakaseaside.com"
+    }
+  },
+  {
+    "id": "hotel_020",
+    "name": "Antalya Alanya Castle View Hotel",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Saray Mahallesi İskele Caddesi No:34 Alanya/Antalya",
+    "type": "Castle View Hotel",
+    "rating": 4.6,
+    "price_per_night": 90,
+    "description": "Alanya'da kale manzaralı butik otel, plaj yakınında.",
+    "features": [
+      "Castle view",
+      "Beach 2 min walk",
+      "Old town nearby",
+      "Rooftop breakfast",
+      "Tour desk"
+    ],
+    "amenities": [
+      "Breakfast Terrace",
+      "WiFi",
+      "Air Con",
+      "Minibar",
+      "Safe",
+      "Beach Towels"
+    ],
+    "contact": {
+      "phone": "+90 242 513 88 99",
+      "email": "info@alanyacastle.com",
+      "website": "www.alanyacastleview.com"
+    }
+  },
+  {
+    "id": "hotel_021",
+    "name": "İstanbul Beylikdüzü Medical Center Hotel",
+    "city": "İstanbul",
+    "country": "Turkey",
+    "address": "Cumhuriyet Mahallesi Eski Londra Asfaltı No:4 Beylikdüzü/İstanbul",
+    "type": "Medical Center Hotel",
+    "rating": 4.5,
+    "price_per_night": 85,
+    "description": "Beylikdüzü'nde yeni yapılan medikal merkez oteli, modern odalı.",
+    "features": [
+      "New building",
+      "Modern rooms",
+      "Hospital shuttle",
+      "Meeting rooms",
+      "Business facilities"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Parking",
+      "Gym",
+      "Restaurant",
+      "Conference Room"
+    ],
+    "contact": {
+      "phone": "+90 212 875 11 22",
+      "email": "info@beylikduzumedical.com",
+      "website": "www.beylikduzumedical.com"
+    }
+  },
+  {
+    "id": "hotel_022",
+    "name": "Ankara Ulus Historical Guesthouse",
+    "city": "Ankara",
+    "country": "Turkey",
+    "address": "Hacıbayram Mahallesi Anıttepe Caddesi No:15 Altındağ/Ankara",
+    "type": "Guesthouse",
+    "rating": 4.2,
+    "price_per_night": 55,
+    "description": "Ulus'ta tarihi Ankara evlerinde misafirhane, ekonomik konaklama.",
+    "features": [
+      "Historic building",
+      "Traditional decor",
+      "City views",
+      "Local experience",
+      "Budget option"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Shared Kitchen",
+      "Garden",
+      "Tea Service",
+      "Heating"
+    ],
+    "contact": {
+      "phone": "+90 312 309 33 44",
+      "email": "info@ulusguesthouse.com",
+      "website": "www.ulushistorical.com"
+    }
+  },
+  {
+    "id": "hotel_023",
+    "name": "Antalya Kaş Diving & Recovery Resort",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Andifli Mahallesi Hastane Caddesi No:18 Kaş/Antalya",
+    "type": "Diving Resort",
+    "rating": 4.7,
+    "price_per_night": 110,
+    "description": "Kaş'ta dalış merkezi olan resort, deniz terapisi programları.",
+    "features": [
+      "Diving center",
+      "Sea therapy",
+      "Boat tours",
+      "Yoga on beach",
+      "Seafood restaurant"
+    ],
+    "amenities": [
+      "Diving Equipment",
+      "Beach",
+      "Pool",
+      "Restaurant",
+      "Bar",
+      "WiFi"
+    ],
+    "contact": {
+      "phone": "+90 242 836 44 55",
+      "email": "info@kasdiving.com",
+      "website": "www.kasdivingresort.com"
+    }
+  },
+  {
+    "id": "hotel_024",
+    "name": "İzmir Çeşme Thermal Spa Hotel",
+    "city": "İzmir",
+    "country": "Turkey",
+    "address": "Ilica Mahallesi Şifa Caddesi No:88 Çeşme/İzmir",
+    "type": "Thermal Spa",
+    "rating": 4.9,
+    "price_per_night": 145,
+    "description": "Çeşme'de termal otel, kaplıca tedavisi ve spa hizmetleri.",
+    "features": [
+      "Thermal springs",
+      "Spa treatments",
+      "Beach club",
+      "Wellness programs",
+      "Detox cuisine"
+    ],
+    "amenities": [
+      "Thermal Pools",
+      "Spa Center",
+      "Beach Club",
+      "Restaurant",
+      "WiFi",
+      "Parking"
+    ],
+    "contact": {
+      "phone": "+90 232 712 55 66",
+      "email": "info@cesmethermal.com",
+      "website": "www.cesmethermal.com"
+    }
+  },
+  {
+    "id": "hotel_025",
+    "name": "Antalya Kemer Paradise Bay",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Göynük Mahallesi Atatürk Bulvarı No:156 Kemer/Antalya",
+    "type": "Bay Resort",
+    "rating": 4.8,
+    "price_per_night": 135,
+    "description": "Kemer'de özel koyda all-inclusive resort, medikal paketler mevcut.",
+    "features": [
+      "Private bay",
+      "All inclusive",
+      "Water sports",
+      "Animation team",
+      "Kids club"
+    ],
+    "amenities": [
+      "All Inclusive",
+      "Private Beach",
+      "Multiple Pools",
+      "Spa",
+      "Restaurants",
+      "Entertainment"
+    ],
+    "contact": {
+      "phone": "+90 242 814 66 77",
+      "email": "info@kemerparadise.com",
+      "website": "www.kemerparadisebay.com"
+    }
+  },
+  {
+    "id": "hotel_026",
+    "name": "İzmir Foça Windsurf Hotel",
+    "city": "İzmir",
+    "country": "Turkey",
+    "address": "Küçükdeniz Mahallesi Sahil Yolu No:44 Foça/İzmir",
+    "type": "Sport Hotel",
+    "rating": 4.5,
+    "price_per_night": 80,
+    "description": "Foça'da rüzgar sörfü merkezi, aktif tatil ve rehabilitasyon.",
+    "features": [
+      "Windsurf school",
+      "Beach sports",
+      "Physiotherapy",
+      "Active recovery",
+      "Group activities"
+    ],
+    "amenities": [
+      "Sports Equipment",
+      "Beach",
+      "Restaurant",
+      "WiFi",
+      "Parking",
+      "Breakfast"
+    ],
+    "contact": {
+      "phone": "+90 232 812 77 88",
+      "email": "info@focawindsurf.com",
+      "website": "www.focawindsurfhotel.com"
+    }
+  },
+  {
+    "id": "hotel_027",
+    "name": "Antalya Olympos Treehouse Lodge",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Yazır Mahallesi Sahil Yolu No:23 Kumluca/Antalya",
+    "type": "Eco Lodge",
+    "rating": 4.4,
+    "price_per_night": 75,
+    "description": "Olympos'ta ağaç ev konseptli eko-lodge, doğa terapisi.",
+    "features": [
+      "Treehouse rooms",
+      "Nature therapy",
+      "Organic garden",
+      "Hiking trails",
+      "Meditation area"
+    ],
+    "amenities": [
+      "Organic Meals",
+      "Garden",
+      "Hammocks",
+      "Fire Pit",
+      "WiFi Zone",
+      "Shared Kitchen"
+    ],
+    "contact": {
+      "phone": "+90 242 892 88 99",
+      "email": "info@olympostreehouse.com",
+      "website": "www.olympostreehouse.com"
+    }
+  },
+  {
+    "id": "hotel_028",
+    "name": "İstanbul Ataşehir Business Suites",
+    "city": "İstanbul",
+    "country": "Turkey",
+    "address": "Küçükbakırköy Mahallesi Aydınlı Caddesi No:2 Ataşehir/İstanbul",
+    "type": "Business Hotel",
+    "rating": 4.6,
+    "price_per_night": 95,
+    "description": "Ataşehir'de iş merkezi oteli, hastane ve AVM yakınında.",
+    "features": [
+      "Business center",
+      "Meeting rooms",
+      "Hospital nearby",
+      "Mall access",
+      "Metro station"
+    ],
+    "amenities": [
+      "Business Center",
+      "WiFi",
+      "Breakfast",
+      "Gym",
+      "Parking",
+      "Conference Rooms"
+    ],
+    "contact": {
+      "phone": "+90 216 577 11 22",
+      "email": "info@atasehirbusiness.com",
+      "website": "www.atasehirsuites.com"
+    }
+  },
+  {
+    "id": "hotel_029",
+    "name": "İzmir Seferihisar Slow City Hotel",
+    "city": "İzmir",
+    "country": "Turkey",
+    "address": "Sığacık Mahallesi Türgütreis Caddesi No:55 Seferihisar/İzmir",
+    "type": "Slow City Hotel",
+    "rating": 4.7,
+    "price_per_night": 105,
+    "description": "Seferihisar'da sakin şehir oteli, yavaş yaşam felsefesi.",
+    "features": [
+      "Slow living",
+      "Local products",
+      "Organic market",
+      "Cycling tours",
+      "Calm environment"
+    ],
+    "amenities": [
+      "Organic Breakfast",
+      "Garden",
+      "Bikes",
+      "WiFi",
+      "Library",
+      "Terrace"
+    ],
+    "contact": {
+      "phone": "+90 232 745 88 99",
+      "email": "info@seferihisarslow.com",
+      "website": "www.seferihisarslowcity.com"
+    }
+  },
+  {
+    "id": "hotel_030",
+    "name": "Antalya Demre Medical Village",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Gökköy Mahallesi Liman Caddesi No:91 Demre/Antalya",
+    "type": "Medical Village",
+    "rating": 4.5,
+    "price_per_night": 85,
+    "description": "Demre'de medikal köy konsepti, uzun süreli konaklama için villa tipi odalar.",
+    "features": [
+      "Village concept",
+      "Villa rooms",
+      "Long-term stays",
+      "Community kitchen",
+      "Organic garden"
+    ],
+    "amenities": [
+      "Villa Rooms",
+      "Kitchen",
+      "Garden",
+      "Pool",
+      "WiFi",
+      "Laundry"
+    ],
+    "contact": {
+      "phone": "+90 242 871 22 33",
+      "email": "info@demremedical.com",
+      "website": "www.demremedicalvillage.com"
+    }
+  },
+  {
+    "id": "hotel_031",
+    "name": "Antmodern Dental Residence",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Fener Mahallesi Bülent Ecevit Bulvarı No:52 Muratpaşa/Antalya",
+    "type": "Dental Residence",
+    "rating": 4.6,
+    "price_per_night": 88,
+    "description": "Antmodern Diş Kliniği'ne 50 metre mesafede, diş tedavisi hastalarına özel konaklama.",
+    "features": [
+      "Kliniğe 1 dk",
+      "Post-dental care",
+      "Soft food menu",
+      "Ice service",
+      "Pharmacy nearby"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Air Con",
+      "Minibar",
+      "Room Service",
+      "Balcony"
+    ],
+    "contact": {
+      "phone": "+90 242 324 77 88",
+      "email": "info@antmodernresidence.com",
+      "website": "www.antmodernresidence.com"
+    }
+  },
+  {
+    "id": "hotel_032",
+    "name": "Bilim University Medical Inn",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Tahıl Pazarı Mahallesi Kazım Özalp Caddesi No:86 Muratpaşa/Antalya",
+    "type": "Medical Inn",
+    "rating": 4.8,
+    "price_per_night": 95,
+    "description": "Antalya Bilim Üniversitesi Diş Fakültesi yanında, öğrenci ve hasta ailelerine uygun.",
+    "features": [
+      "University clinic nearby",
+      "Student friendly",
+      "Clean rooms",
+      "Study area",
+      "Laundry"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Desk",
+      "Shared Kitchen",
+      "Parking",
+      "TV"
+    ],
+    "contact": {
+      "phone": "+90 242 245 11 22",
+      "email": "info@bilimmedicalinn.com",
+      "website": "www.bilimmedicalinn.com"
+    }
+  },
+  {
+    "id": "hotel_033",
+    "name": "Dr. Erdoğan Clinic Hotel",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Çağlayan Mahallesi 2047 Sokak No:3 Muratpaşa/Antalya",
+    "type": "Clinic Hotel",
+    "rating": 4.7,
+    "price_per_night": 92,
+    "description": "Dr. Seda Erdoğan Kliniği'nin hemen yanında, burun estetiği sonrası özel bakım.",
+    "features": [
+      "Clinic next door",
+      "Post-rhinoplasty care",
+      "Private nurse",
+      "Cold compress",
+      "Elevation pillows"
+    ],
+    "amenities": [
+      "Room Service",
+      "WiFi",
+      "Air Con",
+      "Medical Kit",
+      "Minibar",
+      "Balcony"
+    ],
+    "contact": {
+      "phone": "+90 242 323 77 77",
+      "email": "info@erdoganclinichotel.com",
+      "website": "www.erdoganclinichotel.com"
+    }
+  },
+  {
+    "id": "hotel_034",
+    "name": "Yeşilbahçe Medical Apartments",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Yeşilbahçe Mahallesi Metin Kaşapoğlu Caddesi No:5 Muratpaşa/Antalya",
+    "type": "Medical Apartments",
+    "rating": 4.6,
+    "price_per_night": 85,
+    "description": "Yeşilbahçe'de birçok kliniğe yürüme mesafesinde apart daireler.",
+    "features": [
+      "Multiple clinics nearby",
+      "Kitchen equipped",
+      "Weekly cleaning",
+      "Shopping service",
+      "Transport help"
+    ],
+    "amenities": [
+      "Full Kitchen",
+      "WiFi",
+      "Washing Machine",
+      "Parking",
+      "Balcony",
+      "TV"
+    ],
+    "contact": {
+      "phone": "+90 242 322 88 99",
+      "email": "info@yesilbahcemedical.com",
+      "website": "www.yesilbahceapartments.com"
+    }
+  },
+  {
+    "id": "hotel_035",
+    "name": "Konyaaltı Beach Medical Hotel",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Liman Mahallesi 32 Sokak No:4 Konyaaltı/Antalya",
+    "type": "Beach Medical Hotel",
+    "rating": 4.7,
+    "price_per_night": 98,
+    "description": "Konyaaltı sahilinde Dr. Balıkçı ve Dr. Tütüncü kliniklerine yakın otel.",
+    "features": [
+      "Beach access",
+      "Sea view",
+      "Multiple clinics nearby",
+      "Relaxing environment",
+      "Spa services"
+    ],
+    "amenities": [
+      "Breakfast",
+      "Beach",
+      "Pool",
+      "WiFi",
+      "Restaurant",
+      "Bar"
+    ],
+    "contact": {
+      "phone": "+90 242 324 66 77",
+      "email": "info@konyaaltibeachmedical.com",
+      "website": "www.konyaaltimedicalhotel.com"
+    }
+  },
+  {
+    "id": "hotel_036",
+    "name": "İzmir Dental District Hotel",
+    "city": "İzmir",
+    "country": "Turkey",
+    "address": "Alsancak Mahallesi 1469 Sokak No:12 Konak/İzmir",
+    "type": "Dental Hotel",
+    "rating": 4.7,
+    "price_per_night": 90,
+    "description": "Alsancak'ta çoklu diş klinikleri bölgesinde, tüm kliniklere yürüme mesafesi.",
+    "features": [
+      "Dental clinic district",
+      "Walking distance",
+      "Soft diet option",
+      "Dental emergency kit",
+      "Marina view"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Sea View",
+      "Room Service",
+      "Minibar",
+      "Balcony"
+    ],
+    "contact": {
+      "phone": "+90 232 421 88 99",
+      "email": "info@izmirdentaldistrict.com",
+      "website": "www.dentaldistrict.com"
+    }
+  },
+  {
+    "id": "hotel_037",
+    "name": "Bornova University Hospital Lodge",
+    "city": "İzmir",
+    "country": "Turkey",
+    "address": "Erzene Mahallesi İzmir Caddesi No:335 Bornova/İzmir",
+    "type": "Hospital Lodge",
+    "rating": 4.5,
+    "price_per_night": 75,
+    "description": "Ege Üniversitesi Hastanesi ve diş fakültesi karşısında ekonomik konaklama.",
+    "features": [
+      "University hospital",
+      "Budget friendly",
+      "24/7 reception",
+      "Shuttle service",
+      "Long-term stays"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Parking",
+      "Laundry",
+      "Shared Kitchen",
+      "TV"
+    ],
+    "contact": {
+      "phone": "+90 232 388 55 66",
+      "email": "info@bornovahospitallodge.com",
+      "website": "www.bornovahospitallodge.com"
+    }
+  },
+  {
+    "id": "hotel_038",
+    "name": "Karşıyaka Dental Recovery Inn",
+    "city": "İzmir",
+    "country": "Turkey",
+    "address": "Cumhuriyet Mahallesi Atatürk Caddesi No:156 Karşıyaka/İzmir",
+    "type": "Recovery Inn",
+    "rating": 4.6,
+    "price_per_night": 82,
+    "description": "Karşıyaka diş kliniklerine 5 dk mesafede, feribot ile kolay erişim.",
+    "features": [
+      "Ferry access",
+      "Dental clinics nearby",
+      "Sea breeze",
+      "Promenade walking",
+      "Quiet area"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Balcony",
+      "Air Con",
+      "Minibar",
+      "Room Service"
+    ],
+    "contact": {
+      "phone": "+90 232 369 88 99",
+      "email": "info@karsiyakarecovery.com",
+      "website": "www.karsiyakarecoveryinn.com"
+    }
+  },
+  {
+    "id": "hotel_039",
+    "name": "Buca Medical Residence",
+    "city": "İzmir",
+    "country": "Turkey",
+    "address": "Buca Mahallesi İzmir Caddesi No:234 Buca/İzmir",
+    "type": "Medical Residence",
+    "rating": 4.4,
+    "price_per_night": 70,
+    "description": "Buca'da özel diş klinikleri bölgesinde, öğrenci dostu fiyatlar.",
+    "features": [
+      "Student friendly",
+      "Multiple clinics",
+      "Budget option",
+      "Kitchen access",
+      "Study rooms"
+    ],
+    "amenities": [
+      "WiFi",
+      "Kitchen",
+      "Laundry",
+      "Parking",
+      "Study Area",
+      "TV"
+    ],
+    "contact": {
+      "phone": "+90 232 434 77 88",
+      "email": "info@bucamedical.com",
+      "website": "www.bucamedicalresidence.com"
+    }
+  },
+  {
+    "id": "hotel_040",
+    "name": "Konak Dental Suites",
+    "city": "İzmir",
+    "country": "Turkey",
+    "address": "Konak Mahallesi Cumhuriyet Bulvarı No:145 Konak/İzmir",
+    "type": "Dental Suites",
+    "rating": 4.7,
+    "price_per_night": 95,
+    "description": "Konak merkezde premium diş kliniği oteli, deniz manzaralı.",
+    "features": [
+      "City center",
+      "Sea view",
+      "Premium clinics nearby",
+      "Concierge",
+      "Transport service"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Sea View",
+      "Room Service",
+      "Bar",
+      "Terrace"
+    ],
+    "contact": {
+      "phone": "+90 232 484 88 99",
+      "email": "info@konakdentalsuites.com",
+      "website": "www.konakdental.com"
+    }
+  },
+  {
+    "id": "hotel_041",
+    "name": "İstanbul Maslak Medical Tower",
+    "city": "İstanbul",
+    "country": "Turkey",
+    "address": "Maslak Mahallesi Büyükdere Caddesi No:257 Sarıyer/İstanbul",
+    "type": "Medical Tower",
+    "rating": 4.8,
+    "price_per_night": 125,
+    "description": "Acıbadem Maslak ve birçok özel hastane kompleksine entegre konaklama.",
+    "features": [
+      "Hospital integrated",
+      "Elevator access",
+      "Medical concierge",
+      "24/7 nursing",
+      "Lab services"
+    ],
+    "amenities": [
+      "Restaurant",
+      "WiFi",
+      "Business Center",
+      "Gym",
+      "Parking",
+      "Pharmacy"
+    ],
+    "contact": {
+      "phone": "+90 212 456 77 88",
+      "email": "info@maslakmedical.com",
+      "website": "www.maslakmedical tower.com"
+    }
+  },
+  {
+    "id": "hotel_042",
+    "name": "Şişli Hospital District Inn",
+    "city": "İstanbul",
+    "country": "Turkey",
+    "address": "Mecidiyeköy Mahallesi Büyükdere Caddesi No:169 Şişli/İstanbul",
+    "type": "Hospital Inn",
+    "rating": 4.6,
+    "price_per_night": 100,
+    "description": "Şişli hastane bölgesinde, Memorial ve diğer özel hastanelere 5 dk.",
+    "features": [
+      "Multiple hospitals",
+      "Metro access",
+      "Shopping mall nearby",
+      "24/7 reception",
+      "Medical transport"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Room Service",
+      "Parking",
+      "Business Center",
+      "Gym"
+    ],
+    "contact": {
+      "phone": "+90 212 373 66 77",
+      "email": "info@sislihospitalinn.com",
+      "website": "www.sislihospitalinn.com"
+    }
+  },
+  {
+    "id": "hotel_043",
+    "name": "Kadıköy Moda Dental Hotel",
+    "city": "İstanbul",
+    "country": "Turkey",
+    "address": "Caferağa Mahallesi Moda Caddesi No:74 Kadıköy/İstanbul",
+    "type": "Dental Hotel",
+    "rating": 4.7,
+    "price_per_night": 88,
+    "description": "Kadıköy Moda'da diş klinikleri bölgesinde, deniz kenarında butik otel.",
+    "features": [
+      "Seaside location",
+      "Dental clinics nearby",
+      "Boutique style",
+      "Ferry access",
+      "Cafe culture"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Sea View",
+      "Terrace",
+      "Minibar",
+      "Balcony"
+    ],
+    "contact": {
+      "phone": "+90 216 330 22 33",
+      "email": "info@modadentalhotel.com",
+      "website": "www.modadentalhotel.com"
+    }
+  },
+  {
+    "id": "hotel_044",
+    "name": "Beylikdüzü Medical Plaza Inn",
+    "city": "İstanbul",
+    "country": "Turkey",
+    "address": "Cumhuriyet Mahallesi Eski Londra Asfaltı No:6 Beylikdüzü/İstanbul",
+    "type": "Medical Plaza",
+    "rating": 4.5,
+    "price_per_night": 78,
+    "description": "Beylikdüzü medikal plazalara yakın, yeni ve modern konaklama.",
+    "features": [
+      "New building",
+      "Medical plaza nearby",
+      "Shopping access",
+      "Metro close",
+      "Business facilities"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Parking",
+      "Gym",
+      "Meeting Room",
+      "Restaurant"
+    ],
+    "contact": {
+      "phone": "+90 212 875 22 33",
+      "email": "info@beylikduzuplaza.com",
+      "website": "www.beylikduzuplazainn.com"
+    }
+  },
+  {
+    "id": "hotel_045",
+    "name": "Ataşehir Clinic Apartments",
+    "city": "İstanbul",
+    "country": "Turkey",
+    "address": "Küçükbakırköy Mahallesi Aydınlı Caddesi No:4 Ataşehir/İstanbul",
+    "type": "Clinic Apartments",
+    "rating": 4.6,
+    "price_per_night": 92,
+    "description": "Ataşehir'de özel hastane ve kliniklere yakın, mutfaklı daireler.",
+    "features": [
+      "Kitchen equipped",
+      "Hospital nearby",
+      "Metro access",
+      "Shopping mall",
+      "Family friendly"
+    ],
+    "amenities": [
+      "Full Kitchen",
+      "WiFi",
+      "Washing Machine",
+      "Parking",
+      "Balcony",
+      "TV"
+    ],
+    "contact": {
+      "phone": "+90 216 577 22 33",
+      "email": "info@atasehirclinicapt.com",
+      "website": "www.atasehirclinikapartments.com"
+    }
+  },
+  {
+    "id": "hotel_046",
+    "name": "Ankara Çankaya Medical Hotel",
+    "city": "Ankara",
+    "country": "Turkey",
+    "address": "Çankaya Mahallesi Atatürk Bulvarı No:127 Çankaya/Ankara",
+    "type": "Medical Hotel",
+    "rating": 4.5,
+    "price_per_night": 85,
+    "description": "Çankaya'da estetik klinikleri bölgesinde, merkezi konumda otel.",
+    "features": [
+      "Clinic district",
+      "City center",
+      "Business support",
+      "Meeting rooms",
+      "Transport service"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Business Center",
+      "Restaurant",
+      "Parking",
+      "Gym"
+    ],
+    "contact": {
+      "phone": "+90 312 440 88 99",
+      "email": "info@cankayamedicalhotel.com",
+      "website": "www.cankayamedical.com"
+    }
+  },
+  {
+    "id": "hotel_047",
+    "name": "Kızılay Hospital Suites",
+    "city": "Ankara",
+    "country": "Turkey",
+    "address": "Kızılay Mahallesi Atatürk Bulvarı No:91 Çankaya/Ankara",
+    "type": "Hospital Suites",
+    "rating": 4.4,
+    "price_per_night": 72,
+    "description": "Kızılay merkezde özel hastanelere yürüme mesafesinde konaklama.",
+    "features": [
+      "Central location",
+      "Walking distance",
+      "Metro access",
+      "Shopping nearby",
+      "Budget friendly"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Room Service",
+      "Heating",
+      "Desk",
+      "TV"
+    ],
+    "contact": {
+      "phone": "+90 312 418 77 88",
+      "email": "info@kizilaysuites.com",
+      "website": "www.kizilaysuites.com"
+    }
+  },
+  {
+    "id": "hotel_048",
+    "name": "Ulus Medical Guesthouse",
+    "city": "Ankara",
+    "country": "Turkey",
+    "address": "Hacıbayram Mahallesi Anıttepe Caddesi No:17 Altındağ/Ankara",
+    "type": "Medical Guesthouse",
+    "rating": 4.2,
+    "price_per_night": 58,
+    "description": "Ulus'ta tarihi bölgede ekonomik misafirhane, özel kliniklere yakın.",
+    "features": [
+      "Historic area",
+      "Budget option",
+      "Traditional hospitality",
+      "Clinic access",
+      "City views"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Shared Kitchen",
+      "Garden",
+      "Tea Service",
+      "Heating"
+    ],
+    "contact": {
+      "phone": "+90 312 309 44 55",
+      "email": "info@ulusmedical.com",
+      "website": "www.ulusmedicalguesthouse.com"
+    }
+  },
+  {
+    "id": "hotel_049",
+    "name": "Kavaklidere Clinic Hotel",
+    "city": "Ankara",
+    "country": "Turkey",
+    "address": "Kavaklıdere Mahallesi Tunalı Hilmi Caddesi No:100 Çankaya/Ankara",
+    "type": "Clinic Hotel",
+    "rating": 4.6,
+    "price_per_night": 95,
+    "description": "Kavaklıdere'de premium estetik klinikleri bölgesinde lüks konaklama.",
+    "features": [
+      "Premium location",
+      "Aesthetic clinics",
+      "Shopping district",
+      "Fine dining",
+      "Concierge service"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Room Service",
+      "Bar",
+      "Restaurant",
+      "Parking"
+    ],
+    "contact": {
+      "phone": "+90 312 428 88 99",
+      "email": "info@kavaklidere clinic.com",
+      "website": "www.kavaklidere clinichotel.com"
+    }
+  },
+  {
+    "id": "hotel_050",
+    "name": "Muratpaşa Dental Inn",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Tahıl Pazarı Mahallesi Adnan Menderes Bulvarı No:88 Muratpaşa/Antalya",
+    "type": "Dental Inn",
+    "rating": 4.5,
+    "price_per_night": 75,
+    "description": "Muratpaşa'da yoğun diş kliniği bölgesinde ekonomik konaklama.",
+    "features": [
+      "Dental district",
+      "Budget friendly",
+      "Clean rooms",
+      "Helpful staff",
+      "Transport help"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Air Con",
+      "Minibar",
+      "Parking",
+      "TV"
+    ],
+    "contact": {
+      "phone": "+90 242 245 22 33",
+      "email": "info@muratpasadental.com",
+      "website": "www.muratpasadentalinn.com"
+    }
+  },
+  {
+    "id": "hotel_051",
+    "name": "Lara Clinic Beach Hotel",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Lara Mahallesi Atatürk Caddesi No:199 Muratpaşa/Antalya",
+    "type": "Beach Clinic Hotel",
+    "rating": 4.8,
+    "price_per_night": 115,
+    "description": "Lara'da sahil kenarında, diş ve estetik kliniklerine 2 dk yürüme mesafesi.",
+    "features": [
+      "Beach location",
+      "Multiple clinics nearby",
+      "Sea therapy",
+      "Pool access",
+      "Spa services"
+    ],
+    "amenities": [
+      "Breakfast",
+      "Beach",
+      "Pool",
+      "WiFi",
+      "Restaurant",
+      "Spa"
+    ],
+    "contact": {
+      "phone": "+90 242 324 55 66",
+      "email": "info@laraclinicbeach.com",
+      "website": "www.laraclinicbeach.com"
+    }
+  },
+  {
+    "id": "hotel_052",
+    "name": "Alanya Dental Paradise",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Saray Mahallesi İskele Caddesi No:36 Alanya/Antalya",
+    "type": "Dental Paradise",
+    "rating": 4.7,
+    "price_per_night": 92,
+    "description": "Alanya'da diş klinikleri ve plaj arasında ideal konumda otel.",
+    "features": [
+      "Dental clinics nearby",
+      "Beach 2 min",
+      "Castle view",
+      "Old town access",
+      "Tour support"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Beach Towels",
+      "Pool",
+      "Bar",
+      "Terrace"
+    ],
+    "contact": {
+      "phone": "+90 242 513 99 00",
+      "email": "info@aladentalparadise.com",
+      "website": "www.alayadentalparadise.com"
+    }
+  },
+  {
+    "id": "hotel_053",
+    "name": "Side Medical Resort",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Side Mahallesi Liman Caddesi No:69 Manavgat/Antalya",
+    "type": "Medical Resort",
+    "rating": 4.6,
+    "price_per_night": 102,
+    "description": "Side antik kentinde tarihi dokulu medikal resort, kliniklere shuttle.",
+    "features": [
+      "Historic location",
+      "Beach access",
+      "Clinic shuttle",
+      "Cultural tours",
+      "Relaxing spa"
+    ],
+    "amenities": [
+      "Breakfast & Dinner",
+      "Beach",
+      "Pool",
+      "WiFi",
+      "Spa",
+      "Restaurant"
+    ],
+    "contact": {
+      "phone": "+90 242 753 77 88",
+      "email": "info@sidemedicalresort.com",
+      "website": "www.sidemedical.com"
+    }
+  },
+  {
+    "id": "hotel_054",
+    "name": "Belek Health Resort",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Belek Mahallesi Atatürk Bulvarı No:17 Serik/Antalya",
+    "type": "Health Resort",
+    "rating": 4.9,
+    "price_per_night": 165,
+    "description": "Belek'te lüks sağlık resort'u, golf ve rehabilitasyon programları.",
+    "features": [
+      "Golf course",
+      "Spa center",
+      "Physiotherapy",
+      "Nutritionist",
+      "Personal trainer"
+    ],
+    "amenities": [
+      "All Inclusive",
+      "Golf",
+      "Multiple Pools",
+      "Spa",
+      "Fine Dining",
+      "Gym"
+    ],
+    "contact": {
+      "phone": "+90 242 715 99 00",
+      "email": "info@belekhealthresort.com",
+      "website": "www.belekhealthresort.com"
+    }
+  },
+  {
+    "id": "hotel_055",
+    "name": "Kemer Medical Bay Hotel",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Göynük Mahallesi Atatürk Bulvarı No:158 Kemer/Antalya",
+    "type": "Bay Medical Hotel",
+    "rating": 4.7,
+    "price_per_night": 128,
+    "description": "Kemer'de özel koyda medikal otel, klinik transfer dahil.",
+    "features": [
+      "Private bay",
+      "Clinic shuttle",
+      "Water sports",
+      "Spa wellness",
+      "Animation team"
+    ],
+    "amenities": [
+      "All Inclusive",
+      "Beach",
+      "Pools",
+      "WiFi",
+      "Spa",
+      "Entertainment"
+    ],
+    "contact": {
+      "phone": "+90 242 814 77 88",
+      "email": "info@kemermedical.com",
+      "website": "www.kemermedicalbay.com"
+    }
+  },
+  {
+    "id": "hotel_056",
+    "name": "Kepez Budget Medical Lodge",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Kepez Mahallesi Dokuma Caddesi No:113 Kepez/Antalya",
+    "type": "Budget Lodge",
+    "rating": 4.4,
+    "price_per_night": 65,
+    "description": "Kepez'de ekonomik medikal konaklama, aile odaları ve mutfak mevcut.",
+    "features": [
+      "Very affordable",
+      "Family rooms",
+      "Kitchen access",
+      "Laundry service",
+      "Friendly staff"
+    ],
+    "amenities": [
+      "Breakfast",
+      "WiFi",
+      "Kitchen",
+      "Parking",
+      "Laundry",
+      "TV"
+    ],
+    "contact": {
+      "phone": "+90 242 334 33 44",
+      "email": "info@kepezbudget.com",
+      "website": "www.kepezbudgetlodge.com"
+    }
+  },
+  {
+    "id": "hotel_057",
+    "name": "Manavgat Riverside Wellness",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Side Mahallesi Liman Caddesi No:47 Manavgat/Antalya",
+    "type": "Riverside Wellness",
+    "rating": 4.7,
+    "price_per_night": 118,
+    "description": "Manavgat nehri kenarında wellness merkezi, doğa ve tedavi.",
+    "features": [
+      "River view",
+      "Wellness programs",
+      "Yoga classes",
+      "Organic meals",
+      "Nature therapy"
+    ],
+    "amenities": [
+      "Healthy Meals",
+      "Yoga Studio",
+      "Spa",
+      "Pool",
+      "Garden",
+      "WiFi"
+    ],
+    "contact": {
+      "phone": "+90 242 746 44 55",
+      "email": "info@manavgatwellness.com",
+      "website": "www.manavgatriverside.com"
+    }
+  },
+  {
+    "id": "hotel_058",
+    "name": "Kaş Diving Medical Center",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Andifli Mahallesi Hastane Caddesi No:20 Kaş/Antalya",
+    "type": "Diving Medical Center",
+    "rating": 4.6,
+    "price_per_night": 105,
+    "description": "Kaş'ta dalış ve deniz terapisi merkezi, rehabilitasyon programları.",
+    "features": [
+      "Diving center",
+      "Sea therapy",
+      "Boat tours",
+      "Physiotherapy",
+      "Beach yoga"
+    ],
+    "amenities": [
+      "Diving Equipment",
+      "Beach",
+      "Pool",
+      "Restaurant",
+      "WiFi",
+      "Bar"
+    ],
+    "contact": {
+      "phone": "+90 242 836 55 66",
+      "email": "info@kasdivingmedical.com",
+      "website": "www.kasdivingmedical.com"
+    }
+  },
+  {
+    "id": "hotel_059",
+    "name": "Olympos Nature Medical Lodge",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Yazır Mahallesi Sahil Yolu No:25 Kumluca/Antalya",
+    "type": "Nature Lodge",
+    "rating": 4.5,
+    "price_per_night": 78,
+    "description": "Olympos'ta doğa içinde eko-lodge, zihin ve beden tedavisi.",
+    "features": [
+      "Nature setting",
+      "Eco friendly",
+      "Meditation area",
+      "Hiking trails",
+      "Organic garden"
+    ],
+    "amenities": [
+      "Organic Meals",
+      "Garden",
+      "Meditation Room",
+      "WiFi Zone",
+      "Hammocks",
+      "Fire Pit"
+    ],
+    "contact": {
+      "phone": "+90 242 892 99 00",
+      "email": "info@olymposnature.com",
+      "website": "www.olymposnaturemedical.com"
+    }
+  },
+  {
+    "id": "hotel_060",
+    "name": "Demre Medical Village Inn",
+    "city": "Antalya",
+    "country": "Turkey",
+    "address": "Gökköy Mahallesi Liman Caddesi No:93 Demre/Antalya",
+    "type": "Medical Village",
+    "rating": 4.4,
+    "price_per_night": 82,
+    "description": "Demre'de köy konseptli medikal konaklama, uzun süreli konaklamaya uygun.",
+    "features": [
+      "Village style",
+      "Long-term friendly",
+      "Community kitchen",
+      "Garden produce",
+      "Peaceful environment"
+    ],
+    "amenities": [
+      "Kitchen",
+      "Garden",
+      "Pool",
+      "WiFi",
+      "Laundry",
+      "BBQ Area"
+    ],
+    "contact": {
+      "phone": "+90 242 871 33 44",
+      "email": "info@demrevillageinn.com",
+      "website": "www.demremedicalvillageinn.com"
+    }
   }
 ]
+

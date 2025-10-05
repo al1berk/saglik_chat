@@ -1,0 +1,617 @@
+{
+  "Composite Bonding": {
+    "category": "Dental",
+    "price_min": 150,
+    "price_max": 350,
+    "currency": "EUR",
+    "duration_days": 1,
+    "description": {
+      "tr": "Dişlerin şeklini ve rengini düzeltmek için kompozit reçine materyali uygulanması. Tek seansta tamamlanır.",
+      "en": "Application of composite resin material to improve tooth shape and color. Completed in a single session.",
+      "de": "Anwendung von Kompositharz zur Verbesserung von Zahnform und -farbe. In einer Sitzung abgeschlossen.",
+      "ar": "تطبيق مادة الراتنج المركب لتحسين شكل ولون الأسنان. يتم الانتهاء في جلسة واحدة.",
+      "ru": "Нанесение композитного материала для улучшения формы и цвета зубов. Завершается за один сеанс.",
+      "nl": "Toepassing van composiethars om tandvorm en -kleur te verbeteren. Voltooid in één sessie."
+    }
+  },
+  "Zirconium Crowns": {
+    "category": "Dental",
+    "price_min": 300,
+    "price_max": 600,
+    "currency": "EUR",
+    "duration_days": 5,
+    "description": {
+      "tr": "Zirkonyum diş kaplaması. Doğal görünüm ve uzun ömürlü. 2-3 seans gerektirir.",
+      "en": "Zirconium dental crown. Natural appearance and long-lasting. Requires 2-3 sessions.",
+      "de": "Zirkoniumzahnkrone. Natürliches Aussehen und langlebig. Erfordert 2-3 Sitzungen.",
+      "ar": "تاج الأسنان من الزركونيوم. مظهر طبيعي ودائم. يتطلب 2-3 جلسات.",
+      "ru": "Циркониевая зубная коронка. Естественный вид и долговечность. Требуется 2-3 сеанса.",
+      "nl": "Zirkonium tandkroon. Natuurlijk uiterlijk en duurzaam. Vereist 2-3 sessies."
+    }
+  },
+  "Porcelain Veneers": {
+    "category": "Dental",
+    "price_min": 250,
+    "price_max": 500,
+    "currency": "EUR",
+    "duration_days": 7,
+    "description": {
+      "tr": "İnce porselen kaplamalar ile dişlerin estetik görünümünü iyileştirme. Hollywood smile için idealdir.",
+      "en": "Improving aesthetic appearance with thin porcelain veneers. Ideal for Hollywood smile.",
+      "de": "Verbesserung des ästhetischen Erscheinungsbilds mit dünnen Porzellanveneers. Ideal für Hollywood-Lächeln.",
+      "ar": "تحسين المظهر الجمالي بقشور البورسلين الرقيقة. مثالي للابتسامة الهوليودية.",
+      "ru": "Улучшение эстетического вида с помощью тонких фарфоровых виниров. Идеально для голливудской улыбки.",
+      "nl": "Verbetering van het esthetische uiterlijk met dunne porseleinen veneers. Ideaal voor Hollywood smile."
+    }
+  },
+  "Teeth Whitening": {
+    "category": "Dental",
+    "price_min": 200,
+    "price_max": 400,
+    "currency": "EUR",
+    "duration_days": 1,
+    "description": {
+      "tr": "Profesyonel diş beyazlatma işlemi. Lazer veya LED ışık teknolojisi ile 1-2 seans.",
+      "en": "Professional teeth whitening procedure. With laser or LED light technology in 1-2 sessions.",
+      "de": "Professionelle Zahnaufhellungsbehandlung. Mit Laser- oder LED-Lichttechnologie in 1-2 Sitzungen.",
+      "ar": "إجراء تبييض الأسنان الاحترافي. بتقنية الليزر أو LED في 1-2 جلسة.",
+      "ru": "Профессиональное отбеливание зубов. С лазерной или LED технологией за 1-2 сеанса.",
+      "nl": "Professionele tandbleekprocedure. Met laser- of LED-lichttechnologie in 1-2 sessies."
+    }
+  },
+  "Cosmetic Dentistry": {
+    "category": "Dental",
+    "price_min": 500,
+    "price_max": 2000,
+    "currency": "EUR",
+    "duration_days": 10,
+    "description": {
+      "tr": "Gülüş tasarımı ve estetik diş hekimliği. Kapsamlı estetik iyileştirmeler.",
+      "en": "Smile design and aesthetic dentistry. Comprehensive aesthetic improvements.",
+      "de": "Smile-Design und ästhetische Zahnheilkunde. Umfassende ästhetische Verbesserungen.",
+      "ar": "تصميم الابتسامة وطب الأسنان التجميلي. تحسينات جمالية شاملة.",
+      "ru": "Дизайн улыбки и эстетическая стоматология. Комплексные эстетические улучшения.",
+      "nl": "Smile design en esthetische tandheelkunde. Uitgebreide esthetische verbeteringen."
+    }
+  },
+  "FUE - Follicular Unit Extraction": {
+    "category": "Hair Transplant",
+    "price_min": 1500,
+    "price_max": 3000,
+    "currency": "EUR",
+    "duration_days": 2,
+    "description": {
+      "tr": "Modern saç ekimi tekniği. Foliküler ünite ekstraksiyonu ile doğal sonuçlar. 3000-5000 greft.",
+      "en": "Modern hair transplant technique. Natural results with follicular unit extraction. 3000-5000 grafts.",
+      "de": "Moderne Haartransplantationstechnik. Natürliche Ergebnisse mit follikulärer Unitextraktion. 3000-5000 Grafts.",
+      "ar": "تقنية زراعة الشعر الحديثة. نتائج طبيعية باستخراج الوحدة الجريبية. 3000-5000 بصيلة.",
+      "ru": "Современная техника пересадки волос. Естественные результаты с экстракцией фолликулярных единиц. 3000-5000 графтов.",
+      "nl": "Moderne haartransplantatietechniek. Natuurlijke resultaten met folliculaire unit-extractie. 3000-5000 grafts."
+    }
+  },
+  "DHI - Direct Hair Implantation": {
+    "category": "Hair Transplant",
+    "price_min": 2000,
+    "price_max": 4000,
+    "currency": "EUR",
+    "duration_days": 2,
+    "description": {
+      "tr": "Direkt saç ekimi (DHI Choi Pen). Daha hassas yerleştirme ve daha hızlı iyileşme.",
+      "en": "Direct Hair Implantation (DHI Choi Pen). More precise placement and faster recovery.",
+      "de": "Direkte Haarimplantation (DHI Choi Pen). Präzisere Platzierung und schnellere Genesung.",
+      "ar": "زراعة الشعر المباشرة (DHI Choi Pen). وضع أكثر دقة وشفاء أسرع.",
+      "ru": "Прямая имплантация волос (DHI Choi Pen). Более точное размещение и быстрое восстановление.",
+      "nl": "Directe Haarimplantatie (DHI Choi Pen). Nauwkeurigere plaatsing en sneller herstel."
+    }
+  },
+  "FUT - Follicular Unit Transplant": {
+    "category": "Hair Transplant",
+    "price_min": 1200,
+    "price_max": 2500,
+    "currency": "EUR",
+    "duration_days": 2,
+    "description": {
+      "tr": "Klasik saç ekimi yöntemi. Şerit tekniği ile çok sayıda greft elde edilir.",
+      "en": "Classic hair transplant method. Strip technique provides large number of grafts.",
+      "de": "Klassische Haartransplantationsmethode. Strip-Technik liefert große Anzahl von Grafts.",
+      "ar": "طريقة زراعة الشعر الكلاسيكية. تقنية الشريط توفر عددًا كبيرًا من البصيلات.",
+      "ru": "Классический метод пересадки волос. Стрип-техника обеспечивает большое количество графтов.",
+      "nl": "Klassieke haartransplantatiemethode. Strip-techniek levert groot aantal grafts."
+    }
+  },
+  "Eyebrow Transplant": {
+    "category": "Hair Transplant",
+    "price_min": 800,
+    "price_max": 1500,
+    "currency": "EUR",
+    "duration_days": 1,
+    "description": {
+      "tr": "Kaş ekimi ile doğal ve kalıcı kaş çizgisi oluşturma.",
+      "en": "Creating natural and permanent eyebrow line with eyebrow transplant.",
+      "de": "Erstellung einer natürlichen und dauerhaften Augenbrauenlinie mit Augenbrauentransplantation.",
+      "ar": "إنشاء خط حاجب طبيعي ودائم بزراعة الحواجب.",
+      "ru": "Создание естественной и постоянной линии бровей с помощью пересадки бровей.",
+      "nl": "Creëren van een natuurlijke en permanente wenkbrauwlijn met wenkbrauwtransplantatie."
+    }
+  },
+  "Facial Hair Transplant": {
+    "category": "Hair Transplant",
+    "price_min": 1000,
+    "price_max": 2000,
+    "currency": "EUR",
+    "duration_days": 1,
+    "description": {
+      "tr": "Sakal, bıyık ve favoriler için saç ekimi. Erkek estetik çözümü.",
+      "en": "Hair transplant for beard, mustache and sideburns. Male aesthetic solution.",
+      "de": "Haartransplantation für Bart, Schnurrbart und Koteletten. Männliche ästhetische Lösung.",
+      "ar": "زراعة الشعر للحية والشارب والسوالف. حل جمالي للرجال.",
+      "ru": "Пересадка волос для бороды, усов и бакенбардов. Мужское эстетическое решение.",
+      "nl": "Haartransplantatie voor baard, snor en bakkebaarden. Mannelijke esthetische oplossing."
+    }
+  },
+  "Open Rhinoplasty": {
+    "category": "Plastic Surgery",
+    "price_min": 2500,
+    "price_max": 4500,
+    "currency": "EUR",
+    "duration_days": 7,
+    "description": {
+      "tr": "Açık burun estetiği ameliyatı. Kapsamlı burun şekillendirme için tercih edilir.",
+      "en": "Open rhinoplasty surgery. Preferred for comprehensive nose reshaping.",
+      "de": "Offene Nasenkorrektur-Operation. Bevorzugt für umfassende Nasenformung.",
+      "ar": "جراحة تجميل الأنف المفتوحة. مفضل لإعادة تشكيل الأنف الشامل.",
+      "ru": "Открытая ринопластика. Предпочтительна для комплексной коррекции носа.",
+      "nl": "Open neuscorrectie chirurgie. Voorkeur voor uitgebreide neushervorming."
+    }
+  },
+  "Seconder Rhinoplasty": {
+    "category": "Plastic Surgery",
+    "price_min": 3000,
+    "price_max": 5500,
+    "currency": "EUR",
+    "duration_days": 10,
+    "description": {
+      "tr": "Revizyon burun estetiği. Daha önce yapılmış ameliyatın düzeltilmesi.",
+      "en": "Revision rhinoplasty. Correction of previously performed surgery.",
+      "de": "Revisions-Rhinoplastik. Korrektur einer zuvor durchgeführten Operation.",
+      "ar": "تجميل الأنف التصحيحي. تصحيح الجراحة السابقة.",
+      "ru": "Ревизионная ринопластика. Коррекция ранее выполненной операции.",
+      "nl": "Revisie neuscorrectie. Correctie van eerder uitgevoerde operatie."
+    }
+  },
+  "Septoplasty": {
+    "category": "ENT",
+    "price_min": 1500,
+    "price_max": 3000,
+    "currency": "EUR",
+    "duration_days": 5,
+    "description": {
+      "tr": "Burun septum deviasyonu ameliyatı. Nefes alma problemlerini çözer.",
+      "en": "Nasal septum deviation surgery. Solves breathing problems.",
+      "de": "Nasenseptumdeviation-Operation. Löst Atemprobleme.",
+      "ar": "جراحة انحراف الحاجز الأنفي. تحل مشاكل التنفس.",
+      "ru": "Операция при искривлении носовой перегородки. Решает проблемы с дыханием.",
+      "nl": "Neusseptumdeviatie-operatie. Lost ademhalingsproblemen op."
+    }
+  },
+  "Septum Deviation": {
+    "category": "ENT",
+    "price_min": 1500,
+    "price_max": 3000,
+    "currency": "EUR",
+    "duration_days": 5,
+    "description": {
+      "tr": "Burun içi eğriliğinin düzeltilmesi. Tıbbi ve fonksiyonel amaçlı.",
+      "en": "Correction of nasal internal curvature. Medical and functional purpose.",
+      "de": "Korrektur der inneren Nasenkrümmung. Medizinischer und funktionaler Zweck.",
+      "ar": "تصحيح انحناء الأنف الداخلي. غرض طبي ووظيفي.",
+      "ru": "Коррекция внутреннего искривления носа. Медицинская и функциональная цель.",
+      "nl": "Correctie van interne neuskromming. Medisch en functioneel doel."
+    }
+  },
+  "Facial Surgery": {
+    "category": "Plastic Surgery",
+    "price_min": 3000,
+    "price_max": 8000,
+    "currency": "EUR",
+    "duration_days": 14,
+    "description": {
+      "tr": "Yüz estetiği ameliyatları. Facelift, yüz germe ve gençleştirme.",
+      "en": "Facial aesthetic surgeries. Facelift, face tightening and rejuvenation.",
+      "de": "Gesichtsästhetische Operationen. Facelifting, Gesichtsstraffung und Verjüngung.",
+      "ar": "جراحات تجميل الوجه. شد الوجه وتجديده.",
+      "ru": "Эстетические операции на лице. Подтяжка лица и омоложение.",
+      "nl": "Esthetische gezichtschirurgie. Facelift, gezichtsverstrakking en verjonging."
+    }
+  },
+  "Gastric Bypass": {
+    "category": "Bariatric Surgery",
+    "price_min": 4000,
+    "price_max": 7000,
+    "currency": "EUR",
+    "duration_days": 5,
+    "description": {
+      "tr": "Gastrik bypass ameliyatı. Mide küçültme ve bağırsak bağlantısı değiştirme.",
+      "en": "Gastric bypass surgery. Stomach reduction and intestinal connection alteration.",
+      "de": "Magenbypass-Operation. Magenverkleinerung und Darmverbindungsänderung.",
+      "ar": "جراحة المجازة المعدية. تصغير المعدة وتغيير الاتصال المعوي.",
+      "ru": "Операция желудочного шунтирования. Уменьшение желудка и изменение кишечного соединения.",
+      "nl": "Maagbypass chirurgie. Maagverkleining en darmverbinding wijziging."
+    }
+  },
+  "Gastric Balloon": {
+    "category": "Bariatric Surgery",
+    "price_min": 2000,
+    "price_max": 3500,
+    "currency": "EUR",
+    "duration_days": 1,
+    "description": {
+      "tr": "Mide balonu uygulaması. Endoskopik, ameliyatsız kilo verme yöntemi.",
+      "en": "Gastric balloon application. Endoscopic, non-surgical weight loss method.",
+      "de": "Magenballon-Anwendung. Endoskopische, nicht-chirurgische Gewichtsabnahmemethode.",
+      "ar": "تطبيق بالون المعدة. طريقة إنقاص الوزن بالمنظار وغير الجراحية.",
+      "ru": "Применение желудочного баллона. Эндоскопический, нехирургический метод похудения.",
+      "nl": "Maagballon toepassing. Endoscopische, niet-chirurgische gewichtsverlies methode."
+    }
+  },
+  "Sleeve Gastrectomy": {
+    "category": "Bariatric Surgery",
+    "price_min": 3500,
+    "price_max": 6000,
+    "currency": "EUR",
+    "duration_days": 4,
+    "description": {
+      "tr": "Tüp mide ameliyatı. Mide hacminin %80'i çıkarılır. En popüler bariatrik cerrahi.",
+      "en": "Sleeve gastrectomy surgery. 80% of stomach volume removed. Most popular bariatric surgery.",
+      "de": "Schlauchmagen-Operation. 80% des Magenvolumens entfernt. Beliebteste bariatrische Chirurgie.",
+      "ar": "جراحة تكميم المعدة. إزالة 80٪ من حجم المعدة. الجراحة الأكثر شعبية لعلاج السمنة.",
+      "ru": "Операция рукавной гастрэктомии. Удаляется 80% объема желудка. Самая популярная бариатрическая операция.",
+      "nl": "Sleeve gastrectomie chirurgie. 80% van maagvolume verwijderd. Meest populaire bariatrische chirurgie."
+    }
+  },
+  "Duodenal Switch Surgery": {
+    "category": "Bariatric Surgery",
+    "price_min": 5000,
+    "price_max": 9000,
+    "currency": "EUR",
+    "duration_days": 7,
+    "description": {
+      "tr": "Duodenal switch ameliyatı. En kapsamlı bariatrik cerrahi yöntemi.",
+      "en": "Duodenal switch surgery. Most comprehensive bariatric surgery method.",
+      "de": "Duodenalswitch-Operation. Umfassendste bariatrische Chirurgiemethode.",
+      "ar": "جراحة التحويل الاثني عشري. الطريقة الأكثر شمولاً لجراحة السمنة.",
+      "ru": "Операция дуоденального переключения. Самый комплексный метод бариатрической хирургии.",
+      "nl": "Duodenale switch chirurgie. Meest uitgebreide bariatrische chirurgie methode."
+    }
+  },
+  "Stomach Stapling Surgery": {
+    "category": "Bariatric Surgery",
+    "price_min": 3000,
+    "price_max": 5500,
+    "currency": "EUR",
+    "duration_days": 5,
+    "description": {
+      "tr": "Mide zımbalama ameliyatı. Mide bölümlere ayrılarak küçültülür.",
+      "en": "Stomach stapling surgery. Stomach divided into sections and reduced.",
+      "de": "Magenheftung-Operation. Magen in Abschnitte unterteilt und verkleinert.",
+      "ar": "جراحة تدبيس المعدة. يتم تقسيم المعدة إلى أقسام وتقليلها.",
+      "ru": "Операция сшивания желудка. Желудок разделяется на секции и уменьшается.",
+      "nl": "Maagnieten chirurgie. Maag verdeeld in secties en verkleind."
+    }
+  },
+  "Hip Replacement": {
+    "category": "Orthopedics",
+    "price_min": 6000,
+    "price_max": 12000,
+    "currency": "EUR",
+    "duration_days": 10,
+    "description": {
+      "tr": "Kalça protezi ameliyatı. Aşınmış eklemin yapay eklem ile değiştirilmesi.",
+      "en": "Hip replacement surgery. Replacement of worn joint with artificial joint.",
+      "de": "Hüftgelenksersatz-Operation. Ersatz des verschlissenen Gelenks durch künstliches Gelenk.",
+      "ar": "جراحة استبدال مفصل الورك. استبدال المفصل البالي بمفصل صناعي.",
+      "ru": "Операция замены тазобедренного сустава. Замена изношенного сустава на искусственный.",
+      "nl": "Heupvervanging chirurgie. Vervanging van versleten gewricht door kunstgewricht."
+    }
+  },
+  "Knee Replacement": {
+    "category": "Orthopedics",
+    "price_min": 5500,
+    "price_max": 11000,
+    "currency": "EUR",
+    "duration_days": 10,
+    "description": {
+      "tr": "Diz protezi ameliyatı. Yıpranmış diz ekleminin değiştirilmesi.",
+      "en": "Knee replacement surgery. Replacement of worn knee joint.",
+      "de": "Kniegelenkersatz-Operation. Ersatz des verschlissenen Kniegelenks.",
+      "ar": "جراحة استبدال مفصل الركبة. استبدال مفصل الركبة البالي.",
+      "ru": "Операция замены коленного сустава. Замена изношенного коленного сустава.",
+      "nl": "Knievervanging chirurgie. Vervanging van versleten kniegewricht."
+    }
+  },
+  "Arthroscopic Operations": {
+    "category": "Orthopedics",
+    "price_min": 2000,
+    "price_max": 4500,
+    "currency": "EUR",
+    "duration_days": 3,
+    "description": {
+      "tr": "Artroskopik ameliyatlar. Minimal invaziv eklem cerrahisi, kamera ile.",
+      "en": "Arthroscopic operations. Minimally invasive joint surgery with camera.",
+      "de": "Arthroskopische Operationen. Minimal-invasive Gelenkchirurgie mit Kamera.",
+      "ar": "عمليات التنظير المفصلي. جراحة المفاصل طفيفة التوغل بالكاميرا.",
+      "ru": "Артроскопические операции. Минимально инвазивная хирургия суставов с камерой.",
+      "nl": "Arthroscopische operaties. Minimaal invasieve gewrichtschirurgie met camera."
+    }
+  },
+  "Spinal Surgery": {
+    "category": "Orthopedics",
+    "price_min": 7000,
+    "price_max": 15000,
+    "currency": "EUR",
+    "duration_days": 14,
+    "description": {
+      "tr": "Omurga cerrahisi. Fıtık, skolyoz ve omurga deformitelerinin tedavisi.",
+      "en": "Spinal surgery. Treatment of herniated disc, scoliosis and spinal deformities.",
+      "de": "Wirbelsäulenchirurgie. Behandlung von Bandscheibenvorfall, Skoliose und Wirbelsäulendeformitäten.",
+      "ar": "جراحة العمود الفقري. علاج الانزلاق الغضروفي والجنف وتشوهات العمود الفقري.",
+      "ru": "Хирургия позвоночника. Лечение грыжи диска, сколиоза и деформаций позвоночника.",
+      "nl": "Spinale chirurgie. Behandeling van hernia, scoliose en spinale misvormingen."
+    }
+  },
+  "Pediatric Orthopedics": {
+    "category": "Orthopedics",
+    "price_min": 2500,
+    "price_max": 6000,
+    "currency": "EUR",
+    "duration_days": 7,
+    "description": {
+      "tr": "Çocuk ortopedisi. Çocuklarda kemik ve eklem problemlerinin tedavisi.",
+      "en": "Pediatric orthopedics. Treatment of bone and joint problems in children.",
+      "de": "Kinderorthopädie. Behandlung von Knochen- und Gelenkproblemen bei Kindern.",
+      "ar": "جراحة العظام للأطفال. علاج مشاكل العظام والمفاصل عند الأطفال.",
+      "ru": "Детская ортопедия. Лечение проблем костей и суставов у детей.",
+      "nl": "Kinderorthopedie. Behandeling van bot- en gewrichtsproblemen bij kinderen."
+    }
+  },
+  "Cataract": {
+    "category": "Ophthalmology",
+    "price_min": 1500,
+    "price_max": 3000,
+    "currency": "EUR",
+    "duration_days": 1,
+    "description": {
+      "tr": "Katarakt ameliyatı. Göz merceğinin bulanıklığının giderilmesi, lens değişimi.",
+      "en": "Cataract surgery. Removal of lens cloudiness, lens replacement.",
+      "de": "Katarakt-Operation. Entfernung der Linsentrübung, Linsenersatz.",
+      "ar": "جراحة الساد. إزالة غموض العدسة واستبدال العدسة.",
+      "ru": "Операция катаракты. Удаление помутнения хрусталика, замена хрусталика.",
+      "nl": "Cataract chirurgie. Verwijdering van lensvertroebeling, lensvervanging."
+    }
+  },
+  "Extracapsullar Cataract Extraction": {
+    "category": "Ophthalmology",
+    "price_min": 1800,
+    "price_max": 3500,
+    "currency": "EUR",
+    "duration_days": 2,
+    "description": {
+      "tr": "Ekstrakapsuler katarakt ekstraksiyonu. İleri katarakt vakaları için.",
+      "en": "Extracapsular cataract extraction. For advanced cataract cases.",
+      "de": "Extrakapsuläre Kataraktextraktion. Für fortgeschrittene Kataraktfälle.",
+      "ar": "استخراج الساد خارج المحفظة. لحالات الساد المتقدمة.",
+      "ru": "Экстракапсулярная экстракция катаракты. Для запущенных случаев катаракты.",
+      "nl": "Extracapsulaire cataract extractie. Voor gevorderde cataract gevallen."
+    }
+  },
+  "Epi-LASIK Eye Surgery": {
+    "category": "Ophthalmology",
+    "price_min": 1200,
+    "price_max": 2500,
+    "currency": "EUR",
+    "duration_days": 1,
+    "description": {
+      "tr": "Epi-LASIK göz ameliyatı. Gözlük bağımlılığını ortadan kaldırma, lazer ile.",
+      "en": "Epi-LASIK eye surgery. Eliminating glasses dependency with laser.",
+      "de": "Epi-LASIK Augenoperation. Beseitigung der Brillenabhängigkeit mit Laser.",
+      "ar": "جراحة العين Epi-LASIK. القضاء على الاعتماد على النظارات بالليزر.",
+      "ru": "Операция Epi-LASIK. Устранение зависимости от очков с помощью лазера.",
+      "nl": "Epi-LASIK oogchirurgie. Elimineren van brillenafhankelijkheid met laser."
+    }
+  },
+  "Keratoplasty": {
+    "category": "Ophthalmology",
+    "price_min": 3000,
+    "price_max": 6000,
+    "currency": "EUR",
+    "duration_days": 7,
+    "description": {
+      "tr": "Kornea nakli ameliyatı. Hasarlı korneanın sağlıklı doku ile değiştirilmesi.",
+      "en": "Corneal transplant surgery. Replacement of damaged cornea with healthy tissue.",
+      "de": "Hornhauttransplantation. Ersatz der beschädigten Hornhaut durch gesundes Gewebe.",
+      "ar": "جراحة زرع القرنية. استبدال القرنية التالفة بأنسجة سليمة.",
+      "ru": "Операция трансплантации роговицы. Замена поврежденной роговицы здоровой тканью.",
+      "nl": "Hoornvliestransplantatie. Vervanging van beschadigd hoornvlies door gezond weefsel."
+    }
+  },
+  "Oculoplastic Surgery": {
+    "category": "Ophthalmology",
+    "price_min": 2000,
+    "price_max": 4000,
+    "currency": "EUR",
+    "duration_days": 5,
+    "description": {
+      "tr": "Göz kapağı estetiği. Göz çevresi estetik ve rekonstrüktif cerrahi.",
+      "en": "Eyelid aesthetics. Periocular aesthetic and reconstructive surgery.",
+      "de": "Lidästhetik. Periokuläre ästhetische und rekonstruktive Chirurgie.",
+      "ar": "جماليات الجفن. الجراحة التجميلية والترميمية حول العين.",
+      "ru": "Эстетика век. Периокулярная эстетическая и реконструктивная хирургия.",
+      "nl": "Ooglid esthetiek. Perioculaire esthetische en reconstructieve chirurgie."
+    }
+  },
+  "Laser Varicose Vein Treatment": {
+    "category": "Vascular Surgery",
+    "price_min": 1500,
+    "price_max": 3500,
+    "currency": "EUR",
+    "duration_days": 1,
+    "description": {
+      "tr": "Lazer ile varis tedavisi. Ameliyatsız, minimal invaziv yöntem.",
+      "en": "Laser varicose vein treatment. Non-surgical, minimally invasive method.",
+      "de": "Laser-Krampfaderbehandlung. Nicht-chirurgische, minimal-invasive Methode.",
+      "ar": "علاج الدوالي بالليزر. طريقة غير جراحية طفيفة التوغل.",
+      "ru": "Лазерное лечение варикозного расширения вен. Нехирургический, минимально инвазивный метод.",
+      "nl": "Laser spataderen behandeling. Niet-chirurgische, minimaal invasieve methode."
+    }
+  },
+  "IVF": {
+    "category": "Fertility",
+    "price_min": 2500,
+    "price_max": 5000,
+    "currency": "EUR",
+    "duration_days": 21,
+    "description": {
+      "tr": "Tüp bebek tedavisi. In vitro fertilizasyon ile gebelik sağlama.",
+      "en": "IVF treatment. Achieving pregnancy through in vitro fertilization.",
+      "de": "IVF-Behandlung. Schwangerschaft durch In-vitro-Fertilisation.",
+      "ar": "علاج أطفال الأنابيب. تحقيق الحمل من خلال الإخصاب في المختبر.",
+      "ru": "Лечение ЭКО. Достижение беременности путем экстракорпорального оплодотворения.",
+      "nl": "IVF-behandeling. Zwangerschap bereiken via in-vitrofertilisatie."
+    }
+  },
+  "Cardiac stress test": {
+    "category": "Cardiology",
+    "price_min": 150,
+    "price_max": 350,
+    "currency": "EUR",
+    "duration_days": 1,
+    "description": {
+      "tr": "Kardiyak stres testi. Kalp fonksiyonlarının egzersiz altında değerlendirilmesi.",
+      "en": "Cardiac stress test. Evaluation of heart functions under exercise.",
+      "de": "Herzbelastungstest. Bewertung der Herzfunktionen unter Belastung.",
+      "ar": "اختبار الإجهاد القلبي. تقييم وظائف القلب تحت التمرين.",
+      "ru": "Кардиологический стресс-тест. Оценка функций сердца при физической нагрузке.",
+      "nl": "Cardiale stresstest. Evaluatie van hartfuncties onder inspanning."
+    }
+  },
+  "ECG (Electrocardiogram)": {
+    "category": "Cardiology",
+    "price_min": 50,
+    "price_max": 150,
+    "currency": "EUR",
+    "duration_days": 1,
+    "description": {
+      "tr": "EKG - Elektrokardiyogram. Kalp ritminin elektriksel kaydı ve analizi.",
+      "en": "ECG - Electrocardiogram. Electrical recording and analysis of heart rhythm.",
+      "de": "EKG - Elektrokardiogramm. Elektrische Aufzeichnung und Analyse des Herzrhythmus.",
+      "ar": "تخطيط كهربية القلب. التسجيل الكهربائي وتحليل إيقاع القلب.",
+      "ru": "ЭКГ - Электрокардиограмма. Электрическая запись и анализ сердечного ритма.",
+      "nl": "ECG - Elektrocardiogram. Elektrische opname en analyse van hartritme."
+    }
+  },
+  "Invasive Procedures": {
+    "category": "General Surgery",
+    "price_min": 3000,
+    "price_max": 10000,
+    "currency": "EUR",
+    "duration_days": 7,
+    "description": {
+      "tr": "İnvaziv cerrahi prosedürler. Ameliyat gerektiren müdahaleler.",
+      "en": "Invasive surgical procedures. Interventions requiring surgery.",
+      "de": "Invasive chirurgische Eingriffe. Interventionen, die eine Operation erfordern.",
+      "ar": "الإجراءات الجراحية الغازية. التدخلات التي تتطلب الجراحة.",
+      "ru": "Инвазивные хирургические процедуры. Вмешательства, требующие операции.",
+      "nl": "Invasieve chirurgische procedures. Interventies die chirurgie vereisen."
+    }
+  },
+  "Non-invasive Procedures": {
+    "category": "General Surgery",
+    "price_min": 500,
+    "price_max": 2000,
+    "currency": "EUR",
+    "duration_days": 1,
+    "description": {
+      "tr": "Non-invaziv prosedürler. Ameliyatsız tedavi yöntemleri.",
+      "en": "Non-invasive procedures. Non-surgical treatment methods.",
+      "de": "Nicht-invasive Verfahren. Nicht-chirurgische Behandlungsmethoden.",
+      "ar": "الإجراءات غير الغازية. طرق العلاج غير الجراحية.",
+      "ru": "Неинвазивные процедуры. Нехирургические методы лечения.",
+      "nl": "Niet-invasieve procedures. Niet-chirurgische behandelmethoden."
+    }
+  },
+  "Child Psychotherapy": {
+    "category": "Psychology",
+    "price_min": 80,
+    "price_max": 150,
+    "currency": "EUR",
+    "duration_days": 30,
+    "description": {
+      "tr": "Çocuk psikoterapisi. Çocuklarda davranışsal ve duygusal problemlerin tedavisi.",
+      "en": "Child psychotherapy. Treatment of behavioral and emotional problems in children.",
+      "de": "Kinderpsychotherapie. Behandlung von Verhaltens- und emotionalen Problemen bei Kindern.",
+      "ar": "العلاج النفسي للأطفال. علاج المشاكل السلوكية والعاطفية عند الأطفال.",
+      "ru": "Детская психотерапия. Лечение поведенческих и эмоциональных проблем у детей.",
+      "nl": "Kinderpsychotherapie. Behandeling van gedrags- en emotionele problemen bij kinderen."
+    }
+  },
+  "Couples Therapy": {
+    "category": "Psychology",
+    "price_min": 100,
+    "price_max": 200,
+    "currency": "EUR",
+    "duration_days": 60,
+    "description": {
+      "tr": "Çift terapisi. İlişki sorunlarının çözümü için profesyonel danışmanlık.",
+      "en": "Couples therapy. Professional counseling for relationship problem resolution.",
+      "de": "Paartherapie. Professionelle Beratung zur Lösung von Beziehungsproblemen.",
+      "ar": "العلاج الزوجي. الاستشارة المهنية لحل مشاكل العلاقات.",
+      "ru": "Парная терапия. Профессиональное консультирование для решения проблем в отношениях.",
+      "nl": "Relatietherapie. Professionele begeleiding voor het oplossen van relatieproblemen."
+    }
+  },
+  "Bereavement Counselling": {
+    "category": "Psychology",
+    "price_min": 70,
+    "price_max": 130,
+    "currency": "EUR",
+    "duration_days": 45,
+    "description": {
+      "tr": "Yas danışmanlığı. Kayıp sonrası psikolojik destek ve iyileşme süreci.",
+      "en": "Bereavement counselling. Psychological support and healing process after loss.",
+      "de": "Trauerberatung. Psychologische Unterstützung und Heilungsprozess nach Verlust.",
+      "ar": "الاستشارة في حالات الفقد. الدعم النفسي وعملية الشفاء بعد الفقدان.",
+      "ru": "Консультирование по утрате. Психологическая поддержка и процесс исцеления после потери.",
+      "nl": "Rouwbegeleiding. Psychologische ondersteuning en herstelproces na verlies."
+    }
+  },
+  "Hypnotherapy": {
+    "category": "Psychology",
+    "price_min": 90,
+    "price_max": 180,
+    "currency": "EUR",
+    "duration_days": 30,
+    "description": {
+      "tr": "Hipnoterapi. Bilinçaltı ile çalışarak davranış değişikliği ve tedavi.",
+      "en": "Hypnotherapy. Behavioral change and treatment through subconscious work.",
+      "de": "Hypnotherapie. Verhaltensänderung und Behandlung durch Unterbewusstseinsarbeit.",
+      "ar": "العلاج بالتنويم المغناطيسي. تغيير السلوك والعلاج من خلال العمل مع اللاوعي.",
+      "ru": "Гипнотерапия. Изменение поведения и лечение через работу с подсознанием.",
+      "nl": "Hypnotherapie. Gedragsverandering en behandeling door werk met het onderbewustzijn."
+    }
+  },
+  "Career Coaching": {
+    "category": "Psychology",
+    "price_min": 80,
+    "price_max": 160,
+    "currency": "EUR",
+    "duration_days": 30,
+    "description": {
+      "tr": "Kariyer koçluğu. Profesyonel gelişim ve kariyer planlama danışmanlığı.",
+      "en": "Career coaching. Professional development and career planning counseling.",
+      "de": "Karriere-Coaching. Professionelle Entwicklung und Karriereplanungsberatung.",
+      "ar": "التدريب المهني. الاستشارة في التطوير المهني والتخطيط الوظيفي.",
+      "ru": "Карьерный коучинг. Профессиональное развитие и консультирование по планированию карьеры.",
+      "nl": "Carrièrecoaching. Professionele ontwikkeling en loopbaanplanning advisering."
+    }
+  }
+}
