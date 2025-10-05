@@ -2285,6 +2285,528 @@
       "Cosmetic Dentistry",
       "Teeth Whitening"
     ]
+  },
+  {
+    "id": "izm_clinic_001",
+    "name": "İzmir Can Hospital",
+    "rating": 4.98,
+    "address": "Ataşehir Mahallesi 8019/16. Sokak No:18 35630 Çiğli/İzmir",
+    "phone": "0 232 715 40 00",
+    "city": "İzmir",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "izm_clinic_002",
+    "name": "Op. Dr. Hakan Aydoğan Clinic",
+    "rating": 4.98,
+    "address": "Mansuroğlu Mahallesiİslam Kerimov Cad.No:4/A Bayraklı/İzmir",
+    "phone": "0 532 486 28 98",
+    "city": "İzmir",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "izm_clinic_003",
+    "name": "Başkent University İzmir Zübeyde Hanım Research & Application Center",
+    "rating": 4.78,
+    "address": "Caher Dudayev Bulvarı no: 175 Bostanlı Karşıyaka / İZMİR",
+    "phone": "0 232 241 10 00",
+    "city": "İzmir",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "izm_clinic_004",
+    "name": "Akut Kalp Damar Hospital",
+    "rating": 4.98,
+    "address": "Dokuz Eylül Mahallesi 343/1 Sokak No:6 Gaziemir / İzmir",
+    "phone": "+90 232 220 3900",
+    "city": "İzmir",
+    "treatments": [
+      "Cardiac stress test",
+      "Non-invasive Procedures",
+      "Invasive Procedures",
+      "ECG (Electrocardiogram)",
+      "Laser Varicose Vein Treatment"
+    ]
+  },
+  {
+    "id": "izm_clinic_005",
+    "name": "Balçova Termal Otel",
+    "rating": 4.93,
+    "address": "Vali Hüseyin Öğütcen Cd. No:2 35330, Balçova - İZMİR",
+    "phone": "+90 232 259 01 02",
+    "city": "İzmir",
+    "treatments": [
+      "Hypnotherapy",
+      "Career Coaching",
+      "Child Psychotherapy",
+      "Couples Therapy",
+      "Bereavement Counselling"
+    ]
+  },
+  {
+    "id": "izm_clinic_006",
+    "name": "Cadde Dental Oral & Dental Health Clinic",
+    "rating": 4.65,
+    "address": "Mavişehir Mahallesi Cafer Dudayev Bulvarı Mavibahçe Avm no:40/B /İzmir",
+    "phone": "0 232 336 70 79",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_007",
+    "name": "Doç. Dr. Fatih UYGUR Clinic",
+    "rating": 4.78,
+    "address": "Kültür Mahallesi Cumhuriyet Bulvarı No:193 No:3 Konak/İzmir",
+    "phone": "0 555 015 39 53",
+    "city": "İzmir",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "izm_clinic_008",
+    "name": "Dr. Ali ÜÇKAN Clinic",
+    "rating": 4.87,
+    "address": "Mansuroğlu Mh: 1593/1 Sokak:16/7 Lider Centrio İş Merkezi K:2 d: 7 Bayraklı/İzmir",
+    "phone": "0 232 422 02 26",
+    "city": "İzmir",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "izm_clinic_009",
+    "name": "Op. Dr. Özgün Akgül Clinic",
+    "rating": 4.65,
+    "address": "Adalet Mahallesi Manos Bulvarı No:39/3 kapı no:3806 Bayraklı/İzmir",
+    "phone": "0 555 259 94 25",
+    "city": "İzmir",
+    "treatments": [
+      "Stomach Stapling Surgery",
+      "Gastric Balloon",
+      "Sleeve Gastrectomy",
+      "Duodenal Switch Surgery",
+      "Gastric Bypass"
+    ]
+  },
+  {
+    "id": "izm_clinic_010",
+    "name": "Batı Anadolu Central Hospital",
+    "rating": 4.98,
+    "address": "Fuat Edip Baksi Mahallesi Zeki Yavaş Sokak No: 2/2, 35540 Bayraklı/İzmir",
+    "phone": "(0232) 341 67 67",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_011",
+    "name": "Ata Oral & Dental Health Clinic",
+    "rating": 4.65,
+    "address": "1377 Sokak Mutlu Apartmanı No: 2/1-2 Alsancak/İzmir",
+    "phone": "+90 232 464 86 26",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_012",
+    "name": "Op. Dr. Çağhan Baytekin Clinic",
+    "rating": 4.78,
+    "address": "Alsancak Atatürk Cad.Mert Plaza No:376 Kat:4 Konak/İzmir",
+    "phone": "0 232 463 35 44",
+    "city": "İzmir",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "izm_clinic_013",
+    "name": "Çınarlı Hospital",
+    "rating": 4.93,
+    "address": "Çınarlı Mahallesi Anadolu Caddesi No:14 35110 Konak/İzmir",
+    "phone": "0 232 462 27 27",
+    "city": "İzmir",
+    "treatments": [
+      "IVF"
+    ]
+  },
+  {
+    "id": "izm_clinic_014",
+    "name": "Op. Dr. Nazmi YOĞURTÇU Clinic",
+    "rating": 4.87,
+    "address": "İslam Kerimov Cad. No:4/A Bayraklı/İzmir",
+    "phone": "0 232 440 90 90",
+    "city": "İzmir",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "izm_clinic_015",
+    "name": "Atagöz Eye Diseases Center",
+    "rating": 4.65,
+    "address": "Manas Bulvarı 1586/7 Sokak No:2/A Blok Bayraklı/İZMİR",
+    "phone": "0(232) 446 15 16",
+    "city": "İzmir",
+    "treatments": [
+      "Keratoplasty",
+      "Cataract",
+      "Oculoplastic Surgery",
+      "Epi-LASIK Eye Surgery",
+      "Extracapsullar Cataract Extraction"
+    ]
+  },
+  {
+    "id": "izm_clinic_016",
+    "name": "Dent Forum Oral & Dental Health Clinic",
+    "rating": 4.93,
+    "address": "Mithatpaşa Cad. No:262/1B Ünlü Apartmanı Narlıdere/İzmir",
+    "phone": "0 232 250 30 50",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_017",
+    "name": "Alfa Medical Center",
+    "rating": 4.87,
+    "address": "6244 Sokak No:1/B Bornova, İzmir",
+    "phone": "+90 232 262 28 28",
+    "city": "İzmir",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "izm_clinic_018",
+    "name": "Diş Hekimi Çiğdem İdiz Clinic",
+    "rating": 4.98,
+    "address": "Adalet Mahallesi Manas Bulvarı Folkart Towers B Blok No:39 K: 32 D: 3203 Bayraklı/İzmir",
+    "phone": "0 232 502 11 10",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_019",
+    "name": "Ata Health Hospital",
+    "rating": 4.87,
+    "address": "Kazım Dirik Mah. 297 Sokak No:1 (Metro Stadyum Durağı) Bornova / İzmir / Türkiye",
+    "phone": "+90(232) 459 59 59",
+    "city": "İzmir",
+    "treatments": [
+      "Hip Replacement",
+      "Pediatric Orthopedics",
+      "Knee Replacement",
+      "Arthroscopic Operations",
+      "Spinal Surgery"
+    ]
+  },
+  {
+    "id": "izm_clinic_020",
+    "name": "Dent Ekol Oral & Dental Health Center",
+    "rating": 4.65,
+    "address": "8019/13 Sokak No:211 A-B Çiğli/İzmir",
+    "phone": "0 232 386 43 46",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_021",
+    "name": "Op. Dr. Ali Saraç Clinic",
+    "rating": 4.65,
+    "address": "İslam Kerimov Cad. No:4/A Bayraklı/İzmir",
+    "phone": "0 232 440 90 90",
+    "city": "İzmir",
+    "treatments": [
+      "Keratoplasty",
+      "Cataract",
+      "Oculoplastic Surgery",
+      "Epi-LASIK Eye Surgery",
+      "Extracapsullar Cataract Extraction"
+    ]
+  },
+  {
+    "id": "izm_clinic_022",
+    "name": "Dentapoint Oral & Dental Health Clinic",
+    "rating": 4.78,
+    "address": "Bahriye Üçok Mahallesi Girne Bulvarı No: 154/A Karşıyaka/İzmir",
+    "phone": "0 232 999 76 70",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_023",
+    "name": "Çankaya Medical Center",
+    "rating": 4.98,
+    "address": "Gazi Blv. No: 56-58 Çankaya / İZMİR",
+    "phone": "0232 425 31 32",
+    "city": "İzmir",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "izm_clinic_024",
+    "name": "Ekol Göz Medical Center",
+    "rating": 4.93,
+    "address": "8019/ 13 Sokak No: 2 Çiğli/İzmir",
+    "phone": "0 232 386 69 69",
+    "city": "İzmir",
+    "treatments": [
+      "Keratoplasty",
+      "Cataract",
+      "Oculoplastic Surgery",
+      "Epi-LASIK Eye Surgery",
+      "Extracapsullar Cataract Extraction"
+    ]
+  },
+  {
+    "id": "izm_clinic_025",
+    "name": "Dent 35 Oral & Dental Health Clinic",
+    "rating": 4.87,
+    "address": "Kazım Dirik Mahallesi Mustafa Kemal Cad. No:119/C Bornova/İzmir",
+    "phone": "0 232 404 84 84",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_026",
+    "name": "Denta Klinik Oral & Dental Health Clinic",
+    "rating": 4.65,
+    "address": "Laleli MahallesiMenderes Cad.No:354-A Buca/İzmir",
+    "phone": "0 232 438 05 10",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_027",
+    "name": "Dentroyal Oral & Dental Health Clinic",
+    "rating": 4.78,
+    "address": "Mavişehir Mahallesi 2040 Sokak No:33 B/0 Karşıyaka /İzmir",
+    "phone": "0 232 366 33 30",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_028",
+    "name": "Ekol Kulak Burun Boğaz Hospital",
+    "rating": 4.98,
+    "address": "Ataşehir Mahallesi 8019/16 Sokak No:4 35630 Çiğli/ İzmir",
+    "phone": "0 232 386 55 05",
+    "city": "İzmir",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "izm_clinic_029",
+    "name": "Dent KM Ağız ve Diş Clinic",
+    "rating": 4.93,
+    "address": "Menderes Mahallesi Seyfi Demirsoy Caddesi No:13/B Buca/İzmir",
+    "phone": "0 232 452 54 51",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_030",
+    "name": "Art Oral & Dental Health Clinic",
+    "rating": 4.65,
+    "address": "Mertoğlu İş Merkezi 1717 Sokak Kat:3 No: 128/301-302 Karşıyaka/İzmir",
+    "phone": "+90 232 381 10 74",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_031",
+    "name": "Egesante Medical Center",
+    "rating": 4.98,
+    "address": "Bahçelerarası Mahallesi Mithat Paşa Caddesi 24/A, 35330 Balçova/İzmir",
+    "phone": "0 232 259 14 44",
+    "city": "İzmir",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
+  },
+  {
+    "id": "izm_clinic_032",
+    "name": "Estetik4 Oral & Dental Health Clinic",
+    "rating": 4.93,
+    "address": "Bahriye Üçok Mahallesi Atatürk Blv. No:45/D Karşıyaka /İzmir",
+    "phone": "0 232 462 60 70",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_033",
+    "name": "Dentomega Oral & Dental Health Clinic",
+    "rating": 4.87,
+    "address": "Adalet Mahallesi Manas Bulvarı No:72/A Bayraklı /İzmir",
+    "phone": "0 232 338 77 59",
+    "city": "İzmir",
+    "treatments": [
+      "Composite Bonding",
+      "Zirconium Crowns",
+      "Porcelain Veneers",
+      "Cosmetic Dentistry",
+      "Teeth Whitening"
+    ]
+  },
+  {
+    "id": "izm_clinic_034",
+    "name": "Karşıyaka Göz Hospital",
+    "rating": 4.65,
+    "address": "Yalı Mahallesi Caher Dudayev Bulvarı No:71 35550 Karşıyaka/İzmir",
+    "phone": "0 232 362 54 54",
+    "city": "İzmir",
+    "treatments": [
+      "Keratoplasty",
+      "Cataract",
+      "Oculoplastic Surgery",
+      "Epi-LASIK Eye Surgery",
+      "Extracapsullar Cataract Extraction"
+    ]
+  },
+  {
+    "id": "izm_clinic_035",
+    "name": "Medifema Hospital",
+    "rating": 4.78,
+    "address": "Mustafa Kemal Paşa Mahallesi Kocatepe Caddesi No:1 35860 Torbalı/İzmir",
+    "phone": "0 232 854 18 54",
+    "city": "İzmir",
+    "treatments": [
+      "Facial Surgery",
+      "Seconder Rhinoplasty",
+      "Open Rhinoplasty",
+      "Septum Deviation",
+      "Septoplasty"
+    ]
   }
+
   ]
 }

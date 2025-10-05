@@ -1,16 +1,20 @@
 # Klinik veritabanı modeli
-from sqlalchemy import Column, Integer, String, Float, Text
+from sqlalchemy import Column, Integer, String, Float, Text, JSON
 from app.db.session import Base
 
 class Clinic(Base):
     __tablename__ = "clinics"
 
-    id = Column(Integer, primary_key=True, index=True)
-    name = Column(String, index=True)
-    city = Column(String, index=True)
+    id = Column(String, primary_key=True, index=True)  # JSON'dan gelen ID (ant_clinic_001)
+    name = Column(String, index=True, nullable=False)
+    city = Column(String, index=True, nullable=False)
+    country = Column(String, default="Turkey")
     address = Column(Text)
-    specialty = Column(String, index=True)  # Uzmanlık alanı
-    rating = Column(Float)
+    rating = Column(Float, index=True)
     phone = Column(String)
-    email = Column(String)
-    description = Column(Text)
+    treatments = Column(JSON)  # Array of strings: ["Composite Bonding", "Zirconium Crowns"]
+    
+    # Metadata
+    created_at = Column(String)  # ISO format date
+    updated_at = Column(String)  # ISO format date
+
