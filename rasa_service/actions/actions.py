@@ -240,36 +240,38 @@ class ActionSacEkimiDetaylari(Action):
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         logger.info("💇 Saç ekimi bilgisi için Ollama'ya sorgu gönderiliyor...")
 
-        # TÜRKÇE İÇİN GÜÇLENDİRİLMİŞ PROMPT
-        prompt = """Sen Türkçe konuşan bir sağlık turizmi danışmanısın. 
+        # GÜÇLÜ TÜRKÇE PROMPT - Fallback yok, direkt Ollama cevabı
+        prompt = """Sen profesyonel bir Türk sağlık turizmi danışmanısın. 
 
-SADECE TÜRKÇE CEVAP VER! İngilizce kelime kullanma!
+ÖNEMLİ: SADECE VE SADECE TÜRKÇE CEVAP VER! Hiçbir İngilizce kelime kullanma!
 
-Antalya'daki saç ekimi hakkında bu bilgileri ver:
+Antalya'daki saç ekimi tedavisi hakkında şu bilgileri kısa ve net şekilde açıkla:
 
-1. FUE yöntemi nedir?
-2. DHI yöntemi nedir? 
-3. İki yöntem arasındaki fark nedir?
-4. Ortalama fiyat: 2500-4000 Euro
-5. İşlem süresi: 6-8 saat
-6. İyileşme: 7-10 gün
-7. Paket içeriği: Otel konaklama, havalimanı transferi, kontrollerini içerir
+1. FUE (Follicular Unit Extraction) tekniği nedir? Nasıl yapılır?
+2. DHI (Direct Hair Implantation) tekniği nedir? Nasıl yapılır?
+3. Bu iki teknik arasındaki temel farklar nelerdir?
+4. Ortalama tedavi ücreti: 2.500-4.000 Euro arası
+5. İşlem süresi: Genellikle 6-8 saat
+6. İyileşme süresi: 7-10 gün
+7. Paket içeriği: 5 yıldız otel konaklaması, VIP havalimanı transferi, tüm kontroller dahil
 
-Kısa ve öz anlat (maksimum 6-7 cümle)."""
+Her maddeyi 2-3 cümle ile açıkla. Net, anlaşılır ve profesyonel bir dil kullan.
+Toplam maksimum 10 cümle yaz."""
         
         data = {
             "model": "llama3",
             "prompt": prompt,
             "stream": False,
             "options": {
-                "temperature": 0.3,  # Daha deterministik için düşürüldü
-                "num_predict": 400,
+                "temperature": 0.4,  # Daha tutarlı ve deterministik
+                "num_predict": 500,  # Daha uzun cevaplar için
                 "top_p": 0.9,
-                "repeat_penalty": 1.1
+                "repeat_penalty": 1.2,  # Tekrar önleme
+                "stop": ["English:", "In English:", "Translation:"]  # İngilizce geçişi engelle
             }
         }
 
-        dispatcher.utter_message(text="💇 Saç ekimi hakkında detaylı bilgi hazırlıyorum...")
+        dispatcher.utter_message(text="💇 Saç ekimi hakkında detaylı bilgi hazırlıyorum, lütfen bekleyin...")
 
         try:
             response = requests.post(OLLAMA_API_URL, json=data, timeout=OLLAMA_TIMEOUT, proxies=PROXIES)
@@ -278,48 +280,25 @@ Kısa ve öz anlat (maksimum 6-7 cümle)."""
             generated_text = response.json().get('response', '').strip()
 
             if generated_text:
-                # Eğer İngilizce cevap gelmişse fallback kullan
-                if self._is_mostly_english(generated_text):
-                    logger.warning("⚠️ Ollama İngilizce cevap verdi, fallback kullanılıyor")
-                    fallback_message = """💇 **SAÇ EKİMİ BİLGİLERİ:**
-
-**FUE Yöntemi:** Tek tek foliküllerin alınıp nakledildiği modern saç ekimi tekniğidir.
-
-**DHI Yöntemi:** Özel bir kalemle direkt implantasyon yapılır, daha hassas bir yöntemdir.
-
-**Farkları:** DHI daha az iz bırakır ve iyileşme süresi daha kısadır.
-
-**Fiyat:** Ortalama 2.500-4.000 Euro arasındadır.
-
-**İşlem Süresi:** Yaklaşık 6-8 saat sürer.
-
-**İyileşme:** 7-10 gün içinde normal hayata dönebilirsiniz.
-
-**Paket Kapsamı:** Otel konaklaması, havalimanı transferi, tüm kontroller ve takip dahildir."""
-                    dispatcher.utter_message(text=fallback_message)
-                else:
-                    dispatcher.utter_message(text=f"💇 **SAÇ EKİMİ BİLGİLERİ:**\n\n{generated_text}")
+                # Direkt Ollama cevabını göster (fallback YOK!)
+                dispatcher.utter_message(text=f"💇 **SAÇ EKİMİ BİLGİLERİ:**\n\n{generated_text}")
+                logger.info(f"✅ Ollama cevabı başarıyla alındı ({len(generated_text)} karakter)")
             else:
-                dispatcher.utter_message(text="Yapay zekadan cevap alamadım, lütfen tekrar deneyin.")
+                # Sadece boş cevap durumunda minimal fallback
+                dispatcher.utter_message(text="💇 Üzgünüm, saç ekimi bilgisi şu anda hazırlanamadı. Lütfen tekrar deneyin veya daha spesifik bir soru sorun.")
+                logger.warning("⚠️ Ollama boş cevap döndürdü")
 
         except requests.exceptions.ConnectionError:
             logger.error("❌ Ollama servisine bağlanılamadı")
-            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. 'ollama serve' çalıştırın.")
+            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın ve tekrar deneyin.")
         except requests.exceptions.Timeout:
             logger.error(f"⏱️ Ollama API zaman aşımı ({OLLAMA_TIMEOUT}s)")
-            dispatcher.utter_message(text=f"⏱️ Yapay zeka servisi yanıt vermekte gecikiyor. Lütfen tekrar deneyin.")
+            dispatcher.utter_message(text=f"⏱️ Yapay zeka servisi yanıt vermekte gecikiyor. Lütfen biraz bekleyip tekrar deneyin.")
         except Exception as e:
             logger.error(f"❌ Ollama hatası: {e}")
-            dispatcher.utter_message(text=f"❌ Yapay zeka hatası: {str(e)}")
+            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
 
         return []
-    
-    def _is_mostly_english(self, text: str) -> bool:
-        """Metnin çoğunlukla İngilizce olup olmadığını kontrol et"""
-        english_indicators = ['the', 'and', 'is', 'are', 'in', 'to', 'for', 'of', 'with', 'procedure', 'treatment']
-        text_lower = text.lower()
-        english_count = sum(1 for word in english_indicators if word in text_lower)
-        return english_count >= 3  # 3 veya daha fazla İngilizce kelime varsa
 
 class ActionAskOllama(Action):
     """Genel sorular için Ollama'ya sor"""
