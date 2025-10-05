@@ -1,4 +1,3 @@
-# Botun beyni: tüm intent, entity, action ve response tanımlamaları
 version: "3.1"
 
 intents:
@@ -6,53 +5,57 @@ intents:
   - goodbye
   - affirm
   - deny
-  - search_clinic
-  - search_hotel
-  - ask_treatment
-  - ask_price
-  - book_appointment
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - klinik_ara
+  - otel_ara
+  - sac_ekimi_bilgisi
 
 entities:
-  - city
-  - treatment_type
-  - date
-  - specialty
-
-slots:
-  city:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: city
-  
-  treatment_type:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: treatment_type
-  
-  specialty:
-    type: text
-    mappings:
-      - type: from_entity
-        entity: specialty
+  - tedavi
+  - otel_tipi
+  - konum_ozelligi
+  - sehir
 
 responses:
   utter_greet:
-    - text: "Merhaba! Sağlık turizmi asistanınızım. Size nasıl yardımcı olabilirim?"
+  - text: "Merhaba! Size nasıl yardımcı olabilirim?"
+  - text: "Selam! Bugün size nasıl yardımcı olabilirim?"
+  
+  utter_cheer_up:
+  - text: "Üzülmeyin, size yardımcı olmak için buradayım!"
+  
+  utter_did_that_help:
+  - text: "Bu yardımcı oldu mu?"
+  - text: "Size yardımcı olabildim mi?"
+  
+  utter_happy:
+  - text: "Harika! Size yardımcı olabildiğime sevindim."
+  - text: "Süper! Devam edelim."
   
   utter_goodbye:
-    - text: "Hoşça kalın! İyi günler dilerim."
+  - text: "Görüşmek üzere! İyi günler!"
+  - text: "Hoşça kalın! Tekrar görüşmek üzere."
   
-  utter_ask_location:
-    - text: "Hangi şehirde tedavi olmak istersiniz?"
-  
-  utter_ask_treatment:
-    - text: "Ne tür bir tedavi arıyorsunuz?"
+  utter_iamabot:
+  - text: "Ben Rasa destekli bir sağlık asistanıyım. Size klinik ve otel önerileri sunabilirim."
 
 actions:
-  - action_search_clinics
-  - action_search_hotels
+  # Basit metin cevapları (utterances)
+  - utter_greet
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_happy
+  - utter_goodbye
+  - utter_iamabot
+  
+  # actions.py dosyasında tanımlayacağımız özel eylemler (Custom Actions)
+  - action_klinik_ara
+  - action_otel_ara
+  - action_sac_ekimi_detaylari
+  - action_ask_ollama
+
 
 session_config:
   session_expiration_time: 60

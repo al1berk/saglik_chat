@@ -1,50 +1,114 @@
-# Intent ve Entity tanımlamaları
-# Konuşma akışlarının
+# data/nlu.yml
+
 version: "3.1"
 
 nlu:
-  - intent: greet
-    examples: |
-      - merhaba
-      - selam
-      - hey
-      - iyi günler
-      - günaydın
-      
-  - intent: goodbye
-    examples: |
-      - hoşça kal
-      - görüşürüz
-      - güle güle
-      - bay bay
-      
-  - intent: search_clinic
-    examples: |
-      - klinik arıyorum
-      - [İstanbul](city)'da klinik bul
-      - [Antalya](city)'da hastane öner
-      - [diş tedavisi](treatment_type) için klinik
-      - [saç ekimi](treatment_type) yapan yer
-      - [göz ameliyatı](treatment_type) için hastane
-      
-  - intent: search_hotel
-    examples: |
-      - otel arıyorum
-      - [İstanbul](city)'da otel bul
-      - kalacak yer öner
-      - yakınlarda otel var mı
-      - [Ankara](city)'da konaklama
-      
-  - intent: ask_treatment
-    examples: |
-      - hangi tedaviler var
-      - ne tür tedaviler yapılıyor
-      - tedavi seçenekleri neler
-      - ameliyat çeşitleri
-      
-  - intent: ask_price
-    examples: |
-      - fiyat ne kadar
-      - ücret bilgisi
-      - maliyet nedir
-      - kaç para tutar
+- intent: greet
+  examples: |
+    - merhaba
+    - selam
+    - günaydın
+    - iyi günler
+    - hey
+    - merhabalar
+    - selamlar
+    - sa
+    - slm
+    - hello
+    - hi
+
+- intent: goodbye
+  examples: |
+    - görüşürüz
+    - hoşça kal
+    - güle güle
+    - bay bay
+    - iyi günler
+    - görüşmek üzere
+    - kendine iyi bak
+
+- intent: affirm
+  examples: |
+    - evet
+    - evet lütfen
+    - tamam
+    - olur
+    - tabii
+    - tabii ki
+    - kabul
+    - peki
+
+- intent: deny
+  examples: |
+    - hayır
+    - hayır teşekkürler
+    - olmaz
+    - istemiyorum
+    - gerek yok
+    - hayır olmaz
+
+- intent: mood_great
+  examples: |
+    - harikayım
+    - çok iyiyim
+    - mükemmelim
+    - süperim
+    - çok iyi hissediyorum
+    - bugün harika
+
+- intent: mood_unhappy
+  examples: |
+    - üzgünüm
+    - kötüyüm
+    - mutsuzum
+    - iyi değilim
+    - kötü hissediyorum
+
+- intent: bot_challenge
+  examples: |
+    - sen bir bot musun?
+    - sen robot musun?
+    - sen insan mısın?
+    - seninle mi konuşuyorum?
+    - sen gerçek misin?
+
+- intent: klinik_ara
+  examples: |
+    - bir klinik arıyorum
+    - klinik bul
+    - [Antalya](sehir) da klinik var mı
+    - [diş tedavisi](tedavi) için klinik
+    - [saç ekimi](tedavi) kliniği lazım
+    - [İstanbul](sehir) da [göz ameliyatı](tedavi) yapan klinik
+    - [diş](tedavi) kliniği öner
+    - iyi bir [estetik](tedavi) kliniği
+    - [rinoplasti](tedavi) için doktor
+
+- intent: otel_ara
+  examples: |
+    - otel arıyorum
+    - otel bul
+    - [Antalya](sehir) da otel
+    - [deniz manzaralı](konum_ozelligi) otel
+    - [spa](otel_tipi) oteli
+    - [İstanbul](sehir) da [lüks](otel_tipi) otel
+    - konaklama yeri lazım
+    - nerede kalabilirim
+
+- intent: sac_ekimi_bilgisi
+  examples: |
+    - saç ekimi hakkında bilgi
+    - saç ekimi nasıl yapılıyor
+    - FUE ve DHI yöntemleri nedir
+    - saç ekimi nedir
+    - saç ekimi fiyatları
+    - saç ekimi ne kadar
+    - saç ekimi süreci
+    - saç ekimi hakkında bilgi ver
+    - saç ekimi detayları
+    - saç dökülmesi tedavisi
+    - saç transplantasyonu
+    - saç restorasyonu
+    - fue saç ekimi
+    - dhi saç ekimi
+    - saç ekimi ameliyatı

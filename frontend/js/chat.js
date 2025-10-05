@@ -1,223 +1,83 @@
-// Chat Manager - Mesajlaşma mantığını yönetir
+// Chat Logic - Rasa ile entegre
 class ChatManager {
     constructor() {
-        this.api = new ChatAPI();
-        this.messagesDiv = document.getElementById('chatMessages');
+        this.messagesContainer = document.getElementById('chatMessages');
         this.userInput = document.getElementById('userInput');
-        this.sessionId = this.generateSessionId();
-        this.useFallback = true; // API yoksa fallback kullan
-        this.init();
+        this.useRealAPI = true; // true = Rasa kullan, false = mock data
     }
 
-    generateSessionId() {
-        return 'user_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
-    }
-
-    async init() {
-        // API sağlık kontrolü
-        const isHealthy = await this.api.healthCheck();
-        if (isHealthy) {
-            console.log('✅ API bağlantısı başarılı');
-            this.useFallback = false;
-        } else {
-            console.log('⚠️ API bağlantısı yok, fallback modu aktif');
-            this.useFallback = true;
-        }
-
-        // Event listeners
-        this.userInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') {
-                this.sendMessage();
-            }
-        });
-    }
-
+    // Mesaj gönder (ana fonksiyon - index.html'deki sendMessage'ı override eder)
     async sendMessage() {
         const message = this.userInput.value.trim();
+        
         if (!message) return;
-
-        // Kullanıcı mesajını göster
+        
         this.addUserMessage(message);
         this.userInput.value = '';
-
-        // Typing indicator
         this.showTyping();
 
         try {
-            if (this.useFallback) {
-                // Fallback: Static responses
-                await this.handleFallbackResponse(message);
-            } else {
-                // Real API: Rasa + ChromaDB + Ollama
-                await this.handleAPIResponse(message);
-            }
-        } catch (error) {
-            console.error('Error:', error);
-            this.hideTyping();
-            this.addBotMessage({
-                text: '❌ Üzgünüm, bir hata oluştu. Lütfen daha sonra tekrar deneyin.',
-                quickReplies: ['Ana Menü', 'Yardım']
-            });
-        }
-    }
-
-    async handleAPIResponse(message) {
-        try {
-            // 1. Rasa'ya gönder (intent detection)
-            const rasaResponses = await this.api.sendToRasa(message, this.sessionId);
-
-            this.hideTyping();
-
-            if (rasaResponses && rasaResponses.length > 0) {
-                // Rasa'dan gelen yanıtları işle
-                for (const response of rasaResponses) {
-                    if (response.text) {
-                        this.addBotMessage({
-                            text: response.text,
-                            quickReplies: response.buttons?.map(b => b.title) || []
-                        });
+            if (this.useRealAPI) {
+                // Gerçek Rasa API kullan
+                const responses = await window.apiService.sendMessage(message);
+                this.hideTyping();
+                
+                if (responses && responses.length > 0) {
+                    for (const response of responses) {
+                        this.addBotMessage({ text: response.response });
+                        await this.delay(500); // Mesajlar arası kısa gecikme
                     }
-
-                    // Custom action varsa işle
-                    if (response.custom) {
-                        await this.handleCustomAction(response.custom);
-                    }
+                } else {
+                    // Rasa yanıt vermediyse fallback
+                    this.addBotMessage({ 
+                        text: 'Üzgünüm, şu anda size yardımcı olamıyorum. Lütfen tekrar deneyin.' 
+                    });
                 }
             } else {
-                // Rasa yanıt vermediyse semantic search yap
-                await this.handleSemanticSearch(message);
+                // Mock data kullan (test için)
+                await this.delay(1500);
+                this.hideTyping();
+                const response = this.getMockResponse(message);
+                this.addBotMessage(response);
             }
-
         } catch (error) {
-            console.error('API Response Error:', error);
-            // API hatası varsa fallback'e geç
-            await this.handleFallbackResponse(message);
-        }
-    }
-
-    async handleSemanticSearch(message) {
-        // Mesajda anahtar kelimelere göre arama yap
-        const lowerMsg = message.toLowerCase();
-
-        if (lowerMsg.includes('klinik') || lowerMsg.includes('hastane') || 
-            lowerMsg.includes('diş') || lowerMsg.includes('göz') || 
-            lowerMsg.includes('saç') || lowerMsg.includes('estetik')) {
-            
-            // Klinik ara
-            const clinics = await this.api.searchClinics(message);
-            const formattedResponse = formatClinicResponse(clinics);
-            
-            this.addBotMessage({
-                text: formattedResponse,
-                quickReplies: ['Detaylı Bilgi', 'Randevu Al', 'Fiyat Sor']
-            });
-
-        } else if (lowerMsg.includes('otel') || lowerMsg.includes('konaklama')) {
-            
-            // Otel ara
-            const hotels = await this.api.searchHotels(message);
-            const formattedResponse = formatHotelResponse(hotels);
-            
-            this.addBotMessage({
-                text: formattedResponse,
-                quickReplies: ['Rezervasyon', 'Fiyatlar', 'Lokasyon']
-            });
-
-        } else {
-            // Genel RAG response
-            const context = await this.api.searchClinics(message, 3);
-            const ragResponse = await this.api.generateResponse(message, context);
-            
-            this.addBotMessage({
-                text: ragResponse.response || ragResponse.text,
-                quickReplies: ['Daha Fazla Bilgi', 'Randevu Al']
-            });
-        }
-    }
-
-    async handleCustomAction(customData) {
-        // Rasa'dan gelen custom action'ları işle
-        if (customData.action === 'search_clinic') {
-            const clinics = await this.api.searchClinics(customData.query);
-            const formattedResponse = formatClinicResponse(clinics);
-            this.addBotMessage({
-                text: formattedResponse,
-                quickReplies: ['Detaylı Bilgi', 'Randevu Al']
-            });
-        } else if (customData.action === 'search_hotel') {
-            const hotels = await this.api.searchHotels(customData.query);
-            const formattedResponse = formatHotelResponse(hotels);
-            this.addBotMessage({
-                text: formattedResponse,
-                quickReplies: ['Rezervasyon', 'Fiyatlar']
-            });
-        }
-    }
-
-    async handleFallbackResponse(message) {
-        // Static responses (API olmadan çalışır)
-        setTimeout(() => {
+            console.error('Chat error:', error);
             this.hideTyping();
-            const response = this.findStaticResponse(message);
-            this.addBotMessage(response);
-        }, 1500);
+            
+            // Hata mesajı göster
+            this.addBotMessage({
+                text: `❌ <strong>Bağlantı Hatası</strong><br><br>
+                Backend servisi çalışmıyor olabilir. Lütfen şunları kontrol edin:<br><br>
+                1. API servisi çalışıyor mu? <code>cd api_service && python main.py</code><br>
+                2. Rasa servisi çalışıyor mu? <code>rasa run</code><br>
+                3. Rasa actions çalışıyor mu? <code>rasa run actions</code><br><br>
+                Teknik detay: ${error.message}`
+            });
+        }
     }
 
-    findStaticResponse(message) {
-        // Existing static responses from original chatbot.html
-        // (responses object'i buraya kopyalanabilir)
-        
-        const msg = message.toLowerCase();
-        
-        // Basit pattern matching
-        if (msg.includes('merhaba') || msg.includes('selam') || msg.includes('hey')) {
-            return {
-                text: 'Merhaba! 👋 Size nasıl yardımcı olabilirim?',
-                quickReplies: ['Klinikler', 'Tedaviler', 'Fiyatlar', 'Randevu']
-            };
-        }
-        
-        if (msg.includes('diş') || msg.includes('implant')) {
-            return {
-                text: `<h3>🦷 Diş Tedavileri</h3>
-                <p>Diş implantı, kaplama ve diğer dental işlemler için size yardımcı olabilirim.</p>
-                <div class="info-box">
-                    <strong>💰 Ortalama Fiyatlar:</strong><br>
-                    • Tek implant: 450€ - 700€<br>
-                    • All-on-4: 4.500€ - 7.000€<br>
-                    • Kaplama (diş başına): 150€ - 300€
-                </div>`,
-                quickReplies: ['Klinik Öner', 'Randevu Al', 'Detaylı Bilgi']
-            };
-        }
-
-        // Default yanıt
-        return {
-            text: 'Size nasıl yardımcı olabilirim? Tedaviler, klinikler, fiyatlar veya randevu hakkında soru sorabilirsiniz.',
-            quickReplies: ['Tedaviler', 'Klinikler', 'Fiyatlar', 'Randevu Al']
-        };
-    }
-
+    // Kullanıcı mesajı ekle
     addUserMessage(text) {
         // Welcome screen'i kaldır
-        const welcome = this.messagesDiv.querySelector('.welcome-screen');
+        const welcome = this.messagesContainer.querySelector('.welcome-screen');
         if (welcome) welcome.remove();
-
+        
         const messageDiv = document.createElement('div');
         messageDiv.className = 'message user';
         messageDiv.innerHTML = `
             <div class="message-avatar">👤</div>
             <div class="message-content">${this.escapeHtml(text)}</div>
         `;
-
-        this.messagesDiv.appendChild(messageDiv);
+        
+        this.messagesContainer.appendChild(messageDiv);
         this.scrollToBottom();
     }
 
+    // Bot mesajı ekle
     addBotMessage(response) {
         const messageDiv = document.createElement('div');
         messageDiv.className = 'message bot';
-
+        
         let quickRepliesHTML = '';
         if (response.quickReplies && response.quickReplies.length > 0) {
             quickRepliesHTML = `
@@ -228,7 +88,7 @@ class ChatManager {
                 </div>
             `;
         }
-
+        
         messageDiv.innerHTML = `
             <div class="message-avatar">🏥</div>
             <div class="message-content">
@@ -236,16 +96,18 @@ class ChatManager {
                 ${quickRepliesHTML}
             </div>
         `;
-
-        this.messagesDiv.appendChild(messageDiv);
+        
+        this.messagesContainer.appendChild(messageDiv);
         this.scrollToBottom();
     }
 
+    // Quick message gönder
     sendQuickMessage(text) {
         this.userInput.value = text;
         this.sendMessage();
     }
 
+    // Typing indicator göster
     showTyping() {
         const typingDiv = document.createElement('div');
         typingDiv.className = 'message bot';
@@ -260,38 +122,105 @@ class ChatManager {
                 </div>
             </div>
         `;
-        this.messagesDiv.appendChild(typingDiv);
+        this.messagesContainer.appendChild(typingDiv);
         this.scrollToBottom();
     }
 
+    // Typing indicator gizle
     hideTyping() {
         const typing = document.getElementById('typingIndicator');
         if (typing) typing.remove();
     }
 
+    // Scroll to bottom
     scrollToBottom() {
-        this.messagesDiv.scrollTop = this.messagesDiv.scrollHeight;
+        this.messagesContainer.scrollTop = this.messagesContainer.scrollHeight;
     }
 
+    // Delay helper
+    delay(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+
+    // HTML escape
     escapeHtml(text) {
         const div = document.createElement('div');
         div.textContent = text;
         return div.innerHTML;
     }
+
+    // Mock response (test için)
+    getMockResponse(message) {
+        const msg = message.toLowerCase();
+        
+        if (msg.includes('saç ekimi') || msg.includes('saç')) {
+            return {
+                text: `💇‍♂️ <strong>SAÇ EKİMİ BİLGİSİ</strong><br><br>
+                Saç ekimi, saç köklerinin sağlıklı bölgelerden alınıp dökülme olan bölgelere nakledilmesi işlemidir.<br><br>
+                <strong>Yöntemler:</strong><br>
+                • FUE: 1.800€ - 2.500€<br>
+                • DHI: 2.200€ - 3.000€<br><br>
+                <strong>Süre:</strong> 6-8 saat işlem, 2-3 gün konaklama<br><br>
+                📞 Randevu için bizimle iletişime geçin!`,
+                quickReplies: ['Randevu Al', 'Fiyat Detayları', 'Klinikler']
+            };
+        }
+        
+        if (msg.includes('merhaba') || msg.includes('selam')) {
+            return {
+                text: 'Merhaba! 👋 Size nasıl yardımcı olabilirim?',
+                quickReplies: ['Saç Ekimi', 'Diş Tedavisi', 'Estetik', 'Otel']
+            };
+        }
+        
+        return {
+            text: 'Size nasıl yardımcı olabilirim? Saç ekimi, diş tedavisi, estetik operasyonlar ve konaklama hakkında bilgi verebilirim.',
+            quickReplies: ['Tedaviler', 'Fiyatlar', 'Randevu Al']
+        };
+    }
+
+    // Enter tuşu kontrolü
+    handleKeyPress(event) {
+        if (event.key === 'Enter') {
+            this.sendMessage();
+        }
+    }
+
+    // Sağlık kontrolü
+    async checkHealth() {
+        try {
+            const health = await window.apiService.healthCheck();
+            console.log('Backend health:', health);
+            return health.status === 'healthy';
+        } catch (error) {
+            console.warn('Backend offline, fallback to mock mode');
+            this.useRealAPI = false;
+            return false;
+        }
+    }
 }
 
-// Initialize when DOM is ready
-let chatManager;
-document.addEventListener('DOMContentLoaded', () => {
-    chatManager = new ChatManager();
-    console.log('🤖 Chat Manager initialized');
+// Global instance oluştur
+const chatManager = new ChatManager();
+
+// DOM yüklendiğinde
+document.addEventListener('DOMContentLoaded', async function() {
+    console.log('🏥 Sağlık Chat başlatılıyor...');
+    
+    // Sağlık kontrolü yap
+    const isHealthy = await chatManager.checkHealth();
+    
+    if (!isHealthy) {
+        console.warn('⚠️ Backend çalışmıyor, mock mode aktif');
+    } else {
+        console.log('✅ Backend bağlantısı başarılı');
+    }
+    
+    // Input'a focus
+    chatManager.userInput.focus();
 });
 
-// Global fonksiyonlar (HTML'den erişim için)
-function sendMessage() {
-    if (chatManager) chatManager.sendMessage();
-}
-
-function sendQuickMessage(text) {
-    if (chatManager) chatManager.sendQuickMessage(text);
-}
+// Global fonksiyonları override et
+window.sendMessage = () => chatManager.sendMessage();
+window.sendQuickMessage = (text) => chatManager.sendQuickMessage(text);
+window.handleKeyPress = (event) => chatManager.handleKeyPress(event);
