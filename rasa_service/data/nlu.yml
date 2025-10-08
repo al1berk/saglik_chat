@@ -253,3 +253,11 @@ nlu:
     - bu hafta müsait misiniz
     - randevu iptal
     - randevu değiştirme
+
+- intent: nlu_fallback
+  examples: |
+    - asdfghjkl
+    - ne diyorsun
+    - anlamadım
+    - başka bir şey
+    - bilmiyorum ne diyeceğimi

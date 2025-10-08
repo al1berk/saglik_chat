@@ -314,29 +314,57 @@ Toplam maksimum 10 cümle yaz."""
         return []
 
 class ActionAskOllama(Action):
-    """Genel sorular için Ollama'ya sor"""
+    """Genel sorular için Ollama'ya sor - Rasa'nın anlayamadığı sorular buraya yönlendirilir"""
     
     def name(self) -> Text:
         return "action_ask_ollama"
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         user_message = tracker.latest_message.get('text', '')
-        logger.info(f"🤖 Ollama'ya genel soru: '{user_message}'")
+        logger.info(f"🤖 Ollama'ya genel soru (fallback): '{user_message}'")
 
-        prompt = f"""Sen bir Türk sağlık turizmi asistanısın. 
-Kullanıcının şu sorusunu kısa, net ve TÜRKÇE yanıtla: '{user_message}'
+        # Slot'tan context bilgisi al
+        tedavi = tracker.get_slot("tedavi")
+        sehir = tracker.get_slot("sehir")
+        
+        # Context'i prompt'a ekle
+        context_info = ""
+        if tedavi:
+            context_info += f"\nKullanıcı daha önce '{tedavi}' tedavisi hakkında sordu."
+        if sehir:
+            context_info += f"\nKullanıcı '{sehir}' şehrinde arama yapıyor."
 
-Yanıtın maksimum 3-4 cümle olsun."""
+        prompt = f"""Sen profesyonel bir Türk sağlık turizmi danışmanısın. Türkiye'deki medikal turizm konusunda uzmansın.
+
+GÖREVIN: Kullanıcının sorusunu sağlık turizmi perspektifinden yanıtla. 
+
+ÖNEMLİ KURALLAR:
+1. SADECE TÜRKÇE CEVAP VER
+2. Kısa, net ve profesyonel ol (maksimum 4-5 cümle)
+3. Eğer medikal bir soru ise, genel bilgi ver (kesin tanı/tedavi önerme)
+4. Fiyat soruluyorsa, genel aralık ver
+5. Klinik/otel önerisi isteniyorsa, kriterleri sor
+
+CONTEXT:{context_info}
+
+KULLANICI SORUSU: {user_message}
+
+TÜRKÇE CEVAP:"""
         
         data = {
             "model": "llama3",
             "prompt": prompt,
             "stream": False,
             "options": {
-                "temperature": 0.7,
-                "num_predict": 300
+                "temperature": 0.6,  # Daha tutarlı cevaplar
+                "num_predict": 400,  # Biraz daha uzun cevaplar
+                "top_p": 0.9,
+                "repeat_penalty": 1.3,
+                "stop": ["KULLANICI", "USER:", "English:", "In English:"]
             }
         }
+
+        dispatcher.utter_message(text="🤔 Düşünüyorum...")
 
         try:
             response = requests.post(OLLAMA_API_URL, json=data, timeout=OLLAMA_TIMEOUT, proxies=PROXIES)
@@ -345,16 +373,20 @@ Yanıtın maksimum 3-4 cümle olsun."""
             generated_text = response.json().get('response', '').strip()
 
             if generated_text:
-                dispatcher.utter_message(text=generated_text)
+                dispatcher.utter_message(text=f"💡 {generated_text}")
+                logger.info(f"✅ Ollama fallback cevabı: {len(generated_text)} karakter")
             else:
-                dispatcher.utter_message(text="Üzgünüm, bu soruya şu anda cevap veremiyorum.")
+                dispatcher.utter_message(text="Üzgünüm, bu soruya şu anda cevap veremiyorum. Daha spesifik sorular sorabilirsiniz:\n- Klinik aramak için: 'Antalya'da saç ekimi kliniği'\n- Otel aramak için: 'İstanbul'da otel'\n- Tedavi bilgisi için: 'Rinoplasti nedir?'")
 
         except requests.exceptions.ConnectionError:
             logger.error("❌ Ollama servisine bağlanılamadı")
-            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor.")
+            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. Lütfen spesifik sorular sorun:\n- Klinik arama\n- Otel arama\n- Tedavi bilgisi")
+        except requests.exceptions.Timeout:
+            logger.error(f"⏱️ Ollama timeout ({OLLAMA_TIMEOUT}s)")
+            dispatcher.utter_message(text="⏱️ Cevap hazırlanırken zaman aşımı. Lütfen tekrar deneyin.")
         except Exception as e:
             logger.error(f"❌ Ollama hatası: {e}")
-            dispatcher.utter_message(text="Üzgünüm, şu anda size yardımcı olamıyorum.")
+            dispatcher.utter_message(text="Üzgünüm, şu anda size yardımcı olamıyorum. Lütfen daha sonra tekrar deneyin.")
 
         return []
 

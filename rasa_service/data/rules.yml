@@ -31,3 +31,43 @@ rules:
   steps:
   - intent: otel_ara
   - action: action_otel_ara
+
+- rule: Anlaşılmayan sorular için Ollama'ya yönlendir
+  steps:
+  - intent: nlu_fallback
+  - action: action_ask_ollama
+
+- rule: Diş implantı bilgisi sorulduğunda
+  steps:
+  - intent: dis_implant_bilgisi
+  - action: action_dis_implant_detaylari
+
+- rule: Rinoplasti bilgisi sorulduğunda
+  steps:
+  - intent: rinoplasti_bilgisi
+  - action: action_rinoplasti_detaylari
+
+- rule: Mide küçültme bilgisi sorulduğunda
+  steps:
+  - intent: mide_kucultme_bilgisi
+  - action: action_mide_kucultme_detaylari
+
+- rule: Lasik bilgisi sorulduğunda
+  steps:
+  - intent: lasik_bilgisi
+  - action: action_lasik_detaylari
+
+- rule: Fiyat bilgisi sorulduğunda
+  steps:
+  - intent: fiyat_sor
+  - action: action_fiyat_bilgisi
+
+- rule: Sigorta bilgisi sorulduğunda
+  steps:
+  - intent: sigorta_sor
+  - action: action_sigorta_bilgisi
+
+- rule: Randevu bilgisi sorulduğunda
+  steps:
+  - intent: randevu_sor
+  - action: action_randevu_bilgisi
