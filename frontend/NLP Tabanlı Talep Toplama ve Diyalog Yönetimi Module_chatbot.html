@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sağlık Turizmi AI Asistan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --bg-dark: #0f0f23;
+            --bg-light: #1a1a2e;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text-primary: #ffffff;
+            --text-secondary: #a0aec0;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --glass-bg: rgba(255, 255, 255, 0.08);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.4;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(245, 87, 108, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 40% 20%, rgba(79, 172, 254, 0.1) 0%, transparent 50%);
+            animation: bgMove 20s ease infinite;
+        }
+
+        @keyframes bgMove {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 30px) scale(0.9); }
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+            display: flex;
+            gap: 20px;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 320px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo-section {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+
+        .logo-subtitle {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .categories {
+            flex: 1;
+            overflow-y: auto;
+        }
+
+        .category-title {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+        }
+
+        .category-item {
+            padding: 14px 16px;
+            margin-bottom: 8px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid transparent;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .category-item:hover {
+            background: rgba(102, 126, 234, 0.15);
+            border-color: rgba(102, 126, 234, 0.3);
+            transform: translateX(4px);
+        }
+
+        .category-item.active {
+            background: var(--primary-gradient);
+            border-color: transparent;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .category-icon {
+            font-size: 24px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .category-info {
+            flex: 1;
+        }
+
+        .category-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .category-count {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .chat-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+            overflow: hidden;
+        }
+
+        .chat-header {
+            padding: 24px 32px;
+            background: rgba(255, 255, 255, 0.03);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .assistant-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
+        }
+
+        .assistant-status {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .assistant-name {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .assistant-state {
+            font-size: 13px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .status-indicator {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #10b981;
+            animation: pulse 2s ease infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.1); }
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 12px;
+        }
+
+        .action-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 18px;
+        }
+
+        .action-btn:hover {
+            background: rgba(102, 126, 234, 0.2);
+            border-color: rgba(102, 126, 234, 0.4);
+            transform: translateY(-2px);
+        }
+
+        .messages-area {
+            flex: 1;
+            overflow-y: auto;
+            padding: 32px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .messages-area::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .messages-area::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 10px;
+        }
+
+        .messages-area::-webkit-scrollbar-thumb {
+            background: rgba(102, 126, 234, 0.5);
+            border-radius: 10px;
+        }
+
+        .message {
+            display: flex;
+            gap: 12px;
+            animation: messageSlide 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        @keyframes messageSlide {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .message.user {
+            flex-direction: row-reverse;
+        }
+
+        .message-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+
+        .message.bot .message-avatar {
+            background: var(--primary-gradient);
+        }
+
+        .message.user .message-avatar {
+            background: var(--secondary-gradient);
+        }
+
+        .message-content {
+            max-width: 70%;
+        }
+
+        .message-bubble {
+            padding: 16px 20px;
+            border-radius: 20px;
+            line-height: 1.6;
+            font-size: 15px;
+        }
+
+        .message.bot .message-bubble {
+            background: rgba(102, 126, 234, 0.15);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 20px 20px 20px 4px;
+        }
+
+        .message.user .message-bubble {
+            background: var(--secondary-gradient);
+            border-radius: 20px 20px 4px 20px;
+            text-align: right;
+        }
+
+        .message-time {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-top: 6px;
+            padding: 0 4px;
+        }
+
+        .quick-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .quick-btn {
+            padding: 10px 16px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.3s;
+            white-space: nowrap;
+            color: var(--text-primary);
+        }
+
+        .quick-btn:hover {
+            background: var(--primary-gradient);
+            border-color: transparent;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+        }
+
+        .package-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .package-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .package-card:hover {
+            background: rgba(102, 126, 234, 0.1);
+            border-color: rgba(102, 126, 234, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+        }
+
+        .package-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .package-badge.ekonomik {
+            background: var(--success-gradient);
+        }
+
+        .package-badge.standart {
+            background: var(--primary-gradient);
+        }
+
+        .package-badge.premium {
+            background: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+        }
+
+        .package-name {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .package-details {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            line-height: 1.8;
+        }
+
+        .package-price {
+            font-size: 24px;
+            font-weight: 800;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .input-area {
+            padding: 24px 32px;
+            background: rgba(255, 255, 255, 0.03);
+            border-top: 1px solid var(--border-color);
+        }
+
+        .input-wrapper {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid var(--border-color);
+            border-radius: 16px;
+            padding: 4px;
+            transition: all 0.3s;
+        }
+
+        .input-wrapper:focus-within {
+            border-color: rgba(102, 126, 234, 0.6);
+            box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+        }
+
+        .input-actions {
+            display: flex;
+            gap: 8px;
+            padding-left: 12px;
+        }
+
+        .input-icon-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: transparent;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text-secondary);
+            transition: all 0.3s;
+            font-size: 20px;
+        }
+
+        .input-icon-btn:hover {
+            color: var(--text-primary);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .message-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: var(--text-primary);
+            font-size: 15px;
+            padding: 12px 8px;
+            font-family: inherit;
+        }
+
+        .message-input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .send-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            background: var(--primary-gradient);
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+            font-size: 20px;
+            color: white;
+        }
+
+        .send-btn:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        }
+
+        .send-btn:active {
+            transform: translateY(0) scale(0.95);
+        }
+
+        .typing-indicator {
+            display: flex;
+            gap: 4px;
+            padding: 16px 20px;
+        }
+
+        .typing-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(102, 126, 234, 0.6);
+            animation: typingBounce 1.4s ease infinite;
+        }
+
+        .typing-dot:nth-child(2) {
+            animation-delay: 0.2s;
+        }
+
+        .typing-dot:nth-child(3) {
+            animation-delay: 0.4s;
+        }
+
+        @keyframes typingBounce {
+            0%, 60%, 100% { transform: translateY(0); }
+            30% { transform: translateY(-10px); }
+        }
+
+        @media (max-width: 1024px) {
+            .sidebar {
+                display: none;
+            }
+            .container {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .package-cards {
+                grid-template-columns: 1fr;
+            }
+            .message-content {
+                max-width: 85%;
+            }
+            .chat-header {
+                padding: 16px 20px;
+            }
+            .messages-area {
+                padding: 20px;
+            }
+            .input-area {
+                padding: 16px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <div class="container">
+        <!-- Kenar Çubuğu -->
+        <div class="sidebar">
+            <div class="logo-section">
+                <div class="logo">🏥 Sağlık Turizmi AI</div>
+                <div class="logo-subtitle">Medikal Yolculuğunuzun Partneri</div>
+            </div>
+
+            <div class="categories">
+                <div class="category-title">Tedavi Kategorileri</div>
+                
+                <div class="category-item active" onclick="selectCategory('dental', this)">
+                    <div class="category-icon">🦷</div>
+                    <div class="category-info">
+                        <div class="category-name">Diş Tedavileri</div>
+                        <div class="category-count">15+ tedavi</div>
+                    </div>
+                </div>
+
+                <div class="category-item" onclick="selectCategory('estetik', this)">
+                    <div class="category-icon">💉</div>
+                    <div class="category-info">
+                        <div class="category-name">Estetik Cerrahi</div>
+                        <div class="category-count">20+ işlem</div>
+                    </div>
+                </div>
+
+                <div class="category-item" onclick="selectCategory('goz', this)">
+                    <div class="category-icon">👁️</div>
+                    <div class="category-info">
+                        <div class="category-name">Göz Tedavileri</div>
+                        <div class="category-count">8+ tedavi</div>
+                    </div>
+                </div>
+
+                <div class="category-item" onclick="selectCategory('obezite', this)">
+                    <div class="category-icon">⚖️</div>
+                    <div class="category-info">
+                        <div class="category-name">Obezite Cerrahisi</div>
+                        <div class="category-count">4+ ameliyat</div>
+                    </div>
+                </div>
+
+                <div class="category-item" onclick="selectCategory('ortopedi', this)">
+                    <div class="category-icon">🦴</div>
+                    <div class="category-info">
+                        <div class="category-name">Ortopedi</div>
+                        <div class="category-count">25+ işlem</div>
+                    </div>
+                </div>
+
+                <div class="category-item" onclick="selectCategory('kardiyoloji', this)">
+                    <div class="category-icon">❤️</div>
+                    <div class="category-info">
+                        <div class="category-name">Kardiyoloji</div>
+                        <div class="category-count">10+ tedavi</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sohbet Konteyneri -->
+        <div class="chat-container">
+            <!-- Başlık -->
+            <div class="chat-header">
+                <div class="header-info">
+                    <div class="assistant-avatar">🤖</div>
+                    <div class="assistant-status">
+                        <div class="assistant-name">Sağlık Turizmi AI Asistan</div>
+                        <div class="assistant-state">
+                            <span class="status-indicator"></span>
+                            Çevrimiçi • Size yardımcı olmaya hazır
+                        </div>
+                    </div>
+                </div>
+                <div class="header-actions">
+                    <div class="action-btn" title="Ayarlar">⚙️</div>
+                    <div class="action-btn" title="Dil">🌐</div>
+                    <div class="action-btn" title="Geçmiş">📋</div>
+                </div>
+            </div>
+
+            <!-- Mesajlar -->
+            <div class="messages-area" id="messagesArea">
+                <!-- Hoşgeldin Mesajı -->
+                <div class="message bot">
+                    <div class="message-avatar">🤖</div>
+                    <div class="message-content">
+                        <div class="message-bubble">
+                            <strong>👋 Sağlık Turizmi AI'ya Hoş Geldiniz!</strong><br><br>
+                            Ben sizin kişisel medikal turizm asistanınızım. Türkiye'de mükemmel tedavi paketini bulmanıza yardımcı olabilirim:<br><br>
+                            • 🏥 En iyi klinikler ve uzmanlar<br>
+                            • 🏨 Lüks konaklama<br>
+                            • ✈️ Uçuş düzenlemeleri<br>
+                            • 🚗 Havaalanı ve klinik transferleri<br><br>
+                            Bugün hangi tedavi ile ilgileniyorsunuz?
+                        </div>
+                        <div class="quick-actions">
+                            <button class="quick-btn" onclick="sendQuickMessage('Diş implantı yaptırmak istiyorum')">🦷 Diş İmplantı</button>
+                            <button class="quick-btn" onclick="sendQuickMessage('Burun estetiği hakkında bilgi almak istiyorum')">💉 Rinoplasti</button>
+                            <button class="quick-btn" onclick="sendQuickMessage('Saç ekimi yaptıracağım')">💇 Saç Ekimi</button>
+                            <button class="quick-btn" onclick="sendQuickMessage('Göz ameliyatı')">👁️ Göz Ameliyatı</button>
+                        </div>
+                        <div class="message-time">Şimdi</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Giriş Alanı -->
+            <div class="input-area">
+                <div class="input-wrapper">
+                    <div class="input-actions">
+                        <button class="input-icon-btn" title="Dosya ekle" onclick="alert('Dosya ekleme özelliği - Tıbbi raporlarınızı yükleyin')">📎</button>
+                        <button class="input-icon-btn" title="Sesli mesaj" onclick="alert('Sesli mesaj özelliği - Mesajınızı kaydetmek için tıklayın')">🎤</button>
+                        <button class="input-icon-btn" title="Emoji" onclick="alert('Emoji seçici - Mesajınıza emoji ekleyin')">😊</button>
+                    </div>
+                    <input 
+                        type="text" 
+                        class="message-input" 
+                        id="messageInput" 
+                        placeholder="Mesajınızı buraya yazın... (örn: 'Antalya'da diş implantı yaptırmak istiyorum')"
+                        onkeypress="handleKeyPress(event)"
+                    />
+                    <button class="send-btn" onclick="sendMessage()">
+                        ➤
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let conversationState = {
+            treatment: null,
+            location: null,
+            budget: null,
+            date: null,
+            step: 0
+        };
+
+        // Önce bu fonksiyonları tanımlayalım
+        function sendQuickMessage(text) {
+            document.getElementById('messageInput').value = text;
+            sendMessage();
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function selectCategory(category, element) {
+            document.querySelectorAll('.category-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            element.classList.add('active');
+            
+            const categoryNames = {
+                'dental': 'Diş tedavileri',
+                'estetik': 'Estetik cerrahi',
+                'goz': 'Göz tedavileri',
+                'obezite': 'Obezite cerrahisi',
+                'ortopedi': 'Ortopedi tedavileri',
+                'kardiyoloji': 'Kardiyoloji tedavileri'
+            };
+            
+            sendQuickMessage(categoryNames[category] + ' hakkında bilgi almak istiyorum');
+        }
+
+        function selectPackage(packageNum) {
+            const packages = [
+                'Ekonomik Temel Bakım Paketi (4.200€)',
+                'Standart Konfor Plus Paketi (6.800€)',
+                'Premium Royal Deneyim Paketi (9.500€)'
+            ];
+            
+            sendQuickMessage(packages[packageNum - 1] + ' paketini seçmek istiyorum');
+        }
+
+        const turkishResponses = {
+            dental: {
+                initial: `✨ <strong>Mükemmel seçim!</strong><br><br>
+                         Türkiye'deki diş tedavileri konusunda size yardımcı olabilirim. Elimizde:<br><br>
+                         • 🏥 Antalya'da 7 premium diş kliniği<br>
+                         • 💎 JCI akredite tesisler<br>
+                         • 👨‍⚕️ Deneyimli diş hekimleri<br>
+                         • 🌟 Yüksek başarı oranları<br><br>
+                         Hangi şehirde tedavi olmak istersiniz?`,
+                options: ['Antalya', 'İstanbul', 'İzmir', 'Tüm lokasyonları göster']
+            },
+            estetik: {
+                initial: `💉 <strong>Estetik Cerrahi</strong><br><br>
+                         Türkiye estetik işlemlerde dünyaca ünlüdür!<br><br>
+                         Popüler tedaviler:<br>
+                         • Rinoplasti (Burun estetiği)<br>
+                         • Saç Ekimi<br>
+                         • Meme Estetiği<br>
+                         • Yüz Germe<br>
+                         • Liposuction<br><br>
+                         Hangi işlem ilginizi çekiyor?`,
+                options: ['Rinoplasti', 'Saç Ekimi', 'Meme Estetiği', 'Yüz Germe']
+            },
+            goz: {
+                initial: `👁️ <strong>Göz Tedavileri</strong><br><br>
+                         Göz sağlığınız için en iyi hizmeti sunuyoruz:<br><br>
+                         • Katarakt Ameliyatı<br>
+                         • Lazer Göz Ameliyatı<br>
+                         • Retina Tedavileri<br>
+                         • Glokom Tedavisi<br>
+                         • Kornea Nakli<br><br>
+                         Hangi tedaviye ihtiyacınız var?`,
+                options: ['Katarakt', 'Lazer Göz', 'Retina Tedavisi', 'Glokom']
+            },
+            obezite: {
+                initial: `⚖️ <strong>Obezite Cerrahisi</strong><br><br>
+                         Sağlıklı yaşam için adım atın:<br><br>
+                         • Tüp Mide (Sleeve Gastrectomy)<br>
+                         • Mide Bypass<br>
+                         • Mide Balonu<br>
+                         • Duodenal Switch<br><br>
+                         Hangi yöntemi tercih edersiniz?`,
+                options: ['Tüp Mide', 'Mide Bypass', 'Mide Balonu', 'Danışmanlık İstiyorum']
+            },
+            ortopedi: {
+                initial: `🦴 <strong>Ortopedi Tedavileri</strong><br><br>
+                         Hareket özgürlüğünüzü geri kazanın:<br><br>
+                         • Diz Protezi<br>
+                         • Kalça Protezi<br>
+                         • Menisküs Ameliyatı<br>
+                         • Omurga Cerrahisi<br>
+                         • Omuz Protezi<br><br>
+                         Hangi tedaviye ihtiyacınız var?`,
+                options: ['Diz Protezi', 'Kalça Protezi', 'Menisküs', 'Omurga']
+            },
+            kardiyoloji: {
+                initial: `❤️ <strong>Kardiyoloji Tedavileri</strong><br><br>
+                         Kalp sağlığınız bizim önceliğimiz:<br><br>
+                         • Lazer Varis Tedavisi<br>
+                         • Koroner Anjiyografi<br>
+                         • Efor Testi<br>
+                         • Doğumsal Kalp Hastalıkları<br><br>
+                         Hangi tedavi için bilgi almak istersiniz?`,
+                options: ['Varis Tedavisi', 'Anjiyografi', 'Kalp Check-up', 'Tümünü Göster']
+            }
+        };
+
+        function selectCategory(category, element) {
+            document.querySelectorAll('.category-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            element.classList.add('active');
+            
+            const categoryNames = {
+                'dental': 'Diş tedavileri',
+                'estetik': 'Estetik cerrahi',
+                'goz': 'Göz tedavileri',
+                'obezite': 'Obezite cerrahisi',
+                'ortopedi': 'Ortopedi tedavileri',
+                'kardiyoloji': 'Kardiyoloji tedavileri'
+            };
+            
+            sendQuickMessage(categoryNames[category] + ' hakkında bilgi almak istiyorum');
+        }
+
+        function sendQuickMessage(text) {
+            document.getElementById('messageInput').value = text;
+            sendMessage();
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('messageInput');
+            const message = input.value.trim();
+            
+            if (!message) return;
+            
+            addMessage(message, 'user');
+            input.value = '';
+            
+            showTypingIndicator();
+            
+            setTimeout(() => {
+                hideTypingIndicator();
+                generateBotResponse(message);
+            }, 1500);
+        }
+
+        function addMessage(text, sender) {
+            const messagesArea = document.getElementById('messagesArea');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = `message ${sender}`;
+            
+            const time = new Date().toLocaleTimeString('tr-TR', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+            
+            messageDiv.innerHTML = `
+                <div class="message-avatar">${sender === 'bot' ? '🤖' : '👤'}</div>
+                <div class="message-content">
+                    <div class="message-bubble">${text}</div>
+                    <div class="message-time">${time}</div>
+                </div>
+            `;
+            
+            messagesArea.appendChild(messageDiv);
+            messagesArea.scrollTop = messagesArea.scrollHeight;
+        }
+
+        function showTypingIndicator() {
+            const messagesArea = document.getElementById('messagesArea');
+            const typingDiv = document.createElement('div');
+            typingDiv.className = 'message bot';
+            typingDiv.id = 'typingIndicator';
+            typingDiv.innerHTML = `
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        <div class="typing-indicator">
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                            <div class="typing-dot"></div>
+                        </div>
+                    </div>
+                </div>
+            `;
+            messagesArea.appendChild(typingDiv);
+            messagesArea.scrollTop = messagesArea.scrollHeight;
+        }
+
+        function hideTypingIndicator() {
+            const indicator = document.getElementById('typingIndicator');
+            if (indicator) indicator.remove();
+        }
+
+        function generateBotResponse(userMessage) {
+            const msg = userMessage.toLowerCase();
+            let response = '';
+            let options = [];
+            
+            // Diş tedavileri
+            if (msg.includes('diş') || msg.includes('implant') || msg.includes('dental')) {
+                response = turkishResponses.dental.initial;
+                options = turkishResponses.dental.options;
+                conversationState.treatment = 'dental';
+                conversationState.step = 1;
+            }
+            // Estetik
+            else if (msg.includes('estetik') || msg.includes('rinoplasti') || msg.includes('saç') || msg.includes('burun')) {
+                response = turkishResponses.estetik.initial;
+                options = turkishResponses.estetik.options;
+                conversationState.treatment = 'estetik';
+                conversationState.step = 1;
+            }
+            // Göz
+            else if (msg.includes('göz') || msg.includes('katarakt') || msg.includes('lazer')) {
+                response = turkishResponses.goz.initial;
+                options = turkishResponses.goz.options;
+                conversationState.treatment = 'goz';
+                conversationState.step = 1;
+            }
+            // Obezite
+            else if (msg.includes('obezite') || msg.includes('kilo') || msg.includes('tüp mide') || msg.includes('bypass')) {
+                response = turkishResponses.obezite.initial;
+                options = turkishResponses.obezite.options;
+                conversationState.treatment = 'obezite';
+                conversationState.step = 1;
+            }
+            // Ortopedi
+            else if (msg.includes('ortopedi') || msg.includes('protez') || msg.includes('menisküs') || msg.includes('omurga')) {
+                response = turkishResponses.ortopedi.initial;
+                options = turkishResponses.ortopedi.options;
+                conversationState.treatment = 'ortopedi';
+                conversationState.step = 1;
+            }
+            // Kardiyoloji
+            else if (msg.includes('kalp') || msg.includes('kardiyoloji') || msg.includes('varis')) {
+                response = turkishResponses.kardiyoloji.initial;
+                options = turkishResponses.kardiyoloji.options;
+                conversationState.treatment = 'kardiyoloji';
+                conversationState.step = 1;
+            }
+            // Lokasyon seçimi
+            else if (conversationState.step === 1 && (msg.includes('antalya') || msg.includes('istanbul') || msg.includes('izmir'))) {
+                const city = msg.includes('antalya') ? 'Antalya' : msg.includes('istanbul') ? 'İstanbul' : 'İzmir';
+                response = `📍 <strong>Harika! ${city} mükemmel bir seçim.</strong><br><br>
+                            ${city}'da JCI akredite kliniklerimiz ve deneyimli doktorlarımız var.<br><br>
+                            Komple paket için bütçeniz nedir?<br>
+                            (Tedavi, otel, uçuş ve transferler dahil)`;
+                options = ['3.000€ - 5.000€', '5.000€ - 8.000€', '8.000€+', 'Esnek bütçem var'];
+                conversationState.location = city;
+                conversationState.step = 2;
+            }
+            // Bütçe seçimi
+            else if (conversationState.step === 2 && (msg.includes('€') || msg.includes('euro') || msg.includes('bütçe') || msg.includes('esnek'))) {
+                response = `💰 <strong>Mükemmel! Sizin için özel paketler hazırlıyorum...</strong><br><br>
+                            Lütfen birkaç saniye bekleyin.`;
+                conversationState.budget = msg;
+                conversationState.step = 3;
+                addMessageWithOptions(response, []);
+                setTimeout(() => showPackages(), 1500);
+                return;
+            }
+            // Paket seçimi
+            else if (msg.includes('paket') || msg.includes('ekonomik') || msg.includes('standart') || msg.includes('premium')) {
+                response = `✅ <strong>Harika seçim!</strong><br><br>
+                            Seçtiğiniz paket şunları içerir:<br><br>
+                            ✓ Komple ${conversationState.treatment} tedavisi<br>
+                            ✓ Tedavi öncesi konsültasyon<br>
+                            ✓ Tedavi sonrası bakım<br>
+                            ✓ Otel konaklaması (kahvaltı dahil)<br>
+                            ✓ Gidiş-dönüş uçuş biletleri<br>
+                            ✓ Havaalanı karşılama ve transfer<br>
+                            ✓ Klinik transferleri<br>
+                            ✓ 7/24 Türkçe koordinatör desteği<br>
+                            ✓ Şehir turu (opsiyonel)<br><br>
+                            📅 Ne zaman seyahat etmek istersiniz?`;
+                options = ['Gelecek ay', '2-3 ay içinde', '6 ay içinde', 'Tarih konusunda esnekim'];
+                conversationState.step = 4;
+            }
+            // Tarih seçimi
+            else if (conversationState.step === 4) {
+                response = `🎉 <strong>Harika! Rezervasyonunuz neredeyse tamamlandı.</strong><br><br>
+                            <strong>📋 Özet Bilgiler:</strong><br>
+                            • Tedavi: ${conversationState.treatment}<br>
+                            • Lokasyon: ${conversationState.location}<br>
+                            • Bütçe: ${conversationState.budget}<br>
+                            • Tarih: ${msg}<br><br>
+                            Rezervasyonunuzu onaylamak ister misiniz?`;
+                options = ['Evet, rezervasyon yap!', 'Detayları e-posta ile gönder', 'Telefon görüşmesi planla', 'Paketi değiştir'];
+                conversationState.date = msg;
+                conversationState.step = 5;
+            }
+            // Rezervasyon onayı
+            else if (conversationState.step === 5 && msg.includes('evet')) {
+                response = `🎊 <strong>Tebrikler! Rezervasyonunuz alındı.</strong><br><br>
+                            Size özel koordinatörümüz 24 saat içinde sizinle iletişime geçecektir.<br><br>
+                            <strong>📧 E-posta:</strong> info@saglikturizmi.com<br>
+                            <strong>📱 WhatsApp:</strong> +90 555 123 4567<br>
+                            <strong>🌐 Web:</strong> www.saglikturizmi.com<br><br>
+                            Detaylı rezervasyon bilgileriniz e-posta adresinize gönderilecektir.<br><br>
+                            Size yardımcı olmaktan mutluluk duydum! 🌟`;
+                options = ['Yeni arama yap', 'SSS', 'İletişim', 'Başka biri için arama yap'];
+                conversationState.step = 0;
+            }
+            // Default yanıt
+            else {
+                response = `Sağlık turizmi konusunda size yardımcı olmak isterim. Lütfen bana şunları söyler misiniz:<br><br>
+                            1️⃣ Hangi tedaviyi arıyorsunuz?<br>
+                            2️⃣ Hangi şehri tercih edersiniz?<br>
+                            3️⃣ Yaklaşık bütçeniz nedir?<br><br>
+                            Bu bilgiler sizin için mükemmel paketi oluşturmama yardımcı olacak! 🎁`;
+                options = ['Baştan başla', 'Diş tedavileri', 'Estetik işlemler', 'Göz bakımı'];
+            }
+            
+            addMessageWithOptions(response, options);
+        }
+
+        function addMessageWithOptions(text, options) {
+            const messagesArea = document.getElementById('messagesArea');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message bot';
+            
+            const time = new Date().toLocaleTimeString('tr-TR', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+            
+            const optionsHtml = options.length > 0 ? `
+                <div class="quick-actions">
+                    ${options.map(opt => `<button class="quick-btn" onclick="sendQuickMessage('${opt}')">${opt}</button>`).join('')}
+                </div>
+            ` : '';
+            
+            messageDiv.innerHTML = `
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <div class="message-bubble">${text}</div>
+                    ${optionsHtml}
+                    <div class="message-time">${time}</div>
+                </div>
+            `;
+            
+            messagesArea.appendChild(messageDiv);
+            messagesArea.scrollTop = messagesArea.scrollHeight;
+        }
+
+        function showPackages() {
+            const messagesArea = document.getElementById('messagesArea');
+            const messageDiv = document.createElement('div');
+            messageDiv.className = 'message bot';
+            
+            const time = new Date().toLocaleTimeString('tr-TR', { 
+                hour: '2-digit', 
+                minute: '2-digit' 
+            });
+            
+            messageDiv.innerHTML = `
+                <div class="message-avatar">🤖</div>
+                <div class="message-content">
+                    <div class="message-bubble">
+                        🎁 <strong>Sizin için hazırladığım özel paketler!</strong><br><br>
+                        Tercihlerinize göre 3 farklı seçenek oluşturdum:
+                    </div>
+                    <div class="package-cards">
+                        <div class="package-card" onclick="selectPackage(1)">
+                            <span class="package-badge ekonomik">EKONOMİK</span>
+                            <div class="package-name">Temel Bakım Paketi</div>
+                            <div class="package-details">
+                                🏥 Antmodern Klinik<br>
+                                🏨 4★ Otel (7 gece)<br>
+                                ✈️ Ekonomi sınıfı uçuş<br>
+                                🚗 Tüm transferler
+                            </div>
+                            <div class="package-price">4.200€</div>
+                        </div>
+                        
+                        <div class="package-card" onclick="selectPackage(2)">
+                            <span class="package-badge standart">STANDART</span>
+                            <div class="package-name">Konfor Plus Paketi</div>
+                            <div class="package-details">
+                                🏥 Markasya Klinik<br>
+                                🏨 5★ Resort (7 gece)<br>
+                                ✈️ Business class<br>
+                                🚗 VIP transferler
+                            </div>
+                            <div class="package-price">6.800€</div>
+                        </div>
+                        
+                        <div class="package-card" onclick="selectPackage(3)">
+                            <span class="package-badge premium">PREMIUM</span>
+                            <div class="package-name">Royal Deneyim Paketi</div>
+                            <div class="package-details">
+                                🏥 Elite Dental Center<br>
+                                🏨 5★ Lüks Resort<br>
+                                ✈️ First class uçuş<br>
+                                🚗 Özel şoförlü araç
+                            </div>
+                            <div class="package-price">9.500€</div>
+                        </div>
+                    </div>
+                    <div class="quick-actions" style="margin-top: 16px;">
+                        <button class="quick-btn" onclick="sendQuickMessage('1. paket hakkında detay istiyorum')">📋 Detaylı Bilgi</button>
+                        <button class="quick-btn" onclick="sendQuickMessage('Paketleri karşılaştır')">⚖️ Karşılaştır</button>
+                        <button class="quick-btn" onclick="sendQuickMessage('Konsültasyon randevusu al')">📞 Randevu Al</button>
+                    </div>
+                    <div class="message-time">${time}</div>
+                </div>
+            `;
+            
+            messagesArea.appendChild(messageDiv);
+            messagesArea.scrollTop = messagesArea.scrollHeight;
+        }
+
+        function selectPackage(packageNum) {
+            const packages = [
+                'Ekonomik Temel Bakım Paketi (4.200€)',
+                'Standart Konfor Plus Paketi (6.800€)',
+                'Premium Royal Deneyim Paketi (9.500€)'
+            ];
+            
+            sendQuickMessage(`${packages[packageNum - 1]} paketini seçmek istiyorum`);
+        }
+
+        // Sayfa yüklendiğinde
+        document.addEventListener('DOMContentLoaded', function() {
+            const messagesArea = document.getElementById('messagesArea');
+            messagesArea.scrollTop = messagesArea.scrollHeight;
+        });
+    </script>
+</body>
+</html>

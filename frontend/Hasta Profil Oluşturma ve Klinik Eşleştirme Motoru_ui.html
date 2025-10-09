@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hasta Profili ve Akıllı Eşleştirme Motoru</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --secondary-gradient: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --success-gradient: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --gold-gradient: linear-gradient(135deg, #f5af19 0%, #f12711 100%);
+            --bg-dark: #0a0a1a;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --text-primary: #ffffff;
+            --text-secondary: #a0aec0;
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            opacity: 0.3;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(102, 126, 234, 0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(245, 87, 108, 0.15) 0%, transparent 50%);
+            animation: bgMove 25s ease infinite;
+        }
+
+        @keyframes bgMove {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, -30px) scale(1.1); }
+        }
+
+        .container {
+            max-width: 1800px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px 32px;
+            margin-bottom: 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-left h1 {
+            font-size: 24px;
+            background: var(--primary-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 4px;
+        }
+
+        .header-left p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .header-right {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            background: var(--primary-gradient);
+            border-color: transparent;
+            transform: translateY(-2px);
+        }
+
+        .main-grid {
+            display: grid;
+            grid-template-columns: 400px 1fr 400px;
+            gap: 20px;
+        }
+
+        .panel {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 24px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .panel-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .profile-section {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .profile-header {
+            display: flex;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .profile-info h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .profile-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            background: var(--success-gradient);
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .info-item {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+        .info-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .info-value {
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--text-secondary);
+            margin: 20px 0 12px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .list-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 13px;
+        }
+
+        .list-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: rgba(102, 126, 234, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .center-panel {
+            overflow-y: auto;
+            max-height: calc(100vh - 140px);
+        }
+
+        .matching-header {
+            background: var(--primary-gradient);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .matching-score {
+            font-size: 48px;
+            font-weight: 800;
+            margin: 16px 0;
+        }
+
+        .matching-subtitle {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+
+        .clinic-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .clinic-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--success-gradient);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .clinic-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .clinic-card:hover::before {
+            opacity: 1;
+        }
+
+        .clinic-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+            margin-bottom: 16px;
+        }
+
+        .clinic-name {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .clinic-location {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        .match-score {
+            background: var(--success-gradient);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .clinic-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 16px 0;
+        }
+
+        .feature-tag {
+            padding: 6px 12px;
+            border-radius: 16px;
+            background: rgba(102, 126, 234, 0.2);
+            font-size: 12px;
+            border: 1px solid rgba(102, 126, 234, 0.3);
+        }
+
+        .clinic-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+            padding-top: 16px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 20px;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: var(--text-secondary);
+        }
+
+        .package-preview {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 16px;
+            margin-top: 16px;
+        }
+
+        .package-title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .package-price {
+            font-size: 24px;
+            font-weight: 800;
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .package-items {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .package-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+        }
+
+        .insights-panel {
+            overflow-y: auto;
+            max-height: calc(100vh - 140px);
+        }
+
+        .insight-card {
+            background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+            border: 1px solid rgba(102, 126, 234, 0.3);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .insight-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .insight-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .insight-title {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .insight-content {
+            font-size: 14px;
+            line-height: 1.6;
+            color: var(--text-secondary);
+        }
+
+        .progress-bar {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            height: 8px;
+            margin: 12px 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--success-gradient);
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 14px;
+            border-radius: 12px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .action-btn.primary {
+            background: var(--primary-gradient);
+            color: white;
+        }
+
+        .action-btn.secondary {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
+        }
+
+        .action-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .json-viewer {
+            background: #1a1a2e;
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 16px;
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .json-key {
+            color: #f093fb;
+        }
+
+        .json-string {
+            color: #4facfe;
+        }
+
+        .json-number {
+            color: #f5af19;
+        }
+
+        .json-boolean {
+            color: #10b981;
+        }
+
+        @media (max-width: 1400px) {
+            .main-grid {
+                grid-template-columns: 350px 1fr;
+            }
+            .insights-panel {
+                display: none;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .panel:first-child {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h1>🎯 Akıllı Hasta Profili ve Klinik Eşleştirme Motoru</h1>
+                <p>AI Destekli Kişiselleştirilmiş Sağlık Turizmi Çözümleri</p>
+            </div>
+            <div class="header-right">
+                <button class="btn" id="showJsonBtn">📋 JSON Görüntüle</button>
+                <button class="btn" id="exportBtn">💾 Profil İndir</button>
+                <button class="btn" id="refreshBtn">🔄 Yeniden Eşleştir</button>
+            </div>
+        </div>
+
+        <!-- Main Grid -->
+        <div class="main-grid">
+            <!-- Left Panel - Patient Profile -->
+            <div class="panel">
+                <div class="panel-title">
+                    <span>👤</span> Hasta Profili
+                </div>
+
+                <div class="profile-section">
+                    <div class="profile-header">
+                        <div class="avatar">👨</div>
+                        <div class="profile-info">
+                            <h3>Ahmet Yılmaz</h3>
+                            <div class="profile-badges">
+                                <span class="badge">Yeni Hasta</span>
+                                <span class="badge" style="background: var(--gold-gradient);">VIP</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-label">Yaş</div>
+                            <div class="info-value">35</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Cinsiyet</div>
+                            <div class="info-value">Erkek</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Ülke</div>
+                            <div class="info-value">🇩🇪 Almanya</div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-label">Şehir</div>
+                            <div class="info-value">Berlin</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-title">📞 İletişim Bilgileri</div>
+                <div class="list-item">
+                    <div class="list-icon">📧</div>
+                    <div>ahmet.yilmaz@email.com</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon">📱</div>
+                    <div>+49 176 1234 5678</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon">💬</div>
+                    <div>WhatsApp Aktif</div>
+                </div>
+
+                <div class="section-title">🏥 Tedavi Tercihleri</div>
+                <div class="list-item">
+                    <div class="list-icon">🦷</div>
+                    <div><strong>Diş İmplantı</strong> (Öncelik: Yüksek)</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon">💉</div>
+                    <div><strong>Saç Ekimi</strong> (Öncelik: Orta)</div>
+                </div>
+
+                <div class="section-title">🏨 Konaklama Tercihleri</div>
+                <div class="list-item">
+                    <div class="list-icon">⭐</div>
+                    <div>5 Yıldızlı Otel</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon">🏊</div>
+                    <div>Spa & Wellness</div>
+                </div>
+                <div class="list-item">
+                    <div class="list-icon">🌊</div>
+                    <div>Deniz Manzaralı</div>
+                </div>
+
+                <div class="section-title">💰 Bütçe & Sigorta</div>
+                <div class="info-grid">
+                    <div class="info-item">
+                        <div class="info-label">Bütçe</div>
+                        <div class="info-value">8.000€</div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-label">Sigorta</div>
+                        <div class="info-value">DKV Var</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center Panel - Matching Results -->
+            <div class="panel center-panel">
+                <div class="matching-header">
+                    <div class="matching-subtitle">AI Eşleştirme Skoru</div>
+                    <div class="matching-score">96%</div>
+                    <div class="matching-subtitle">3 Mükemmel Eşleşme Bulundu</div>
+                </div>
+
+                <!-- Clinic Card 1 -->
+                <div class="clinic-card">
+                    <div class="clinic-header">
+                        <div>
+                            <div class="clinic-name">🏥 Antmodern Dental Clinic</div>
+                            <div class="clinic-location">📍 Antalya, Muratpaşa</div>
+                        </div>
+                        <div class="match-score">96%</div>
+                    </div>
+
+                    <div class="clinic-features">
+                        <span class="feature-tag">✅ JCI Akredite</span>
+                        <span class="feature-tag">🇩🇪 Almanca Konuşuluyor</span>
+                        <span class="feature-tag">⭐ 4.9/5.0</span>
+                        <span class="feature-tag">💎 Premium</span>
+                    </div>
+
+                    <div class="clinic-stats">
+                        <div class="stat">
+                            <span class="stat-value">1,200+</span>
+                            <span class="stat-label">Hasta</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">15 Yıl</span>
+                            <span class="stat-label">Deneyim</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">98%</span>
+                            <span class="stat-label">Başarı</span>
+                        </div>
+                    </div>
+
+                    <div class="package-preview">
+                        <div class="package-title">
+                            <span>📦 Komple Paket</span>
+                            <span class="package-price">7,850€</span>
+                        </div>
+                        <div class="package-items">
+                            <div class="package-item">✓ 4 Diş İmplantı + Zirkonyum Kaplama</div>
+                            <div class="package-item">✓ Delphin Palace 5★ (7 gece, All Inclusive)</div>
+                            <div class="package-item">✓ Business Class Uçuş (Berlin-Antalya)</div>
+                            <div class="package-item">✓ VIP Transfer + 7/24 Almanca Koordinatör</div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="action-btn primary" onclick="selectPackage(1)">✨ Paketi Seç</button>
+                            <button class="action-btn secondary" onclick="viewDetails(1)">📋 Detaylar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clinic Card 2 -->
+                <div class="clinic-card">
+                    <div class="clinic-header">
+                        <div>
+                            <div class="clinic-name">🏥 Markasya Clinic</div>
+                            <div class="clinic-location">📍 Antalya, Konyaaltı</div>
+                        </div>
+                        <div class="match-score" style="background: var(--primary-gradient);">94%</div>
+                    </div>
+
+                    <div class="clinic-features">
+                        <span class="feature-tag">✅ ISO 9001</span>
+                        <span class="feature-tag">🇬🇧 İngilizce Konuşuluyor</span>
+                        <span class="feature-tag">⭐ 4.8/5.0</span>
+                        <span class="feature-tag">💰 Ekonomik</span>
+                    </div>
+
+                    <div class="clinic-stats">
+                        <div class="stat">
+                            <span class="stat-value">850+</span>
+                            <span class="stat-label">Hasta</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">10 Yıl</span>
+                            <span class="stat-label">Deneyim</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">96%</span>
+                            <span class="stat-label">Başarı</span>
+                        </div>
+                    </div>
+
+                    <div class="package-preview">
+                        <div class="package-title">
+                            <span>📦 Standart Paket</span>
+                            <span class="package-price">6,200€</span>
+                        </div>
+                        <div class="package-items">
+                            <div class="package-item">✓ 4 Diş İmplantı + Porselen Kaplama</div>
+                            <div class="package-item">✓ Sheraton Voyager 5★ (7 gece, Yarım Pansiyon)</div>
+                            <div class="package-item">✓ Ekonomi Sınıfı Uçuş (Berlin-Antalya)</div>
+                            <div class="package-item">✓ Standart Transfer + İngilizce Koordinatör</div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="action-btn primary" onclick="selectPackage(2)">✨ Paketi Seç</button>
+                            <button class="action-btn secondary" onclick="viewDetails(2)">📋 Detaylar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Clinic Card 3 -->
+                <div class="clinic-card">
+                    <div class="clinic-header">
+                        <div>
+                            <div class="clinic-name">🏥 Elite Dental Center</div>
+                            <div class="clinic-location">📍 Antalya, Lara</div>
+                        </div>
+                        <div class="match-score" style="background: var(--gold-gradient);">92%</div>
+                    </div>
+
+                    <div class="clinic-features">
+                        <span class="feature-tag">✅ JCI + ISO</span>
+                        <span class="feature-tag">🇩🇪 Almanca + 🇬🇧 İngilizce</span>
+                        <span class="feature-tag">⭐ 5.0/5.0</span>
+                        <span class="feature-tag">👑 Luxury</span>
+                    </div>
+
+                    <div class="clinic-stats">
+                        <div class="stat">
+                            <span class="stat-value">2,100+</span>
+                            <span class="stat-label">Hasta</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">20 Yıl</span>
+                            <span class="stat-label">Deneyim</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value">99%</span>
+                            <span class="stat-label">Başarı</span>
+                        </div>
+                    </div>
+
+                    <div class="package-preview">
+                        <div class="package-title">
+                            <span>📦 VIP Royal Paket</span>
+                            <span class="package-price">9,900€</span>
+                        </div>
+                        <div class="package-items">
+                            <div class="package-item">✓ 4 Diş İmplantı + Premium Zirkonyum</div>
+                            <div class="package-item">✓ Rixos Premium 5★ (10 gece, Ultra All Inclusive)</div>
+                            <div class="package-item">✓ Business Class Uçuş + Lounge Erişimi</div>
+                            <div class="package-item">✓ Özel Şoförlü Araç + Kişisel Asistan</div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="action-btn primary" onclick="selectPackage(3)">✨ Paketi Seç</button>
+                            <button class="action-btn secondary" onclick="viewDetails(3)">📋 Detaylar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel - AI Insights -->
+            <div class="panel insights-panel">
+                <div class="panel-title">
+                    <span>🤖</span> AI Öngörüleri
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <div class="insight-icon">🎯</div>
+                        <div class="insight-title">Eşleştirme Kalitesi</div>
+                    </div>
+                    <div class="insight-content">
+                        Hasta profili ile klinik özellikleri %96 uyumludur. Almanca dil desteği ve premium konaklama tercihleri mükemmel şekilde karşılanmıştır.
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 96%"></div>
+                    </div>
+                </div>
+
+                <div class="insight-card">
+                    <div class="insight-header">
+                        <div class="insight-icon">💰</div>
+                        <div class="insight-title">Bütçe Analizi</div>
+                    </div>
+                    <div class="

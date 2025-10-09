@@ -5,6 +5,18 @@ from rasa_sdk.executor import CollectingDispatcher
 from typing import Any, Text, Dict, List
 import requests
 import logging
+import json
+from datetime import datetime
+from rasa_sdk.events import SlotSet, FollowupAction
+import sys
+import os
+
+# MongoDB logger için path ekle
+sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
+
+from api_service.mongodb_logger import MongoDBLogger
+from rasa_service.actions.api_clients import ClinicAPIClient, FlightAPIClient, HotelAPIClient
+
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -18,20 +30,59 @@ PROXIES = {
     "https": None,
 }
 
+
+# API Client'ları başlat
+clinic_client = ClinicAPIClient()
+hotel_client = HotelAPIClient()
+flight_client = FlightAPIClient()
 # Timeout süreleri (saniye) - AGRESİF DÜŞÜRÜLDÜ
 API_TIMEOUT = 5  # API istekleri için 5 saniye (30s → 5s)
 OLLAMA_TIMEOUT = 30  # Ollama için 30 saniye (90s → 30s)
 
-# Entity normalizasyon mapping
 CITY_NORMALIZATION = {
-    "antalyada": "Antalya",
+    # Antalya
     "antalya": "Antalya",
-    "istanbulda": "İstanbul",
+    "antalyada": "Antalya",
+    "antalya'da": "Antalya",
+    "antalyaya": "Antalya",
+    "antalya'ya": "Antalya",
+    "antalyadan": "Antalya",
+    "antalya'dan": "Antalya",
+    "antalyanın": "Antalya",
+    "antalya'nın": "Antalya",
+    
+    # İstanbul
     "istanbul": "İstanbul",
-    "izmirde": "İzmir",
+    "istanbulda": "İstanbul",
+    "istanbul'da": "İstanbul",
+    "istanbula": "İstanbul",
+    "istanbul'a": "İstanbul",
+    "istanbuldan": "İstanbul",
+    "istanbul'dan": "İstanbul",
+    "istanbulun": "İstanbul",
+    "istanbul'un": "İstanbul",
+
+    # İzmir
     "izmir": "İzmir",
-    "bursada": "Bursa",
-    "bursa": "Bursa"
+    "izmirde": "İzmir",
+    "izmir'de": "İzmir",
+    "izmire": "İzmir",
+    "izmir'e": "İzmir",
+    "izmirden": "İzmir",
+    "izmir'den": "İzmir",
+    "izmirin": "İzmir",
+    "izmir'in": "İzmir",
+
+    # Ankara
+    "ankara": "Ankara",
+    "ankarada": "Ankara",
+    "ankara'da": "Ankara",
+    "ankaraya": "Ankara",
+    "ankara'ya": "Ankara",
+    "ankaradan": "Ankara",
+    "ankara'dan": "Ankara",
+    "ankaranın": "Ankara",
+    "ankara'nın": "Ankara"
 }
 
 def normalize_city(city: str) -> str:
@@ -53,44 +104,90 @@ class ActionAskOllama(Action):
         user_message = tracker.latest_message.get('text', '')
         logger.info(f"🤖 Ollama'ya genel soru (fallback): '{user_message}'")
 
-        # Slot'tan context bilgisi al
-        tedavi = tracker.get_slot("tedavi")
+        # ✅ TÜM CONTEXT BİLGİLERİNİ TOPLA
+        # 1. Slot'lardan kullanıcı bilgileri
+        tedavi_adi = tracker.get_slot("tedavi_adi")
+        tedavi_turu = tracker.get_slot("tedavi_turu")
         sehir = tracker.get_slot("sehir")
+        bolge = tracker.get_slot("bolge")
+        butce = tracker.get_slot("butce")
+        klinik_adi = tracker.get_slot("klinik_adi")
+        tarih = tracker.get_slot("tarih")
+        otel_kategori = tracker.get_slot("otel_kategori")
+        ucus_sinifi = tracker.get_slot("ucus_sinifi")
         
-        # Context'i prompt'a ekle
-        context_info = ""
-        if tedavi:
-            context_info += f"\nKullanıcı daha önce '{tedavi}' tedavisi hakkında sordu."
+        # 2. Sohbet geçmişini al (son 5 mesaj)
+        conversation_history = []
+        for event in list(tracker.events)[-10:]:  # Son 10 event'e bak
+            if event.get('event') == 'user':
+                conversation_history.append(f"Kullanıcı: {event.get('text', '')}")
+            elif event.get('event') == 'bot':
+                conversation_history.append(f"Bot: {event.get('text', '')[:100]}...")  # İlk 100 karakter
+        
+        # 3. Context bilgisini zengin şekilde oluştur
+        context_info = "\n\n📋 **KULLANICI PROFİLİ:**\n"
+        
+        if tedavi_adi or tedavi_turu:
+            context_info += f"• Tedavi: {tedavi_adi or tedavi_turu or 'Belirtilmemiş'}\n"
         if sehir:
-            context_info += f"\nKullanıcı '{sehir}' şehrinde arama yapıyor."
+            context_info += f"• Şehir: {sehir}\n"
+        if bolge:
+            context_info += f"• Bölge: {bolge}\n"
+        if butce:
+            context_info += f"• Bütçe: {butce}\n"
+        if klinik_adi:
+            context_info += f"• İlgilenilen Klinik: {klinik_adi}\n"
+        if tarih:
+            context_info += f"• Tarih: {tarih}\n"
+        if otel_kategori:
+            context_info += f"• Otel Tercihi: {otel_kategori}\n"
+        if ucus_sinifi:
+            context_info += f"• Uçuş Sınıfı: {ucus_sinifi}\n"
+        
+        # Eğer hiç bilgi yoksa
+        if context_info == "\n\n📋 **KULLANICI PROFİLİ:**\n":
+            context_info = "\n\n📋 Kullanıcı henüz profil bilgisi paylaşmadı.\n"
+        
+        # 4. Son 3 mesajı ekle
+        if conversation_history:
+            context_info += f"\n💬 **SON MESAJLAR:**\n"
+            for msg in conversation_history[-3:]:
+                context_info += f"{msg}\n"
 
-        prompt = f"""Sen profesyonel bir Türk sağlık turizmi danışmanısın. Türkiye'deki medikal turizm konusunda uzmansın.
+        # ✅ GELİŞTİRİLMİŞ PROMPT - Medikal Turizm Odaklı
+        prompt = f"""Sen Türkiye'nin lider sağlık turizmi şirketinin AI asistanısın. Adın "Sağlık Turizmi AI Asistan".
 
-GÖREVIN: Kullanıcının sorusunu sağlık turizmi perspektifinden yanıtla. 
+🎯 **UZMANLIKLARIN:**
+- Türkiye'deki tüm medikal tedavi türleri (diş, estetik, göz, ortopedi, kardiyoloji, obezite)
+- Klinik ve hastane önerileri (Antalya, İstanbul, İzmir, Ankara)
+- Konaklama ve ulaşım planlaması
+- Fiyat bilgilendirme ve paket önerileri
+- Hasta hakları ve yasal süreçler
 
-ÖNEMLİ KURALLAR:
-1. SADECE TÜRKÇE CEVAP VER
-2. Kısa, net ve profesyonel ol (maksimum 4-5 cümle)
-3. Eğer medikal bir soru ise, genel bilgi ver (kesin tanı/tedavi önerme)
-4. Fiyat soruluyorsa, genel aralık ver
-5. Klinik/otel önerisi isteniyorsa, kriterleri sor
+📌 **ÖNEMLİ KURALLAR:**
+1. ✅ SADECE TÜRKÇE YANIT VER (hiç İngilizce kullanma)
+2. ✅ Kısa, samimi ve profesyonel ol (maksimum 5-6 cümle)
+3. ✅ Sohbet akışını sürdür - context'i kullan
+4. ❌ Kesin tanı/tedavi önerisi YAPMA - genel bilgi ver
+5. ❌ Fiyat sorulursa "ortalama aralıklar" ver (kesin fiyat verme)
+6. ✅ Kullanıcının ihtiyacını netleştirici sorular sor
 
-CONTEXT:{context_info}
+{context_info}
 
-KULLANICI SORUSU: {user_message}
+🤔 **ŞİMDİKİ SORU:** {user_message}
 
-TÜRKÇE CEVAP:"""
+💡 **CEVABINI YAZ (Türkçe, samimi, yardımcı):**"""
         
         data = {
             "model": "llama3",
             "prompt": prompt,
             "stream": False,
             "options": {
-                "temperature": 0.6,  # Daha tutarlı cevaplar
-                "num_predict": 400,  # Biraz daha uzun cevaplar
+                "temperature": 0.7,  # Biraz daha yaratıcı
+                "num_predict": 500,  # Daha uzun cevaplar
                 "top_p": 0.9,
                 "repeat_penalty": 1.3,
-                "stop": ["KULLANICI", "USER:", "English:", "In English:"]
+                "stop": ["KULLANICI", "USER:", "English:", "In English:", "Kullanıcı:", "SORU:"]
             }
         }
 
@@ -103,146 +200,296 @@ TÜRKÇE CEVAP:"""
             generated_text = response.json().get('response', '').strip()
 
             if generated_text:
+                # Temizlik: Gereksiz başlıkları kaldır
+                generated_text = generated_text.replace("💡 CEVABINI YAZ:", "").strip()
+                generated_text = generated_text.replace("CEVAP:", "").strip()
+                
                 dispatcher.utter_message(text=f"💡 {generated_text}")
                 logger.info(f"✅ Ollama fallback cevabı: {len(generated_text)} karakter")
+                
+                # ✅ Context'i güncelle - bütçe, tarih gibi bilgileri slot'a kaydet
+                slots_to_set = []
+                
+                # Basit entity extraction (rakamlar bütçe olabilir)
+                import re
+                numbers = re.findall(r'\b\d{4,5}\b', user_message)
+                if numbers and not butce:
+                    potential_budget = numbers[0]
+                    slots_to_set.append(SlotSet("butce", potential_budget))
+                    logger.info(f"📊 Bütçe slot'una kaydedildi: {potential_budget}")
+                
+                return slots_to_set
             else:
-                dispatcher.utter_message(text="Üzgünüm, bu soruya şu anda cevap veremiyorum. Daha spesifik sorular sorabilirsiniz:\n- Klinik aramak için: 'Antalya'da saç ekimi kliniği'\n- Otel aramak için: 'İstanbul'da otel'\n- Tedavi bilgisi için: 'Rinoplasti nedir?'")
+                dispatcher.utter_message(text="Üzgünüm, bu soruya şu anda cevap veremiyorum. Daha spesifik sorular sorabilirsiniz:\n\n💡 Örnek sorular:\n• 'Antalya'da diş implantı kliniği'\n• 'Rinoplasti fiyatları'\n• 'Göz ameliyatı sonrası bakım'\n• 'Otel önerileri'")
+                return []
 
         except requests.exceptions.ConnectionError:
             logger.error("❌ Ollama servisine bağlanılamadı")
-            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. Lütfen spesifik sorular sorun:\n- Klinik arama\n- Otel arama\n- Tedavi bilgisi")
+            dispatcher.utter_message(text="❌ Yapay zeka servisi şu anda çalışmıyor.\n\n✅ Şunları deneyebilirsiniz:\n• 'Antalya'da klinik ara'\n• 'Tedavi paketleri'\n• 'Fiyat bilgisi'")
+            return []
         except requests.exceptions.Timeout:
             logger.error(f"⏱️ Ollama timeout ({OLLAMA_TIMEOUT}s)")
-            dispatcher.utter_message(text="⏱️ Cevap hazırlanırken zaman aşımı. Lütfen tekrar deneyin.")
+            dispatcher.utter_message(text="⏱️ Cevap hazırlanırken zaman aşımı. Lütfen tekrar deneyin veya daha spesifik soru sorun.")
+            return []
         except Exception as e:
             logger.error(f"❌ Ollama hatası: {e}")
-            dispatcher.utter_message(text="Üzgünüm, şu anda size yardımcı olamıyorum. Lütfen daha sonra tekrar deneyin.")
+            dispatcher.utter_message(text="Üzgünüm, şu anda size yardımcı olamıyorum. Lütfen:\n• Tedavi türü belirtin\n• Şehir seçin\n• Bütçe bilgisi verin\n\nVe tekrar deneyin!")
+            return []
 
+class ActionLogConversation(Action):
+    """
+    HER MESAJDA ÇALIŞIR - MongoDB'ye log atar
+    Bu action'ı domain.yml'de tanımlamanız gerekiyor
+    """
+    
+    def name(self) -> Text:
+        return "action_log_conversation"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        # MongoDB logger başlat
+        mongo_logger = MongoDBLogger()
+        
+        try:
+            # User bilgilerini al
+            user_id = tracker.sender_id
+            latest_message = tracker.latest_message
+            
+            # Intent ve entities
+            intent_data = latest_message.get('intent', {})
+            intent_name = intent_data.get('name')
+            confidence = intent_data.get('confidence', 0.0)
+            entities = latest_message.get('entities', [])
+            
+            # User mesajını kaydet
+            if latest_message.get('text'):
+                mongo_logger.log_message(
+                    user_id=user_id,
+                    sender="user",
+                    text=latest_message['text'],
+                    intent=intent_name,
+                    entities=entities,
+                    confidence=confidence
+                )
+                
+                logger.info(f"✅ MongoDB'ye kaydedildi: {user_id} - {intent_name}")
+            
+            # User profili güncelle (entity'lerden bilgi çıkar)
+            user_updates = {}
+            for entity in entities:
+                entity_name = entity.get('entity')
+                entity_value = entity.get('value')
+                
+                # Eğer kişisel bilgi entity'si ise profili güncelle
+                if entity_name in ['yas', 'age']:
+                    user_updates['age'] = int(entity_value) if isinstance(entity_value, (int, str)) else None
+                elif entity_name in ['cinsiyet', 'gender']:
+                    user_updates['gender'] = entity_value
+                elif entity_name in ['isim', 'name']:
+                    user_updates['name'] = entity_value
+                elif entity_name in ['hastalik', 'health_condition']:
+                    # Health conditions'ı array olarak tut
+                    existing_user = mongo_logger.get_user(user_id)
+                    health_conditions = existing_user.get('health_conditions', []) if existing_user else []
+                    if entity_value not in health_conditions:
+                        health_conditions.append(entity_value)
+                    user_updates['health_conditions'] = health_conditions
+            
+            # Preferences güncelle (tedavi, şehir, bütçe vb.)
+            preferences = {}
+            for entity in entities:
+                entity_name = entity.get('entity')
+                entity_value = entity.get('value')
+                
+                if entity_name in ['tedavi_adi', 'treatment']:
+                    preferences['treatment'] = entity_value
+                elif entity_name in ['sehir', 'city']:
+                    preferences['city'] = entity_value
+                elif entity_name in ['butce', 'budget']:
+                    preferences['budget'] = entity_value
+                elif entity_name in ['bolge', 'region']:
+                    preferences['region'] = entity_value
+            
+            if preferences:
+                user_updates['preferences'] = preferences
+            
+            # Eğer güncellenecek bilgi varsa user'ı güncelle
+            if user_updates:
+                user_updates['user_id'] = user_id
+                mongo_logger.upsert_user(user_updates)
+                logger.info(f"✅ User profili güncellendi: {user_id}")
+        
+        except Exception as e:
+            logger.error(f"❌ MongoDB logging hatası: {e}")
+        
+        finally:
+            mongo_logger.close()
+        
+        return []
+
+
+class ActionLogBotResponse(Action):
+    """
+    Bot cevabını MongoDB'ye kaydet
+    """
+    
+    def name(self) -> Text:
+        return "action_log_bot_response"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        mongo_logger = MongoDBLogger()
+        
+        try:
+            user_id = tracker.sender_id
+            
+            # Son bot action'ını al
+            events = tracker.events
+            last_bot_action = None
+            last_bot_message = None
+            
+            for event in reversed(events):
+                if event.get('event') == 'action':
+                    last_bot_action = event.get('name')
+                    break
+                elif event.get('event') == 'bot':
+                    last_bot_message = event.get('text')
+                    if last_bot_action:
+                        break
+            
+            # Bot mesajını kaydet
+            if last_bot_message:
+                mongo_logger.log_message(
+                    user_id=user_id,
+                    sender="bot",
+                    text=last_bot_message,
+                    bot_action=last_bot_action
+                )
+                logger.info(f"✅ Bot cevabı kaydedildi: {last_bot_action}")
+        
+        except Exception as e:
+            logger.error(f"❌ Bot response logging hatası: {e}")
+        
+        finally:
+            mongo_logger.close()
+        
+        return []
+
+
+class ActionSaveUserProfile(Action):
+    """
+    User profili kaydetme action'ı (önceki kodunuzda vardı)
+    Şimdi MongoDB'ye kaydediyor
+    """
+    
+    def name(self) -> Text:
+        return "action_save_user_profile"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        mongo_logger = MongoDBLogger()
+        
+        try:
+            user_id = tracker.sender_id
+            
+            # Slot'lardan user bilgilerini topla
+            user_data = {
+                "user_id": user_id,
+                "name": tracker.get_slot("user_name"),
+                "age": tracker.get_slot("yas"),
+                "gender": tracker.get_slot("cinsiyet"),
+                "preferences": {
+                    "treatment": tracker.get_slot("tedavi_adi"),
+                    "city": tracker.get_slot("sehir"),
+                    "region": tracker.get_slot("bolge"),
+                    "budget": tracker.get_slot("butce"),
+                    "hotel_category": tracker.get_slot("otel_kategori"),
+                    "flight_class": tracker.get_slot("ucus_sinifi")
+                }
+            }
+            
+            # Health conditions ekle
+            hastalik = tracker.get_slot("hastalik")
+            if hastalik:
+                user_data["health_conditions"] = [hastalik] if isinstance(hastalik, str) else hastalik
+            
+            # MongoDB'ye kaydet
+            mongo_logger.upsert_user(user_data)
+            
+            dispatcher.utter_message(text="✅ Bilgileriniz güvenle kaydedildi.")
+            logger.info(f"✅ User profili MongoDB'ye kaydedildi: {user_id}")
+        
+        except Exception as e:
+            logger.error(f"❌ User profile kaydetme hatası: {e}")
+            dispatcher.utter_message(text="⚠️ Bilgileriniz kaydedilirken bir sorun oluştu.")
+        
+        finally:
+            mongo_logger.close()
+        
+        return []
+
+
+class ActionScheduleAppointment(Action):
+    """
+    Randevu oluştur ve MongoDB'ye booking olarak kaydet
+    """
+    
+    def name(self) -> Text:
+        return "action_schedule_appointment"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        mongo_logger = MongoDBLogger()
+        
+        try:
+            user_id = tracker.sender_id
+            
+            # Booking bilgilerini slot'lardan topla
+            booking_data = {
+                "user_id": user_id,
+                "clinic_name": tracker.get_slot("klinik_adi") or "Belirtilmedi",
+                "treatment": tracker.get_slot("tedavi_adi") or "Belirtilmedi",
+                "hotel_name": tracker.get_slot("otel_kategori") or "Belirtilecek",
+                "appointment_date": tracker.get_slot("tarih") or "Planlanacak",
+                "status": "pending",
+                "notes": f"Bütçe: {tracker.get_slot('butce')}"
+            }
+            
+            # MongoDB'ye kaydet
+            booking_id = mongo_logger.create_booking(booking_data)
+            
+            message = f"✅ Randevunuz oluşturuldu!\n\n"
+            message += f"📋 Booking ID: {booking_id}\n"
+            message += f"🏥 Klinik: {booking_data['clinic_name']}\n"
+            message += f"💉 Tedavi: {booking_data['treatment']}\n"
+            message += f"📅 Tarih: {booking_data['appointment_date']}\n\n"
+            message += f"📧 Detaylı bilgilendirme e-posta adresinize gönderilecektir.\n"
+            message += f"📱 Koordinatörümüz 24 saat içinde sizinle iletişime geçecektir."
+            
+            dispatcher.utter_message(text=message)
+            logger.info(f"✅ Booking oluşturuldu: {booking_id}")
+        
+        except Exception as e:
+            logger.error(f"❌ Appointment scheduling hatası: {e}")
+            dispatcher.utter_message(text="⚠️ Randevu oluşturulurken bir sorun oluştu.")
+        
+        finally:
+            mongo_logger.close()
+        
         return []
 
 
 
 
 
-
-
-
-
-# ============ KLİNİK VERİTABANI (Örnek) ============
-CLINICS_DB = {
-    "dental": {
-        "Antalya": [
-            {
-                "name": "Antmodern Oral & Dental Health Clinic",
-                "address": "Fener Mah. Bülent Ecevit Blv. No:50 Muratpaşa/Antalya",
-                "district": "Muratpaşa",
-                "treatments": ["Composite Bonding", "Porcelain Veneers", "Teeth Whitening", 
-                              "Orthodontics", "Implant Dentistry", "Zirconium Crowns"],
-                "rating": 4.8,
-                "accreditations": ["JCI", "ISO 9001"],
-                "languages": ["Turkish", "English", "Russian", "Arabic"]
-            },
-            {
-                "name": "Dt. Murat Özbıyık Clinic",
-                "address": "Yeşilbahçe Mah. Metin Kasapoğlu Cad. 3/1 Muratpaşa/Antalya",
-                "district": "Muratpaşa",
-                "treatments": ["Root Canal Treatment", "Dental Implants", "Smile Restoration", 
-                              "Invisalign", "Bone Graft"],
-                "rating": 4.7,
-                "accreditations": ["ISO 9001"],
-                "languages": ["Turkish", "English", "German"]
-            },
-            {
-                "name": "Markasya Oral & Dental Health Clinic",
-                "address": "Toros Mah. 805 Sok. Kurgu Plaza No: 14/1 Konyaaltı/Antalya",
-                "district": "Konyaaltı",
-                "treatments": ["Cosmetic Dentistry", "Periodontics", "Gum Disease Treatment", 
-                              "Dentures", "Sedation"],
-                "rating": 4.6,
-                "accreditations": ["ISO 9001"],
-                "languages": ["Turkish", "English"]
-            }
-        ]
-    },
-    "aesthetic": {
-        "Antalya": [
-            {
-                "name": "Dr. Gökhan Özerdem Clinic",
-                "address": "Yeşilbahçe Mah. Metin Kasapoğlu Cad. Ayhan Kadam İş Merkezi A blok No: 48/11 Muratpaşa/Antalya",
-                "district": "Muratpaşa",
-                "treatments": ["Rhinoplasty", "Botox", "Face Lift", "Breast Surgery", 
-                              "Liposuction", "Genioplasty"],
-                "rating": 4.9,
-                "accreditations": ["JCI", "ISO 9001", "ISAPS"],
-                "languages": ["Turkish", "English", "Arabic", "Russian"]
-            },
-            {
-                "name": "Dr. Hasan Hüseyin Balıkçı Clinic",
-                "address": "Arapsuyu Mah. Atatürk Bulvarı M. Gökay Plaza No:23/41 Konyaaltı/Antalya",
-                "district": "Konyaaltı",
-                "treatments": ["Septoplasty", "Chin Filler", "Eye Contour Aesthetics", 
-                              "Lip Lift", "Cheek Augmentation"],
-                "rating": 4.8,
-                "accreditations": ["ISO 9001", "TSAPS"],
-                "languages": ["Turkish", "English", "German"]
-            }
-        ]
-    },
-    "eye_care": {
-        "Antalya": [
-            {
-                "name": "Akdeniz Hospital",
-                "address": "Sorgun Mah. 8151 Sk.No:10 Manavgat/Antalya",
-                "district": "Manavgat",
-                "treatments": ["Cataract", "Glaucoma", "Retinal Diseases", 
-                              "Intraocular Lens Implants", "Keratoplasty"],
-                "rating": 4.7,
-                "accreditations": ["JCI", "ISO 9001"],
-                "languages": ["Turkish", "English", "Russian"]
-            },
-            {
-                "name": "Akdeniz Şifa Konyaaltı Medical Center",
-                "address": "Kuşkavağı Mah. Atatürk Bulvarı No:81 Konyaaltı/Antalya",
-                "district": "Konyaaltı",
-                "treatments": ["Cataract", "Lazy Eye", "Oculoplastic Surgery", 
-                              "Extracapsular Cataract Extraction"],
-                "rating": 4.6,
-                "accreditations": ["ISO 9001"],
-                "languages": ["Turkish", "English"]
-            }
-        ]
-    }
-}
-
-# ============ OTEL VERİTABANI (Örnek) ============
-HOTELS_DB = {
-    "Belek": [
-        {"name": "Regnum Carya Golf & Spa Resort", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Golf"], "price_range": "premium"},
-        {"name": "Rixos Premium Belek", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Beach"], "price_range": "premium"},
-        {"name": "Maxx Royal Belek Golf Resort", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Golf"], "price_range": "luxury"}
-    ],
-    "Lara": [
-        {"name": "Delphin Palace", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Beach"], "price_range": "premium"},
-        {"name": "Titanic Beach Lara", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Aquapark"], "price_range": "premium"},
-        {"name": "Rixos Premium Belek", "stars": 5, "features": ["Spa", "Pool", "All Inclusive"], "price_range": "luxury"}
-    ],
-    "Side": [
-        {"name": "Barut Hotels Hemera", "stars": 5, "features": ["Spa", "Pool", "All Inclusive"], "price_range": "standard"},
-        {"name": "Royal Dragon Hotel", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Aquapark"], "price_range": "premium"}
-    ],
-    "Alanya": [
-        {"name": "Eftalia Ocean Hotel", "stars": 5, "features": ["Spa", "Pool", "All Inclusive"], "price_range": "standard"},
-        {"name": "Granada Luxury Resort", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Beach"], "price_range": "premium"}
-    ],
-    "Kemer": [
-        {"name": "Rixos Sungate", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Beach"], "price_range": "premium"},
-        {"name": "Crystal Sunrise Queen Luxury Resort", "stars": 5, "features": ["Spa", "Pool", "All Inclusive"], "price_range": "premium"}
-    ],
-    "Konyaaltı": [
-        {"name": "Sheraton Voyager Antalya", "stars": 5, "features": ["Spa", "Pool", "Beach", "City Center"], "price_range": "premium"},
-        {"name": "DoubleTree by Hilton Antalya", "stars": 4, "features": ["Pool", "Beach", "City Center"], "price_range": "standard"}
-    ]
-}
 
 
 
@@ -296,7 +543,7 @@ def calculate_flight_price(flight_class, flight_type):
 # ============ CUSTOM ACTIONS ============
 
 class ActionSearchClinicsByTreatment(Action):
-    """Tedavi türüne göre klinik ara"""
+    """Tedavi türüne göre klinik ara - API Client kullanıyor"""
     
     def name(self) -> Text:
         return "action_search_clinics_by_treatment"
@@ -307,33 +554,51 @@ class ActionSearchClinicsByTreatment(Action):
         
         tedavi_adi = tracker.get_slot("tedavi_adi")
         tedavi_turu = tracker.get_slot("tedavi_turu")
-        sehir = tracker.get_slot("sehir")
+        sehir = normalize_city(tracker.get_slot("sehir"))
         
         # Tedavi türünü belirle
-        if not tedavi_turu:
-            if tedavi_adi:
-                # Tedavi adından türü çıkar
-                dental_treatments = ["implant", "whitening", "veneers", "orthodontics", "root canal"]
-                aesthetic_treatments = ["rhinoplasty", "botox", "face lift", "breast"]
-                eye_treatments = ["cataract", "glaucoma", "retinal"]
-                
-                tedavi_lower = tedavi_adi.lower()
-                if any(t in tedavi_lower for t in dental_treatments):
-                    tedavi_turu = "dental"
-                elif any(t in tedavi_lower for t in aesthetic_treatments):
-                    tedavi_turu = "aesthetic"
-                elif any(t in tedavi_lower for t in eye_treatments):
-                    tedavi_turu = "eye_care"
+        if not tedavi_turu and tedavi_adi:
+            dental_treatments = ["implant", "whitening", "veneers", "orthodontics", "root canal"]
+            aesthetic_treatments = ["rhinoplasty", "botox", "face lift", "breast"]
+            eye_treatments = ["cataract", "glaucoma", "retinal"]
+            
+            tedavi_lower = tedavi_adi.lower()
+            if any(t in tedavi_lower for t in dental_treatments):
+                tedavi_turu = "dental"
+            elif any(t in tedavi_lower for t in aesthetic_treatments):
+                tedavi_turu = "aesthetic"
+            elif any(t in tedavi_lower for t in eye_treatments):
+                tedavi_turu = "eye_care"
         
-        # API çağrısı simülasyonu - gerçek uygulamada API kullanılacak
-        if tedavi_turu and sehir:
-            clinics = CLINICS_DB.get(tedavi_turu, {}).get(sehir, [])
+        try:
+            response = clinic_client.search_clinics(
+                treatment_type=tedavi_turu,
+                city=sehir,
+                treatment_name=tedavi_adi
+            )
+            
+            clinics = response.get("results", [])
             
             if clinics:
                 message = f"✅ {sehir} için {len(clinics)} klinik bulundu!\n\n"
+                
+                for clinic in clinics[:3]:  # İlk 3 klinik göster
+                    message += f"🏥 **{clinic['name']}**\n"
+                    message += f"   📍 {clinic['district']}\n"
+                    message += f"   ⭐ {clinic['rating']}/5.0\n"
+                    message += f"   💉 Tedaviler: {', '.join(clinic['treatments'][:3])}\n\n"
+                
                 dispatcher.utter_message(text=message)
             else:
-                dispatcher.utter_message(text=f"Üzgünüm, {sehir}'da bu tedavi için klinik bulunamadı.")
+                dispatcher.utter_message(
+                    text=f"Üzgünüm, {sehir}'da bu tedavi için klinik bulunamadı."
+                )
+                
+        except Exception as e:
+            logger.error(f"❌ Klinik arama hatası: {e}")
+            dispatcher.utter_message(
+                text="⚠️ Klinik bilgileri alınırken bir hata oluştu."
+            )
         
         return [SlotSet("tedavi_turu", tedavi_turu)]
 
@@ -362,7 +627,7 @@ class ActionSearchClinicsByLocation(Action):
 
 
 class ActionSearchHotelsByRegion(Action):
-    """Bölgeye göre otel ara"""
+    """Bölgeye göre otel ara - API Client kullanıyor"""
     
     def name(self) -> Text:
         return "action_search_hotels_by_region"
@@ -374,22 +639,44 @@ class ActionSearchHotelsByRegion(Action):
         bolge = tracker.get_slot("bolge")
         otel_kategori = tracker.get_slot("otel_kategori")
         
-        if bolge and bolge in HOTELS_DB:
-            hotels = HOTELS_DB[bolge]
+        # Yıldız sayısını belirle
+        stars = 5 if otel_kategori and "5" in otel_kategori else 4
+        
+        # ✅ API CLIENT KULLAN
+        try:
+            response = hotel_client.search_hotels(
+                region=bolge,
+                stars=stars
+            )
             
-            # Kategori filtrele
-            if otel_kategori:
-                stars = 5 if "5" in otel_kategori else 4
-                hotels = [h for h in hotels if h["stars"] == stars]
+            hotels = response.get("results", [])
             
-            message = f"🏨 {bolge} bölgesinde {len(hotels)} otel bulundu!"
-            dispatcher.utter_message(text=message)
+            if hotels:
+                message = f"🏨 {bolge} bölgesinde {len(hotels)} otel bulundu!\n\n"
+                
+                for hotel in hotels[:3]:  # İlk 3 otel göster
+                    message += f"🏨 **{hotel['name']}**\n"
+                    message += f"   {'⭐' * hotel['stars']}\n"
+                    message += f"   💰 {hotel.get('price_per_night', 'Fiyat bilgisi yok')} EUR/gece\n"
+                    message += f"   ✨ {', '.join(hotel['features'][:3])}\n\n"
+                
+                dispatcher.utter_message(text=message)
+            else:
+                dispatcher.utter_message(
+                    text=f"Üzgünüm, {bolge}'de uygun otel bulunamadı."
+                )
+                
+        except Exception as e:
+            logger.error(f"❌ Otel arama hatası: {e}")
+            dispatcher.utter_message(
+                text="⚠️ Otel bilgileri alınırken bir hata oluştu."
+            )
         
         return []
 
 
 class ActionGenerateBundleRecommendation(Action):
-    """Yapay zeka destekli paket önerisi oluştur"""
+    """Yapay zeka destekli paket önerisi oluştur - API Client kullanıyor"""
     
     def name(self) -> Text:
         return "action_generate_bundle_recommendation"
@@ -402,84 +689,101 @@ class ActionGenerateBundleRecommendation(Action):
         user_profile = {
             "tedavi_turu": tracker.get_slot("tedavi_turu"),
             "tedavi_adi": tracker.get_slot("tedavi_adi"),
-            "sehir": tracker.get_slot("sehir"),
+            "sehir": normalize_city(tracker.get_slot("sehir")),
             "bolge": tracker.get_slot("bolge"),
             "tarih": tracker.get_slot("tarih"),
             "butce": tracker.get_slot("butce"),
             "otel_kategori": tracker.get_slot("otel_kategori"),
-            "ucus_sinifi": tracker.get_slot("ucus_sinifi"),
-            "ucus_tipi": tracker.get_slot("ucus_tipi")
+            "ucus_sinifi": tracker.get_slot("ucus_sinifi") or "economy",
+            "ucus_tipi": tracker.get_slot("ucus_tipi") or "connecting"
         }
         
-        # Recommendation Engine çağrısı simülasyonu
-        # Gerçek uygulamada ML modeli ve API kullanılacak
+        dispatcher.utter_message(text="🔍 Sizin için en uygun paketler hazırlanıyor...")
         
-        bundles = []
-        tedavi_turu = user_profile.get("tedavi_turu", "dental")
-        sehir = user_profile.get("sehir", "Antalya")
-        bolge = user_profile.get("bolge", "Lara")
-        
-        # Örnek klinikler
-        clinics = CLINICS_DB.get(tedavi_turu, {}).get(sehir, [])[:3]
-        
-        # Örnek oteller
-        hotels = HOTELS_DB.get(bolge, HOTELS_DB["Lara"])[:3]
-        
-        # 3 farklı paket oluştur
-        for i in range(min(3, len(clinics))):
-            clinic = clinics[i] if i < len(clinics) else clinics[0]
-            hotel = hotels[i] if i < len(hotels) else hotels[0]
-            
-            # Fiyat hesapla
-            treatment_price = calculate_treatment_price(
-                user_profile.get("tedavi_adi", "dental treatment"),
-                clinic.get("rating", 4.5)
+        try:
+            # ✅ API CLIENT'LARI KULLAN
+            # 1. Klinik ara
+            clinic_response = clinic_client.search_clinics(
+                treatment_type=user_profile["tedavi_turu"],
+                city=user_profile["sehir"]
             )
-            hotel_price = calculate_hotel_price(hotel, nights=7)
-            flight_price = calculate_flight_price(
-                user_profile.get("ucus_sinifi", "economy"),
-                user_profile.get("ucus_tipi", "connecting")
+            clinics = clinic_response.get("results", [])[:3]
+            
+            # 2. Otel ara
+            hotel_response = hotel_client.search_hotels(
+                region=user_profile["bolge"] or "Lara",
+                stars=5
             )
-            transfer_price = 150
+            hotels = hotel_response.get("results", [])[:3]
             
-            total_price = treatment_price + hotel_price + (flight_price * 2) + transfer_price
+            # 3. Uçuş ara
+            flight_response = flight_client.search_flights(
+                flight_class=user_profile["ucus_sinifi"]
+            )
+            flights = flight_response.get("results", [])[:3]
             
-            bundles.append({
-                "name": f"Paket {i+1} - {['Ekonomik', 'Standart', 'Premium'][i]}",
-                "clinic": clinic["name"],
-                "clinic_rating": clinic["rating"],
-                "hotel": hotel["name"],
-                "hotel_stars": hotel["stars"],
-                "treatment_price": treatment_price,
-                "hotel_price": hotel_price,
-                "flight_price": flight_price * 2,
-                "transfer_price": transfer_price,
-                "total_price": total_price,
-                "currency": "EUR"
-            })
-        
-        # Paketleri göster
-        message = "🎁 **Sizin İçin Özel Hazırlanan Paketler:**\n\n"
-        
-        for bundle in bundles:
-            message += f"**{bundle['name']}** - {bundle['total_price']} {bundle['currency']}\n"
-            message += f"🏥 Klinik: {bundle['clinic']} (⭐{bundle['clinic_rating']})\n"
-            message += f"🏨 Otel: {bundle['hotel']} ({'⭐' * bundle['hotel_stars']})\n"
-            message += f"💰 Detaylar:\n"
-            message += f"   • Tedavi: {bundle['treatment_price']} EUR\n"
-            message += f"   • Konaklama (7 gece): {bundle['hotel_price']} EUR\n"
-            message += f"   • Uçuş (Gidiş-Dönüş): {bundle['flight_price']} EUR\n"
-            message += f"   • Transfer: {bundle['transfer_price']} EUR\n"
-            message += f"━━━━━━━━━━━━━━━━━\n\n"
-        
-        message += "✅ Tüm paketler şunları içerir:\n"
-        message += "• Havalimanı karşılama ve transferler\n"
-        message += "• 7/24 Türkçe asistan desteği\n"
-        message += "• Ön konsültasyon\n"
-        message += "• Kontrol muayeneleri\n\n"
-        message += "Hangi paketi seçmek istersiniz?"
-        
-        dispatcher.utter_message(text=message)
+            # Paketleri oluştur
+            bundles = []
+            for i in range(min(3, len(clinics))):
+                clinic = clinics[i] if i < len(clinics) else clinics[0]
+                hotel = hotels[i] if i < len(hotels) else hotels[0]
+                flight = flights[i] if i < len(flights) else flights[0]
+                
+                # Fiyat hesapla
+                treatment_price = calculate_treatment_price(
+                    user_profile.get("tedavi_adi", "dental treatment"),
+                    clinic.get("rating", 4.5)
+                )
+                hotel_price = calculate_hotel_price(hotel, nights=7)
+                flight_price = flight.get("price", 300)
+                transfer_price = 150
+                
+                total_price = treatment_price + hotel_price + (flight_price * 2) + transfer_price
+                
+                bundles.append({
+                    "name": f"Paket {i+1} - {['Ekonomik', 'Standart', 'Premium'][i]}",
+                    "clinic": clinic["name"],
+                    "clinic_rating": clinic["rating"],
+                    "hotel": hotel["name"],
+                    "hotel_stars": hotel["stars"],
+                    "flight": flight.get("airline", "Turkish Airlines"),
+                    "treatment_price": treatment_price,
+                    "hotel_price": hotel_price,
+                    "flight_price": flight_price * 2,
+                    "transfer_price": transfer_price,
+                    "total_price": total_price,
+                    "currency": "EUR"
+                })
+            
+            # Paketleri göster
+            message = "🎁 **Sizin İçin Özel Hazırlanan Paketler:**\n\n"
+            
+            for bundle in bundles:
+                message += f"**{bundle['name']}** - {bundle['total_price']} {bundle['currency']}\n"
+                message += f"🏥 Klinik: {bundle['clinic']} (⭐{bundle['clinic_rating']})\n"
+                message += f"🏨 Otel: {bundle['hotel']} ({'⭐' * bundle['hotel_stars']})\n"
+                message += f"✈️ Uçuş: {bundle['flight']}\n"
+                message += f"💰 Detaylar:\n"
+                message += f"   • Tedavi: {bundle['treatment_price']} EUR\n"
+                message += f"   • Konaklama (7 gece): {bundle['hotel_price']} EUR\n"
+                message += f"   • Uçuş (Gidiş-Dönüş): {bundle['flight_price']} EUR\n"
+                message += f"   • Transfer: {bundle['transfer_price']} EUR\n"
+                message += f"━━━━━━━━━━━━━━━━━\n\n"
+            
+            message += "✅ Tüm paketler şunları içerir:\n"
+            message += "• Havalimanı karşılama ve transferler\n"
+            message += "• 7/24 Türkçe asistan desteği\n"
+            message += "• Ön konsültasyon\n"
+            message += "• Kontrol muayeneleri\n\n"
+            message += "Hangi paketi seçmek istersiniz?"
+            
+            dispatcher.utter_message(text=message)
+            
+        except Exception as e:
+            logger.error(f"❌ Paket oluşturma hatası: {e}")
+            dispatcher.utter_message(
+                text="⚠️ Paket hazırlanırken bir hata oluştu. Lütfen tekrar deneyin."
+            )
         
         return []
 
@@ -522,7 +826,7 @@ class ActionCalculatePackagePrice(Action):
 
 
 class ActionProvideClinicDetails(Action):
-    """Klinik detaylarını göster"""
+    """Klinik detaylarını göster - API Client kullanıyor"""
     
     def name(self) -> Text:
         return "action_provide_clinic_details"
@@ -533,29 +837,77 @@ class ActionProvideClinicDetails(Action):
         
         klinik_adi = tracker.get_slot("klinik_adi")
         
-        if klinik_adi:
-            # Klinik bilgisini bul
+        if not klinik_adi:
+            dispatcher.utter_message(text="Lütfen klinik adını belirtin.")
+            return []
+        
+        try:
+            # ✅ API CLIENT KULLAN - Tüm klinikleri ara
+            response = clinic_client.search_clinics(
+                treatment_type=None,  # Tüm kategoriler
+                city=None,            # Tüm şehirler
+                treatment_name=None   # Tüm tedaviler
+            )
+            
+            all_clinics = response.get("results", [])
+            
+            # Klinik adına göre filtrele
             clinic_found = None
-            for category in CLINICS_DB.values():
-                for city_clinics in category.values():
-                    for clinic in city_clinics:
-                        if clinic["name"] == klinik_adi:
-                            clinic_found = clinic
-                            break
+            for clinic in all_clinics:
+                if clinic["name"].lower() == klinik_adi.lower():
+                    clinic_found = clinic
+                    break
+                # Kısmi eşleşme de kontrol et
+                elif klinik_adi.lower() in clinic["name"].lower():
+                    clinic_found = clinic
+                    break
             
             if clinic_found:
                 message = f"🏥 **{clinic_found['name']}**\n\n"
-                message += f"📍 Adres: {clinic_found['address']}\n"
-                message += f"⭐ Rating: {clinic_found['rating']}/5.0\n"
-                message += f"🏆 Akreditasyonlar: {', '.join(clinic_found['accreditations'])}\n"
-                message += f"🌍 Diller: {', '.join(clinic_found['languages'])}\n\n"
-                message += f"💉 Tedaviler:\n"
-                for treatment in clinic_found['treatments'][:5]:
+                message += f"📍 Adres: {clinic_found.get('address', 'Belirtilmemiş')}\n"
+                message += f"🏙️ Şehir: {clinic_found.get('city', 'N/A')}\n"
+                message += f"📌 İlçe: {clinic_found.get('district', 'N/A')}\n"
+                message += f"⭐ Rating: {clinic_found.get('rating', 0)}/5.0\n"
+                
+                if 'accreditations' in clinic_found:
+                    message += f"🏆 Akreditasyonlar: {', '.join(clinic_found['accreditations'])}\n"
+                
+                if 'languages' in clinic_found:
+                    message += f"🌍 Diller: {', '.join(clinic_found['languages'])}\n"
+                
+                message += f"\n💉 **Tedaviler:**\n"
+                treatments = clinic_found.get('treatments', [])
+                for treatment in treatments[:8]:  # İlk 8 tedavi
                     message += f"• {treatment}\n"
+                
+                if len(treatments) > 8:
+                    message += f"• ve {len(treatments) - 8} tedavi daha...\n"
+                
+                message += f"\n💰 Fiyat Aralığı: {clinic_found.get('price_range', 'Standart').title()}\n"
+                message += f"\n📞 Randevu almak için bize ulaşın!"
                 
                 dispatcher.utter_message(text=message)
             else:
-                dispatcher.utter_message(text=f"Üzgünüm, {klinik_adi} hakkında detaylı bilgi bulunamadı.")
+                # Klinik bulunamadı, alternatif öner
+                message = f"Üzgünüm, '{klinik_adi}' adlı klinik bulunamadı.\n\n"
+                message += "✅ Şunları deneyebilirsiniz:\n"
+                message += "• Klinik adını tam olarak yazın\n"
+                message += "• Tedavi türü ve şehir belirtin\n"
+                message += "• Örnek: 'Antalya'da diş kliniği'\n\n"
+                
+                # İlk 3 kliniği öneri olarak göster
+                if all_clinics:
+                    message += "📍 **Popüler Kliniklerimiz:**\n"
+                    for clinic in all_clinics[:3]:
+                        message += f"• {clinic['name']} ({clinic.get('city', 'Antalya')})\n"
+                
+                dispatcher.utter_message(text=message)
+        
+        except Exception as e:
+            logger.error(f"❌ Klinik detay hatası: {e}")
+            dispatcher.utter_message(
+                text="⚠️ Klinik bilgileri alınırken bir hata oluştu. Lütfen tekrar deneyin."
+            )
         
         return []
 
@@ -704,5 +1056,34 @@ class ActionGenerateReport(Action):
         # 3. Klinik performans skorları
         # 4. Gelir analizi
         # 5. Müşteri memnuniyet skorları
+        
+        return []
+
+
+class ActionDefaultFallback(Action):
+    """
+    Default fallback action - Rasa anlayamadığında çalışır
+    """
+    
+    def name(self) -> Text:
+        return "action_default_fallback"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        user_message = tracker.latest_message.get('text', '')
+        logger.info(f"🤷 Default fallback triggered: '{user_message}'")
+        
+        # Kullanıcıya yardımcı mesaj göster
+        message = "Üzgünüm, tam olarak anlayamadım. 🤔\n\n"
+        message += "✨ Şunları deneyebilirsiniz:\n"
+        message += "• 'Antalya'da diş kliniği'\n"
+        message += "• 'İstanbul'da rinoplasti'\n"
+        message += "• 'Otel önerisi'\n"
+        message += "• 'Fiyat bilgisi'\n\n"
+        message += "Ya da bana doğrudan sorunuzu yazabilirsiniz."
+        
+        dispatcher.utter_message(text=message)
         
         return []

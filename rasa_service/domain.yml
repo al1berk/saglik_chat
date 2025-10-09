@@ -5,101 +5,326 @@ intents:
   - goodbye
   - affirm
   - deny
-  - mood_great
-  - mood_unhappy
+  - tedavi_arama_dental
+  - tedavi_arama_estetik
+  - tedavi_arama_goz
+  - tedavi_arama_obezite
+  - tedavi_arama_ortopedi
+  - tedavi_arama_kardiyoloji
+  - lokasyon_tercihi
+  - klinik_secimi
+  - tarih_belirtme
+  - butce_belirtme
+  - paket_sorgulama
+  - paket_secimi
+  - klinik_sorgulama
+  - otel_tercihi
+  - ucus_tercihi
+  - kisisel_bilgi
+  - randevu_talep
+  - fiyat_sorgulama
+  - transfer_sorgulama
+  - dokuman_sorgulama
+  - yardim_talep
   - bot_challenge
-  - klinik_ara
-  - otel_ara
-  - sac_ekimi_bilgisi
-  - dis_implant_bilgisi
-  - rinoplasti_bilgisi
-  - mide_kucultme_bilgisi
-  - lasik_bilgisi
-  - fiyat_sor
-  - sigorta_sor
-  - randevu_sor
   - nlu_fallback
 
 entities:
-  - tedavi
-  - otel_tipi
-  - konum_ozelligi
+  - tedavi_turu
+  - tedavi_adi
+  - klinik_adi
   - sehir
+  - ulke
+  - bolge
+  - tarih
+  - butce
+  - otel_kategori
+  - otel_ozellik
+  - ucus_tipi
+  - ucus_sinifi
+  - ucus_zamani
+  - yas
+  - cinsiyet
+  - isim
+  - hastalik
+  - saglık_durumu
+  - saglik_gecmisi
 
 slots:
-  sehir:
+  tedavi_turu:
     type: text
-    influence_conversation: true
     mappings:
-      - type: from_entity
-        entity: sehir
+    - type: from_entity
+      entity: tedavi_turu
+    influence_conversation: true
+      
+  tedavi_adi:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: tedavi_adi
+    influence_conversation: true
   
   tedavi:
     type: text
-    influence_conversation: true
     mappings:
-      - type: from_entity
-        entity: tedavi
-  
-  otel_tipi:
+    - type: from_entity
+      entity: tedavi_adi
+    influence_conversation: true
+      
+  klinik_adi:
     type: text
-    influence_conversation: true
     mappings:
-      - type: from_entity
-        entity: otel_tipi
+    - type: from_entity
+      entity: klinik_adi
+    influence_conversation: true
+      
+  sehir:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: sehir
+    influence_conversation: true
+      
+  bolge:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: bolge
+    influence_conversation: true
+      
+  tarih:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: tarih
+    influence_conversation: true
+      
+  butce:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: butce
+    influence_conversation: true
+      
+  otel_kategori:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: otel_kategori
+    influence_conversation: true
+      
+  otel_ozellik:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: otel_ozellik
+    influence_conversation: true
+      
+  ucus_sinifi:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ucus_sinifi
+    influence_conversation: true
+  
+  ucus_tipi:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: ucus_tipi
+    influence_conversation: true
+  
+  user_name:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: isim
+    influence_conversation: false
+  
+  yas:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: yas
+    influence_conversation: false
+  
+  cinsiyet:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: cinsiyet
+    influence_conversation: false
+  
+  hastalik:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: hastalik
+    influence_conversation: false
+  
+  saglik_durumu:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: saglik_durumu
+    influence_conversation: false
 
+# 4. RESPONSES: Botun vereceği standart metin cevapları
+# stories.yml dosyasındaki tüm `utter_` ile başlayan action'lar burada tanımlanmalıdır.
 responses:
   utter_greet:
-  - text: "Merhaba! Size nasıl yardımcı olabilirim?"
-  - text: "Selam! Bugün size nasıl yardımcı olabilirim?"
-  - text: "İyi günler! Ne aramıştınız?"
-  
-  utter_cheer_up:
-  - text: "Üzülmeyin, size yardımcı olmak için buradayım!"
-  - text: "Merak etmeyin, en iyi çözümü bulacağız!"
-  
-  utter_did_that_help:
-  - text: "Bu yardımcı oldu mu?"
-  - text: "Size yardımcı olabildim mi?"
-  - text: "Başka bir şey sormak ister misiniz?"
-  
-  utter_happy:
-  - text: "Harika! Size yardımcı olabildiğime sevindim."
-  - text: "Süper! Başka bir konuda yardımcı olabilir miyim?"
-  
+  - text: "Merhaba, sağlık turizmi asistanınıza hoş geldiniz! Size nasıl yardımcı olabilirim? Hangi tedavi hakkında bilgi almak istersiniz?"
+  - text: "Selamlar! Türkiye'de sağlık hizmetleri hakkında bilgi almak için doğru yerdesiniz. Hangi konuda size yardımcı olabilirim?"
+
   utter_goodbye:
-  - text: "Görüşmek üzere! İyi günler!"
-  - text: "Hoşça kalın! Tekrar görüşmek üzere."
-  - text: "İyi günler! Sağlıklı günler dilerim!"
+  - text: "Görüşmek üzere, iyi günler dilerim!"
+  - text: "Yardımcı olabildiğime sevindim. Hoşça kalın!"
+
+  utter_ask_lokasyon:
+  - text: "Harika bir seçim! Bu tedaviyi hangi şehirde veya bölgede düşünürsünüz? Özellikle Antalya, İstanbul gibi popüler şehirlerde birçok seçeneğimiz bulunuyor."
+
+  utter_ask_tarih:
+  - text: "Tedaviniz için uygun bir tarih aralığı var mı? Örneğin 'gelecek ay' veya '15-20 Temmuz arası' gibi."
+
+  utter_ask_butce:
+  - text: "Bu tedavi ve seyahat için ayırmayı düşündüğünüz yaklaşık bir bütçe var mıdır?"
+
+  utter_ask_otel_tercihi:
+  - text: "Konaklama için özel bir tercihiniz var mı? (Örn: 5 yıldızlı, her şey dahil, butik otel)"
+
+  utter_ask_ucus_tercihi:
+  - text: "Uçuş tercihiniz nedir? (Örn: direkt uçuş, ekonomi sınıfı)"
   
+  utter_ask_kisisel_bilgi:
+  - text: "Sizin için en uygun tedaviyi belirlememize yardımcı olması amacıyla yaşınız veya mevcut bir rahatsızlığınız (diyabet, hipertansiyon vb.) gibi bilgileri paylaşabilir misiniz?"
+
+  utter_ask_tedavi_turu:
+  - text: "Elbette, size yardımcı olabilmem için hangi tedaviyi düşündüğünüzü öğrenebilir miyim?"
+
+  utter_paket_hazirlaniyor:
+  - text: "Harika! Verdiğiniz bilgilere göre size en uygun tedavi, konaklama ve transfer seçeneklerini içeren bir paket hazırlıyorum..."
+
+  utter_paket_hazir:
+  - text: "Paketiniz hazır! Detayları sizinle paylaşıyorum. İnceledikten sonra onaylamanız durumunda randevu işlemlerine başlayabiliriz."
+
+  utter_randevu_onay:
+  - text: "Harika! Randevunuzu ve seyahat planınızı oluşturuyorum. Detaylar en kısa sürede size iletilecektir. İyi günler!"
+
+  utter_transfer_bilgi:
+  - text: "Tüm paketlerimize standart olarak VIP araçlarla havalimanı-otel ve otel-klinik arası transferler dahildir. Endişelenmenize gerek yok."
+
+  utter_dokuman_bilgi:
+  - text: "Genellikle geçerli bir pasaport yeterlidir. Vize gerekliliği ülkenize göre değişebilir. Tedavinizle ilgili olarak doktorunuz mevcut tıbbi raporlarınızı veya röntgenlerinizi isteyebilir."
+
+  utter_klinik_detay:
+  - text: "Elbette, kliniklerimiz uluslararası akreditasyonlara sahip, modern teknolojiyi kullanan ve alanında uzman doktorlarla çalışan kurumlardır. Hangi klinik hakkında detaylı bilgi istersiniz?"
+  
+  utter_sigorta_bilgi:
+  - text: "Genellikle estetik ve dental tedaviler uluslararası özel sigortalar tarafından karşılanmamaktadır. Ancak, poliçenize bağlı olarak bazı ortopedik veya kardiyolojik operasyonlar için kısmi karşılama olabilir. Sigorta şirketinizle görüşmenizi tavsiye ederiz."
+
+  utter_yardim:
+  - text: "Tabii ki yardımcı olabilirim. Lütfen ne yapmak istediğinizi belirtin. Örneğin: 'Diş implantı yaptırmak istiyorum' veya 'İstanbul'da saç ekimi klinikleri arıyorum'."
+
+  
+
+  # Tedaviye özel bilgilendirme mesajları
+  utter_dental_tedaviler:
+  - text: "Dental tedaviler konusunda Türkiye, özellikle implant, zirkonyum kaplama ve gülüş tasarımı alanlarında çok popülerdir."
+  utter_estetik_tedaviler:
+  - text: "Estetik cerrahi için rinoplasti (burun estetiği), meme estetiği ve yüz germe operasyonları en çok tercih edilenler arasında."
+  utter_goz_tedaviler:
+  - text: "Göz tedavileri için katarakt, lazer ve göz içi lens operasyonlarında son teknolojiye sahip kliniklerimiz mevcut."
+  utter_obezite_tedaviler:
+  - text: "Obezite cerrahisi alanında tüp mide ve mide bypass gibi operasyonlarda başarı oranı yüksek, deneyimli cerrahlarımız bulunmaktadır."
+  utter_ortopedi_tedaviler:
+  - text: "Ortopedi alanında diz/kalça protezi, menisküs ve omurga cerrahisi gibi konularda uzmanlaşmış hastanelerle çalışıyoruz."
+  utter_kardiyoloji_tedaviler:
+  - text: "Kardiyoloji alanında anjiyografi, bypass ameliyatları ve doğumsal kalp rahatsızlıklarının tedavisi gibi hizmetler sunulmaktadır."
+
+  # Lokasyona özel klinik ve otel listeleri (Bunlar örnek; gerçek veriler custom action'dan gelmeli)
+  utter_antalya_klinikler_dental:
+  - text: "Antalya'da dental tedaviler için önerilerim: Antmodern Clinic, Markasya Clinic ve Antera Clinic. Hangisiyle ilgilenirsiniz?"
+  utter_antalya_klinikler_estetik:
+  - text: "Antalya'da estetik cerrahi için Dr. Gökhan Özerdem Clinic ve Dr. Hasan Hüseyin Balıkçı Clinic öne çıkıyor. Detaylı bilgi ister misiniz?"
+  utter_antalya_klinikler_goz:
+  - text: "Antalya'da göz tedavileri için Akdeniz Şifa Konyaaltı ve Antalya Anadolu Hastanesi'ni önerebilirim."
+  utter_antalya_klinikler_genel:
+  - text: "Antalya'da genel cerrahi, ortopedi ve kardiyoloji için Antalya Lara Anadolu Hastanesi ve Akdeniz Yaşam Hastanesi gibi tam donanımlı hastanelerimiz mevcut."
+  utter_lara_oteller:
+  - text: "Lara bölgesinde 5 yıldızlı ve spa imkanı sunan otel önerilerim: Titanic Mardan Palace, Delphin Imperial, Concorde De Luxe Resort."
+  utter_belek_oteller:
+  - text: "Belek bölgesinde lüks konaklama için önerilerim: Regnum Carya, Maxx Royal Belek Golf Resort, Rixos Premium Belek."
+  utter_konyaalti_oteller:
+  - text: "Konyaaltı bölgesinde 4 yıldızlı güzel seçenekler: The Corner Park Hotel, Rixos Downtown Antalya, Harrington Park Resort."
+  utter_side_oteller:
+  - text: "Side'de her şey dahil konseptiyle öne çıkan oteller: Ali Bey Resort Sorgun, Barut Hemera, Melas Holiday Village."
+  utter_alanya_oteller:
+  - text: "Alanya bölgesinde konaklama için önerilerim: Utopia World Hotel, Kirman Sidera Luxury & Spa, Eftalia Ocean."
+  utter_kemer_oteller:
+  - text: "Kemer'de spa ve doğa ile iç içe oteller: Maxx Royal Kemer Resort, Rixos Sungate, Akka Antedon Hotel."
+
   utter_iamabot:
-  - text: "Ben Rasa destekli bir sağlık turizmi asistanıyım. Size klinik ve otel önerileri sunabilirim."
-  - text: "Ben yapay zeka destekli bir sağlık asistanıyım. Tedavi ve konaklama konusunda yardımcı olabilirim."
-
+  - text: "Ben Rasa tabanlı bir sağlık turizmi asistanıyım 🤖. Size Türkiye'deki sağlık hizmetleri, klinikler, oteller ve seyahat paketleri konusunda yardımcı olabilirim."
+  
   utter_default:
-  - text: "Üzgünüm, tam olarak anlayamadım. Daha açık sorabilir misiniz?"
-  - text: "Kusura bakmayın, bunu anlayamadım. Başka türlü sorabilir misiniz?"
+  - text: "Özür dilerim, sizi tam anlayamadım 🤔. Lütfen farklı bir şekilde ifade edebilir misiniz?"
+  - text: "Anlayamadım, yardımcı olabilmem için lütfen daha açık söyler misiniz?"
+  - text: "Bu konuda emin değilim. 'Yardım' yazarak neler yapabileceğimi öğrenebilirsiniz."
 
+
+# 5. ACTIONS: Botun yapabileceği tüm eylemler
 actions:
-  - utter_greet
-  - utter_cheer_up
-  - utter_did_that_help
-  - utter_happy
-  - utter_goodbye
-  - utter_iamabot
-  - utter_default
-  - action_klinik_ara
-  - action_otel_ara
-  - action_sac_ekimi_detaylari
-  - action_dis_implant_detaylari
-  - action_rinoplasti_detaylari
-  - action_mide_kucultme_detaylari
-  - action_lasik_detaylari
-  - action_fiyat_bilgisi
-  - action_sigorta_bilgisi
-  - action_randevu_bilgisi
+  # Custom Actions (actions.py'de kodlanacak)
+  - action_search_clinics_by_treatment
+  - action_search_clinics_by_location
+  - action_provide_clinic_details
+  - action_search_hotels_by_region
+  - action_generate_bundle_recommendation
+  - action_save_user_profile
+  - action_schedule_appointment
+  - action_calculate_package_price
+  - validate_treatment_compatibility
+  - validate_user_budget
   - action_ask_ollama
   - action_default_fallback
+  - action_log_conversation
+  - action_log_bot_response
+
+  # Response Actions
+  - utter_greet
+  - utter_goodbye
+  - utter_ask_lokasyon
+  - utter_ask_tarih
+  - utter_ask_butce
+  - utter_ask_otel_tercihi
+  - utter_ask_ucus_tercihi
+  - utter_ask_kisisel_bilgi
+  - utter_ask_tedavi_turu
+  - utter_paket_hazirlaniyor
+  - utter_paket_hazir
+  - utter_randevu_onay
+  - utter_transfer_bilgi
+  - utter_dokuman_bilgi
+  - utter_klinik_detay
+  - utter_sigorta_bilgi
+  - utter_yardim
+  - utter_dental_tedaviler
+  - utter_estetik_tedaviler
+  - utter_goz_tedaviler
+  - utter_obezite_tedaviler
+  - utter_ortopedi_tedaviler
+  - utter_kardiyoloji_tedaviler
+  - utter_antalya_klinikler_dental
+  - utter_antalya_klinikler_estetik
+  - utter_antalya_klinikler_goz
+  - utter_antalya_klinikler_genel
+  - utter_lara_oteller
+  - utter_belek_oteller
+  - utter_konyaalti_oteller
+  - utter_side_oteller
+  - utter_alanya_oteller
+  - utter_kemer_oteller
 
 session_config:
   session_expiration_time: 60

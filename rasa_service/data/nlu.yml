@@ -6,63 +6,619 @@ nlu:
 - intent: greet
   examples: |
     - merhaba
+    - selamlar
+    - merhabalar
+    - hello
     - selam
     - günaydın
+    - good morning
     - iyi günler
     - hey
-    - merhabalar
-    - selamlar
-    - sa
-    - slm
-    - hello
-    - hi
+    - nasılsınız
+  
+    - how are you
+    - sağlık turizmi hakkında bilgi almak istiyorum
+    - I want information about health tourism
 
 - intent: goodbye
   examples: |
-    - görüşürüz
-    - hoşça kal
     - güle güle
+    - goodbye
+    - hoşça kal
+    - görüşürüz
+    - see you
     - bay bay
-    - iyi günler
-    - görüşmek üzere
+    - bye
+    - teşekkürler görüşmek üzere
+    - iyi günler dilerim
     - kendine iyi bak
+    - iyi günler
 
+
+# ============ TEDAVİ ARAMA - DENTAL ============
+- intent: tedavi_arama_dental
+  examples: |
+    - [diş tedavisi](tedavi_turu) yaptırmak istiyorum
+    - [dental treatment](tedavi_turu) for me
+    - [composite bonding](tedavi_adi) yaptırmak istiyorum
+    - [porcelain veneers](tedavi_adi) istiyorum
+    - [teeth whitening](tedavi_adi) hakkında bilgi
+    - [diş beyazlatma](tedavi_adi) yaptıracağım
+    - [orthodontics](tedavi_adi) tedavisi
+    - [ortodonti](tedavi_adi) için geliyorum
+    - [endodontics](tedavi_adi) işlemi
+    - [kanal tedavisi](tedavi_adi) lazım
+    - [root canal treatment](tedavi_adi) need
+    - [bridges](tedavi_adi) ve [missing teeth](tedavi_adi)
+    - [eksik diş](tedavi_adi) tedavisi
+    - [chrome dentures](tedavi_adi) yaptırmak istiyorum
+    - [protez diş](tedavi_adi) için bilgi
+    - [zirconium crowns](tedavi_adi) hakkında
+    - [zirkonyum kaplama](tedavi_adi) fiyatı
+    - [implant dentistry](tedavi_adi) istiyorum
+    - [diş implantı](tedavi_adi) yaptıracağım
+    - [invisalign](tedavi_adi) tedavisi
+    - [gum disease treatment](tedavi_adi) lazım
+    - [diş eti hastalığı](tedavi_adi) tedavisi
+    - [smile restoration](tedavi_adi) için geliyorum
+    - [gülüş tasarımı](tedavi_adi) yaptırmak istiyorum
+    - [botox](tedavi_adi) for dental
+    - [zygomatic implants](tedavi_adi) operation
+    - [zigomatik implant](tedavi_adi) ameliyatı
+    - [bone graft](tedavi_adi) işlemi
+    - [kemik grefti](tedavi_adi) gerekiyor
+    - [amalgam fillings](tedavi_adi) replacement
+    - [amalgam dolgu](tedavi_adi) değişimi
+    - [composite fillings](tedavi_adi) needed
+    - [kompozit dolgu](tedavi_adi) istiyorum
+    - [acrylic dentures](tedavi_adi) want
+    - [akrilik protez](tedavi_adi) yaptıracağım
+
+# ============ TEDAVİ ARAMA - AESTHETIC & HAIR LOSS ============
+- intent: tedavi_arama_estetik
+  examples: |
+    - [estetik cerrahi](tedavi_turu) istiyorum
+    - [aesthetic surgery](tedavi_turu) information
+    - [saç ekimi](tedavi_turu) yaptırmak istiyorum
+    - [hair transplant](tedavi_turu) for me
+    - [rhinoplasty](tedavi_adi) operation
+    - [burun estetiği](tedavi_adi) ameliyatı
+    - [open rhinoplasty](tedavi_adi) istiyorum
+    - [açık rinoplasti](tedavi_adi) yaptıracağım
+    - [septoplasty](tedavi_adi) needed
+    - [septum deviation](tedavi_adi) surgery
+    - [septum deviasyonu](tedavi_adi) ameliyatı
+    - [botox](tedavi_adi) uygulaması
+    - [palm botox](tedavi_adi) for hands
+    - [avuç içi botoksu](tedavi_adi) istiyorum
+    - [chin filler](tedavi_adi) injection
+    - [çene dolgusu](tedavi_adi) yaptırmak
+    - [breast aesthetic surgery](tedavi_adi) want
+    - [meme estetiği](tedavi_adi) ameliyatı
+    - [genioplasty](tedavi_adi) with osteotomy
+    - [çene cerrahisi](tedavi_adi) istiyorum
+    - [lip lift](tedavi_adi) operation
+    - [dudak kaldırma](tedavi_adi) ameliyatı
+    - [face lift](tedavi_adi) surgery
+    - [yüz germe](tedavi_adi) operasyonu
+    - [neck lift](tedavi_adi) procedure
+    - [boyun germe](tedavi_adi) işlemi
+    - [breast reconstruction](tedavi_adi) after cancer
+    - [meme rekonstrüksiyonu](tedavi_adi) ameliyatı
+    - [breast augmentation](tedavi_adi) with implants
+    - [meme büyütme](tedavi_adi) ameliyatı
+    - [mastopexy](tedavi_adi) operation
+    - [meme dikleştirme](tedavi_adi) ameliyatı
+    - [eye contour aesthetics](tedavi_adi) surgery
+    - [göz kapağı estetiği](tedavi_adi) ameliyatı
+    - [upper eyelid surgery](tedavi_adi) want
+    - [üst göz kapağı](tedavi_adi) ameliyatı
+    - [cheek augmentation](tedavi_adi) with filler
+    - [yanak dolgusu](tedavi_adi) istiyorum
+    - [inner thigh lift](tedavi_adi) with liposuction
+    - [bacak içi germe](tedavi_adi) ve liposuction
+
+# ============ TEDAVİ ARAMA - EYE CARE ============
+- intent: tedavi_arama_goz
+  examples: |
+    - [göz tedavisi](tedavi_turu) istiyorum
+    - [eye care](tedavi_turu) treatment
+    - [göz ameliyatı](tedavi_turu) yaptıracağım
+    - [cataract](tedavi_adi) surgery
+    - [katarakt](tedavi_adi) ameliyatı
+    - [lazy eye](tedavi_adi) treatment
+    - [göz tembelliği](tedavi_adi) tedavisi
+    - [keratoplasty](tedavi_adi) operation
+    - [kornea nakli](tedavi_adi) ameliyatı
+    - [oculoplastic surgery](tedavi_adi) want
+    - [göz plastik cerrahisi](tedavi_adi) istiyorum
+    - [glaucoma](tedavi_adi) treatment
+    - [glokom](tedavi_adi) tedavisi
+    - [intraocular lens implants](tedavi_adi) needed
+    - [göz içi lens](tedavi_adi) ameliyatı
+    - [retinal diseases](tedavi_adi) treatment
+    - [retina hastalıkları](tedavi_adi) tedavisi
+    - [extracapsular cataract extraction](tedavi_adi) surgery
+    - [katarakt çıkarma](tedavi_adi) ameliyatı
+
+# ============ TEDAVİ ARAMA - WEIGHT LOSS ============
+- intent: tedavi_arama_obezite
+  examples: |
+    - [obezite cerrahisi](tedavi_turu) istiyorum
+    - [weight loss surgery](tedavi_turu) need
+    - [kilo verme ameliyatı](tedavi_turu) yaptırmak istiyorum
+    - [gastric bypass](tedavi_adi) operation
+    - [mide bypass](tedavi_adi) ameliyatı
+    - [gastric balloon](tedavi_adi) procedure
+    - [mide balonu](tedavi_adi) uygulaması
+    - [sleeve gastrectomy](tedavi_adi) surgery
+    - [tüp mide](tedavi_adi) ameliyatı
+    - [duodenal switch surgery](tedavi_adi) want
+    - [duodenal switch](tedavi_adi) ameliyatı
+    - [stomach stapling surgery](tedavi_adi) information
+    - [mide küçültme](tedavi_adi) ameliyatı
+
+# ============ TEDAVİ ARAMA - ORTHOPEDICS ============
+- intent: tedavi_arama_ortopedi
+  examples: |
+    - [ortopedi](tedavi_turu) tedavisi istiyorum
+    - [orthopedics](tedavi_turu) treatment
+    - [kemik tedavisi](tedavi_turu) yaptıracağım
+    - [knee reconstructive surgery](tedavi_adi) need
+    - [diz rekonstrüktif cerrahi](tedavi_adi) ameliyatı
+    - [meniscectomy](tedavi_adi) operation
+    - [menisküs ameliyatı](tedavi_adi) istiyorum
+    - [ankle injury treatment](tedavi_adi) want
+    - [ayak bileği tedavisi](tedavi_adi) gerekiyor
+    - [carpal tunnel surgery](tedavi_adi) needed
+    - [karpal tünel](tedavi_adi) ameliyatı
+    - [trigger finger treatment](tedavi_adi) want
+    - [tetik parmak](tedavi_adi) tedavisi
+    - [rheumatoid arthritis treatment](tedavi_adi) need
+    - [romatoid artrit](tedavi_adi) tedavisi
+    - [arthroscopic operations](tedavi_adi) surgery
+    - [artroskopik ameliyat](tedavi_adi) istiyorum
+    - [meniscus repair](tedavi_adi) operation
+    - [menisküs tamiri](tedavi_adi) ameliyatı
+    - [spinal fusion](tedavi_adi) surgery
+    - [omurga füzyonu](tedavi_adi) ameliyatı
+    - [knee replacement](tedavi_adi) needed
+    - [diz protezi](tedavi_adi) ameliyatı
+    - [bunion surgery](tedavi_adi) want
+    - [halluks valgus](tedavi_adi) ameliyatı
+    - [shoulder replacement](tedavi_adi) operation
+    - [omuz protezi](tedavi_adi) ameliyatı
+    - [hip resurfacing](tedavi_adi) surgery
+    - [kalça yüzey protezi](tedavi_adi) ameliyatı
+    - [disc replacement](tedavi_adi) needed
+    - [disk değişimi](tedavi_adi) ameliyatı
+    - [disc herniations treatment](tedavi_adi) want
+    - [disk hernisi](tedavi_adi) tedavisi
+    - [joint prosthesis](tedavi_adi) surgery
+    - [eklem protezi](tedavi_adi) ameliyatı
+    - [osteotomy](tedavi_adi) operation
+    - [osteotomi](tedavi_adi) ameliyatı
+    - [foot and ankle surgery](tedavi_adi) needed
+    - [ayak ve ayak bileği](tedavi_adi) cerrahisi
+    - [pediatric orthopedics](tedavi_adi) treatment
+    - [çocuk ortopedisi](tedavi_adi) tedavisi
+
+# ============ TEDAVİ ARAMA - CARDIOLOGY ============
+- intent: tedavi_arama_kardiyoloji
+  examples: |
+    - [kalp tedavisi](tedavi_turu) istiyorum
+    - [cardiology](tedavi_turu) treatment
+    - [kardiyoloji](tedavi_turu) ameliyatı
+    - [laser varicose vein treatment](tedavi_adi) want
+    - [lazer varis tedavisi](tedavi_adi) istiyorum
+    - [coronary angiography](tedavi_adi) procedure
+    - [koroner anjiyografi](tedavi_adi) işlemi
+    - [cardiac stress test](tedavi_adi) needed
+    - [efor testi](tedavi_adi) yaptırmak istiyorum
+    - [repair of congenital heart disorders](tedavi_adi) surgery
+    - [doğumsal kalp hastalığı](tedavi_adi) ameliyatı
+
+# ============ LOKASYON BELİRTME ============
+- intent: lokasyon_tercihi
+  examples: |
+    - [İstanbul](sehir)'da tedavi olmak istiyorum
+    - treatment in [Antalya](sehir)
+    - [Antalya](sehir)'ya gelmek istiyorum
+    - [İzmir](sehir)'de klinik arıyorum
+    - clinic in [Ankara](sehir)
+    - [Ankara](sehir)'da hastane önerisi
+    - [Muğla](sehir) bölgesinde
+    - [Bursa](sehir)'da ameliyat olmak istiyorum
+    - [Türkiye](ulke)'de tedavi
+    - [Turkey](ulke) for treatment
+    - [İstanbul](sehir) [Avrupa yakası](bolge)
+    - [Antalya](sehir) [Lara](bolge) bölgesinde
+    - [Antalya](sehir) [Konyaaltı](bolge) region
+    - [Belek](bolge)'te otel istiyorum
+    - hotel in [Side](bolge)
+    - [Alanya](bolge) bölgesinde konaklama
+    - [Kemer](bolge) area accommodation
+    - [Muratpaşa](bolge) district
+
+# ============ KLİNİK BELİRTME ============
+- intent: klinik_secimi
+  examples: |
+    - [Antmodern Oral & Dental Health Clinic](klinik_adi) hakkında bilgi
+    - information about [Dt. Murat Özbıyık Clinic](klinik_adi)
+    - [Markasya Oral & Dental Health Clinic](klinik_adi) nerede
+    - where is [Akdeniz Health Vakfı Yaşam Hospital](klinik_adi)
+    - [Antera Oral & Dental Health Clinic](klinik_adi) randevu
+    - [Alaiye Beyaz Oral & Dental Health Clinic](klinik_adi) fiyatları
+    - [Antlara Oral & Dental Health Clinic](klinik_adi) doktorları
+    - [Dr. Gökhan Özerdem Clinic](klinik_adi) estetik
+    - [Dr. Hasan Hüseyin Balıkçı Clinic](klinik_adi) için bilgi
+    - [Antalya Lara Anadolu Hospital](klinik_adi) address
+    - [Antalya Anadolu Hospital](klinik_adi) location
+    - [Akdeniz Hospital](klinik_adi) göz tedavisi
+    - [Akdeniz Şifa Konyaaltı Medical Center](klinik_adi) katarakt
+    - [Antalya Uncalı Meydan Hospital](klinik_adi) için randevu
+
+# ============ TARİH BELİRTME ============
+- intent: tarih_belirtme
+  examples: |
+    - [gelecek hafta](tarih) gelebilirim
+    - [next week](tarih) available
+    - [15 Mayıs](tarih)'ta randevu istiyorum
+    - appointment on [May 15](tarih)
+    - [Haziran ayı](tarih) içinde
+    - in [June](tarih)
+    - [bu ay sonu](tarih) müsait miyim
+    - [end of this month](tarih)
+    - [20-25 Temmuz](tarih) arası
+    - between [July 20-25](tarih)
+    - [önümüzdeki ay](tarih) başında
+    - [next month](tarih) beginning
+    - [3 gün sonra](tarih) gelebilirim
+    - [in 3 days](tarih)
+    - [2 hafta içinde](tarih) ameliyat olmak istiyorum
+    - surgery [in 2 weeks](tarih)
+    - [Aralık](tarih) ayında
+    - [December](tarih) available
+
+# ============ BÜTÇE BİLGİSİ ============
+- intent: butce_belirtme
+  examples: |
+    - bütçem [5000 euro](butce)
+    - my budget is [5000 euro](butce)
+    - [10000 dolar](butce) harcayabilirim
+    - can spend [10000 dollars](butce)
+    - maksimum [3000 pound](butce)
+    - maximum [3000 pounds](butce)
+    - [2000-3000 euro](butce) arası
+    - between [2000-3000 euro](butce)
+    - [50000 TL](butce) bütçem var
+    - have [50000 TRY](butce) budget
+    - [8000 dolar](butce)'a kadar çıkabilirim
+    - up to [8000 dollars](butce)
+    - ekonomik paketler var mı
+    - economical packages available
+    - en uygun fiyatlı seçenekler
+    - most affordable options
+    - premium paket istiyorum
+    - want premium package
+    - lüks otel ve tedavi
+    - luxury hotel and treatment
+    - [5000](butce)
+    - [3000](butce)
+    - [10000](butce)
+    - [7500](butce)
+    - [2500](butce)
+    - [15000](butce)
+    - [4000](butce) civarı
+    - around [6000](butce)
+    - yaklaşık [8000](butce)
+    - [5000](butce) euro bütçem var
+    - budget is [7000](butce)
+    - [12000](butce) tl
+    - [20000](butce) lira
+    - [4500](butce) dolar
+    - [3500](butce) pound
+
+# ============ OTEL TERCİHİ ============
+- intent: otel_tercihi
+  examples: |
+    - [5 yıldızlı](otel_kategori) otel istiyorum
+    - want [5 star](otel_kategori) hotel
+    - [5 yıldızlı](otel_kategori)
+    - [4 yıldızlı](otel_kategori)
+    - [3 yıldızlı](otel_kategori)
+    - [deniz manzaralı](otel_ozellik) oda
+    - [sea view](otel_ozellik) room
+    - [spa](otel_ozellik) olan otel
+    - hotel with [spa](otel_ozellik)
+    - otelde [havuz](otel_ozellik) olsun
+    - [pool](otel_ozellik) in hotel
+    - [merkeze yakın](otel_ozellik) otel
+    - [close to center](otel_ozellik) hotel
+    - [4 yıldızlı](otel_kategori) ekonomik otel
+    - economical [4 star](otel_kategori) hotel
+    - [butik otel](otel_kategori) tercih ederim
+    - prefer [boutique hotel](otel_kategori)
+    - [all inclusive](otel_ozellik) otel
+    - [all inclusive](otel_ozellik) hotel
+    - [Belek](bolge)'te resort
+    - resort in [Belek](bolge)
+    - [Lara](bolge) bölgesinde otel
+    - hotel in [Lara](bolge) region
+    - [Side](bolge)'de konaklama
+    - accommodation in [Side](bolge)
+
+# ============ UÇUŞ TERCİHİ ============
+- intent: ucus_tercihi
+  examples: |
+    - [direkt uçuş](ucus_tipi) istiyorum
+    - want [direct flight](ucus_tipi)
+    - [aktarmalı](ucus_tipi) olabilir
+    - [connecting flight](ucus_tipi) ok
+    - [business class](ucus_sinifi) uçmak istiyorum
+    - want to fly [business class](ucus_sinifi)
+    - [ekonomi sınıfı](ucus_sinifi) yeterli
+    - [economy class](ucus_sinifi) sufficient
+    - en ucuz uçuş
+    - cheapest flight
+    - en hızlı uçuş
+    - fastest flight
+    - [sabah](ucus_zamani) uçuşu tercih ederim
+    - prefer [morning](ucus_zamani) flight
+    - [akşam](ucus_zamani) uçuşları
+    - [evening](ucus_zamani) flights
+
+# ============ KİŞİSEL BİLGİ ============
+- intent: kisisel_bilgi
+  examples: |
+    - [35](yas) yaşındayım
+    - I am [35](yas) years old
+    - [kadın](cinsiyet) hastayım
+    - [female](cinsiyet) patient
+    - [erkek](cinsiyet) hasta
+    - [male](cinsiyet) patient
+    - ismim [Ahmet](isim)
+    - my name is [John](isim)
+    - [diabetes](hastalik) hastasıyım
+    - I have [diabetes](hastalik)
+    - [hipertansiyon](hastalik) var
+    - have [hypertension](hastalik)
+    - [alerjim](saglik_durumu) yok
+    - no [allergies](saglik_durumu)
+    - [kalp](saglik_durumu) rahatsızlığım var
+    - have [heart](saglik_durumu) condition
+    - daha önce [ameliyat](saglik_gecmisi) oldum
+    - had [surgery](saglik_gecmisi) before
+    - ilaç [kullanıyorum](saglik_durumu)
+    - [using](saglik_durumu) medication
+
+# ============ PAKET SORGULAMA ============
+- intent: paket_sorgulama
+  examples: |
+    - hangi paketler var
+    - what packages available
+    - all inclusive paketleriniz nedir
+    - what are your all inclusive packages
+    - tedavi paketi detayları
+    - treatment package details
+    - pakete neler dahil
+    - what is included in package
+    - tam paket istiyorum
+    - want full package
+    - uçak dahil mi
+    - is flight included
+    - otel dahil paket var mı
+    - package with hotel
+    - transferler dahil mi
+    - transfers included
+    - full paket fiyatı nedir
+    - full package price
+
+# ============ PAKET SEÇİMİ ============
+- intent: paket_secimi
+  examples: |
+    - ilk paketi seçiyorum
+    - birinci paketi istiyorum
+    - 1. paketi seçtim
+    - first package
+    - ekonomik paketi alacağım
+    - standart paketi istiyorum
+    - premium paket lütfen
+    - ikinci paketi seçiyorum
+    - 2. paket olsun
+    - second package please
+    - üçüncü paketi tercih ediyorum
+    - 3. paketi alıyorum
+    - third package
+    - bu paketi seçiyorum
+    - this package
+    - onu seçiyorum
+    - that one please
+    - paketi seçtim
+    - paketi alıyorum
+    - bunu istiyorum
+    - devam edelim
+    - onaylıyorum
+    - tamam devam
+    - evet bu paket olsun
+    - paketi onaylıyorum
+    - rezervasyon yapabilirsiniz
+    - rezervasyon yap
+    - rezervasyon istiyorum
+    - bu paketi rezerve et
+    - randevu oluştur
+    - randevu istiyorum
+    - randevu al
+    - appointment please
+    - book this package
+    - reserve it
+    - confirm package
+    - paket onayla
+
+# ============ RANDEVU TALEBİ ============
+- intent: randevu_talep
+  examples: |
+    - randevu almak istiyorum
+    - want to make appointment
+    - ne zaman müsaitsiniz
+    - when are you available
+    - görüşme ayarlayabilir miyiz
+    - can we arrange meeting
+    - doktorla konuşmak istiyorum
+    - want to talk to doctor
+    - online konsültasyon
+    - online consultation
+    - video görüşme yapabilir miyiz
+    - can we have video call
+    - ön değerlendirme istiyorum
+    - want preliminary evaluation
+    - randevu oluştur
+    - randevu yap
+    - randevu ver
+    - appointment create
+    - schedule appointment
+    - book appointment
+    - make reservation
+    - rezervasyon yap
+    - rezervasyon istiyorum
+    - booking yapabilir miyiz
+    - can we book
+    - randevu tarihi belirle
+    - set appointment date
+    - görüşme ayarla
+    - arrange consultation
+    - danışma randevusu
+    - consultation appointment
+
+# ============ ONAY VE RED ============
 - intent: affirm
   examples: |
     - evet
-    - evet lütfen
+    - yes
     - tamam
+    - okay
+    - kabul ediyorum
+    - I accept
     - olur
-    - tabii
-    - tabii ki
-    - kabul
-    - peki
+    - sure
+    - uygun
+    - suitable
+    - devam edelim
+    - let's continue
+    - anlaştık
+    - agreed
 
 - intent: deny
   examples: |
     - hayır
-    - hayır teşekkürler
-    - olmaz
+    - no
     - istemiyorum
-    - gerek yok
-    - hayır olmaz
+    - don't want
+    - olmaz
+    - not possible
+    - uygun değil
+    - not suitable
+    - başka seçenek
+    - other option
+    - vazgeçtim
+    - I quit
+    - yok
+    - farketmez
+    - önemli değil
+    - tercihim yok
+    - no preference
 
-- intent: mood_great
+# ============ YARDIM TALEBİ ============
+- intent: yardim_talep
   examples: |
-    - harikayım
-    - çok iyiyim
-    - mükemmelim
-    - süperim
-    - çok iyi hissediyorum
-    - bugün harika
+    - yardım
+    - help
+    - anlamadım
+    - don't understand
+    - nasıl yapacağım
+    - how to do
+    - bana yardım eder misiniz
+    - can you help me
+    - ne yapmalıyım
+    - what should I do
+    - kafam karıştı
+    - I'm confused
 
-- intent: mood_unhappy
+# ============ FİYAT SORGULAMA ============
+- intent: fiyat_sorgulama
   examples: |
-    - üzgünüm
-    - kötüyüm
-    - mutsuzum
-    - iyi değilim
-    - kötü hissediyorum
+    - bu tedavi ne kadar
+    - how much is this treatment
+    - toplam maliyet nedir
+    - what is total cost
+    - paket fiyatı
+    - package price
+    - sadece ameliyat ücreti
+    - only surgery fee
+    - ekstra ücretler var mı
+    - any extra fees
+    - ödeme planı var mı
+    - payment plan available
+    - taksit imkanı
+    - installment option
+    - sigorta kabul ediyor musunuz
+    - do you accept insurance
+
+# ============ TRANSFER BİLGİSİ ============
+- intent: transfer_sorgulama
+  examples: |
+    - havalimanı transferi var mı
+    - airport transfer available
+    - karşılama hizmeti
+    - meet and greet service
+    - VIP transfer
+    - VIP transfer
+    - araç tahsis edilir mi
+    - car provided
+    - şoförlü araç
+    - car with driver
+    - klinik otel arası ulaşım
+    - transport between clinic and hotel
+
+# ============ DÖKÜMANTASYON ============
+- intent: dokuman_sorgulama
+  examples: |
+    - hangi belgeler gerekli
+    - what documents needed
+    - pasaport yeterli mi
+    - is passport enough
+    - vize gerekli mi
+    - visa required
+    - sağlık raporları
+    - medical reports
+    - hangi testler lazım
+    - what tests needed
+    - ameliyat öncesi hazırlık
+    - pre-surgery preparation
+    - getirmem gereken evraklar
+    - documents I should bring
+
+# ============ KLİNİK SORGULAMA ============
+- intent: klinik_sorgulama
+  examples: |
+    - kliniğiniz hakkında bilgi
+    - information about your clinic
+    - doktorlarınız kimler
+    - who are your doctors
+    - akreditasyonlarınız var mı
+    - do you have accreditations
+    - deneyiminiz nedir
+    - what is your experience
+    - başarı oranınız kaç
+    - what is your success rate
+    - sertifikalarınız
+    - your certificates
+    - hangi kliniklerle çalışıyorsunuz
+    - which clinics do you work with
+    - doktor özgeçmişleri
+    - doctor CVs
+
+
 
 - intent: bot_challenge
   examples: |
@@ -71,189 +627,6 @@ nlu:
     - sen insan mısın?
     - seninle mi konuşuyorum?
     - sen gerçek misin?
-
-- intent: klinik_ara
-  examples: |
-    - bir klinik arıyorum
-    - klinik bul
-    - klinik ara
-    - klinik öner
-    - hangi kliniklere gidebilirim
-    - hangi klinikten randevu alabilirim
-    - klinik listesi
-    - tedavi olabileceğim yer
-    - [Antalya](sehir) da klinik var mı
-    - [Antalyada](sehir) klinik
-    - [Antalya](sehir) klinik bul
-    - [diş tedavisi](tedavi) için klinik
-    - [saç ekimi](tedavi) kliniği lazım
-    - [saç ekimi](tedavi) için klinik bul
-    - [İstanbul](sehir) da [göz ameliyatı](tedavi) yapan klinik
-    - [İstanbulda](sehir) [estetik](tedavi) kliniği
-    - [diş](tedavi) kliniği öner
-    - iyi bir [estetik](tedavi) kliniği
-    - [rinoplasti](tedavi) için doktor
-    - [Bursa](sehir) da klinik
-    - [İzmir](sehir) de [diş](tedavi) kliniği
-    - burada klinik var mı
-    - yakında klinik
-    - [Ankara](sehir) klinik
-    - [Antalyada](sehir) hangi klinikler var
-
-- intent: otel_ara
-  examples: |
-    - otel arıyorum
-    - otel bul
-    - [Antalya](sehir) da otel
-    - [deniz manzaralı](konum_ozelligi) otel
-    - [spa](otel_tipi) oteli
-    - [İstanbul](sehir) da [lüks](otel_tipi) otel
-    - konaklama yeri lazım
-    - nerede kalabilirim
-
-- intent: sac_ekimi_bilgisi
-  examples: |
-    - saç ekimi hakkında bilgi
-    - saç ekimi nasıl yapılıyor
-    - FUE ve DHI yöntemleri nedir
-    - saç ekimi nedir
-    - saç ekimi fiyatları
-    - saç ekimi ne kadar
-    - saç ekimi süreci
-    - saç ekimi hakkında bilgi ver
-    - saç ekimi detayları
-    - saç dökülmesi tedavisi
-    - saç transplantasyonu
-    - saç restorasyonu
-    - fue saç ekimi
-    - dhi saç ekimi
-    - saç ekimi ameliyatı
-
-- intent: dis_implant_bilgisi
-  examples: |
-    - diş implantı hakkında bilgi
-    - diş implantı nedir
-    - diş implantı nasıl yapılır
-    - implant diş tedavisi
-    - diş implantı fiyatları
-    - diş implantı ne kadar
-    - diş eksikliği tedavisi
-    - implant diş
-    - dental implant
-    - tek diş implantı
-    - çoklu diş implantı
-    - all on four nedir
-    - all on six diş implantı
-    - diş protezi mi implant mı
-    - implant diş süreci
-
-- intent: rinoplasti_bilgisi
-  examples: |
-    - rinoplasti nedir
-    - burun estetiği hakkında bilgi
-    - burun ameliyatı
-    - rinoplasti fiyatları
-    - burun estetiği ne kadar
-    - burun şekillendirme
-    - burun küçültme ameliyatı
-    - eğri burun düzeltme
-    - rinoplasti süreci
-    - burun ameliyatı nasıl olur
-    - burun estetiği sonrası
-    - rinoplasti iyileşme
-    - açık rinoplasti
-    - kapalı rinoplasti
-    - revizyon rinoplasti
-
-- intent: mide_kucultme_bilgisi
-  examples: |
-    - mide küçültme ameliyatı
-    - mide küçültme nedir
-    - bariatrik cerrahi
-    - sleeve gastrektomi
-    - tüp mide ameliyatı
-    - gastrik bypass
-    - obezite cerrahisi
-    - mide küçültme fiyatları
-    - mide küçültme ne kadar
-    - kilo verme ameliyatı
-    - mide balonu
-    - mide küçültme süreci
-    - ameliyat sonrası kilo kaybı
-    - mide küçültme riskleri
-    - tüp mide hakkında bilgi
-
-- intent: lasik_bilgisi
-  examples: |
-    - lasik ameliyatı nedir
-    - göz lazer ameliyatı
-    - lasik göz ameliyatı
-    - gözlük bırakma ameliyatı
-    - miyop lazer tedavisi
-    - lasik fiyatları
-    - göz ameliyatı ne kadar
-    - lasik süreci
-    - lazer göz ameliyatı sonrası
-    - prk ameliyatı
-    - femtolasik nedir
-    - göz lazer tedavisi
-    - gözlüksüz yaşam
-    - lasik riskleri
-    - göz ameliyatı hakkında
-
-- intent: fiyat_sor
-  examples: |
-    - fiyatlar ne kadar
-    - [saç ekimi](tedavi) fiyatı
-    - [diş implantı](tedavi) ücreti
-    - [rinoplasti](tedavi) kaç para
-    - ne kadar ödemem gerekir
-    - fiyat bilgisi
-    - ücret ne kadar
-    - paket fiyatı
-    - toplam maliyet
-    - [burun estetiği](tedavi) fiyatı
-    - [mide küçültme](tedavi) ücreti ne kadar
-    - [lasik](tedavi) için ne kadar para
-    - fiyat listesi
-    - ödeme bilgisi
-    - kaç lira
-    - kaç euro
-
-- intent: sigorta_sor
-  examples: |
-    - sigorta kabul ediliyor mu
-    - özel sigortam geçerli mi
-    - sigorta ile ödeme
-    - sağlık sigortası
-    - sigorta kapsamı
-    - sigortam var kullanabilir miyim
-    - sigorta anlaşmalı mı
-    - sgk geçerli mi
-    - devlet hastanesi mi
-    - özel sigorta
-    - sigorta anlaşması
-    - hangi sigortalar geçerli
-    - sigorta ile tedavi
-
-- intent: randevu_sor
-  examples: |
-    - randevu almak istiyorum
-    - nasıl randevu alabilirim
-    - randevu için ne yapmalıyım
-    - randevu oluştur
-    - randevu tarihi
-    - ne zaman müsaitsiniz
-    - hangi günler boş
-    - randevu sistemini nasıl kullanırım
-    - online randevu
-    - telefon ile randevu
-    - acil randevu
-    - yarın randevu var mı
-    - bu hafta müsait misiniz
-    - randevu iptal
-    - randevu değiştirme
-
 - intent: nlu_fallback
   examples: |
     - asdfghjkl
@@ -261,3 +634,5 @@ nlu:
     - anlamadım
     - başka bir şey
     - bilmiyorum ne diyeceğimi
+
+

@@ -2,151 +2,550 @@ version: "3.1"
 
 stories:
 
-- story: happy path
+# ============ DENTAL TEDAVİ SENARYOSU ============
+- story: dental treatment antalya full package
   steps:
   - intent: greet
   - action: utter_greet
-  - intent: mood_great
-  - action: utter_happy
-
-- story: sad path 1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
+  - intent: tedavi_arama_dental
+    entities:
+    - tedavi_adi: "dental implant"
+  - action: utter_ask_lokasyon
+  - intent: lokasyon_tercihi
+    entities:
+    - sehir: "Antalya"
+    - bolge: "Lara"
+  - action: action_search_clinics_by_treatment
+  - action: utter_antalya_klinikler_dental
+  - action: utter_ask_tarih
+  - intent: tarih_belirtme
+    entities:
+    - tarih: "next month"
+  - action: utter_ask_butce
+  - intent: butce_belirtme
+    entities:
+    - butce: "5000 euro"
+  - action: utter_ask_otel_tercihi
+  - intent: otel_tercihi
+    entities:
+    - otel_kategori: "5 star"
+    - otel_ozellik: "spa"
+  - action: action_search_hotels_by_region
+  - action: utter_lara_oteller
+  - action: utter_ask_ucus_tercihi
+  - intent: ucus_tercihi
+    entities:
+    - ucus_tipi: "direct flight"
+    - ucus_sinifi: "economy class"
+  - action: action_generate_bundle_recommendation
+  - action: utter_paket_hazirlaniyor
+  - action: utter_paket_hazir
+  - action: action_save_user_profile
   - intent: affirm
-  - action: utter_happy
-
-- story: sad path 2
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: mood_unhappy
-  - action: utter_cheer_up
-  - action: utter_did_that_help
-  - intent: deny
+  - action: utter_randevu_onay
+  - intent: goodbye
   - action: utter_goodbye
 
-- story: sac ekimi bilgi isteme
+# ============ ESTETİK CERRAHİ SENARYOSU ============
+- story: aesthetic surgery belek premium
   steps:
-  - intent: sac_ekimi_bilgisi
-  - action: action_sac_ekimi_detaylari
-
-- story: klinik arama
-  steps:
-  - intent: klinik_ara
-  - action: action_klinik_ara
-
-- story: otel arama
-  steps:
-  - intent: otel_ara
-  - action: action_otel_ara
-
-# YENİ: Context-aware hikayeler (slot kullanımı)
-- story: otel sonra klinik arama - şehir hatırlama
-  steps:
-  - intent: otel_ara
+  - intent: greet
+  - action: utter_greet
+  - intent: tedavi_arama_estetik
+    entities:
+    - tedavi_adi: "rhinoplasty"
+  - action: utter_estetik_tedaviler
+  - intent: lokasyon_tercihi
     entities:
     - sehir: "Antalya"
-  - action: action_otel_ara
-  - slot_was_set:
-    - sehir: "Antalya"
-  - intent: klinik_ara
-  - action: action_klinik_ara
+    - bolge: "Belek"
+  - action: action_search_clinics_by_location
+  - action: utter_antalya_klinikler_estetik
+  - intent: klinik_secimi
+    entities:
+    - klinik_adi: "Dr. Gökhan Özerdem Clinic"
+  - action: action_provide_clinic_details
+  - action: utter_ask_tarih
+  - intent: tarih_belirtme
+    entities:
+    - tarih: "June"
+  - action: utter_ask_butce
+  - intent: butce_belirtme
+    entities:
+    - butce: "10000 dollars"
+  - action: utter_ask_otel_tercihi
+  - intent: otel_tercihi
+    entities:
+    - otel_kategori: "5 star"
+    - bolge: "Belek"
+  - action: utter_belek_oteller
+  - action: utter_paket_hazirlaniyor
+  - action: action_generate_bundle_recommendation
+  - action: utter_paket_hazir
+  - intent: paket_sorgulama
+  - action: utter_transfer_bilgi
+  - intent: affirm
+  - action: action_schedule_appointment
+  - action: utter_randevu_onay
+  - intent: goodbye
+  - action: utter_goodbye
 
-- story: şehir belirtip klinik arama
+# ============ GÖZ TEDAVİSİ SENARYOSU ============
+- story: eye care cataract konyaalti
   steps:
-  - intent: klinik_ara
+  - intent: greet
+  - action: utter_greet
+  - intent: tedavi_arama_goz
+    entities:
+    - tedavi_adi: "cataract"
+  - action: utter_goz_tedaviler
+  - intent: lokasyon_tercihi
     entities:
     - sehir: "Antalya"
-  - action: action_klinik_ara
-  - slot_was_set:
-    - sehir: "Antalya"
+    - bolge: "Konyaaltı"
+  - action: action_search_clinics_by_treatment
+  - action: utter_antalya_klinikler_goz
+  - intent: klinik_secimi
+    entities:
+    - klinik_adi: "Akdeniz Şifa Konyaaltı Medical Center"
+  - action: action_provide_clinic_details
+  - action: utter_ask_kisisel_bilgi
+  - intent: kisisel_bilgi
+    entities:
+    - yas: "65"
+    - hastalik: "diabetes"
+  - action: action_save_user_profile
+  - action: utter_ask_tarih
+  - intent: tarih_belirtme
+    entities:
+    - tarih: "in 2 weeks"
+  - action: utter_ask_butce
+  - intent: butce_belirtme
+    entities:
+    - butce: "3000 euro"
+  - action: utter_ask_otel_tercihi
+  - intent: otel_tercihi
+    entities:
+    - otel_kategori: "4 star"
+    - bolge: "Konyaaltı"
+  - action: utter_konyaalti_oteller
+  - action: action_generate_bundle_recommendation
+  - action: utter_paket_hazir
+  - intent: fiyat_sorgulama
+  - action: action_calculate_package_price
+  - intent: affirm
+  - action: utter_randevu_onay
+  - intent: goodbye
+  - action: utter_goodbye
 
-- story: tedavi belirtip sonra klinik arama
+# ============ OBEZİTE CERRAHİSİ SENARYOSU ============
+- story: weight loss surgery side
   steps:
-  - intent: sac_ekimi_bilgisi
-  - action: action_sac_ekimi_detaylari
-  - slot_was_set:
-    - tedavi: "saç ekimi"
-  - intent: klinik_ara
-  - action: action_klinik_ara
-
-- story: şehir ve tedavi ile klinik arama
-  steps:
-  - intent: klinik_ara
+  - intent: tedavi_arama_obezite
+    entities:
+    - tedavi_adi: "sleeve gastrectomy"
+  - action: utter_obezite_tedaviler
+  - intent: lokasyon_tercihi
     entities:
     - sehir: "Antalya"
-    - tedavi: "saç ekimi"
-  - action: action_klinik_ara
-  - slot_was_set:
-    - sehir: "Antalya"
-    - tedavi: "saç ekimi"
+    - bolge: "Side"
+  - action: action_search_clinics_by_treatment
+  - action: utter_antalya_klinikler_genel
+  - action: utter_ask_tarih
+  - intent: tarih_belirtme
+    entities:
+    - tarih: "July"
+  - action: utter_ask_butce
+  - intent: butce_belirtme
+    entities:
+    - butce: "8000 dollars"
+  - action: utter_ask_otel_tercihi
+  - intent: otel_tercihi
+    entities:
+    - otel_kategori: "5 star"
+    - otel_ozellik: "all inclusive"
+    - bolge: "Side"
+  - action: utter_side_oteller
+  - action: action_generate_bundle_recommendation
+  - action: utter_paket_hazir
+  - intent: dokuman_sorgulama
+  - action: utter_dokuman_bilgi
+  - intent: transfer_sorgulama
+  - action: utter_transfer_bilgi
+  - intent: affirm
+  - action: utter_randevu_onay
+  - intent: goodbye
+  - action: utter_goodbye
 
-# YENİ STORY'LER
-- story: diş implant bilgisi isteme
+# ============ ORTOPEDİ TEDAVİSİ SENARYOSU ============
+- story: orthopedics knee replacement alanya
   steps:
-  - intent: dis_implant_bilgisi
-  - action: action_dis_implant_detaylari
-
-- story: rinoplasti bilgisi isteme
-  steps:
-  - intent: rinoplasti_bilgisi
-  - action: action_rinoplasti_detaylari
-
-- story: mide küçültme bilgisi isteme
-  steps:
-  - intent: mide_kucultme_bilgisi
-  - action: action_mide_kucultme_detaylari
-
-- story: lasik bilgisi isteme
-  steps:
-  - intent: lasik_bilgisi
-  - action: action_lasik_detaylari
-
-- story: fiyat sorusu
-  steps:
-  - intent: fiyat_sor
-  - action: action_fiyat_bilgisi
-
-- story: sigorta sorusu
-  steps:
-  - intent: sigorta_sor
-  - action: action_sigorta_bilgisi
-
-- story: randevu sorusu
-  steps:
-  - intent: randevu_sor
-  - action: action_randevu_bilgisi
-
-# Context-aware hikayeler
-- story: tedavi bilgisi sonra fiyat sorma
-  steps:
-  - intent: dis_implant_bilgisi
-  - action: action_dis_implant_detaylari
-  - slot_was_set:
-    - tedavi: "diş implantı"
-  - intent: fiyat_sor
-  - action: action_fiyat_bilgisi
-
-- story: tedavi bilgisi sonra klinik arama
-  steps:
-  - intent: rinoplasti_bilgisi
-  - action: action_rinoplasti_detaylari
-  - slot_was_set:
-    - tedavi: "rinoplasti"
-  - intent: klinik_ara
-  - action: action_klinik_ara
-
-- story: klinik arama sonra randevu sorusu
-  steps:
-  - intent: klinik_ara
+  - intent: greet
+  - action: utter_greet
+  - intent: tedavi_arama_ortopedi
+    entities:
+    - tedavi_adi: "knee replacement"
+  - action: utter_ortopedi_tedaviler
+  - intent: lokasyon_tercihi
     entities:
     - sehir: "Antalya"
-  - action: action_klinik_ara
-  - slot_was_set:
+    - bolge: "Alanya"
+  - action: action_search_clinics_by_location
+  - action: utter_antalya_klinikler_genel
+  - action: utter_ask_kisisel_bilgi
+  - intent: kisisel_bilgi
+    entities:
+    - yas: "58"
+    - cinsiyet: "male"
+    - hastalik: "hypertension"
+  - action: validate_treatment_compatibility
+  - action: utter_ask_tarih
+  - intent: tarih_belirtme
+    entities:
+    - tarih: "September"
+  - action: utter_ask_butce
+  - intent: butce_belirtme
+    entities:
+    - butce: "12000 euro"
+  - action: utter_ask_otel_tercihi
+  - intent: otel_tercihi
+    entities:
+    - otel_kategori: "4 star"
+    - bolge: "Alanya"
+  - action: utter_alanya_oteller
+  - action: action_generate_bundle_recommendation
+  - action: utter_paket_hazir
+  - intent: klinik_sorgulama
+  - action: utter_klinik_detay
+  - intent: affirm
+  - action: utter_randevu_onay
+  - intent: goodbye
+  - action: utter_goodbye
+
+# ============ KARDİYOLOJİ TEDAVİSİ SENARYOSU ============
+- story: cardiology varicose vein kemer
+  steps:
+  - intent: tedavi_arama_kardiyoloji
+    entities:
+    - tedavi_adi: "laser varicose vein treatment"
+  - action: utter_kardiyoloji_tedaviler
+  - intent: lokasyon_tercihi
+    entities:
     - sehir: "Antalya"
-  - intent: randevu_sor
-  - action: action_randevu_bilgisi
+    - bolge: "Kemer"
+  - action: action_search_clinics_by_treatment
+  - action: utter_antalya_klinikler_genel
+  - action: utter_ask_tarih
+  - intent: tarih_belirtme
+    entities:
+    - tarih: "next week"
+  - action: utter_ask_butce
+  - intent: butce_belirtme
+    entities:
+    - butce: "4000 euro"
+  - action: utter_ask_otel_tercihi
+  - intent: otel_tercihi
+    entities:
+    - otel_kategori: "5 star"
+    - otel_ozellik: "spa"
+    - bolge: "Kemer"
+  - action: utter_kemer_oteller
+  - action: utter_ask_ucus_tercihi
+  - intent: ucus_tercihi
+    entities:
+    - ucus_tipi: "direct flight"
+    - ucus_sinifi: "business class"
+  - action: action_generate_bundle_recommendation
+  - action: utter_paket_hazir
+  - intent: affirm
+  - action: utter_randevu_onay
+  - intent: goodbye
+  - action: utter_goodbye
+
+# ============ YARDIM SENARYOSU ============
+- story: help request flow
+  steps:
+  - intent: yardim_talep
+  - action: utter_yardim
+  - intent: tedavi_arama_dental
+    entities:
+    - tedavi_turu: "dental treatment"
+  - action: utter_dental_tedaviler
+  - intent: affirm
+  - action: utter_ask_lokasyon
+
+# ============ RED SENARYOSU ============
+- story: deny and alternative
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tedavi_arama_dental
+  - action: utter_ask_lokasyon
+  - intent: lokasyon_tercihi
+    entities:
+    - sehir: "Antalya"
+  - action: action_search_clinics_by_location
+  - intent: deny
+  - action: utter_ask_lokasyon
+  - intent: lokasyon_tercihi
+    entities:
+    - sehir: "İstanbul"
+  - action: action_search_clinics_by_location
+
+# ============ FİYAT ODAKLI SENARYO ============
+- story: price focused inquiry
+  steps:
+  - intent: tedavi_arama_dental
+    entities:
+    - tedavi_adi: "implant dentistry"
+  - action: utter_ask_lokasyon
+  - intent: lokasyon_tercihi
+    entities:
+    - sehir: "Antalya"
+  - action: action_search_clinics_by_treatment
+  - intent: fiyat_sorgulama
+  - action: action_calculate_package_price
+  - intent: butce_belirtme
+    entities:
+    - butce: "3000 euro"
+  - action: validate_user_budget
+  - action: action_generate_bundle_recommendation
+  - action: utter_paket_hazir
+  - intent: paket_sorgulama
+  - action: utter_transfer_bilgi
+  - intent: affirm
+  - action: utter_randevu_onay
+
+# ============ KLİNİK DETAY ODAKLI SENARYO ============
+- story: clinic details focused
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tedavi_arama_estetik
+    entities:
+    - tedavi_adi: "rhinoplasty"
+  - action: utter_estetik_tedaviler
+  - intent: klinik_sorgulama
+  - action: utter_klinik_detay
+  - intent: lokasyon_tercihi
+    entities:
+    - sehir: "Antalya"
+  - action: action_search_clinics_by_treatment
+  - action: utter_antalya_klinikler_estetik
+  - intent: klinik_secimi
+    entities:
+    - klinik_adi: "Dr. Gökhan Özerdem Clinic"
+  - action: action_provide_clinic_details
+  - intent: affirm
+  - action: utter_ask_tarih
+
+# ============ RANDEVU TALEBİ SENARYOSU ============
+- story: direct appointment request
+  steps:
+  - intent: randevu_talep
+  - action: utter_ask_tedavi_turu
+  - intent: tedavi_arama_goz
+    entities:
+    - tedavi_adi: "cataract"
+  - action: utter_ask_lokasyon
+  - intent: lokasyon_tercihi
+    entities:
+    - sehir: "Antalya"
+    - bolge: "Konyaaltı"
+  - action: action_search_clinics_by_treatment
+  - action: utter_antalya_klinikler_goz
+  - action: utter_ask_tarih
+  - intent: tarih_belirtme
+    entities:
+    - tarih: "next month"
+  - action: utter_ask_kisisel_bilgi
+  - intent: kisisel_bilgi
+    entities:
+    - isim: "John"
+    - yas: "60"
+  - action: action_save_user_profile
+  - action: utter_randevu_onay
+
+# ============ PAKET KARŞILAŞTIRMA SENARYOSU ============
+- story: package comparison flow
+  steps:
+  - intent: paket_sorgulama
+  - action: utter_ask_tedavi_turu
+  - intent: tedavi_arama_obezite
+    entities:
+    - tedavi_adi: "gastric bypass"
+  - action: utter_ask_lokasyon
+  - intent: lokasyon_tercihi
+    entities:
+    - sehir: "Antalya"
+  - action: utter_ask_butce
+  - intent: butce_belirtme
+    entities:
+    - butce: "5000-8000 euro"
+  - action: action_generate_bundle_recommendation
+  - action: utter_paket_hazir
+  - intent: fiyat_sorgulama
+  - action: action_calculate_package_price
+  - intent: paket_sorgulama
+  - action: utter_transfer_bilgi
+  - intent: affirm
+  - action: utter_randevu_onay
+
+# ============ SİGORTA SORGULAMA SENARYOSU ============
+- story: insurance inquiry flow
+  steps:
+  - intent: tedavi_arama_ortopedi
+    entities:
+    - tedavi_adi: "knee replacement"
+  - action: utter_ortopedi_tedaviler
+  - intent: fiyat_sorgulama
+  - action: action_calculate_package_price
+  - intent: fiyat_sorgulama
+  - action: utter_sigorta_bilgi
+  - intent: affirm
+  - action: utter_ask_lokasyon
+
+# ============ TRANSFER DETAY SENARYOSU ============
+- story: transfer details inquiry
+  steps:
+  - intent: transfer_sorgulama
+  - action: utter_transfer_bilgi
+  - intent: affirm
+  - action: utter_ask_tedavi_turu
+  - intent: tedavi_arama_dental
+  - action: utter_dental_tedaviler
+
+# ============ DÖKÜMANTASYON SENARYOSU ============
+- story: documentation inquiry flow
+  steps:
+  - intent: dokuman_sorgulama
+  - action: utter_dokuman_bilgi
+  - intent: affirm
+  - action: utter_ask_tedavi_turu
+  - intent: tedavi_arama_estetik
+    entities:
+    - tedavi_adi: "breast augmentation"
+  - action: utter_estetik_tedaviler
+  - action: utter_ask_lokasyon
+
+# ============ ÇOKLU TEDAVİ SENARYOSU ============
+- story: multiple treatments inquiry
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tedavi_arama_dental
+    entities:
+    - tedavi_adi: "dental implant"
+    - tedavi_adi: "teeth whitening"
+  - action: utter_dental_tedaviler
+  - action: utter_ask_lokasyon
+  - intent: lokasyon_tercihi
+    entities:
+    - sehir: "Antalya"
+    - bolge: "Muratpaşa"
+  - action: action_search_clinics_by_treatment
+  - action: utter_antalya_klinikler_dental
+  - intent: klinik_secimi
+    entities:
+    - klinik_adi: "Antmodern Oral & Dental Health Clinic"
+  - action: action_provide_clinic_details
+  - action: utter_ask_tarih
+  - intent: tarih_belirtme
+    entities:
+    - tarih: "August"
+  - action: utter_ask_butce
+  - intent: butce_belirtme
+    entities:
+    - butce: "6000 euro"
+  - action: action_generate_bundle_recommendation
+  - action: utter_paket_hazir
+  - intent: affirm
+  - action: utter_randevu_onay
+  - intent: goodbye
+  - action: utter_goodbye
+
+# ============ EKONOMİK PAKET SENARYOSU ============
+- story: economic package request
+  steps:
+  - intent: tedavi_arama_dental
+    entities:
+    - tedavi_adi: "composite bonding"
+  - action: utter_ask_lokasyon
+  - intent: lokasyon_tercihi
+    entities:
+    - sehir: "Antalya"
+  - action: action_search_clinics_by_treatment
+  - action: utter_ask_butce
+  - intent: butce_belirtme
+    entities:
+    - butce: "2000 euro"
+  - action: validate_user_budget
+  - action: utter_ask_otel_tercihi
+  - intent: otel_tercihi
+    entities:
+    - otel_kategori: "4 star"
+  - action: action_generate_bundle_recommendation
+  - action: utter_paket_hazir
+  - intent: affirm
+  - action: utter_randevu_onay
+
+# ============ PREMIUM PAKET SENARYOSU ============
+- story: premium package luxury
+  steps:
+  - intent: tedavi_arama_estetik
+    entities:
+    - tedavi_adi: "face lift"
+  - action: utter_estetik_tedaviler
+  - intent: butce_belirtme
+    entities:
+    - butce: "15000 euro"
+  - action: utter_ask_lokasyon
+  - intent: lokasyon_tercihi
+    entities:
+    - sehir: "Antalya"
+    - bolge: "Lara"
+  - action: action_search_clinics_by_location
+  - action: utter_antalya_klinikler_estetik
+  - action: utter_ask_otel_tercihi
+  - intent: otel_tercihi
+    entities:
+    - otel_kategori: "5 star"
+    - otel_ozellik: "spa"
+    - otel_ozellik: "sea view"
+    - bolge: "Lara"
+  - action: utter_lara_oteller
+  - action: utter_ask_ucus_tercihi
+  - intent: ucus_tercihi
+    entities:
+    - ucus_tipi: "direct flight"
+    - ucus_sinifi: "business class"
+  - action: action_generate_bundle_recommendation
+  - action: utter_paket_hazir
+  - intent: affirm
+  - action: utter_randevu_onay
+  - intent: goodbye
+  - action: utter_goodbye
+
+# ============ PAKET SEÇİMİ SENARYOSU ============
+- story: package selection and booking
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: tedavi_arama_dental
+    entities:
+    - tedavi_adi: "dental implant"
+  - action: utter_dental_tedaviler
+  - action: utter_ask_lokasyon
+  - intent: lokasyon_tercihi
+    entities:
+    - sehir: "Antalya"
+  - action: action_search_clinics_by_treatment
+  - action: utter_ask_butce
+  - intent: butce_belirtme
+    entities:
+    - butce: "5000 euro"
+  - action: action_generate_bundle_recommendation
+  - action: utter_paket_hazir
+  - intent: paket_secimi
+  - action: action_schedule_appointment
+  - action: utter_randevu_onay
