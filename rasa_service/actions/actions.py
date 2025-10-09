@@ -41,277 +41,7 @@ def normalize_city(city: str) -> str:
     city_lower = city.lower().strip()
     return CITY_NORMALIZATION.get(city_lower, city.title())
 
-class ActionKlinikAra(Action):
-    def name(self) -> Text:
-        return "action_klinik_ara"
 
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # Önce entity'leri kontrol et
-        tedavi = next(tracker.get_latest_entity_values("tedavi"), None)
-        sehir = next(tracker.get_latest_entity_values("sehir"), None)
-        
-        # Entity yoksa slot'tan al (sohbet geçmişinden)
-        if not tedavi:
-            tedavi = tracker.get_slot("tedavi")
-        if not sehir:
-            sehir = tracker.get_slot("sehir")
-        
-        # Şehir normalizasyonu
-        if sehir:
-            sehir = normalize_city(sehir)
-        
-        logger.info(f"🔍 Klinik arama: tedavi={tedavi}, sehir={sehir} (slot'tan: {tracker.get_slot('sehir')})")
-        
-        try:
-            # Doğru endpoint: /api/clinics/search
-            api_url = f"{API_SERVICE_URL}/clinics/search"
-            params = {}
-            
-            if tedavi:
-                params["treatment"] = tedavi
-            if sehir:
-                params["city"] = sehir
-            
-            params["limit"] = 5
-            
-            logger.info(f"📡 API çağrısı: {api_url} | Params: {params}")
-            
-            response = requests.get(api_url, params=params, timeout=API_TIMEOUT, proxies=PROXIES)
-            response.raise_for_status()
-            
-            clinics = response.json()
-            logger.info(f"✅ {len(clinics)} klinik bulundu")
-            
-            if clinics:
-                message = f"🏥 **{len(clinics)} Klinik Buldum:**\n\n"
-                for i, clinic in enumerate(clinics[:3], 1):
-                    message += f"**{i}. {clinic.get('name', 'İsimsiz Klinik')}**\n"
-                    message += f"   📍 {clinic.get('city', 'Şehir Belirtilmemiş')}\n"
-                    message += f"   ⭐ Puan: {clinic.get('rating', 'N/A')}/5\n"
-                    message += f"   📞 {clinic.get('phone', 'Tel yok')}\n"
-                    
-                    treatments = clinic.get('treatments', [])
-                    if treatments:
-                        message += f"   💉 Tedaviler: {', '.join(treatments[:3])}\n"
-                    message += "\n"
-                
-                # Ollama ile doğal dil açıklaması ekle
-                try:
-                    ollama_response = self._get_ollama_recommendation(clinics[:3], sehir, tedavi)
-                    if ollama_response:
-                        message += f"\n💡 **Önerim:**\n{ollama_response}"
-                except Exception as e:
-                    logger.warning(f"Ollama önerisi alınamadı: {e}")
-                
-                dispatcher.utter_message(text=message)
-            else:
-                dispatcher.utter_message(text="😔 Üzgünüm, aradığınız kriterlere uygun klinik bulamadım. Başka bir şehir veya tedavi deneyin.")
-                
-        except requests.exceptions.ConnectionError:
-            logger.error("❌ API servisine bağlanılamadı")
-            dispatcher.utter_message(text="❌ Klinik arama servisi çalışmıyor. Lütfen API'nin çalıştığından emin olun.")
-        except requests.exceptions.Timeout:
-            logger.error("⏱️ API servisi zaman aşımı")
-            dispatcher.utter_message(text="⏱️ Klinik arama servisi çok yavaş. Lütfen tekrar deneyin.")
-        except Exception as e:
-            logger.error(f"❌ Beklenmeyen hata: {e}")
-            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
-        
-        return []
-    
-    def _get_ollama_recommendation(self, clinics: List[Dict], city: str, treatment: str) -> str:
-        """Ollama'dan klinik önerisi al"""
-        context = "Bulunan klinikler:\n"
-        for i, clinic in enumerate(clinics, 1):
-            context += f"{i}. {clinic.get('name')} - {clinic.get('city')} - Puan: {clinic.get('rating')}\n"
-        
-        prompt = f"""Sen bir sağlık turizmi danışmanısın. 
-Kullanıcı {city if city else 'bir şehirde'} {treatment if treatment else 'tedavi'} arıyor.
-Yukarıdaki klinikleri kısaca değerlendir ve hangisini önerirsin? (Maksimum 2-3 cümle, Türkçe)
-
-{context}
-"""
-        
-        try:
-            response = requests.post(
-                OLLAMA_API_URL,
-                json={"model": "llama3", "prompt": prompt, "stream": False},
-                timeout=30,
-                proxies=PROXIES
-            )
-            if response.status_code == 200:
-                return response.json().get('response', '').strip()[:300]  # Max 300 karakter
-        except:
-            pass
-        return ""
-
-class ActionOtelAra(Action):
-    def name(self) -> Text:
-        return "action_otel_ara"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        import time
-        start_time = time.time()
-        
-        sehir = next(tracker.get_latest_entity_values("sehir"), None)
-        otel_tipi = next(tracker.get_latest_entity_values("otel_tipi"), None)
-        
-        # Entity yoksa slot'tan al (sohbet geçmişinden)
-        if not sehir:
-            sehir = tracker.get_slot("sehir")
-        if not otel_tipi:
-            otel_tipi = tracker.get_slot("otel_tipi")
-        
-        # Şehir normalizasyonu
-        if sehir:
-            sehir = normalize_city(sehir)
-        
-        logger.info(f"🔍 Otel arama: sehir={sehir}, tip={otel_tipi} (slot'tan: {tracker.get_slot('sehir')})")
-        
-        try:
-            # Doğru endpoint: /api/hotels/search
-            api_url = f"{API_SERVICE_URL}/hotels/search"
-            params = {}
-            
-            if sehir:
-                params["city"] = sehir
-            if otel_tipi:
-                params["hotel_type"] = otel_tipi
-            
-            params["limit"] = 5
-            
-            logger.info(f"📡 API çağrısı başlıyor: {api_url}")
-            logger.info(f"📊 Params: {params}")
-            logger.info(f"⏱️ Timeout: {API_TIMEOUT}s")
-            
-            # HTTP GET isteği
-            response = requests.get(
-                api_url, 
-                params=params, 
-                timeout=API_TIMEOUT, 
-                proxies=PROXIES
-            )
-            
-            elapsed = time.time() - start_time
-            logger.info(f"✅ API yanıt aldı: status={response.status_code}, süre={elapsed:.2f}s")
-            
-            response.raise_for_status()
-            
-            hotels = response.json()
-            logger.info(f"✅ {len(hotels)} otel bulundu")
-            
-            if hotels:
-                message = f"🏨 **{len(hotels)} Otel Buldum:**\n\n"
-                for i, hotel in enumerate(hotels[:3], 1):
-                    message += f"**{i}. {hotel.get('name', 'İsimsiz Otel')}**\n"
-                    message += f"   📍 {hotel.get('city', 'Şehir Belirtilmemiş')}\n"
-                    message += f"   ⭐ Puan: {hotel.get('rating', 'N/A')}/5\n"
-                    message += f"   💰 Gecelik: ${hotel.get('price_per_night', 'N/A')}\n"
-                    
-                    features = hotel.get('features', [])
-                    if features:
-                        message += f"   ✨ Özellikler: {', '.join(features[:3])}\n"
-                    message += "\n"
-                
-                dispatcher.utter_message(text=message)
-            else:
-                dispatcher.utter_message(text="😔 Aradığınız kriterlere uygun otel bulamadım.")
-                
-        except requests.exceptions.ConnectionError as e:
-            elapsed = time.time() - start_time
-            logger.error(f"❌ API bağlantı hatası ({elapsed:.2f}s): {e}")
-            logger.error(f"🔗 URL: {api_url}")
-            dispatcher.utter_message(text="❌ Otel arama servisi çalışmıyor.")
-        except requests.exceptions.Timeout as e:
-            elapsed = time.time() - start_time
-            logger.error(f"⏱️ API timeout ({elapsed:.2f}s / {API_TIMEOUT}s)")
-            logger.error(f"🔗 URL: {api_url}")
-            logger.error(f"❌ Hata detayı: {e}")
-            dispatcher.utter_message(text=f"⏱️ Otel arama servisi yanıt vermekte gecikiyor ({API_TIMEOUT}s timeout). Lütfen tekrar deneyin.")
-        except requests.exceptions.RequestException as e:
-            elapsed = time.time() - start_time
-            logger.error(f"❌ HTTP hatası ({elapsed:.2f}s): {e}")
-            logger.error(f"🔗 URL: {api_url}")
-            if hasattr(e, 'response') and e.response is not None:
-                logger.error(f"📊 Response status: {e.response.status_code}")
-                logger.error(f"📄 Response body: {e.response.text[:200]}")
-            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
-        except Exception as e:
-            elapsed = time.time() - start_time
-            logger.error(f"❌ Beklenmeyen hata ({elapsed:.2f}s): {type(e).__name__} - {e}")
-            logger.error(f"🔗 URL: {api_url}")
-            import traceback
-            logger.error(f"📚 Traceback: {traceback.format_exc()}")
-            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
-        
-        return []
-
-class ActionSacEkimiDetaylari(Action):
-    def name(self) -> Text:
-        return "action_sac_ekimi_detaylari"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        logger.info("💇 Saç ekimi bilgisi için Ollama'ya sorgu gönderiliyor...")
-
-        # GÜÇLÜ TÜRKÇE PROMPT - Fallback yok, direkt Ollama cevabı
-        prompt = """Sen profesyonel bir Türk sağlık turizmi danışmanısın. 
-
-ÖNEMLİ: SADECE VE SADECE TÜRKÇE CEVAP VER! Hiçbir İngilizce kelime kullanma!
-
-Antalya'daki saç ekimi tedavisi hakkında şu bilgileri kısa ve net şekilde açıkla:
-
-1. FUE (Follicular Unit Extraction) tekniği nedir? Nasıl yapılır?
-2. DHI (Direct Hair Implantation) tekniği nedir? Nasıl yapılır?
-3. Bu iki teknik arasındaki temel farklar nelerdir?
-4. Ortalama tedavi ücreti: 2.500-4.000 Euro arası
-5. İşlem süresi: Genellikle 6-8 saat
-6. İyileşme süresi: 7-10 gün
-7. Paket içeriği: 5 yıldız otel konaklaması, VIP havalimanı transferi, tüm kontroller dahil
-
-Her maddeyi 2-3 cümle ile açıkla. Net, anlaşılır ve profesyonel bir dil kullan.
-Toplam maksimum 10 cümle yaz."""
-        
-        data = {
-            "model": "llama3",
-            "prompt": prompt,
-            "stream": False,
-            "options": {
-                "temperature": 0.4,  # Daha tutarlı ve deterministik
-                "num_predict": 500,  # Daha uzun cevaplar için
-                "top_p": 0.9,
-                "repeat_penalty": 1.2,  # Tekrar önleme
-                "stop": ["English:", "In English:", "Translation:"]  # İngilizce geçişi engelle
-            }
-        }
-
-        dispatcher.utter_message(text="💇 Saç ekimi hakkında detaylı bilgi hazırlıyorum, lütfen bekleyin...")
-
-        try:
-            response = requests.post(OLLAMA_API_URL, json=data, timeout=OLLAMA_TIMEOUT, proxies=PROXIES)
-            response.raise_for_status()
-            
-            generated_text = response.json().get('response', '').strip()
-
-            if generated_text:
-                # Direkt Ollama cevabını göster (fallback YOK!)
-                dispatcher.utter_message(text=f"💇 **SAÇ EKİMİ BİLGİLERİ:**\n\n{generated_text}")
-                logger.info(f"✅ Ollama cevabı başarıyla alındı ({len(generated_text)} karakter)")
-            else:
-                # Sadece boş cevap durumunda minimal fallback
-                dispatcher.utter_message(text="💇 Üzgünüm, saç ekimi bilgisi şu anda hazırlanamadı. Lütfen tekrar deneyin veya daha spesifik bir soru sorun.")
-                logger.warning("⚠️ Ollama boş cevap döndürdü")
-
-        except requests.exceptions.ConnectionError:
-            logger.error("❌ Ollama servisine bağlanılamadı")
-            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın ve tekrar deneyin.")
-        except requests.exceptions.Timeout:
-            logger.error(f"⏱️ Ollama API zaman aşımı ({OLLAMA_TIMEOUT}s)")
-            dispatcher.utter_message(text=f"⏱️ Yapay zeka servisi yanıt vermekte gecikiyor. Lütfen biraz bekleyip tekrar deneyin.")
-        except Exception as e:
-            logger.error(f"❌ Ollama hatası: {e}")
-            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
-
-        return []
 
 class ActionAskOllama(Action):
     """Genel sorular için Ollama'ya sor - Rasa'nın anlayamadığı sorular buraya yönlendirilir"""
@@ -390,401 +120,589 @@ TÜRKÇE CEVAP:"""
 
         return []
 
-class ActionDisImplantDetaylari(Action):
-    """Diş implantı bilgisi için Ollama'dan detaylı açıklama al"""
-    
-    def name(self) -> Text:
-        return "action_dis_implant_detaylari"
 
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        logger.info("🦷 Diş implantı bilgisi için Ollama'ya sorgu gönderiliyor...")
 
-        prompt = """Sen profesyonel bir Türk sağlık turizmi danışmanısın. 
 
-ÖNEMLİ: SADECE VE SADECE TÜRKÇE CEVAP VER!
 
-Diş implantı tedavisi hakkında şu bilgileri kısa ve net şekilde açıkla:
 
-1. Diş implantı nedir ve nasıl yapılır?
-2. All-on-4 ve All-on-6 teknikleri nedir?
-3. Tek diş vs çoklu diş implantı farkları
-4. Ortalama tedavi ücreti: 400-800 Euro (tek diş), 3.500-6.000 Euro (All-on-4/6)
-5. İşlem süresi: Tek diş 30-60 dakika, tam ağız 2-3 saat
-6. İyileşme süresi: 3-6 ay (kemik entegrasyonu)
-7. Paket içeriği: Panoramik röntgen, 3D tomografi, geçici protez, otel konaklaması dahil
 
-Her maddeyi 2-3 cümle ile açıkla. Net, anlaşılır ve profesyonel bir dil kullan.
-Toplam maksimum 10 cümle yaz."""
-        
-        data = {
-            "model": "llama3",
-            "prompt": prompt,
-            "stream": False,
-            "options": {
-                "temperature": 0.4,
-                "num_predict": 500,
-                "top_p": 0.9,
-                "repeat_penalty": 1.2,
-                "stop": ["English:", "In English:", "Translation:"]
+
+
+# ============ KLİNİK VERİTABANI (Örnek) ============
+CLINICS_DB = {
+    "dental": {
+        "Antalya": [
+            {
+                "name": "Antmodern Oral & Dental Health Clinic",
+                "address": "Fener Mah. Bülent Ecevit Blv. No:50 Muratpaşa/Antalya",
+                "district": "Muratpaşa",
+                "treatments": ["Composite Bonding", "Porcelain Veneers", "Teeth Whitening", 
+                              "Orthodontics", "Implant Dentistry", "Zirconium Crowns"],
+                "rating": 4.8,
+                "accreditations": ["JCI", "ISO 9001"],
+                "languages": ["Turkish", "English", "Russian", "Arabic"]
+            },
+            {
+                "name": "Dt. Murat Özbıyık Clinic",
+                "address": "Yeşilbahçe Mah. Metin Kasapoğlu Cad. 3/1 Muratpaşa/Antalya",
+                "district": "Muratpaşa",
+                "treatments": ["Root Canal Treatment", "Dental Implants", "Smile Restoration", 
+                              "Invisalign", "Bone Graft"],
+                "rating": 4.7,
+                "accreditations": ["ISO 9001"],
+                "languages": ["Turkish", "English", "German"]
+            },
+            {
+                "name": "Markasya Oral & Dental Health Clinic",
+                "address": "Toros Mah. 805 Sok. Kurgu Plaza No: 14/1 Konyaaltı/Antalya",
+                "district": "Konyaaltı",
+                "treatments": ["Cosmetic Dentistry", "Periodontics", "Gum Disease Treatment", 
+                              "Dentures", "Sedation"],
+                "rating": 4.6,
+                "accreditations": ["ISO 9001"],
+                "languages": ["Turkish", "English"]
             }
-        }
-
-        dispatcher.utter_message(text="🦷 Diş implantı hakkında detaylı bilgi hazırlıyorum...")
-
-        try:
-            response = requests.post(OLLAMA_API_URL, json=data, timeout=OLLAMA_TIMEOUT, proxies=PROXIES)
-            response.raise_for_status()
-            
-            generated_text = response.json().get('response', '').strip()
-
-            if generated_text:
-                dispatcher.utter_message(text=f"🦷 **DİŞ IMPLANTI BİLGİLERİ:**\n\n{generated_text}")
-                logger.info(f"✅ Ollama cevabı başarıyla alındı ({len(generated_text)} karakter)")
-            else:
-                dispatcher.utter_message(text="🦷 Üzgünüm, diş implantı bilgisi şu anda hazırlanamadı. Lütfen tekrar deneyin.")
-                logger.warning("⚠️ Ollama boş cevap döndürdü")
-
-        except requests.exceptions.ConnectionError:
-            logger.error("❌ Ollama servisine bağlanılamadı")
-            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın.")
-        except requests.exceptions.Timeout:
-            logger.error(f"⏱️ Ollama API zaman aşımı ({OLLAMA_TIMEOUT}s)")
-            dispatcher.utter_message(text=f"⏱️ Yapay zeka servisi yanıt vermekte gecikiyor. Lütfen biraz bekleyip tekrar deneyin.")
-        except Exception as e:
-            logger.error(f"❌ Ollama hatası: {e}")
-            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
-
-        return [{"event": "slot", "name": "tedavi", "value": "diş implantı"}]
-
-class ActionRinoplastiDetaylari(Action):
-    """Rinoplasti (burun estetiği) bilgisi için Ollama'dan detaylı açıklama al"""
-    
-    def name(self) -> Text:
-        return "action_rinoplasti_detaylari"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        logger.info("👃 Rinoplasti bilgisi için Ollama'ya sorgu gönderiliyor...")
-
-        prompt = """Sen profesyonel bir Türk sağlık turizmi danışmanısın. 
-
-ÖNEMLİ: SADECE VE SADECE TÜRKÇE CEVAP VER!
-
-Rinoplasti (burun estetiği) tedavisi hakkında şu bilgileri kısa ve net şekilde açıkla:
-
-1. Rinoplasti nedir ve nasıl yapılır?
-2. Açık rinoplasti vs Kapalı rinoplasti farkları
-3. Piezo tekniği nedir?
-4. Ortalama tedavi ücreti: 2.500-4.500 Euro
-5. İşlem süresi: 2-4 saat
-6. İyileşme süresi: 7-10 gün (splint çıkarma), 6-12 ay (tam iyileşme)
-7. Paket içeriği: Tüm testler, 5 yıldız otel, VIP transfer, kontroller dahil
-
-Her maddeyi 2-3 cümle ile açıkla. Net, anlaşılır ve profesyonel bir dil kullan.
-Toplam maksimum 10 cümle yaz."""
-        
-        data = {
-            "model": "llama3",
-            "prompt": prompt,
-            "stream": False,
-            "options": {
-                "temperature": 0.4,
-                "num_predict": 500,
-                "top_p": 0.9,
-                "repeat_penalty": 1.2,
-                "stop": ["English:", "In English:", "Translation:"]
+        ]
+    },
+    "aesthetic": {
+        "Antalya": [
+            {
+                "name": "Dr. Gökhan Özerdem Clinic",
+                "address": "Yeşilbahçe Mah. Metin Kasapoğlu Cad. Ayhan Kadam İş Merkezi A blok No: 48/11 Muratpaşa/Antalya",
+                "district": "Muratpaşa",
+                "treatments": ["Rhinoplasty", "Botox", "Face Lift", "Breast Surgery", 
+                              "Liposuction", "Genioplasty"],
+                "rating": 4.9,
+                "accreditations": ["JCI", "ISO 9001", "ISAPS"],
+                "languages": ["Turkish", "English", "Arabic", "Russian"]
+            },
+            {
+                "name": "Dr. Hasan Hüseyin Balıkçı Clinic",
+                "address": "Arapsuyu Mah. Atatürk Bulvarı M. Gökay Plaza No:23/41 Konyaaltı/Antalya",
+                "district": "Konyaaltı",
+                "treatments": ["Septoplasty", "Chin Filler", "Eye Contour Aesthetics", 
+                              "Lip Lift", "Cheek Augmentation"],
+                "rating": 4.8,
+                "accreditations": ["ISO 9001", "TSAPS"],
+                "languages": ["Turkish", "English", "German"]
             }
-        }
-
-        dispatcher.utter_message(text="👃 Rinoplasti hakkında detaylı bilgi hazırlıyorum...")
-
-        try:
-            response = requests.post(OLLAMA_API_URL, json=data, timeout=OLLAMA_TIMEOUT, proxies=PROXIES)
-            response.raise_for_status()
-            
-            generated_text = response.json().get('response', '').strip()
-
-            if generated_text:
-                dispatcher.utter_message(text=f"👃 **RİNOPLASTİ BİLGİLERİ:**\n\n{generated_text}")
-                logger.info(f"✅ Ollama cevabı başarıyla alındı ({len(generated_text)} karakter)")
-            else:
-                dispatcher.utter_message(text="👃 Üzgünüm, rinoplasti bilgisi şu anda hazırlanamadı. Lütfen tekrar deneyin.")
-                logger.warning("⚠️ Ollama boş cevap döndürdü")
-
-        except requests.exceptions.ConnectionError:
-            logger.error("❌ Ollama servisine bağlanılamadı")
-            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın.")
-        except requests.exceptions.Timeout:
-            logger.error(f"⏱️ Ollama API zaman aşımı ({OLLAMA_TIMEOUT}s)")
-            dispatcher.utter_message(text=f"⏱️ Yapay zeka servisi yanıt vermekte gecikiyor. Lütfen biraz bekleyip tekrar deneyin.")
-        except Exception as e:
-            logger.error(f"❌ Ollama hatası: {e}")
-            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
-
-        return [{"event": "slot", "name": "tedavi", "value": "rinoplasti"}]
-
-class ActionMideKucultmeDetaylari(Action):
-    """Mide küçültme ameliyatı bilgisi için Ollama'dan detaylı açıklama al"""
-    
-    def name(self) -> Text:
-        return "action_mide_kucultme_detaylari"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        logger.info("🏥 Mide küçültme bilgisi için Ollama'ya sorgu gönderiliyor...")
-
-        prompt = """Sen profesyonel bir Türk sağlık turizmi danışmanısın. 
-
-ÖNEMLİ: SADECE VE SADECE TÜRKÇE CEVAP VER!
-
-Mide küçültme (bariatrik cerrahi) ameliyatı hakkında şu bilgileri kısa ve net şekilde açıkla:
-
-1. Mide küçültme ameliyatı nedir?
-2. Sleeve gastrektomi (tüp mide) vs Gastrik bypass farkları
-3. Kimler için uygundur? (BMI > 35)
-4. Ortalama tedavi ücreti: 3.500-5.500 Euro
-5. İşlem süresi: 1-2 saat (laparoskopik)
-6. Hastanede kalış: 3-4 gün, iyileşme: 2-3 hafta
-7. Beklenen kilo kaybı: 1 yılda %60-70 fazla kilo
-8. Paket içeriği: Tüm testler, diyet programı, otel, transfer dahil
-
-Her maddeyi 2-3 cümle ile açıkla. Net, anlaşılır ve profesyonel bir dil kullan.
-Toplam maksimum 12 cümle yaz."""
-        
-        data = {
-            "model": "llama3",
-            "prompt": prompt,
-            "stream": False,
-            "options": {
-                "temperature": 0.4,
-                "num_predict": 600,
-                "top_p": 0.9,
-                "repeat_penalty": 1.2,
-                "stop": ["English:", "In English:", "Translation:"]
+        ]
+    },
+    "eye_care": {
+        "Antalya": [
+            {
+                "name": "Akdeniz Hospital",
+                "address": "Sorgun Mah. 8151 Sk.No:10 Manavgat/Antalya",
+                "district": "Manavgat",
+                "treatments": ["Cataract", "Glaucoma", "Retinal Diseases", 
+                              "Intraocular Lens Implants", "Keratoplasty"],
+                "rating": 4.7,
+                "accreditations": ["JCI", "ISO 9001"],
+                "languages": ["Turkish", "English", "Russian"]
+            },
+            {
+                "name": "Akdeniz Şifa Konyaaltı Medical Center",
+                "address": "Kuşkavağı Mah. Atatürk Bulvarı No:81 Konyaaltı/Antalya",
+                "district": "Konyaaltı",
+                "treatments": ["Cataract", "Lazy Eye", "Oculoplastic Surgery", 
+                              "Extracapsular Cataract Extraction"],
+                "rating": 4.6,
+                "accreditations": ["ISO 9001"],
+                "languages": ["Turkish", "English"]
             }
-        }
+        ]
+    }
+}
 
-        dispatcher.utter_message(text="🏥 Mide küçültme ameliyatı hakkında detaylı bilgi hazırlıyorum...")
+# ============ OTEL VERİTABANI (Örnek) ============
+HOTELS_DB = {
+    "Belek": [
+        {"name": "Regnum Carya Golf & Spa Resort", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Golf"], "price_range": "premium"},
+        {"name": "Rixos Premium Belek", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Beach"], "price_range": "premium"},
+        {"name": "Maxx Royal Belek Golf Resort", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Golf"], "price_range": "luxury"}
+    ],
+    "Lara": [
+        {"name": "Delphin Palace", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Beach"], "price_range": "premium"},
+        {"name": "Titanic Beach Lara", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Aquapark"], "price_range": "premium"},
+        {"name": "Rixos Premium Belek", "stars": 5, "features": ["Spa", "Pool", "All Inclusive"], "price_range": "luxury"}
+    ],
+    "Side": [
+        {"name": "Barut Hotels Hemera", "stars": 5, "features": ["Spa", "Pool", "All Inclusive"], "price_range": "standard"},
+        {"name": "Royal Dragon Hotel", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Aquapark"], "price_range": "premium"}
+    ],
+    "Alanya": [
+        {"name": "Eftalia Ocean Hotel", "stars": 5, "features": ["Spa", "Pool", "All Inclusive"], "price_range": "standard"},
+        {"name": "Granada Luxury Resort", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Beach"], "price_range": "premium"}
+    ],
+    "Kemer": [
+        {"name": "Rixos Sungate", "stars": 5, "features": ["Spa", "Pool", "All Inclusive", "Beach"], "price_range": "premium"},
+        {"name": "Crystal Sunrise Queen Luxury Resort", "stars": 5, "features": ["Spa", "Pool", "All Inclusive"], "price_range": "premium"}
+    ],
+    "Konyaaltı": [
+        {"name": "Sheraton Voyager Antalya", "stars": 5, "features": ["Spa", "Pool", "Beach", "City Center"], "price_range": "premium"},
+        {"name": "DoubleTree by Hilton Antalya", "stars": 4, "features": ["Pool", "Beach", "City Center"], "price_range": "standard"}
+    ]
+}
 
-        try:
-            response = requests.post(OLLAMA_API_URL, json=data, timeout=OLLAMA_TIMEOUT, proxies=PROXIES)
-            response.raise_for_status()
-            
-            generated_text = response.json().get('response', '').strip()
 
-            if generated_text:
-                dispatcher.utter_message(text=f"🏥 **MİDE KÜÇÜLTME BİLGİLERİ:**\n\n{generated_text}")
-                logger.info(f"✅ Ollama cevabı başarıyla alındı ({len(generated_text)} karakter)")
-            else:
-                dispatcher.utter_message(text="🏥 Üzgünüm, mide küçültme bilgisi şu anda hazırlanamadı. Lütfen tekrar deneyin.")
-                logger.warning("⚠️ Ollama boş cevap döndürdü")
 
-        except requests.exceptions.ConnectionError:
-            logger.error("❌ Ollama servisine bağlanılamadı")
-            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın.")
-        except requests.exceptions.Timeout:
-            logger.error(f"⏱️ Ollama API zaman aşımı ({OLLAMA_TIMEOUT}s)")
-            dispatcher.utter_message(text=f"⏱️ Yapay zeka servisi yanıt vermekte gecikiyor. Lütfen biraz bekleyip tekrar deneyin.")
-        except Exception as e:
-            logger.error(f"❌ Ollama hatası: {e}")
-            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
+# ============ FİYAT HESAPLAMA FONKSİYONU ============
+def calculate_treatment_price(treatment_name, clinic_rating):
+    """Tedavi fiyatını hesapla"""
+    base_prices = {
+        "dental implant": 1500,
+        "rhinoplasty": 3500,
+        "cataract": 2000,
+        "sleeve gastrectomy": 4500,
+        "knee replacement": 8000,
+        "laser varicose vein": 1800,
+        "teeth whitening": 300,
+        "botox": 400,
+        "face lift": 5000,
+        "breast surgery": 4000
+    }
+    
+    base_price = base_prices.get(treatment_name.lower(), 2000)
+    # Klinik rating'e göre fiyat artışı
+    rating_multiplier = 1 + (clinic_rating - 4.5) * 0.2
+    
+    return int(base_price * rating_multiplier)
 
-        return [{"event": "slot", "name": "tedavi", "value": "mide küçültme"}]
+def calculate_hotel_price(hotel_info, nights=7):
+    """Otel fiyatını hesapla"""
+    base_prices = {
+        "standard": 100,
+        "premium": 200,
+        "luxury": 400
+    }
+    
+    price_per_night = base_prices.get(hotel_info.get("price_range", "standard"), 150)
+    return price_per_night * nights
 
-class ActionLasikDetaylari(Action):
-    """Lasik (göz lazer) ameliyatı bilgisi için Ollama'dan detaylı açıklama al"""
+def calculate_flight_price(flight_class, flight_type):
+    """Uçuş fiyatını hesapla"""
+    base_prices = {
+        "economy": 300,
+        "business": 1200
+    }
+    
+    price = base_prices.get(flight_class, 300)
+    if flight_type == "direct":
+        price *= 1.3
+    
+    return int(price)
+
+
+# ============ CUSTOM ACTIONS ============
+
+class ActionSearchClinicsByTreatment(Action):
+    """Tedavi türüne göre klinik ara"""
     
     def name(self) -> Text:
-        return "action_lasik_detaylari"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        logger.info("👁️ Lasik bilgisi için Ollama'ya sorgu gönderiliyor...")
-
-        prompt = """Sen profesyonel bir Türk sağlık turizmi danışmanısın. 
-
-ÖNEMLİ: SADECE VE SADECE TÜRKÇE CEVAP VER!
-
-Lasik (göz lazer) ameliyatı hakkında şu bilgileri kısa ve net şekilde açıkla:
-
-1. Lasik ameliyatı nedir ve nasıl yapılır?
-2. Lasik, PRK ve Femtolasik farkları
-3. Kimler için uygundur? (miyopi, hipermetropi, astigmat)
-4. Ortalama tedavi ücreti: 1.500-2.500 Euro (her iki göz)
-5. İşlem süresi: 15-20 dakika (her iki göz)
-6. İyileşme süresi: 1-2 gün (görmede düzelme), 1 hafta (tam iyileşme)
-7. Başarı oranı: %95+ hastada gözlüksüz yaşam
-8. Paket içeriği: Tüm testler, kontroller, otel, transfer dahil
-
-Her maddeyi 2-3 cümle ile açıkla. Net, anlaşılır ve profesyonel bir dil kullan.
-Toplam maksimum 12 cümle yaz."""
+        return "action_search_clinics_by_treatment"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        data = {
-            "model": "llama3",
-            "prompt": prompt,
-            "stream": False,
-            "options": {
-                "temperature": 0.4,
-                "num_predict": 600,
-                "top_p": 0.9,
-                "repeat_penalty": 1.2,
-                "stop": ["English:", "In English:", "Translation:"]
-            }
-        }
-
-        dispatcher.utter_message(text="👁️ Lasik ameliyatı hakkında detaylı bilgi hazırlıyorum...")
-
-        try:
-            response = requests.post(OLLAMA_API_URL, json=data, timeout=OLLAMA_TIMEOUT, proxies=PROXIES)
-            response.raise_for_status()
+        tedavi_adi = tracker.get_slot("tedavi_adi")
+        tedavi_turu = tracker.get_slot("tedavi_turu")
+        sehir = tracker.get_slot("sehir")
+        
+        # Tedavi türünü belirle
+        if not tedavi_turu:
+            if tedavi_adi:
+                # Tedavi adından türü çıkar
+                dental_treatments = ["implant", "whitening", "veneers", "orthodontics", "root canal"]
+                aesthetic_treatments = ["rhinoplasty", "botox", "face lift", "breast"]
+                eye_treatments = ["cataract", "glaucoma", "retinal"]
+                
+                tedavi_lower = tedavi_adi.lower()
+                if any(t in tedavi_lower for t in dental_treatments):
+                    tedavi_turu = "dental"
+                elif any(t in tedavi_lower for t in aesthetic_treatments):
+                    tedavi_turu = "aesthetic"
+                elif any(t in tedavi_lower for t in eye_treatments):
+                    tedavi_turu = "eye_care"
+        
+        # API çağrısı simülasyonu - gerçek uygulamada API kullanılacak
+        if tedavi_turu and sehir:
+            clinics = CLINICS_DB.get(tedavi_turu, {}).get(sehir, [])
             
-            generated_text = response.json().get('response', '').strip()
-
-            if generated_text:
-                dispatcher.utter_message(text=f"👁️ **LASİK AMELİYATI BİLGİLERİ:**\n\n{generated_text}")
-                logger.info(f"✅ Ollama cevabı başarıyla alındı ({len(generated_text)} karakter)")
+            if clinics:
+                message = f"✅ {sehir} için {len(clinics)} klinik bulundu!\n\n"
+                dispatcher.utter_message(text=message)
             else:
-                dispatcher.utter_message(text="👁️ Üzgünüm, lasik bilgisi şu anda hazırlanamadı. Lütfen tekrar deneyin.")
-                logger.warning("⚠️ Ollama boş cevap döndürdü")
+                dispatcher.utter_message(text=f"Üzgünüm, {sehir}'da bu tedavi için klinik bulunamadı.")
+        
+        return [SlotSet("tedavi_turu", tedavi_turu)]
 
-        except requests.exceptions.ConnectionError:
-            logger.error("❌ Ollama servisine bağlanılamadı")
-            dispatcher.utter_message(text="❌ Yapay zeka servisi çalışmıyor. Lütfen 'ollama serve' komutunu çalıştırın.")
-        except requests.exceptions.Timeout:
-            logger.error(f"⏱️ Ollama API zaman aşımı ({OLLAMA_TIMEOUT}s)")
-            dispatcher.utter_message(text=f"⏱️ Yapay zeka servisi yanıt vermekte gecikiyor. Lütfen biraz bekleyip tekrar deneyin.")
-        except Exception as e:
-            logger.error(f"❌ Ollama hatası: {e}")
-            dispatcher.utter_message(text=f"❌ Bir hata oluştu: {str(e)}")
 
-        return [{"event": "slot", "name": "tedavi", "value": "lasik"}]
-
-class ActionFiyatBilgisi(Action):
-    """Fiyat bilgisi için context-aware cevap ver"""
+class ActionSearchClinicsByLocation(Action):
+    """Lokasyona göre klinik ara"""
     
     def name(self) -> Text:
-        return "action_fiyat_bilgisi"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        # Slot'tan tedavi bilgisini al
-        tedavi = tracker.get_slot("tedavi")
-        tedavi_entity = next(tracker.get_latest_entity_values("tedavi"), None)
+        return "action_search_clinics_by_location"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        if tedavi_entity:
-            tedavi = tedavi_entity
+        sehir = tracker.get_slot("sehir")
+        bolge = tracker.get_slot("bolge")
         
-        logger.info(f"💰 Fiyat bilgisi soruluyor - tedavi: {tedavi}")
-
-        # Tedavi bazlı fiyat bilgileri
-        fiyat_bilgileri = {
-            "saç ekimi": "💇 **SAÇ EKİMİ FİYATLARI:**\n- FUE Tekniği: 2.500-3.500 Euro\n- DHI Tekniği: 3.000-4.000 Euro\n- Paket: 5 yıldız otel, VIP transfer, tüm kontroller dahil",
-            "diş implantı": "🦷 **DİŞ IMPLANTI FİYATLARI:**\n- Tek Diş: 400-800 Euro\n- All-on-4: 3.500-5.000 Euro\n- All-on-6: 4.500-6.000 Euro\n- Paket: Otel konaklaması, testler dahil",
-            "rinoplasti": "👃 **RİNOPLASTİ FİYATLARI:**\n- Açık/Kapalı Rinoplasti: 2.500-4.500 Euro\n- Piezo Tekniği: 3.500-5.000 Euro\n- Paket: 5 yıldız otel, VIP transfer, kontroller dahil",
-            "mide küçültme": "🏥 **MİDE KÜÇÜLTME FİYATLARI:**\n- Sleeve Gastrektomi: 3.500-4.500 Euro\n- Gastrik Bypass: 4.000-5.500 Euro\n- Paket: 3-4 gün hastane, otel, diyet programı dahil",
-            "lasik": "👁️ **LASİK AMELİYATI FİYATLARI:**\n- Klasik Lasik: 1.500-2.000 Euro\n- Femtolasik: 2.000-2.500 Euro (her iki göz)\n- Paket: Tüm testler, kontroller dahil"
-        }
-
-        if tedavi and any(key in tedavi.lower() for key in fiyat_bilgileri.keys()):
-            for key, value in fiyat_bilgileri.items():
-                if key in tedavi.lower():
-                    dispatcher.utter_message(text=value)
-                    return []
-        
-        # Genel fiyat bilgisi
-        message = """💰 **GENEL FİYAT BİLGİLERİ:**
-
-Türkiye'deki medikal turizm fiyatları, Avrupa ve ABD'ye göre %50-70 daha ekonomiktir.
-
-**Popüler Tedaviler:**
-🦷 Diş İmplantı: 400-800 Euro (tek)
-💇 Saç Ekimi: 2.500-4.000 Euro
-👃 Rinoplasti: 2.500-4.500 Euro
-🏥 Mide Küçültme: 3.500-5.500 Euro
-👁️ Lasik: 1.500-2.500 Euro
-
-**Paket İçeriği:**
-✅ Tüm ameliyat masrafları
-✅ Otel konaklaması
-✅ VIP havalimanı transferi
-✅ Ameliyat öncesi/sonrası kontroller
-✅ Tercümanlık hizmeti
-
-Hangi tedavi için detaylı fiyat bilgisi almak istersiniz?"""
+        message = f"📍 {sehir}"
+        if bolge:
+            message += f" - {bolge} bölgesi"
+        message += " için klinikler aranıyor..."
         
         dispatcher.utter_message(text=message)
+        
         return []
 
-class ActionSigortaBilgisi(Action):
-    """Sigorta bilgisi ver"""
+
+class ActionSearchHotelsByRegion(Action):
+    """Bölgeye göre otel ara"""
     
     def name(self) -> Text:
-        return "action_sigorta_bilgisi"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        logger.info("🏥 Sigorta bilgisi soruluyor...")
-
-        message = """🏥 **SİGORTA BİLGİLERİ:**
-
-**Türkiye'deki Medikal Turizm ve Sigorta:**
-
-❌ **SGK (Sosyal Güvenlik Kurumu):**
-Yurt dışından gelen hastalar için SGK kapsamı yoktur. Ancak Türk vatandaşları belirli koşullarda SGK ile tedavi olabilir.
-
-✅ **Özel Sigorta:**
-- Bazı uluslararası özel sağlık sigortaları Türkiye'deki tedavileri karşılayabilir
-- Anlaşmalı kliniklerimiz: Allianz, Axa, Cigna
-- Tedavi öncesi sigorta şirketinizle mutlaka iletişime geçin
-
-💳 **Ödeme Seçenekleri:**
-- Nakit (Euro, Dolar, TL)
-- Kredi kartı (taksit imkanı)
-- Banka havalesi
-
-📋 **Fatura ve Raporlama:**
-- Tüm tedaviler için detaylı fatura verilir
-- Sigorta şirketinize sunabileceğiniz medikal raporlar hazırlanır
-- Geri ödeme için gerekli evraklar sağlanır
-
-Özel sigorta durumunuz için kliniklerimizle direkt iletişime geçmenizi öneririz."""
+        return "action_search_hotels_by_region"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
-        dispatcher.utter_message(text=message)
+        bolge = tracker.get_slot("bolge")
+        otel_kategori = tracker.get_slot("otel_kategori")
+        
+        if bolge and bolge in HOTELS_DB:
+            hotels = HOTELS_DB[bolge]
+            
+            # Kategori filtrele
+            if otel_kategori:
+                stars = 5 if "5" in otel_kategori else 4
+                hotels = [h for h in hotels if h["stars"] == stars]
+            
+            message = f"🏨 {bolge} bölgesinde {len(hotels)} otel bulundu!"
+            dispatcher.utter_message(text=message)
+        
         return []
 
-class ActionRandevuBilgisi(Action):
-    """Randevu alma bilgisi ver"""
+
+class ActionGenerateBundleRecommendation(Action):
+    """Yapay zeka destekli paket önerisi oluştur"""
     
     def name(self) -> Text:
-        return "action_randevu_bilgisi"
-
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        logger.info("📅 Randevu bilgisi soruluyor...")
-
-        message = """📅 **RANDEVU ALMA SÜRECİ:**
-
-**Adım 1: İletişim**
-📞 Klinikle direkt iletişime geçin
-📧 E-posta ile başvuru yapın
-💬 WhatsApp hattından yazın
-
-**Adım 2: Ön Değerlendirme**
-📸 Fotoğraf veya röntgen gönderin
-📋 Medikal geçmişinizi paylaşın
-🩺 Online konsültasyon alın (ücretsiz)
-
-**Adım 3: Randevu Tarihi**
-📅 Uygun tarih belirleyin
-✈️ Uçak bileti alın
-🏨 Otel rezervasyonu yapılır
-
-**Adım 4: Türkiye'ye Geliş**
-🚐 VIP havalimanı karşılama
-🏥 Kliniğe transfer
-👨‍⚕️ Doktor görüşmesi ve son kontroller
-
-**Randevu Süresi:**
-- Acil durumlar: 2-3 gün içinde
-- Normal randevu: 1-2 hafta
-- Yoğun dönemler: 3-4 hafta
-
-**İletişim:**
-Öncelikle hangi tedavi için randevu almak istediğinizi belirtin. Size en uygun kliniği önerebilirim!"""
+        return "action_generate_bundle_recommendation"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        # Kullanıcı bilgilerini topla
+        user_profile = {
+            "tedavi_turu": tracker.get_slot("tedavi_turu"),
+            "tedavi_adi": tracker.get_slot("tedavi_adi"),
+            "sehir": tracker.get_slot("sehir"),
+            "bolge": tracker.get_slot("bolge"),
+            "tarih": tracker.get_slot("tarih"),
+            "butce": tracker.get_slot("butce"),
+            "otel_kategori": tracker.get_slot("otel_kategori"),
+            "ucus_sinifi": tracker.get_slot("ucus_sinifi"),
+            "ucus_tipi": tracker.get_slot("ucus_tipi")
+        }
+        
+        # Recommendation Engine çağrısı simülasyonu
+        # Gerçek uygulamada ML modeli ve API kullanılacak
+        
+        bundles = []
+        tedavi_turu = user_profile.get("tedavi_turu", "dental")
+        sehir = user_profile.get("sehir", "Antalya")
+        bolge = user_profile.get("bolge", "Lara")
+        
+        # Örnek klinikler
+        clinics = CLINICS_DB.get(tedavi_turu, {}).get(sehir, [])[:3]
+        
+        # Örnek oteller
+        hotels = HOTELS_DB.get(bolge, HOTELS_DB["Lara"])[:3]
+        
+        # 3 farklı paket oluştur
+        for i in range(min(3, len(clinics))):
+            clinic = clinics[i] if i < len(clinics) else clinics[0]
+            hotel = hotels[i] if i < len(hotels) else hotels[0]
+            
+            # Fiyat hesapla
+            treatment_price = calculate_treatment_price(
+                user_profile.get("tedavi_adi", "dental treatment"),
+                clinic.get("rating", 4.5)
+            )
+            hotel_price = calculate_hotel_price(hotel, nights=7)
+            flight_price = calculate_flight_price(
+                user_profile.get("ucus_sinifi", "economy"),
+                user_profile.get("ucus_tipi", "connecting")
+            )
+            transfer_price = 150
+            
+            total_price = treatment_price + hotel_price + (flight_price * 2) + transfer_price
+            
+            bundles.append({
+                "name": f"Paket {i+1} - {['Ekonomik', 'Standart', 'Premium'][i]}",
+                "clinic": clinic["name"],
+                "clinic_rating": clinic["rating"],
+                "hotel": hotel["name"],
+                "hotel_stars": hotel["stars"],
+                "treatment_price": treatment_price,
+                "hotel_price": hotel_price,
+                "flight_price": flight_price * 2,
+                "transfer_price": transfer_price,
+                "total_price": total_price,
+                "currency": "EUR"
+            })
+        
+        # Paketleri göster
+        message = "🎁 **Sizin İçin Özel Hazırlanan Paketler:**\n\n"
+        
+        for bundle in bundles:
+            message += f"**{bundle['name']}** - {bundle['total_price']} {bundle['currency']}\n"
+            message += f"🏥 Klinik: {bundle['clinic']} (⭐{bundle['clinic_rating']})\n"
+            message += f"🏨 Otel: {bundle['hotel']} ({'⭐' * bundle['hotel_stars']})\n"
+            message += f"💰 Detaylar:\n"
+            message += f"   • Tedavi: {bundle['treatment_price']} EUR\n"
+            message += f"   • Konaklama (7 gece): {bundle['hotel_price']} EUR\n"
+            message += f"   • Uçuş (Gidiş-Dönüş): {bundle['flight_price']} EUR\n"
+            message += f"   • Transfer: {bundle['transfer_price']} EUR\n"
+            message += f"━━━━━━━━━━━━━━━━━\n\n"
+        
+        message += "✅ Tüm paketler şunları içerir:\n"
+        message += "• Havalimanı karşılama ve transferler\n"
+        message += "• 7/24 Türkçe asistan desteği\n"
+        message += "• Ön konsültasyon\n"
+        message += "• Kontrol muayeneleri\n\n"
+        message += "Hangi paketi seçmek istersiniz?"
         
         dispatcher.utter_message(text=message)
+        
+        return []
+
+
+class ActionCalculatePackagePrice(Action):
+    """Paket fiyatını hesapla ve göster"""
+    
+    def name(self) -> Text:
+        return "action_calculate_package_price"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        tedavi_adi = tracker.get_slot("tedavi_adi") or "dental treatment"
+        
+        # Basit fiyat hesaplama
+        base_price = calculate_treatment_price(tedavi_adi, 4.7)
+        hotel_price = 700  # 7 gece ortalama
+        flight_price = 600  # Gidiş-dönüş
+        transfer_price = 150
+        
+        total = base_price + hotel_price + flight_price + transfer_price
+        
+        message = f"💰 **Fiyat Detayları:**\n\n"
+        message += f"• Tedavi: {base_price} EUR\n"
+        message += f"• Otel (7 gece): {hotel_price} EUR\n"
+        message += f"• Uçuş: {flight_price} EUR\n"
+        message += f"• Transfer: {transfer_price} EUR\n"
+        message += f"━━━━━━━━━━━━━━━━━\n"
+        message += f"**TOPLAM: {total} EUR**\n\n"
+        message += f"✨ Ödeme seçenekleri:\n"
+        message += f"• Peşin ödeme (5% indirim)\n"
+        message += f"• 3 taksit (komisyonsuz)\n"
+        message += f"• 6-12 taksit seçenekleri"
+        
+        dispatcher.utter_message(text=message)
+        
+        return []
+
+
+class ActionProvideClinicDetails(Action):
+    """Klinik detaylarını göster"""
+    
+    def name(self) -> Text:
+        return "action_provide_clinic_details"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        klinik_adi = tracker.get_slot("klinik_adi")
+        
+        if klinik_adi:
+            # Klinik bilgisini bul
+            clinic_found = None
+            for category in CLINICS_DB.values():
+                for city_clinics in category.values():
+                    for clinic in city_clinics:
+                        if clinic["name"] == klinik_adi:
+                            clinic_found = clinic
+                            break
+            
+            if clinic_found:
+                message = f"🏥 **{clinic_found['name']}**\n\n"
+                message += f"📍 Adres: {clinic_found['address']}\n"
+                message += f"⭐ Rating: {clinic_found['rating']}/5.0\n"
+                message += f"🏆 Akreditasyonlar: {', '.join(clinic_found['accreditations'])}\n"
+                message += f"🌍 Diller: {', '.join(clinic_found['languages'])}\n\n"
+                message += f"💉 Tedaviler:\n"
+                for treatment in clinic_found['treatments'][:5]:
+                    message += f"• {treatment}\n"
+                
+                dispatcher.utter_message(text=message)
+            else:
+                dispatcher.utter_message(text=f"Üzgünüm, {klinik_adi} hakkında detaylı bilgi bulunamadı.")
+        
+        return []
+
+
+class ActionSaveUserProfile(Action):
+    """Kullanıcı profilini kaydet"""
+    
+    def name(self) -> Text:
+        return "action_save_user_profile"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        user_profile = {
+            "user_name": tracker.get_slot("user_name"),
+            "yas": tracker.get_slot("yas"),
+            "cinsiyet": tracker.get_slot("cinsiyet"),
+            "hastalik": tracker.get_slot("hastalik"),
+            "saglik_durumu": tracker.get_slot("saglik_durumu"),
+            "timestamp": datetime.now().isoformat()
+        }
+        
+        # Veritabanına kaydetme simülasyonu
+        # Gerçek uygulamada database API kullanılacak
+        
+        dispatcher.utter_message(text="✅ Bilgileriniz güvenle kaydedildi.")
+        
+        return []
+
+
+class ActionScheduleAppointment(Action):
+    """Randevu planla"""
+    
+    def name(self) -> Text:
+        return "action_schedule_appointment"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        klinik_adi = tracker.get_slot("klinik_adi")
+        tarih = tracker.get_slot("tarih")
+        tedavi_adi = tracker.get_slot("tedavi_adi")
+        
+        # Randevu API çağrısı simülasyonu
+        
+        message = f"✅ Randevunuz oluşturuldu!\n\n"
+        message += f"🏥 Klinik: {klinik_adi or 'Seçilecek'}\n"
+        message += f"💉 Tedavi: {tedavi_adi or 'Belirtilecek'}\n"
+        message += f"📅 Tarih: {tarih or 'Planlanacak'}\n\n"
+        message += f"📧 Detaylı bilgilendirme e-posta adresinize gönderilecektir.\n"
+        message += f"📱 Koordinatörümüz 24 saat içinde sizinle iletişime geçecektir."
+        
+        dispatcher.utter_message(text=message)
+        
+        return []
+
+
+class ValidateUserBudget(Action):
+    """Kullanıcı bütçesini doğrula"""
+    
+    def name(self) -> Text:
+        return "validate_user_budget"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        butce = tracker.get_slot("butce")
+        
+        if butce:
+            # Bütçeden sayısal değer çıkar
+            import re
+            numbers = re.findall(r'\d+', str(butce))
+            
+            if numbers:
+                budget_value = int(numbers[0])
+                
+                if budget_value < 2000:
+                    message = "💡 Belirttiğiniz bütçe için ekonomik paketlerimiz mevcut. "
+                    message += "Daha fazla seçenek için bütçenizi artırabilir veya ödeme planlarımızdan yararlanabilirsiniz."
+                    dispatcher.utter_message(text=message)
+                elif budget_value > 15000:
+                    message = "👑 Premium ve lüks paketlerimizle size en iyi hizmeti sunabiliriz!"
+                    dispatcher.utter_message(text=message)
+        
+        return []
+
+
+class ValidateTreatmentCompatibility(Action):
+    """Tedavi uyumluluğunu kontrol et"""
+    
+    def name(self) -> Text:
+        return "validate_treatment_compatibility"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        hastalik = tracker.get_slot("hastalik")
+        tedavi_adi = tracker.get_slot("tedavi_adi")
+        yas = tracker.get_slot("yas")
+        
+        # Basit uyumluluk kontrolü
+        warnings = []
+        
+        if hastalik:
+            if "diabetes" in str(hastalik).lower() or "diyabet" in str(hastalik).lower():
+                warnings.append("⚠️ Diyabet hastalarında özel tedavi protokolü uygulanır.")
+            
+            if "hypertension" in str(hastalik).lower() or "hipertansiyon" in str(hastalik).lower():
+                warnings.append("⚠️ Tansiyon takibi ameliyat sürecinde yapılacaktır.")
+        
+        if yas:
+            try:
+                age = int(yas)
+                if age > 70:
+                    warnings.append("ℹ️ Yaşınız nedeniyle ek sağlık kontrolleri gerekebilir.")
+            except:
+                pass
+        
+        if warnings:
+            message = "🏥 **Sağlık Durumu Bildirimi:**\n\n"
+            message += "\n".join(warnings)
+            message += "\n\nDoktorlarımız sizinle görüşme sonrası en uygun tedavi planını belirleyecektir."
+            dispatcher.utter_message(text=message)
+        
+        return []
+
+
+class ActionGenerateReport(Action):
+    """Raporlama sistemi - Paydaşlar için"""
+    
+    def name(self) -> Text:
+        return "action_generate_report"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        
+        # Bu action genellikle admin/paydaş panelinden çağrılır
+        # Örnek rapor türleri:
+        # 1. Hasta sayısı ve demografik analiz
+        # 2. Popüler tedavi türleri
+        # 3. Klinik performans skorları
+        # 4. Gelir analizi
+        # 5. Müşteri memnuniyet skorları
+        
         return []
